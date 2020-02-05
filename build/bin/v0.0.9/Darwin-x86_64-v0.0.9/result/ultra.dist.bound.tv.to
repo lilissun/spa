@@ -1,0 +1,2592 @@
+Rule in cache: 0
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise near(*m@19, #t1@20);
+    @conclusion normalSend(*m@19, #t@21);
+    @constraint -#t1@20 + #t@21 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise near(*m@19, #t1@20);
+    @conclusion normalSend(*m@19, #t@21);
+    @constraint -#t1@20 + #t@21 >= 0;
+};
+
+Rule in cache: 1
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise normalSend(*m@22, #t1@23);
+    @conclusion near(*m@22, #t@24);
+    @constraint -#t1@23 + #t@24 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise normalSend(*m@22, #t1@23);
+    @conclusion near(*m@22, #t@24);
+    @constraint -#t1@23 + #t@24 >= 0;
+};
+
+Rule in cache: 2
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise near(*m@25, #t1@26);
+    @conclusion ultraNearSend(*m@25, #t@27);
+    @constraint -#t1@26 + #t@27 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise near(*m@25, #t1@26);
+    @conclusion ultraNearSend(*m@25, #t@27);
+    @constraint -#t1@26 + #t@27 >= 0;
+};
+
+Rule in cache: 3
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise ultraNearSend(*m@28, #ta@29);
+    @conclusion ultraRecv(*m@28, #tb@30);
+    @constraint -$s - #ta@29 + #tb@30 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise ultraNearSend(*m@28, #ta@29);
+    @conclusion ultraRecv(*m@28, #tb@30);
+    @constraint -$s - #ta@29 + #tb@30 >= 0;
+};
+
+Rule in cache: 4
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise far(*sk@31, #t1@32);
+    @conclusion far(*pk(sk@31), #t@33);
+    @constraint -#t1@32 + #t@33 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*sk@31, #t1@32);
+    @conclusion far(*pk(sk@31), #t@33);
+    @constraint -#t1@32 + #t@33 >= 0;
+};
+
+Rule in cache: 5
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise far(*m@34, #t1@35);
+    @premise far(*sk@36, #t2@37);
+    @conclusion far(*sign(m@34, sk@36), #t@38);
+    @constraint -#t1@35 + #t@38 >= 0;
+    @constraint #t@38 - #t2@37 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*m@34, #t1@35);
+    @premise far(*sk@36, #t2@37);
+    @conclusion far(*sign(m@34, sk@36), #t@38);
+    @constraint -#t1@35 + #t@38 >= 0;
+    @constraint #t@38 - #t2@37 >= 0;
+};
+
+Rule in cache: 6
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise far(*sign(m@39, sk@40), #t1@41);
+    @conclusion far(*m@39, #t@42);
+    @constraint -#t1@41 + #t@42 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*sign(m@39, sk@40), #t1@41);
+    @conclusion far(*m@39, #t@42);
+    @constraint -#t1@41 + #t@42 >= 0;
+};
+
+Rule in cache: 7
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise far(*m@43, #t1@44);
+    @conclusion normalSend(*m@43, #t@45);
+    @constraint -#t1@44 + #t@45 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*m@43, #t1@44);
+    @conclusion normalSend(*m@43, #t@45);
+    @constraint -#t1@44 + #t@45 >= 0;
+};
+
+Rule in cache: 8
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise normalSend(*m@46, #t1@47);
+    @conclusion far(*m@46, #t@48);
+    @constraint -#t1@47 + #t@48 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise normalSend(*m@46, #t1@47);
+    @conclusion far(*m@46, #t@48);
+    @constraint -#t1@47 + #t@48 >= 0;
+};
+
+Rule in cache: 9
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise far(*m@49, #t1@50);
+    @conclusion ultraFarSend(*m@49, #t@51);
+    @constraint -#t1@50 + #t@51 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*m@49, #t1@50);
+    @conclusion ultraFarSend(*m@49, #t@51);
+    @constraint -#t1@50 + #t@51 >= 0;
+};
+
+Rule in cache: 10
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise ultraFarSend(*m@52, #ta@53);
+    @conclusion ultraRecv(*m@52, #tb@54);
+    @constraint -$l - #ta@53 + #tb@54 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise ultraFarSend(*m@52, #ta@53);
+    @conclusion ultraRecv(*m@52, #tb@54);
+    @constraint -$l - #ta@53 + #tb@54 >= 0;
+};
+
+Rule in cache: 11
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @conclusion near(*skB(), #t@56);
+};
+Rule cached at priority 0: 
+@rule{
+    @conclusion near(*skB(), #t@56);
+};
+
+Rule in cache: 12
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule cached at priority 0: 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+
+Rule in cache: 13
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise initFar(*[na@58], #ta@59);
+    @conclusion far(*[na@58], #t@60);
+    @constraint -#ta@59 + #t@60 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initFar(*[na@58], #ta@59);
+    @conclusion far(*[na@58], #t@60);
+    @constraint -#ta@59 + #t@60 >= 0;
+};
+
+Rule in cache: 14
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@61], #ta@62);
+    @conclusion near(*[na@61], #t@63);
+    @constraint -#ta@62 + #t@63 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@61], #ta@62);
+    @conclusion near(*[na@61], #t@63);
+    @constraint -#ta@62 + #t@63 >= 0;
+};
+
+Rule in cache: 15
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise initFar(*[na@64], #ta@65);
+    @premise ultraRecv(*sign([na@64], skB()), #tb@66);
+    @conclusion accept([na@64], #tb@66);
+    @constraint 2 * $s + #ta@65 - #tb@66 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initFar(*[na@64], #ta@65);
+    @premise ultraRecv(*sign([na@64], skB()), #tb@66);
+    @conclusion accept([na@64], #tb@66);
+    @constraint 2 * $s + #ta@65 - #tb@66 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Rule in cache: 16
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@67], #ta@68);
+    @premise ultraRecv(*sign([na@67], skB()), #tb@69);
+    @conclusion accept([na@67], #tb@69);
+    @constraint 2 * $s + #ta@68 - #tb@69 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@67], #ta@68);
+    @premise ultraRecv(*sign([na@67], skB()), #tb@69);
+    @conclusion accept([na@67], #tb@69);
+    @constraint 2 * $s + #ta@68 - #tb@69 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise near(*m@19, #t1@20);
+    @conclusion normalSend(*m@19, #t@21);
+    @constraint -#t1@20 + #t@21 >= 0;
+};
+Rule added at 0.
+
+Stage rule: 
+@rule{
+    @premise normalSend(*m@22, #t1@23);
+    @conclusion near(*m@22, #t@24);
+    @constraint -#t1@23 + #t@24 >= 0;
+};
+Rule added at 0.
+
+Stage rule: 
+@rule{
+    @premise near(*m@25, #t1@26);
+    @conclusion ultraNearSend(*m@25, #t@27);
+    @constraint -#t1@26 + #t@27 >= 0;
+};
+Rule added at 0.
+
+Stage rule: 
+@rule{
+    @premise ultraNearSend(*m@28, #ta@29);
+    @conclusion ultraRecv(*m@28, #tb@30);
+    @constraint -$s - #ta@29 + #tb@30 >= 0;
+};
+Rule added at 0.
+
+Stage rule: 
+@rule{
+    @premise far(*sk@31, #t1@32);
+    @conclusion far(*pk(sk@31), #t@33);
+    @constraint -#t1@32 + #t@33 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise far(*m@34, #t1@35);
+    @premise far(*sk@36, #t2@37);
+    @conclusion far(*sign(m@34, sk@36), #t@38);
+    @constraint -#t1@35 + #t@38 >= 0;
+    @constraint #t@38 - #t2@37 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise far(*sign(m@39, sk@40), #t1@41);
+    @conclusion far(*m@39, #t@42);
+    @constraint -#t1@41 + #t@42 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise far(*m@34, #t1@35);
+    @premise far(*sk@36, #t2@37);
+    @conclusion far(*sign(m@34, sk@36), #t@38);
+    @constraint -#t1@35 + #t@38 >= 0;
+    @constraint #t@38 - #t2@37 >= 0;
+};
+Rule in cache: 10
+Rule staged: 7
+Rule before check and clean: 
+@rule{
+    @premise far(*m@73, #t1@75);
+    @premise far(*sk@76, #t2@77);
+    @conclusion far(*m@73, #t@74);
+    @constraint #t@74 - #t@38 >= 0;
+    @constraint #t@38 - #t2@77 >= 0;
+    @constraint -#t1@75 + #t@38 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise far(*m@43, #t1@44);
+    @conclusion normalSend(*m@43, #t@45);
+    @constraint -#t1@44 + #t@45 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise normalSend(*m@22, #t1@23);
+    @conclusion near(*m@22, #t@24);
+    @constraint -#t1@23 + #t@24 >= 0;
+};
+Rule in cache: 9
+Rule staged: 8
+Rule before check and clean: 
+@rule{
+    @premise far(*m@78, #t1@80);
+    @conclusion near(*m@78, #t@79);
+    @constraint #t@79 - #t@45 >= 0;
+    @constraint -#t1@80 + #t@45 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*m@78, #t1@80);
+    @conclusion near(*m@78, #t@79);
+    @constraint #t@79 - #t1@80 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise normalSend(*m@46, #t1@47);
+    @conclusion far(*m@46, #t@48);
+    @constraint -#t1@47 + #t@48 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise far(*m@43, #t1@44);
+    @conclusion normalSend(*m@43, #t@45);
+    @constraint -#t1@44 + #t@45 >= 0;
+};
+Rule in cache: 9
+Rule staged: 9
+Rule before check and clean: 
+@rule{
+    @premise far(*m@81, #t1@83);
+    @conclusion far(*m@81, #t@82);
+    @constraint #t@82 - #t@45 >= 0;
+    @constraint -#t1@83 + #t@45 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise far(*m@49, #t1@50);
+    @conclusion ultraFarSend(*m@49, #t@51);
+    @constraint -#t1@50 + #t@51 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise ultraFarSend(*m@52, #ta@53);
+    @conclusion ultraRecv(*m@52, #tb@54);
+    @constraint -$l - #ta@53 + #tb@54 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise far(*m@49, #t1@50);
+    @conclusion ultraFarSend(*m@49, #t@51);
+    @constraint -#t1@50 + #t@51 >= 0;
+};
+Rule in cache: 7
+Rule staged: 11
+Rule before check and clean: 
+@rule{
+    @premise far(*m@84, #t1@86);
+    @conclusion ultraRecv(*m@84, #tb@85);
+    @constraint -$l + #tb@85 - #t@51 >= 0;
+    @constraint -#t1@86 + #t@51 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*m@84, #t1@86);
+    @conclusion ultraRecv(*m@84, #tb@85);
+    @constraint -$l + #tb@85 - #t1@86 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @conclusion near(*skB(), #t@56);
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise near(*m@19, #t1@20);
+    @conclusion normalSend(*m@19, #t@21);
+    @constraint -#t1@20 + #t@21 >= 0;
+};
+Rule in cache: 7
+Rule staged: 12
+Rule before check and clean: 
+@rule{
+    @conclusion normalSend(*skB(), #t@87);
+    @constraint -#t@56 + #t@87 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @conclusion normalSend(*skB(), #t@87);
+};
+
+Compose to at 0 : 
+@rule{
+    @premise near(*m@25, #t1@26);
+    @conclusion ultraNearSend(*m@25, #t@27);
+    @constraint -#t1@26 + #t@27 >= 0;
+};
+Rule in cache: 8
+Rule staged: 12
+Rule before check and clean: 
+@rule{
+    @conclusion ultraNearSend(*skB(), #t@88);
+    @constraint -#t@56 + #t@88 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @conclusion ultraNearSend(*skB(), #t@88);
+};
+
+Stage rule: 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise initFar(*[na@58], #ta@59);
+    @conclusion far(*[na@58], #t@60);
+    @constraint -#ta@59 + #t@60 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@61], #ta@62);
+    @conclusion near(*[na@61], #t@63);
+    @constraint -#ta@62 + #t@63 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise near(*m@19, #t1@20);
+    @conclusion normalSend(*m@19, #t@21);
+    @constraint -#t1@20 + #t@21 >= 0;
+};
+Rule in cache: 6
+Rule staged: 15
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@89], #ta@91);
+    @conclusion normalSend(*[na@89], #t@90);
+    @constraint #t@90 - #t@63 >= 0;
+    @constraint -#ta@91 + #t@63 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@89], #ta@91);
+    @conclusion normalSend(*[na@89], #t@90);
+    @constraint #t@90 - #ta@91 >= 0;
+};
+
+Compose to at 0 : 
+@rule{
+    @premise near(*m@25, #t1@26);
+    @conclusion ultraNearSend(*m@25, #t@27);
+    @constraint -#t1@26 + #t@27 >= 0;
+};
+Rule in cache: 7
+Rule staged: 15
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@92], #ta@94);
+    @conclusion ultraNearSend(*[na@92], #t@93);
+    @constraint #t@93 - #t@63 >= 0;
+    @constraint -#ta@94 + #t@63 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@92], #ta@94);
+    @conclusion ultraNearSend(*[na@92], #t@93);
+    @constraint #t@93 - #ta@94 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initFar(*[na@64], #ta@65);
+    @premise ultraRecv(*sign([na@64], skB()), #tb@66);
+    @conclusion accept([na@64], #tb@66);
+    @constraint 2 * $s + #ta@65 - #tb@66 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule added at 1.
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@67], #ta@68);
+    @premise ultraRecv(*sign([na@67], skB()), #tb@69);
+    @conclusion accept([na@67], #tb@69);
+    @constraint 2 * $s + #ta@68 - #tb@69 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule added at 1.
+
+Stage rule: 
+@rule{
+    @premise far(*m@78, #t1@80);
+    @conclusion near(*m@78, #t@79);
+    @constraint #t@79 - #t1@80 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise near(*m@19, #t1@20);
+    @conclusion normalSend(*m@19, #t@21);
+    @constraint -#t1@20 + #t@21 >= 0;
+};
+Rule in cache: 5
+Rule staged: 18
+Rule before check and clean: 
+@rule{
+    @premise far(*m@95, #t1@97);
+    @conclusion normalSend(*m@95, #t@96);
+    @constraint #t@79 - #t1@97 >= 0;
+    @constraint #t@96 - #t@79 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*m@95, #t1@97);
+    @conclusion normalSend(*m@95, #t@96);
+    @constraint #t@96 - #t1@97 >= 0;
+};
+
+Compose to at 0 : 
+@rule{
+    @premise near(*m@25, #t1@26);
+    @conclusion ultraNearSend(*m@25, #t@27);
+    @constraint -#t1@26 + #t@27 >= 0;
+};
+Rule in cache: 6
+Rule staged: 18
+Rule before check and clean: 
+@rule{
+    @premise far(*m@98, #t1@100);
+    @conclusion ultraNearSend(*m@98, #t@99);
+    @constraint #t@79 - #t1@100 >= 0;
+    @constraint #t@99 - #t@79 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*m@98, #t1@100);
+    @conclusion ultraNearSend(*m@98, #t@99);
+    @constraint #t@99 - #t1@100 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise far(*m@84, #t1@86);
+    @conclusion ultraRecv(*m@84, #tb@85);
+    @constraint -$l + #tb@85 - #t1@86 >= 0;
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise initFar(*[na@64], #ta@65);
+    @premise ultraRecv(*sign([na@64], skB()), #tb@66);
+    @conclusion accept([na@64], #tb@66);
+    @constraint 2 * $s + #ta@65 - #tb@66 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule in cache: 6
+Rule staged: 19
+Rule before check and clean: 
+@rule{
+    @premise far(*sign([na@101], skB()), #t1@103);
+    @premise initFar(*[na@101], #ta@104);
+    @conclusion accept([na@101], #tb@102);
+    @constraint -$l + #tb@102 - #t1@103 >= 0;
+    @constraint 2 * $s + #ta@104 - #tb@102 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*sign([na@101], skB()), #t1@103);
+    @premise initFar(*[na@101], #ta@104);
+    @conclusion accept([na@101], #tb@102);
+    @constraint -$l + #tb@102 - #t1@103 >= 0;
+    @constraint 2 * $s + #ta@104 - #tb@102 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Compose to at 1 : 
+@rule{
+    @premise initNear(*[na@67], #ta@68);
+    @premise ultraRecv(*sign([na@67], skB()), #tb@69);
+    @conclusion accept([na@67], #tb@69);
+    @constraint 2 * $s + #ta@68 - #tb@69 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule in cache: 7
+Rule staged: 19
+Rule before check and clean: 
+@rule{
+    @premise far(*sign([na@105], skB()), #t1@107);
+    @premise initNear(*[na@105], #ta@108);
+    @conclusion accept([na@105], #tb@106);
+    @constraint -$l + #tb@106 - #t1@107 >= 0;
+    @constraint 2 * $s + #ta@108 - #tb@106 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*sign([na@105], skB()), #t1@107);
+    @premise initNear(*[na@105], #ta@108);
+    @conclusion accept([na@105], #tb@106);
+    @constraint -$l + #tb@106 - #t1@107 >= 0;
+    @constraint 2 * $s + #ta@108 - #tb@106 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Stage rule: 
+@rule{
+    @conclusion normalSend(*skB(), #t@87);
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise normalSend(*m@22, #t1@23);
+    @conclusion near(*m@22, #t@24);
+    @constraint -#t1@23 + #t@24 >= 0;
+};
+Rule in cache: 7
+Rule staged: 20
+Rule before check and clean: 
+@rule{
+    @conclusion near(*skB(), #t@109);
+    @constraint #t@109 - #t@87 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @conclusion near(*skB(), #t@109);
+};
+
+Compose to at 0 : 
+@rule{
+    @premise normalSend(*m@46, #t1@47);
+    @conclusion far(*m@46, #t@48);
+    @constraint -#t1@47 + #t@48 >= 0;
+};
+Rule in cache: 8
+Rule staged: 20
+Rule before check and clean: 
+@rule{
+    @conclusion far(*skB(), #t@110);
+    @constraint #t@110 - #t@87 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @conclusion far(*skB(), #t@110);
+};
+
+Stage rule: 
+@rule{
+    @conclusion ultraNearSend(*skB(), #t@88);
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise ultraNearSend(*m@28, #ta@29);
+    @conclusion ultraRecv(*m@28, #tb@30);
+    @constraint -$s - #ta@29 + #tb@30 >= 0;
+};
+Rule in cache: 8
+Rule staged: 21
+Rule before check and clean: 
+@rule{
+    @conclusion ultraRecv(*skB(), #tb@111);
+    @constraint -$s + #tb@111 - #t@88 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @conclusion ultraRecv(*skB(), #tb@111);
+};
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@89], #ta@91);
+    @conclusion normalSend(*[na@89], #t@90);
+    @constraint #t@90 - #ta@91 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise normalSend(*m@22, #t1@23);
+    @conclusion near(*m@22, #t@24);
+    @constraint -#t1@23 + #t@24 >= 0;
+};
+Rule in cache: 8
+Rule staged: 22
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@112], #ta@114);
+    @conclusion near(*[na@112], #t@113);
+    @constraint #t@90 - #ta@114 >= 0;
+    @constraint #t@113 - #t@90 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@112], #ta@114);
+    @conclusion near(*[na@112], #t@113);
+    @constraint #t@113 - #ta@114 >= 0;
+};
+
+Compose to at 0 : 
+@rule{
+    @premise normalSend(*m@46, #t1@47);
+    @conclusion far(*m@46, #t@48);
+    @constraint -#t1@47 + #t@48 >= 0;
+};
+Rule in cache: 9
+Rule staged: 22
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@115], #ta@117);
+    @conclusion far(*[na@115], #t@116);
+    @constraint #t@90 - #ta@117 >= 0;
+    @constraint #t@116 - #t@90 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@115], #ta@117);
+    @conclusion far(*[na@115], #t@116);
+    @constraint #t@116 - #ta@117 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@92], #ta@94);
+    @conclusion ultraNearSend(*[na@92], #t@93);
+    @constraint #t@93 - #ta@94 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise ultraNearSend(*m@28, #ta@29);
+    @conclusion ultraRecv(*m@28, #tb@30);
+    @constraint -$s - #ta@29 + #tb@30 >= 0;
+};
+Rule in cache: 9
+Rule staged: 23
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@118], #ta@120);
+    @conclusion ultraRecv(*[na@118], #tb@119);
+    @constraint #t@93 - #ta@120 >= 0;
+    @constraint -$s + #tb@119 - #t@93 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@118], #ta@120);
+    @conclusion ultraRecv(*[na@118], #tb@119);
+    @constraint -$s + #tb@119 - #ta@120 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise far(*m@95, #t1@97);
+    @conclusion normalSend(*m@95, #t@96);
+    @constraint #t@96 - #t1@97 >= 0;
+};
+Rule implied by: 
+@rule{
+    @premise far(*m@43, #t1@44);
+    @conclusion normalSend(*m@43, #t@45);
+    @constraint -#t1@44 + #t@45 >= 0;
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise far(*m@98, #t1@100);
+    @conclusion ultraNearSend(*m@98, #t@99);
+    @constraint #t@99 - #t1@100 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise ultraNearSend(*m@28, #ta@29);
+    @conclusion ultraRecv(*m@28, #tb@30);
+    @constraint -$s - #ta@29 + #tb@30 >= 0;
+};
+Rule in cache: 8
+Rule staged: 24
+Rule before check and clean: 
+@rule{
+    @premise far(*m@121, #t1@123);
+    @conclusion ultraRecv(*m@121, #tb@122);
+    @constraint #t@99 - #t1@123 >= 0;
+    @constraint -$s + #tb@122 - #t@99 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*m@121, #t1@123);
+    @conclusion ultraRecv(*m@121, #tb@122);
+    @constraint -$s + #tb@122 - #t1@123 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise far(*sign([na@101], skB()), #t1@103);
+    @premise initFar(*[na@101], #ta@104);
+    @conclusion accept([na@101], #tb@102);
+    @constraint -$l + #tb@102 - #t1@103 >= 0;
+    @constraint 2 * $s + #ta@104 - #tb@102 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise far(*m@34, #t1@35);
+    @premise far(*sk@36, #t2@37);
+    @conclusion far(*sign(m@34, sk@36), #t@38);
+    @constraint -#t1@35 + #t@38 >= 0;
+    @constraint #t@38 - #t2@37 >= 0;
+};
+Rule in cache: 8
+Rule staged: 25
+Rule before check and clean: 
+@rule{
+    @premise far(*[na@124], #t1@126);
+    @premise far(*skB(), #t2@127);
+    @premise initFar(*[na@124], #ta@128);
+    @conclusion accept([na@124], #tb@125);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@128 - #tb@125 >= 0;
+    @constraint #t@38 - #t2@127 >= 0;
+    @constraint -#t1@126 + #t@38 >= 0;
+    @constraint -$l + #tb@125 - #t@38 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*[na@124], #t1@126);
+    @premise far(*skB(), #t2@127);
+    @premise initFar(*[na@124], #ta@128);
+    @conclusion accept([na@124], #tb@125);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@128 - #tb@125 >= 0;
+    @constraint -$l + #tb@125 - #t1@126 >= 0;
+    @constraint -$l + #tb@125 - #t2@127 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise far(*sign([na@105], skB()), #t1@107);
+    @premise initNear(*[na@105], #ta@108);
+    @conclusion accept([na@105], #tb@106);
+    @constraint -$l + #tb@106 - #t1@107 >= 0;
+    @constraint 2 * $s + #ta@108 - #tb@106 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise far(*m@34, #t1@35);
+    @premise far(*sk@36, #t2@37);
+    @conclusion far(*sign(m@34, sk@36), #t@38);
+    @constraint -#t1@35 + #t@38 >= 0;
+    @constraint #t@38 - #t2@37 >= 0;
+};
+Rule in cache: 8
+Rule staged: 26
+Rule before check and clean: 
+@rule{
+    @premise far(*[na@129], #t1@131);
+    @premise far(*skB(), #t2@132);
+    @premise initNear(*[na@129], #ta@133);
+    @conclusion accept([na@129], #tb@130);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@133 - #tb@130 >= 0;
+    @constraint #t@38 - #t2@132 >= 0;
+    @constraint -#t1@131 + #t@38 >= 0;
+    @constraint -$l + #tb@130 - #t@38 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*[na@129], #t1@131);
+    @premise far(*skB(), #t2@132);
+    @premise initNear(*[na@129], #ta@133);
+    @conclusion accept([na@129], #tb@130);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@133 - #tb@130 >= 0;
+    @constraint -$l + #tb@130 - #t1@131 >= 0;
+    @constraint -$l + #tb@130 - #t2@132 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @conclusion near(*skB(), #t@109);
+};
+Rule implied by: 
+@rule{
+    @conclusion near(*skB(), #t@56);
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @conclusion far(*skB(), #t@110);
+};
+Rule implied by: 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @conclusion ultraRecv(*skB(), #tb@111);
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@112], #ta@114);
+    @conclusion near(*[na@112], #t@113);
+    @constraint #t@113 - #ta@114 >= 0;
+};
+Rule implied by: 
+@rule{
+    @premise initNear(*[na@61], #ta@62);
+    @conclusion near(*[na@61], #t@63);
+    @constraint -#ta@62 + #t@63 >= 0;
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@115], #ta@117);
+    @conclusion far(*[na@115], #t@116);
+    @constraint #t@116 - #ta@117 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@118], #ta@120);
+    @conclusion ultraRecv(*[na@118], #tb@119);
+    @constraint -$s + #tb@119 - #ta@120 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise far(*m@121, #t1@123);
+    @conclusion ultraRecv(*m@121, #tb@122);
+    @constraint -$s + #tb@122 - #t1@123 >= 0;
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise initFar(*[na@64], #ta@65);
+    @premise ultraRecv(*sign([na@64], skB()), #tb@66);
+    @conclusion accept([na@64], #tb@66);
+    @constraint 2 * $s + #ta@65 - #tb@66 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule in cache: 2
+Rule staged: 30
+Rule before check and clean: 
+@rule{
+    @premise far(*sign([na@134], skB()), #t1@136);
+    @premise initFar(*[na@134], #ta@137);
+    @conclusion accept([na@134], #tb@135);
+    @constraint -$s + #tb@135 - #t1@136 >= 0;
+    @constraint 2 * $s + #ta@137 - #tb@135 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*sign([na@134], skB()), #t1@136);
+    @premise initFar(*[na@134], #ta@137);
+    @conclusion accept([na@134], #tb@135);
+    @constraint -$s + #tb@135 - #t1@136 >= 0;
+    @constraint 2 * $s + #ta@137 - #tb@135 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Compose to at 1 : 
+@rule{
+    @premise initNear(*[na@67], #ta@68);
+    @premise ultraRecv(*sign([na@67], skB()), #tb@69);
+    @conclusion accept([na@67], #tb@69);
+    @constraint 2 * $s + #ta@68 - #tb@69 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule in cache: 3
+Rule staged: 30
+Rule before check and clean: 
+@rule{
+    @premise far(*sign([na@138], skB()), #t1@140);
+    @premise initNear(*[na@138], #ta@141);
+    @conclusion accept([na@138], #tb@139);
+    @constraint -$s + #tb@139 - #t1@140 >= 0;
+    @constraint 2 * $s + #ta@141 - #tb@139 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*sign([na@138], skB()), #t1@140);
+    @premise initNear(*[na@138], #ta@141);
+    @conclusion accept([na@138], #tb@139);
+    @constraint -$s + #tb@139 - #t1@140 >= 0;
+    @constraint 2 * $s + #ta@141 - #tb@139 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise far(*[na@124], #t1@126);
+    @premise far(*skB(), #t2@127);
+    @premise initFar(*[na@124], #ta@128);
+    @conclusion accept([na@124], #tb@125);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@128 - #tb@125 >= 0;
+    @constraint -$l + #tb@125 - #t1@126 >= 0;
+    @constraint -$l + #tb@125 - #t2@127 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise initFar(*[na@58], #ta@59);
+    @conclusion far(*[na@58], #t@60);
+    @constraint -#ta@59 + #t@60 >= 0;
+};
+Rule in cache: 3
+Rule staged: 31
+Rule before check and clean: 
+@rule{
+    @premise initFar(*[na@142], #ta@144);
+    @premise far(*skB(), #t2@145);
+    @premise initFar(*[na@142], #ta@146);
+    @conclusion accept([na@142], #tb@143);
+    @constraint 2 * $s + #ta@146 - #tb@143 >= 0;
+    @constraint -#ta@144 + #t@60 >= 0;
+    @constraint -$l + #tb@143 - #t@60 >= 0;
+    @constraint -$l + #tb@143 - #t2@145 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initFar(*[na@142], #ta@144);
+    @premise far(*skB(), #t2@145);
+    @conclusion accept([na@142], #tb@143);
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$l + #tb@143 - #t2@145 >= 0;
+    @constraint 2 * $s - #tb@143 + #ta@144 >= 0;
+    @constraint -$l + #tb@143 - #ta@144 >= 0;
+};
+
+Compose by at 0 : 
+@rule{
+    @premise initNear(*[na@115], #ta@117);
+    @conclusion far(*[na@115], #t@116);
+    @constraint #t@116 - #ta@117 >= 0;
+};
+Rule in cache: 4
+Rule staged: 31
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@147], #ta@149);
+    @premise far(*skB(), #t2@150);
+    @premise initFar(*[na@147], #ta@151);
+    @conclusion accept([na@147], #tb@148);
+    @constraint 2 * $s + #ta@151 - #tb@148 >= 0;
+    @constraint #t@116 - #ta@149 >= 0;
+    @constraint -$l + #tb@148 - #t@116 >= 0;
+    @constraint -$l + #tb@148 - #t2@150 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@147], #ta@149);
+    @premise far(*skB(), #t2@150);
+    @premise initFar(*[na@147], #ta@151);
+    @conclusion accept([na@147], #tb@148);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@151 - #tb@148 >= 0;
+    @constraint -$l + #tb@148 - #t2@150 >= 0;
+    @constraint -$l + #tb@148 - #ta@149 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise far(*[na@129], #t1@131);
+    @premise far(*skB(), #t2@132);
+    @premise initNear(*[na@129], #ta@133);
+    @conclusion accept([na@129], #tb@130);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@133 - #tb@130 >= 0;
+    @constraint -$l + #tb@130 - #t1@131 >= 0;
+    @constraint -$l + #tb@130 - #t2@132 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise initFar(*[na@58], #ta@59);
+    @conclusion far(*[na@58], #t@60);
+    @constraint -#ta@59 + #t@60 >= 0;
+};
+Rule in cache: 4
+Rule staged: 32
+Rule before check and clean: 
+@rule{
+    @premise initFar(*[na@152], #ta@154);
+    @premise far(*skB(), #t2@155);
+    @premise initNear(*[na@152], #ta@156);
+    @conclusion accept([na@152], #tb@153);
+    @constraint 2 * $s + #ta@156 - #tb@153 >= 0;
+    @constraint -#ta@154 + #t@60 >= 0;
+    @constraint -$l + #tb@153 - #t@60 >= 0;
+    @constraint -$l + #tb@153 - #t2@155 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initFar(*[na@152], #ta@154);
+    @premise far(*skB(), #t2@155);
+    @premise initNear(*[na@152], #ta@156);
+    @conclusion accept([na@152], #tb@153);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@156 - #tb@153 >= 0;
+    @constraint -$l + #tb@153 - #t2@155 >= 0;
+    @constraint -$l + #tb@153 - #ta@154 >= 0;
+};
+
+Compose by at 0 : 
+@rule{
+    @premise initNear(*[na@115], #ta@117);
+    @conclusion far(*[na@115], #t@116);
+    @constraint #t@116 - #ta@117 >= 0;
+};
+Rule in cache: 5
+Rule staged: 32
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@157], #ta@159);
+    @premise far(*skB(), #t2@160);
+    @premise initNear(*[na@157], #ta@161);
+    @conclusion accept([na@157], #tb@158);
+    @constraint 2 * $s + #ta@161 - #tb@158 >= 0;
+    @constraint #t@116 - #ta@159 >= 0;
+    @constraint -$l + #tb@158 - #t@116 >= 0;
+    @constraint -$l + #tb@158 - #t2@160 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@157], #ta@159);
+    @premise far(*skB(), #t2@160);
+    @conclusion accept([na@157], #tb@158);
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$l + #tb@158 - #t2@160 >= 0;
+    @constraint 2 * $s - #tb@158 + #ta@159 >= 0;
+    @constraint -$l + #tb@158 - #ta@159 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise far(*sign([na@134], skB()), #t1@136);
+    @premise initFar(*[na@134], #ta@137);
+    @conclusion accept([na@134], #tb@135);
+    @constraint -$s + #tb@135 - #t1@136 >= 0;
+    @constraint 2 * $s + #ta@137 - #tb@135 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise far(*m@34, #t1@35);
+    @premise far(*sk@36, #t2@37);
+    @conclusion far(*sign(m@34, sk@36), #t@38);
+    @constraint -#t1@35 + #t@38 >= 0;
+    @constraint #t@38 - #t2@37 >= 0;
+};
+Rule in cache: 5
+Rule staged: 33
+Rule before check and clean: 
+@rule{
+    @premise far(*[na@162], #t1@164);
+    @premise far(*skB(), #t2@165);
+    @premise initFar(*[na@162], #ta@166);
+    @conclusion accept([na@162], #tb@163);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@166 - #tb@163 >= 0;
+    @constraint #t@38 - #t2@165 >= 0;
+    @constraint -#t1@164 + #t@38 >= 0;
+    @constraint -$s + #tb@163 - #t@38 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*[na@162], #t1@164);
+    @premise far(*skB(), #t2@165);
+    @premise initFar(*[na@162], #ta@166);
+    @conclusion accept([na@162], #tb@163);
+    @constraint 2 * $s + #ta@166 - #tb@163 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@163 - #t1@164 >= 0;
+    @constraint -$s + #tb@163 - #t2@165 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise far(*sign([na@138], skB()), #t1@140);
+    @premise initNear(*[na@138], #ta@141);
+    @conclusion accept([na@138], #tb@139);
+    @constraint -$s + #tb@139 - #t1@140 >= 0;
+    @constraint 2 * $s + #ta@141 - #tb@139 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise far(*m@34, #t1@35);
+    @premise far(*sk@36, #t2@37);
+    @conclusion far(*sign(m@34, sk@36), #t@38);
+    @constraint -#t1@35 + #t@38 >= 0;
+    @constraint #t@38 - #t2@37 >= 0;
+};
+Rule in cache: 5
+Rule staged: 34
+Rule before check and clean: 
+@rule{
+    @premise far(*[na@167], #t1@169);
+    @premise far(*skB(), #t2@170);
+    @premise initNear(*[na@167], #ta@171);
+    @conclusion accept([na@167], #tb@168);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@171 - #tb@168 >= 0;
+    @constraint #t@38 - #t2@170 >= 0;
+    @constraint -#t1@169 + #t@38 >= 0;
+    @constraint -$s + #tb@168 - #t@38 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise far(*[na@167], #t1@169);
+    @premise far(*skB(), #t2@170);
+    @premise initNear(*[na@167], #ta@171);
+    @conclusion accept([na@167], #tb@168);
+    @constraint 2 * $s + #ta@171 - #tb@168 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@168 - #t1@169 >= 0;
+    @constraint -$s + #tb@168 - #t2@170 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initFar(*[na@142], #ta@144);
+    @premise far(*skB(), #t2@145);
+    @conclusion accept([na@142], #tb@143);
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$l + #tb@143 - #t2@145 >= 0;
+    @constraint 2 * $s - #tb@143 + #ta@144 >= 0;
+    @constraint -$l + #tb@143 - #ta@144 >= 0;
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule in cache: 5
+Rule staged: 35
+Rule before check and clean: 
+@rule{
+    @premise initFar(*[na@172], #ta@174);
+    @conclusion accept([na@172], #tb@173);
+    @constraint -$l + #tb@173 - #t@57 >= 0;
+    @constraint -$l + #tb@173 - #ta@174 >= 0;
+    @constraint 2 * $s - #tb@173 + #ta@174 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initFar(*[na@172], #ta@174);
+    @conclusion accept([na@172], #tb@173);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s - #tb@173 + #ta@174 >= 0;
+    @constraint -$l + #tb@173 - #ta@174 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@147], #ta@149);
+    @premise far(*skB(), #t2@150);
+    @premise initFar(*[na@147], #ta@151);
+    @conclusion accept([na@147], #tb@148);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@151 - #tb@148 >= 0;
+    @constraint -$l + #tb@148 - #t2@150 >= 0;
+    @constraint -$l + #tb@148 - #ta@149 >= 0;
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule in cache: 5
+Rule staged: 36
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@175], #ta@177);
+    @premise initFar(*[na@175], #ta@178);
+    @conclusion accept([na@175], #tb@176);
+    @constraint -$l + #tb@176 - #t@57 >= 0;
+    @constraint -$l + #tb@176 - #ta@177 >= 0;
+    @constraint 2 * $s + #ta@178 - #tb@176 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@175], #ta@177);
+    @premise initFar(*[na@175], #ta@178);
+    @conclusion accept([na@175], #tb@176);
+    @constraint 2 * $s + #ta@178 - #tb@176 >= 0;
+    @constraint -$l + #tb@176 - #ta@177 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initFar(*[na@152], #ta@154);
+    @premise far(*skB(), #t2@155);
+    @premise initNear(*[na@152], #ta@156);
+    @conclusion accept([na@152], #tb@153);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@156 - #tb@153 >= 0;
+    @constraint -$l + #tb@153 - #t2@155 >= 0;
+    @constraint -$l + #tb@153 - #ta@154 >= 0;
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule in cache: 5
+Rule staged: 37
+Rule before check and clean: 
+@rule{
+    @premise initFar(*[na@179], #ta@181);
+    @premise initNear(*[na@179], #ta@182);
+    @conclusion accept([na@179], #tb@180);
+    @constraint -$l + #tb@180 - #t@57 >= 0;
+    @constraint -$l + #tb@180 - #ta@181 >= 0;
+    @constraint 2 * $s + #ta@182 - #tb@180 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initFar(*[na@179], #ta@181);
+    @premise initNear(*[na@179], #ta@182);
+    @conclusion accept([na@179], #tb@180);
+    @constraint 2 * $s + #ta@182 - #tb@180 >= 0;
+    @constraint -$l + #tb@180 - #ta@181 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@157], #ta@159);
+    @premise far(*skB(), #t2@160);
+    @conclusion accept([na@157], #tb@158);
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$l + #tb@158 - #t2@160 >= 0;
+    @constraint 2 * $s - #tb@158 + #ta@159 >= 0;
+    @constraint -$l + #tb@158 - #ta@159 >= 0;
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule in cache: 5
+Rule staged: 38
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@183], #ta@185);
+    @conclusion accept([na@183], #tb@184);
+    @constraint -$l + #tb@184 - #t@57 >= 0;
+    @constraint -$l + #tb@184 - #ta@185 >= 0;
+    @constraint 2 * $s - #tb@184 + #ta@185 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@183], #ta@185);
+    @conclusion accept([na@183], #tb@184);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s - #tb@184 + #ta@185 >= 0;
+    @constraint -$l + #tb@184 - #ta@185 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise far(*[na@162], #t1@164);
+    @premise far(*skB(), #t2@165);
+    @premise initFar(*[na@162], #ta@166);
+    @conclusion accept([na@162], #tb@163);
+    @constraint 2 * $s + #ta@166 - #tb@163 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@163 - #t1@164 >= 0;
+    @constraint -$s + #tb@163 - #t2@165 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise initFar(*[na@58], #ta@59);
+    @conclusion far(*[na@58], #t@60);
+    @constraint -#ta@59 + #t@60 >= 0;
+};
+Rule in cache: 5
+Rule staged: 39
+Rule before check and clean: 
+@rule{
+    @premise initFar(*[na@186], #ta@188);
+    @premise far(*skB(), #t2@189);
+    @premise initFar(*[na@186], #ta@190);
+    @conclusion accept([na@186], #tb@187);
+    @constraint 2 * $s + #ta@190 - #tb@187 >= 0;
+    @constraint -#ta@188 + #t@60 >= 0;
+    @constraint -$s + #tb@187 - #t@60 >= 0;
+    @constraint -$s + #tb@187 - #t2@189 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initFar(*[na@186], #ta@188);
+    @premise far(*skB(), #t2@189);
+    @conclusion accept([na@186], #tb@187);
+    @constraint 2 * $s - #tb@187 + #ta@188 >= 0;
+    @constraint -$s + #tb@187 - #ta@188 >= 0;
+    @constraint -$s + #tb@187 - #t2@189 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Compose by at 0 : 
+@rule{
+    @premise initNear(*[na@115], #ta@117);
+    @conclusion far(*[na@115], #t@116);
+    @constraint #t@116 - #ta@117 >= 0;
+};
+Rule in cache: 6
+Rule staged: 39
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@191], #ta@193);
+    @premise far(*skB(), #t2@194);
+    @premise initFar(*[na@191], #ta@195);
+    @conclusion accept([na@191], #tb@192);
+    @constraint 2 * $s + #ta@195 - #tb@192 >= 0;
+    @constraint #t@116 - #ta@193 >= 0;
+    @constraint -$s + #tb@192 - #t@116 >= 0;
+    @constraint -$s + #tb@192 - #t2@194 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@191], #ta@193);
+    @premise far(*skB(), #t2@194);
+    @premise initFar(*[na@191], #ta@195);
+    @conclusion accept([na@191], #tb@192);
+    @constraint 2 * $s + #ta@195 - #tb@192 >= 0;
+    @constraint -$s + #tb@192 - #t2@194 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@192 - #ta@193 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise far(*[na@167], #t1@169);
+    @premise far(*skB(), #t2@170);
+    @premise initNear(*[na@167], #ta@171);
+    @conclusion accept([na@167], #tb@168);
+    @constraint 2 * $s + #ta@171 - #tb@168 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@168 - #t1@169 >= 0;
+    @constraint -$s + #tb@168 - #t2@170 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise initFar(*[na@58], #ta@59);
+    @conclusion far(*[na@58], #t@60);
+    @constraint -#ta@59 + #t@60 >= 0;
+};
+Rule in cache: 6
+Rule staged: 40
+Rule before check and clean: 
+@rule{
+    @premise initFar(*[na@196], #ta@198);
+    @premise far(*skB(), #t2@199);
+    @premise initNear(*[na@196], #ta@200);
+    @conclusion accept([na@196], #tb@197);
+    @constraint 2 * $s + #ta@200 - #tb@197 >= 0;
+    @constraint -#ta@198 + #t@60 >= 0;
+    @constraint -$s + #tb@197 - #t@60 >= 0;
+    @constraint -$s + #tb@197 - #t2@199 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initFar(*[na@196], #ta@198);
+    @premise far(*skB(), #t2@199);
+    @premise initNear(*[na@196], #ta@200);
+    @conclusion accept([na@196], #tb@197);
+    @constraint 2 * $s + #ta@200 - #tb@197 >= 0;
+    @constraint -$s + #tb@197 - #t2@199 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@197 - #ta@198 >= 0;
+};
+
+Compose by at 0 : 
+@rule{
+    @premise initNear(*[na@115], #ta@117);
+    @conclusion far(*[na@115], #t@116);
+    @constraint #t@116 - #ta@117 >= 0;
+};
+Rule in cache: 7
+Rule staged: 40
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@201], #ta@203);
+    @premise far(*skB(), #t2@204);
+    @premise initNear(*[na@201], #ta@205);
+    @conclusion accept([na@201], #tb@202);
+    @constraint 2 * $s + #ta@205 - #tb@202 >= 0;
+    @constraint #t@116 - #ta@203 >= 0;
+    @constraint -$s + #tb@202 - #t@116 >= 0;
+    @constraint -$s + #tb@202 - #t2@204 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@201], #ta@203);
+    @premise far(*skB(), #t2@204);
+    @conclusion accept([na@201], #tb@202);
+    @constraint 2 * $s - #tb@202 + #ta@203 >= 0;
+    @constraint -$s + #tb@202 - #ta@203 >= 0;
+    @constraint -$s + #tb@202 - #t2@204 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initFar(*[na@172], #ta@174);
+    @conclusion accept([na@172], #tb@173);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s - #tb@173 + #ta@174 >= 0;
+    @constraint -$l + #tb@173 - #ta@174 >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise initFar(*[na@142], #ta@144);
+    @premise far(*skB(), #t2@145);
+    @conclusion accept([na@142], #tb@143);
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$l + #tb@143 - #t2@145 >= 0;
+    @constraint 2 * $s - #tb@143 + #ta@144 >= 0;
+    @constraint -$l + #tb@143 - #ta@144 >= 0;
+};
+Rule added.
+
+Check rule against queries: 
+@rule{
+    @premise initFar(*[na@172], #ta@174);
+    @conclusion accept([na@172], #tb@173);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s - #tb@173 + #ta@174 >= 0;
+    @constraint -$l + #tb@173 - #ta@174 >= 0;
+};
+Before checking:
+0. Requested parameter relation:
+[@universe]
+
+After checking:
+0. Requested parameter relation:
+-3 * $s + $l > 0
+
+1. Requested parameter relation:
+-2 * $s + $l > 0
+
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@175], #ta@177);
+    @premise initFar(*[na@175], #ta@178);
+    @conclusion accept([na@175], #tb@176);
+    @constraint 2 * $s + #ta@178 - #tb@176 >= 0;
+    @constraint -$l + #tb@176 - #ta@177 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise initNear(*[na@147], #ta@149);
+    @premise far(*skB(), #t2@150);
+    @premise initFar(*[na@147], #ta@151);
+    @conclusion accept([na@147], #tb@148);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@151 - #tb@148 >= 0;
+    @constraint -$l + #tb@148 - #t2@150 >= 0;
+    @constraint -$l + #tb@148 - #ta@149 >= 0;
+};
+Rule added.
+
+Check rule against queries: 
+@rule{
+    @premise initNear(*[na@175], #ta@177);
+    @premise initFar(*[na@175], #ta@178);
+    @conclusion accept([na@175], #tb@176);
+    @constraint 2 * $s + #ta@178 - #tb@176 >= 0;
+    @constraint -$l + #tb@176 - #ta@177 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Before checking:
+0. Requested parameter relation:
+-3 * $s + $l > 0
+
+1. Requested parameter relation:
+-2 * $s + $l > 0
+
+After checking:
+0. Requested parameter relation:
+-3 * $s + $l > 0
+
+1. Requested parameter relation:
+-2 * $s + $l > 0
+
+
+Stage rule: 
+@rule{
+    @premise initFar(*[na@179], #ta@181);
+    @premise initNear(*[na@179], #ta@182);
+    @conclusion accept([na@179], #tb@180);
+    @constraint 2 * $s + #ta@182 - #tb@180 >= 0;
+    @constraint -$l + #tb@180 - #ta@181 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise initFar(*[na@152], #ta@154);
+    @premise far(*skB(), #t2@155);
+    @premise initNear(*[na@152], #ta@156);
+    @conclusion accept([na@152], #tb@153);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@156 - #tb@153 >= 0;
+    @constraint -$l + #tb@153 - #t2@155 >= 0;
+    @constraint -$l + #tb@153 - #ta@154 >= 0;
+};
+Rule added.
+
+Check rule against queries: 
+@rule{
+    @premise initFar(*[na@179], #ta@181);
+    @premise initNear(*[na@179], #ta@182);
+    @conclusion accept([na@179], #tb@180);
+    @constraint 2 * $s + #ta@182 - #tb@180 >= 0;
+    @constraint -$l + #tb@180 - #ta@181 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Before checking:
+0. Requested parameter relation:
+-3 * $s + $l > 0
+
+1. Requested parameter relation:
+-2 * $s + $l > 0
+
+After checking:
+0. Requested parameter relation:
+-3 * $s + $l > 0
+
+1. Requested parameter relation:
+-2 * $s + $l > 0
+
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@183], #ta@185);
+    @conclusion accept([na@183], #tb@184);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s - #tb@184 + #ta@185 >= 0;
+    @constraint -$l + #tb@184 - #ta@185 >= 0;
+};
+Rule's zone is empty considering the global zones: 
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise initFar(*[na@186], #ta@188);
+    @premise far(*skB(), #t2@189);
+    @conclusion accept([na@186], #tb@187);
+    @constraint 2 * $s - #tb@187 + #ta@188 >= 0;
+    @constraint -$s + #tb@187 - #ta@188 >= 0;
+    @constraint -$s + #tb@187 - #t2@189 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule in cache: 3
+Rule staged: 44
+Rule before check and clean: 
+@rule{
+    @premise initFar(*[na@206], #ta@208);
+    @conclusion accept([na@206], #tb@207);
+    @constraint -$s + #tb@207 - #t@57 >= 0;
+    @constraint -$s + #tb@207 - #ta@208 >= 0;
+    @constraint 2 * $s - #tb@207 + #ta@208 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initFar(*[na@206], #ta@208);
+    @conclusion accept([na@206], #tb@207);
+    @constraint 2 * $s - #tb@207 + #ta@208 >= 0;
+    @constraint -$s + #tb@207 - #ta@208 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@191], #ta@193);
+    @premise far(*skB(), #t2@194);
+    @premise initFar(*[na@191], #ta@195);
+    @conclusion accept([na@191], #tb@192);
+    @constraint 2 * $s + #ta@195 - #tb@192 >= 0;
+    @constraint -$s + #tb@192 - #t2@194 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@192 - #ta@193 >= 0;
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule in cache: 3
+Rule staged: 45
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@209], #ta@211);
+    @premise initFar(*[na@209], #ta@212);
+    @conclusion accept([na@209], #tb@210);
+    @constraint -$s + #tb@210 - #t@57 >= 0;
+    @constraint -$s + #tb@210 - #ta@211 >= 0;
+    @constraint 2 * $s + #ta@212 - #tb@210 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@209], #ta@211);
+    @premise initFar(*[na@209], #ta@212);
+    @conclusion accept([na@209], #tb@210);
+    @constraint 2 * $s + #ta@212 - #tb@210 >= 0;
+    @constraint -$s + #tb@210 - #ta@211 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initFar(*[na@196], #ta@198);
+    @premise far(*skB(), #t2@199);
+    @premise initNear(*[na@196], #ta@200);
+    @conclusion accept([na@196], #tb@197);
+    @constraint 2 * $s + #ta@200 - #tb@197 >= 0;
+    @constraint -$s + #tb@197 - #t2@199 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@197 - #ta@198 >= 0;
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule in cache: 3
+Rule staged: 46
+Rule before check and clean: 
+@rule{
+    @premise initFar(*[na@213], #ta@215);
+    @premise initNear(*[na@213], #ta@216);
+    @conclusion accept([na@213], #tb@214);
+    @constraint -$s + #tb@214 - #t@57 >= 0;
+    @constraint -$s + #tb@214 - #ta@215 >= 0;
+    @constraint 2 * $s + #ta@216 - #tb@214 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initFar(*[na@213], #ta@215);
+    @premise initNear(*[na@213], #ta@216);
+    @conclusion accept([na@213], #tb@214);
+    @constraint 2 * $s + #ta@216 - #tb@214 >= 0;
+    @constraint -$s + #tb@214 - #ta@215 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@201], #ta@203);
+    @premise far(*skB(), #t2@204);
+    @conclusion accept([na@201], #tb@202);
+    @constraint 2 * $s - #tb@202 + #ta@203 >= 0;
+    @constraint -$s + #tb@202 - #ta@203 >= 0;
+    @constraint -$s + #tb@202 - #t2@204 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+Rule in cache: 3
+Rule staged: 47
+Rule before check and clean: 
+@rule{
+    @premise initNear(*[na@217], #ta@219);
+    @conclusion accept([na@217], #tb@218);
+    @constraint -$s + #tb@218 - #t@57 >= 0;
+    @constraint -$s + #tb@218 - #ta@219 >= 0;
+    @constraint 2 * $s - #tb@218 + #ta@219 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise initNear(*[na@217], #ta@219);
+    @conclusion accept([na@217], #tb@218);
+    @constraint 2 * $s - #tb@218 + #ta@219 >= 0;
+    @constraint -$s + #tb@218 - #ta@219 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initFar(*[na@206], #ta@208);
+    @conclusion accept([na@206], #tb@207);
+    @constraint 2 * $s - #tb@207 + #ta@208 >= 0;
+    @constraint -$s + #tb@207 - #ta@208 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise initFar(*[na@186], #ta@188);
+    @premise far(*skB(), #t2@189);
+    @conclusion accept([na@186], #tb@187);
+    @constraint 2 * $s - #tb@187 + #ta@188 >= 0;
+    @constraint -$s + #tb@187 - #ta@188 >= 0;
+    @constraint -$s + #tb@187 - #t2@189 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule added.
+
+Check rule against queries: 
+@rule{
+    @premise initFar(*[na@206], #ta@208);
+    @conclusion accept([na@206], #tb@207);
+    @constraint 2 * $s - #tb@207 + #ta@208 >= 0;
+    @constraint -$s + #tb@207 - #ta@208 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Before checking:
+0. Requested parameter relation:
+-3 * $s + $l > 0
+
+1. Requested parameter relation:
+-2 * $s + $l > 0
+
+After checking:
+0. Requested parameter relation:
+-3 * $s + $l > 0
+-$s > 0
+
+1. Requested parameter relation:
+-3 * $s + $l > 0
+
+2. Requested parameter relation:
+-2 * $s + $l > 0
+-$s > 0
+
+3. Requested parameter relation:
+-2 * $s + $l > 0
+-3 * $s + $l > 0
+
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@209], #ta@211);
+    @premise initFar(*[na@209], #ta@212);
+    @conclusion accept([na@209], #tb@210);
+    @constraint 2 * $s + #ta@212 - #tb@210 >= 0;
+    @constraint -$s + #tb@210 - #ta@211 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule's zone is empty considering the global zones: 
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise initFar(*[na@213], #ta@215);
+    @premise initNear(*[na@213], #ta@216);
+    @conclusion accept([na@213], #tb@214);
+    @constraint 2 * $s + #ta@216 - #tb@214 >= 0;
+    @constraint -$s + #tb@214 - #ta@215 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule's zone is empty considering the global zones: 
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise initNear(*[na@217], #ta@219);
+    @conclusion accept([na@217], #tb@218);
+    @constraint 2 * $s - #tb@218 + #ta@219 >= 0;
+    @constraint -$s + #tb@218 - #ta@219 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+Rule's zone is empty considering the global zones: 
+Rule not added.
+
+Details:
+General Rules: 
+Rule No. [0.0]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise near(*m@19, #t1@20);
+    @conclusion normalSend(*m@19, #t@21);
+    @constraint -#t1@20 + #t@21 >= 0;
+};
+
+Rule No. [0.1]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise normalSend(*m@22, #t1@23);
+    @conclusion near(*m@22, #t@24);
+    @constraint -#t1@23 + #t@24 >= 0;
+};
+
+Rule No. [0.2]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise near(*m@25, #t1@26);
+    @conclusion ultraNearSend(*m@25, #t@27);
+    @constraint -#t1@26 + #t@27 >= 0;
+};
+
+Rule No. [0.3]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise ultraNearSend(*m@28, #ta@29);
+    @conclusion ultraRecv(*m@28, #tb@30);
+    @constraint -$s - #ta@29 + #tb@30 >= 0;
+};
+
+Rule No. [0.4]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise far(*sk@31, #t1@32);
+    @conclusion far(*pk(sk@31), #t@33);
+    @constraint -#t1@32 + #t@33 >= 0;
+};
+
+Rule No. [0.5]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise far(*m@34, #t1@35);
+    @premise far(*sk@36, #t2@37);
+    @conclusion far(*sign(m@34, sk@36), #t@38);
+    @constraint -#t1@35 + #t@38 >= 0;
+    @constraint #t@38 - #t2@37 >= 0;
+};
+
+Rule No. [0.6]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise far(*sign(m@39, sk@40), #t1@41);
+    @conclusion far(*m@39, #t@42);
+    @constraint -#t1@41 + #t@42 >= 0;
+};
+
+Rule No. [0.7]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise far(*m@43, #t1@44);
+    @conclusion normalSend(*m@43, #t@45);
+    @constraint -#t1@44 + #t@45 >= 0;
+};
+
+Rule No. [0.8]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise normalSend(*m@46, #t1@47);
+    @conclusion far(*m@46, #t@48);
+    @constraint -#t1@47 + #t@48 >= 0;
+};
+
+Rule No. [0.9]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise far(*m@49, #t1@50);
+    @conclusion ultraFarSend(*m@49, #t@51);
+    @constraint -#t1@50 + #t@51 >= 0;
+};
+
+Rule No. [0.10]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise ultraFarSend(*m@52, #ta@53);
+    @conclusion ultraRecv(*m@52, #tb@54);
+    @constraint -$l - #ta@53 + #tb@54 >= 0;
+};
+
+Rule No. [0.11]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @conclusion near(*skB(), #t@56);
+};
+
+Rule No. [0.12]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @conclusion far(*skB(), #t@57);
+};
+
+Rule No. [0.13]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise initFar(*[na@58], #ta@59);
+    @conclusion far(*[na@58], #t@60);
+    @constraint -#ta@59 + #t@60 >= 0;
+};
+
+Rule No. [0.14]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise initNear(*[na@61], #ta@62);
+    @conclusion near(*[na@61], #t@63);
+    @constraint -#ta@62 + #t@63 >= 0;
+};
+
+Rule No. [0.15]
+Valid Rule
+Intial Rule
+Selectable at 1:
+@rule{
+    @premise initFar(*[na@64], #ta@65);
+    @premise ultraRecv(*sign([na@64], skB()), #tb@66);
+    @conclusion accept([na@64], #tb@66);
+    @constraint 2 * $s + #ta@65 - #tb@66 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Rule No. [0.16]
+Valid Rule
+Intial Rule
+Selectable at 1:
+@rule{
+    @premise initNear(*[na@67], #ta@68);
+    @premise ultraRecv(*sign([na@67], skB()), #tb@69);
+    @conclusion accept([na@67], #tb@69);
+    @constraint 2 * $s + #ta@68 - #tb@69 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Rule No. [0.17]
+Valid Rule
+Composed by Rule [0.7] and [0.1]
+Not Selectable : 
+@rule{
+    @premise far(*m@78, #t1@80);
+    @conclusion near(*m@78, #t@79);
+    @constraint #t@79 - #t1@80 >= 0;
+};
+
+Rule No. [0.18]
+Valid Rule
+Composed by Rule [0.9] and [0.10]
+Not Selectable : 
+@rule{
+    @premise far(*m@84, #t1@86);
+    @conclusion ultraRecv(*m@84, #tb@85);
+    @constraint -$l + #tb@85 - #t1@86 >= 0;
+};
+
+Rule No. [0.19]
+Valid Rule
+Composed by Rule [0.11] and [0.0]
+Not Selectable : 
+@rule{
+    @conclusion normalSend(*skB(), #t@87);
+};
+
+Rule No. [0.20]
+Valid Rule
+Composed by Rule [0.11] and [0.2]
+Not Selectable : 
+@rule{
+    @conclusion ultraNearSend(*skB(), #t@88);
+};
+
+Rule No. [0.21]
+Valid Rule
+Composed by Rule [0.14] and [0.0]
+Not Selectable : 
+@rule{
+    @premise initNear(*[na@89], #ta@91);
+    @conclusion normalSend(*[na@89], #t@90);
+    @constraint #t@90 - #ta@91 >= 0;
+};
+
+Rule No. [0.22]
+Valid Rule
+Composed by Rule [0.14] and [0.2]
+Not Selectable : 
+@rule{
+    @premise initNear(*[na@92], #ta@94);
+    @conclusion ultraNearSend(*[na@92], #t@93);
+    @constraint #t@93 - #ta@94 >= 0;
+};
+
+Rule No. [0.23]
+Valid Rule
+Composed by Rule [0.17] and [0.2]
+Not Selectable : 
+@rule{
+    @premise far(*m@98, #t1@100);
+    @conclusion ultraNearSend(*m@98, #t@99);
+    @constraint #t@99 - #t1@100 >= 0;
+};
+
+Rule No. [0.24]
+Valid Rule
+Composed by Rule [0.18] and [0.15]
+Selectable at 0:
+@rule{
+    @premise far(*sign([na@101], skB()), #t1@103);
+    @premise initFar(*[na@101], #ta@104);
+    @conclusion accept([na@101], #tb@102);
+    @constraint -$l + #tb@102 - #t1@103 >= 0;
+    @constraint 2 * $s + #ta@104 - #tb@102 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Rule No. [0.25]
+Valid Rule
+Composed by Rule [0.18] and [0.16]
+Selectable at 0:
+@rule{
+    @premise far(*sign([na@105], skB()), #t1@107);
+    @premise initNear(*[na@105], #ta@108);
+    @conclusion accept([na@105], #tb@106);
+    @constraint -$l + #tb@106 - #t1@107 >= 0;
+    @constraint 2 * $s + #ta@108 - #tb@106 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Rule No. [0.26]
+Valid Rule
+Composed by Rule [0.20] and [0.3]
+Not Selectable : 
+@rule{
+    @conclusion ultraRecv(*skB(), #tb@111);
+};
+
+Rule No. [0.27]
+Valid Rule
+Composed by Rule [0.21] and [0.8]
+Not Selectable : 
+@rule{
+    @premise initNear(*[na@115], #ta@117);
+    @conclusion far(*[na@115], #t@116);
+    @constraint #t@116 - #ta@117 >= 0;
+};
+
+Rule No. [0.28]
+Valid Rule
+Composed by Rule [0.22] and [0.3]
+Not Selectable : 
+@rule{
+    @premise initNear(*[na@118], #ta@120);
+    @conclusion ultraRecv(*[na@118], #tb@119);
+    @constraint -$s + #tb@119 - #ta@120 >= 0;
+};
+
+Rule No. [0.29]
+Valid Rule
+Composed by Rule [0.23] and [0.3]
+Not Selectable : 
+@rule{
+    @premise far(*m@121, #t1@123);
+    @conclusion ultraRecv(*m@121, #tb@122);
+    @constraint -$s + #tb@122 - #t1@123 >= 0;
+};
+
+Rule No. [0.30]
+Valid Rule
+Composed by Rule [0.5] and [0.24]
+Selectable at 0:
+@rule{
+    @premise far(*[na@124], #t1@126);
+    @premise far(*skB(), #t2@127);
+    @premise initFar(*[na@124], #ta@128);
+    @conclusion accept([na@124], #tb@125);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@128 - #tb@125 >= 0;
+    @constraint -$l + #tb@125 - #t1@126 >= 0;
+    @constraint -$l + #tb@125 - #t2@127 >= 0;
+};
+
+Rule No. [0.31]
+Valid Rule
+Composed by Rule [0.5] and [0.25]
+Selectable at 0:
+@rule{
+    @premise far(*[na@129], #t1@131);
+    @premise far(*skB(), #t2@132);
+    @premise initNear(*[na@129], #ta@133);
+    @conclusion accept([na@129], #tb@130);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@133 - #tb@130 >= 0;
+    @constraint -$l + #tb@130 - #t1@131 >= 0;
+    @constraint -$l + #tb@130 - #t2@132 >= 0;
+};
+
+Rule No. [0.32]
+Valid Rule
+Composed by Rule [0.29] and [0.15]
+Selectable at 0:
+@rule{
+    @premise far(*sign([na@134], skB()), #t1@136);
+    @premise initFar(*[na@134], #ta@137);
+    @conclusion accept([na@134], #tb@135);
+    @constraint -$s + #tb@135 - #t1@136 >= 0;
+    @constraint 2 * $s + #ta@137 - #tb@135 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Rule No. [0.33]
+Valid Rule
+Composed by Rule [0.29] and [0.16]
+Selectable at 0:
+@rule{
+    @premise far(*sign([na@138], skB()), #t1@140);
+    @premise initNear(*[na@138], #ta@141);
+    @conclusion accept([na@138], #tb@139);
+    @constraint -$s + #tb@139 - #t1@140 >= 0;
+    @constraint 2 * $s + #ta@141 - #tb@139 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Rule No. [0.34]
+Replaced by Rule [0.40]
+Composed by Rule [0.13] and [0.30]
+Selectable at 1:
+@rule{
+    @premise initFar(*[na@142], #ta@144);
+    @premise far(*skB(), #t2@145);
+    @conclusion accept([na@142], #tb@143);
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$l + #tb@143 - #t2@145 >= 0;
+    @constraint 2 * $s - #tb@143 + #ta@144 >= 0;
+    @constraint -$l + #tb@143 - #ta@144 >= 0;
+};
+
+Rule No. [0.35]
+Replaced by Rule [0.41]
+Composed by Rule [0.27] and [0.30]
+Selectable at 1:
+@rule{
+    @premise initNear(*[na@147], #ta@149);
+    @premise far(*skB(), #t2@150);
+    @premise initFar(*[na@147], #ta@151);
+    @conclusion accept([na@147], #tb@148);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@151 - #tb@148 >= 0;
+    @constraint -$l + #tb@148 - #t2@150 >= 0;
+    @constraint -$l + #tb@148 - #ta@149 >= 0;
+};
+
+Rule No. [0.36]
+Replaced by Rule [0.42]
+Composed by Rule [0.13] and [0.31]
+Selectable at 1:
+@rule{
+    @premise initFar(*[na@152], #ta@154);
+    @premise far(*skB(), #t2@155);
+    @premise initNear(*[na@152], #ta@156);
+    @conclusion accept([na@152], #tb@153);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s + #ta@156 - #tb@153 >= 0;
+    @constraint -$l + #tb@153 - #t2@155 >= 0;
+    @constraint -$l + #tb@153 - #ta@154 >= 0;
+};
+
+Rule No. [0.37]
+Valid Rule
+Composed by Rule [0.27] and [0.31]
+Selectable at 1:
+@rule{
+    @premise initNear(*[na@157], #ta@159);
+    @premise far(*skB(), #t2@160);
+    @conclusion accept([na@157], #tb@158);
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$l + #tb@158 - #t2@160 >= 0;
+    @constraint 2 * $s - #tb@158 + #ta@159 >= 0;
+    @constraint -$l + #tb@158 - #ta@159 >= 0;
+};
+
+Rule No. [0.38]
+Valid Rule
+Composed by Rule [0.5] and [0.32]
+Selectable at 0:
+@rule{
+    @premise far(*[na@162], #t1@164);
+    @premise far(*skB(), #t2@165);
+    @premise initFar(*[na@162], #ta@166);
+    @conclusion accept([na@162], #tb@163);
+    @constraint 2 * $s + #ta@166 - #tb@163 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@163 - #t1@164 >= 0;
+    @constraint -$s + #tb@163 - #t2@165 >= 0;
+};
+
+Rule No. [0.39]
+Valid Rule
+Composed by Rule [0.5] and [0.33]
+Selectable at 0:
+@rule{
+    @premise far(*[na@167], #t1@169);
+    @premise far(*skB(), #t2@170);
+    @premise initNear(*[na@167], #ta@171);
+    @conclusion accept([na@167], #tb@168);
+    @constraint 2 * $s + #ta@171 - #tb@168 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@168 - #t1@169 >= 0;
+    @constraint -$s + #tb@168 - #t2@170 >= 0;
+};
+
+Rule No. [0.43]
+Replaced by Rule [0.47]
+Composed by Rule [0.13] and [0.38]
+Selectable at 1:
+@rule{
+    @premise initFar(*[na@186], #ta@188);
+    @premise far(*skB(), #t2@189);
+    @conclusion accept([na@186], #tb@187);
+    @constraint 2 * $s - #tb@187 + #ta@188 >= 0;
+    @constraint -$s + #tb@187 - #ta@188 >= 0;
+    @constraint -$s + #tb@187 - #t2@189 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+Rule No. [0.44]
+Valid Rule
+Composed by Rule [0.27] and [0.38]
+Selectable at 1:
+@rule{
+    @premise initNear(*[na@191], #ta@193);
+    @premise far(*skB(), #t2@194);
+    @premise initFar(*[na@191], #ta@195);
+    @conclusion accept([na@191], #tb@192);
+    @constraint 2 * $s + #ta@195 - #tb@192 >= 0;
+    @constraint -$s + #tb@192 - #t2@194 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@192 - #ta@193 >= 0;
+};
+
+Rule No. [0.45]
+Valid Rule
+Composed by Rule [0.13] and [0.39]
+Selectable at 1:
+@rule{
+    @premise initFar(*[na@196], #ta@198);
+    @premise far(*skB(), #t2@199);
+    @premise initNear(*[na@196], #ta@200);
+    @conclusion accept([na@196], #tb@197);
+    @constraint 2 * $s + #ta@200 - #tb@197 >= 0;
+    @constraint -$s + #tb@197 - #t2@199 >= 0;
+    @constraint 3 * $s - $l >= 0;
+    @constraint -$s + #tb@197 - #ta@198 >= 0;
+};
+
+Rule No. [0.46]
+Valid Rule
+Composed by Rule [0.27] and [0.39]
+Selectable at 1:
+@rule{
+    @premise initNear(*[na@201], #ta@203);
+    @premise far(*skB(), #t2@204);
+    @conclusion accept([na@201], #tb@202);
+    @constraint 2 * $s - #tb@202 + #ta@203 >= 0;
+    @constraint -$s + #tb@202 - #ta@203 >= 0;
+    @constraint -$s + #tb@202 - #t2@204 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+
+
+Final Rules: 
+Rule No. [0.40]
+Valid Rule
+Composed by Rule [0.12] and [0.34]
+@rule{
+    @premise initFar(*[na@172], #ta@174);
+    @conclusion accept([na@172], #tb@173);
+    @constraint 3 * $s - $l >= 0;
+    @constraint 2 * $s - #tb@173 + #ta@174 >= 0;
+    @constraint -$l + #tb@173 - #ta@174 >= 0;
+};
+with parameter relation:
+3 * $s - $l >= 0
+2 * $s - $l >= 0
+
+Rule No. [0.41]
+Valid Rule
+Composed by Rule [0.12] and [0.35]
+@rule{
+    @premise initNear(*[na@175], #ta@177);
+    @premise initFar(*[na@175], #ta@178);
+    @conclusion accept([na@175], #tb@176);
+    @constraint 2 * $s + #ta@178 - #tb@176 >= 0;
+    @constraint -$l + #tb@176 - #ta@177 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+with parameter relation:
+3 * $s - $l >= 0
+
+Rule No. [0.42]
+Valid Rule
+Composed by Rule [0.12] and [0.36]
+@rule{
+    @premise initFar(*[na@179], #ta@181);
+    @premise initNear(*[na@179], #ta@182);
+    @conclusion accept([na@179], #tb@180);
+    @constraint 2 * $s + #ta@182 - #tb@180 >= 0;
+    @constraint -$l + #tb@180 - #ta@181 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+with parameter relation:
+3 * $s - $l >= 0
+
+Rule No. [0.47]
+Valid Rule
+Composed by Rule [0.12] and [0.43]
+@rule{
+    @premise initFar(*[na@206], #ta@208);
+    @conclusion accept([na@206], #tb@207);
+    @constraint 2 * $s - #tb@207 + #ta@208 >= 0;
+    @constraint -$s + #tb@207 - #ta@208 >= 0;
+    @constraint 3 * $s - $l >= 0;
+};
+with parameter relation:
+$s >= 0
+3 * $s - $l >= 0
+
+
+0. Requested parameter relation:
+-3 * $s + $l > 0
+-$s > 0
+
+1. Requested parameter relation:
+-3 * $s + $l > 0
+
+2. Requested parameter relation:
+-2 * $s + $l > 0
+-$s > 0
+
+3. Requested parameter relation:
+-2 * $s + $l > 0
+-3 * $s + $l > 0
+
+
+Overall generated rule count : 58
+Basis size : 48
+Verification time: 73
+
+An attack exists.
+

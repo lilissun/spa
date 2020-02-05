@@ -1,0 +1,267 @@
+Approximated : 13.
+
+Query satisfied.
+
+Service size : 40
+Verification time: 9
+
+Details:
+General services : 
+Select : NA	
+tknow<m@0, #t1@1> -> tknow<inc(m@0), #t@4>
+1:	[<=:0]	[<=:0]	
+4:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<m@5, #t1@6>, tknow<k@7, #t2@8> -> tknow<senc(m@5, k@7), #t@10>
+6:	[<=:0]	[<=:0]	[ <:Max]	
+10:	[ <:Max]	[<=:0]	[ <:Max]	
+8:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : 1
+tknow<k@11, #t1@12>, tknow<senc(m@13, k@11), #t2@14> -> tknow<m@13, #t@15>
+12:	[<=:0]	[<=:0]	[ <:Max]	
+15:	[ <:Max]	[<=:0]	[ <:Max]	
+14:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : NA	
+tknow<m@16, #t1@17>, tknow<k@18, #t2@19> -> tknow<senc1(m@16, k@18), #t@21>
+17:	[<=:0]	[<=:0]	[ <:Max]	
+21:	[ <:Max]	[<=:0]	[ <:Max]	
+19:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : 1
+tknow<k@22, #t1@23>, tknow<senc1(m@24, k@22), #t2@25> -> tknow<m@24, #t@26>
+23:	[<=:0]	[<=:0]	[ <:Max]	
+26:	[ <:Max]	[<=:0]	[ <:Max]	
+25:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : NA	
+tknow<x@27, #t1@28>, tknow<y@29, #t2@30>, tknow<z@31, #t3@32>, tknow<k@33, #t4@34> -> tknow<tuple4(x@27, y@29, z@31, k@33), #t@36>
+28:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+36:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+30:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+32:	[ <:Max]	[<=:0]	[ <:Max]	[<=:0]	[ <:Max]	
+34:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple4(x@37, y@38, z@39, k@40), #t1@41> -> tknow<x@37, #t@42>
+41:	[<=:0]	[<=:0]	
+42:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple4(x@43, y@44, z@45, k@46), #t1@47> -> tknow<y@44, #t@48>
+47:	[<=:0]	[<=:0]	
+48:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple4(x@49, y@50, z@51, k@52), #t1@53> -> tknow<z@51, #t@54>
+53:	[<=:0]	[<=:0]	
+54:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple4(x@55, y@56, z@57, k@58), #t1@59> -> tknow<k@58, #t@60>
+59:	[<=:0]	[<=:0]	
+60:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<senc(tuple4(#tI@61, R@62, k@63), key(I@64)), #t1@66>, tknow<R@62, #t2@67> -> tknow<senc(tuple4(#tS@68, I@64, k@63), key(R@62)), #tS@68>
+68:	[<=:0]	[<=:2]	[ <:Max]	[ <:Max]	
+61:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+66:	[<=:0]	[<=:2]	[<=:0]	[ <:Max]	
+67:	[<=:0]	[<=:2]	[ <:Max]	[<=:0]	
+
+Select : NA	
+ -> tknow<A[], #t@70>
+
+Select : NA	
+ -> tknow<B[], #t@72>
+
+Select : NA	
+initA<A[], R@73, *[k@74], #tA@75> -> tknow<senc(tuple4(#tA@75, R@73, [k@74]), key(A[])), #tA@75>
+
+Select : 1
+initB<I@77, B[], k@78, *[Nb@79], #tB@80>, tknow<senc(tuple4(#tS@82, I@77, k@78), key(B[])), #t@83> -> tknow<senc([Nb@79], k@78), #tB@80>
+80:	[<=:0]	[<=:2]	[ <:Max]	
+82:	[ <:Max]	[<=:0]	[ <:Max]	
+83:	[<=:0]	[<=:2]	[<=:0]	
+
+Select : 1
+initA<A[], R@84, *[k@85], #tA@86>, tknow<senc(Nb@87, [k@85]), #t1@88> -> tknow<senc1(Nb@87, [k@85]), #t@89>
+88:	[<=:0]	[<=:0]	[<=:4]	
+89:	[ <:Max]	[<=:0]	[<=:4]	
+86:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : 1
+initB<I@90, B[], k@91, *[Nb@92], #tB@93>, tknow<senc1([Nb@92], k@91), #t1@94> -> accept<I@90, B[], k@91, #t@95>
+95:	[<=:0]	[<=:2]	
+93:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple4(#tI@154, R@153, k@152), #t1@155>, tknow<key(I@151), #t2@156>, tknow<R@153, #t2@157> -> tknow<senc(tuple4(#tS@150, I@151, k@152), key(R@153)), #tS@150>
+150:	[<=:0]	[<=:2]	[ <:Max]	[ <:Max]	[ <:Max]	
+154:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+156:	[<=:0]	[<=:2]	[<=:0]	[ <:Max]	[ <:Max]	
+157:	[<=:0]	[<=:2]	[ <:Max]	[<=:0]	[ <:Max]	
+155:	[<=:0]	[<=:2]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<R@165, #t2@167>, initA<A[], R@165, *[k@164], #tA@166> -> tknow<senc(tuple4(#tS@163, A[], [k@164]), key(R@165)), #tS@163>
+163:	[<=:0]	[<=:2]	[ <:Max]	
+166:	[<=:0]	[<=:0]	[ <:Max]	
+167:	[<=:0]	[<=:2]	[<=:0]	
+
+Select : 0
+tknow<tuple4(#tS@171, I@172, k@169), #t1@173>, tknow<key(B[]), #t2@174>, initB<I@172, B[], k@169, *[Nb@168], #tB@170> -> tknow<senc([Nb@168], k@169), #tB@170>
+170:	[<=:0]	[<=:2]	[ <:Max]	[ <:Max]	
+171:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+174:	[<=:0]	[<=:2]	[<=:0]	[ <:Max]	
+173:	[<=:0]	[<=:2]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<[Nb@185], #t1@186>, tknow<k@183, #t2@187>, initB<I@182, B[], k@183, *[Nb@185], #tB@188> -> accept<I@182, B[], k@183, #t@184>
+184:	[<=:0]	[<=:2]	[ <:Max]	[ <:Max]	
+188:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+186:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+187:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<R@225, #t2@226>, initA<A[], R@225, *[k@224], #tA@227> -> tknow<senc(tuple4(#tS@223, A[], [k@224]), key(R@225)), #tS@223>
+223:	[<=:0]	[<=:6]	[ <:Max]	[ <:Max]	
+227:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+228:	[<=:0]	[<=:6]	[<=:0]	[ <:Max]	
+226:	[<=:0]	[<=:2]	[ <:Max]	[<=:0]	
+
+Select : NA	
+initB<A[], B[], [k@243], *[Nb@242], #tB@245>, initA<A[], B[], *[k@243], #tA@246> -> tknow<senc1([Nb@242], [k@243]), #t@244>
+245:	[<=:0]	[<=:0]	[<=:4]	
+244:	[<=:4]	[<=:0]	[<=:4]	
+246:	[<=:0]	[<=:0]	[<=:0]	
+
+Select : NA	
+tknow<R@301, #t2@302>, initA<A[], R@301, *[k@300], #tA@303> -> tknow<senc(tuple4(#tS@299, A[], [k@300]), key(R@301)), #tS@299>
+299:	[<=:0]	[<=:10]	[ <:Max]	[ <:Max]	
+303:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+304:	[<=:0]	[<=:10]	[<=:0]	[ <:Max]	
+302:	[<=:0]	[<=:2]	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<R@359, #t2@360>, initA<A[], R@359, *[k@358], #tA@361> -> tknow<senc(tuple4(#tS@357, A[], [k@358]), key(R@359)), #tS@357>
+357:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+361:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+362:	[<=:0]	[ <:Max]	[<=:0]	[ <:Max]	
+360:	[<=:0]	[<=:2]	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<R@400, #t2@402>, initA<A[], R@400, *[k@401], #tA@403> -> tknow<senc(tuple4(#tS@399, R@400, [k@401]), key(A[])), #tS@399>
+399:	[<=:0]	[ <:Max]	[ <:Max]	
+403:	[<=:0]	[<=:0]	[ <:Max]	
+402:	[<=:0]	[<=:2]	[<=:0]	
+
+Select : NA	
+initA<A[], B[], *[k@405], #tA@407>, initB<A[], B[], [k@405], *[Nb@404], #tB@406> -> tknow<senc([Nb@404], [k@405]), #tB@406>
+406:	[<=:0]	[ <:Max]	
+407:	[<=:0]	[<=:0]	
+
+Select : NA	
+tknow<R@417, #t2@418>, initA<A[], R@417, *[k@416], #tA@419> -> tknow<senc(tuple4(#tS@415, A[], [k@416]), key(R@417)), #tS@415>
+415:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+419:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+420:	[<=:0]	[ <:Max]	[<=:0]	[ <:Max]	
+418:	[<=:0]	[<=:2]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<[k@423], #t1@426>, initA<A[], B[], *[k@423], #tA@424>, initB<A[], B[], [k@423], *[Nb@421], #tB@425> -> tknow<[Nb@421], #t@422>
+426:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+422:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+425:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	
+424:	[ <:Max]	[<=:0]	[<=:0]	[<=:0]	
+
+
+Non-unifiable services : 
+Reserve as input on 0 is not unifiable. 
+tknow<key(A[]), #t1@162>, initA<A[], R@159, *[k@160], #tA@158> -> tknow<tuple4(#tA@158, R@159, [k@160]), #t@161>
+162:	[<=:0]	[<=:0]	[ <:Max]	
+161:	[ <:Max]	[<=:0]	[ <:Max]	
+158:	[ <:Max]	[<=:0]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<R@192, #t2@193>, tknow<key(R@192), #t1@195>, initA<A[], R@192, *[k@190], #tA@194> -> tknow<tuple4(#tS@189, A[], [k@190]), #t@191>
+195:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+191:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+189:	[ <:Max]	[<=:0]	[<=:0]	[<=:2]	[ <:Max]	
+194:	[ <:Max]	[<=:0]	[<=:0]	[<=:0]	[ <:Max]	
+193:	[ <:Max]	[<=:0]	[<=:0]	[<=:2]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<R@217, #t2@220>, tknow<key(A[]), #t1@222>, initA<A[], R@217, *[k@218], #tA@221> -> tknow<tuple4(#tS@216, R@217, [k@218]), #t@219>
+222:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+219:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+216:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:4]	
+220:	[ <:Max]	[<=:0]	[<=:0]	[<=:0]	[<=:2]	
+221:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<R@250, #t2@251>, tknow<key(R@250), #t1@253>, initA<A[], R@250, *[k@248], #tA@252> -> tknow<tuple4(#tS@247, A[], [k@248]), #t@249>
+253:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+249:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+247:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:6]	
+251:	[ <:Max]	[<=:0]	[<=:0]	[<=:0]	[<=:2]	
+252:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<R@293, #t2@296>, tknow<key(A[]), #t1@298>, initA<A[], R@293, *[k@294], #tA@297> -> tknow<tuple4(#tS@292, R@293, [k@294]), #t@295>
+298:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+295:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+292:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:8]	
+296:	[ <:Max]	[<=:0]	[<=:0]	[<=:0]	[<=:2]	
+297:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<R@326, #t2@327>, tknow<key(R@326), #t1@329>, initA<A[], R@326, *[k@324], #tA@328> -> tknow<tuple4(#tS@323, A[], [k@324]), #t@325>
+329:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+325:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+323:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:10]	
+327:	[ <:Max]	[<=:0]	[<=:0]	[<=:0]	[<=:2]	
+328:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<R@351, #t2@354>, tknow<key(A[]), #t1@356>, initA<A[], R@351, *[k@352], #tA@355> -> tknow<tuple4(#tS@350, R@351, [k@352]), #t@353>
+356:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+353:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+350:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:12]	
+354:	[ <:Max]	[<=:0]	[<=:0]	[<=:0]	[<=:2]	
+355:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<R@384, #t2@385>, tknow<key(R@384), #t1@387>, initA<A[], R@384, *[k@382], #tA@386> -> tknow<tuple4(#tS@381, A[], [k@382]), #t@383>
+387:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+383:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+381:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+385:	[ <:Max]	[<=:0]	[<=:0]	[<=:0]	[<=:2]	
+386:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<R@409, #t2@412>, tknow<key(A[]), #t1@414>, initA<A[], R@409, *[k@410], #tA@413> -> tknow<tuple4(#tS@408, R@409, [k@410]), #t@411>
+414:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+411:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+408:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+412:	[ <:Max]	[<=:0]	[<=:0]	[<=:0]	[<=:2]	
+413:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<R@442, #t2@443>, tknow<key(R@442), #t1@445>, initA<A[], R@442, *[k@440], #tA@444> -> tknow<tuple4(#tS@439, A[], [k@440]), #t@441>
+445:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+441:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+439:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+443:	[ <:Max]	[<=:0]	[<=:0]	[<=:0]	[<=:2]	
+444:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[<=:0]	
+
+
+Final services : 
+initA<A[], B[], *[k@278], #tA@280>, initB<A[], B[], [k@278], *[Nb@281], #tB@282> -> accept<A[], B[], [k@278], #t@279>
+279:	[<=:0]	[<=:2]	[<=:6]	
+282:	[ <:Max]	[<=:0]	[<=:4]	
+280:	[ <:Max]	[<=:0]	[<=:0]	
+
+

@@ -1,0 +1,88 @@
+@string true;
+
+@function (@variable skey) pk(skey);
+@function (@variable mess, @variable skey) sign(mess, skey);
+@function (@variable mess, @variable skey) check(sign(mess, skey), pk(skey)) -> true;
+@function (@variable mess, @variable skey) get(sign(mess, skey)) -> mess;
+@function (@variable mess, @variable pkey) aenc(mess, pkey);
+@function (@variable mess, @variable skey) adec(aenc(mess, pk(skey)), skey) -> mess;
+
+@string SKA;
+@string SKB;
+
+@init initA;
+@init initB;
+@accept acceptA;
+@accept acceptB;
+
+@process Pa(@variable skA, @variable pkB) {
+    @receive @variable pkR;
+    @new @nonce na;
+    @secrecy na;
+    @if (pkR != pkB) {
+        @open na;
+        @send aenc((na, pk(skA)), pkR);
+        @receive @variable m;
+        @let (== na, @variable nb, == pkR) = adec(m, skA) @then
+        @read @timestamp ta;
+        @engage initA(pk(skA), pkR, na, nb)@ta;
+        @send aenc(nb, pkR);
+    } @else {
+        @send aenc((na, pk(skA)), pkR);
+        @receive @variable m;
+        @let (== na, @variable nb, == pkR) = adec(m, skA) @then
+        @read @timestamp ta;
+        @engage acceptA(pk(skA), pkR, na, nb)@ta;
+        @engage initA(pk(skA), pkR, na, nb)@ta;
+        @send aenc(nb, pkR);
+    }
+}
+
+@process Pb(@variable skB, @variable pkA) {
+    @receive @variable m;
+    @let (@variable na, @variable pkI) = adec(m, skB) @then
+    @new @nonce nb;
+    @read @timestamp tbi;
+    @engage initB(pkI, pk(skB), na, nb)@tbi;
+    @secrecy nb;
+    @if (pkI != pkA) {
+        @open nb;
+        @send aenc((na, nb, pk(skB)), pkI);
+        @receive @variable m1;
+        @if (nb == adec(m1, skB)) @then
+        @read @timestamp tba;
+    } @else {
+        @send aenc((na, nb, pk(skB)), pkI);
+        @receive @variable m1;
+        @if (nb == adec(m1, skB)) @then
+        @read @timestamp tba;
+        @engage acceptB(pkI, pk(skB), na, nb)@tba;
+    }
+}
+
+@process Pp(@variable pkB, @variable pkA) {
+    @send pkA;
+    @send pkB;
+}
+
+@system {
+    @parallel { 
+        !{ @invoke Pa(SKA, pk(SKB)); } | 
+        !{ @invoke Pb(SKB, pk(SKA)); } | 
+        !{ @invoke Pp(pk(SKA), pk(SKB)); } 
+    }
+}
+
+@correspondence (@variable pkA, @variable pkB, @variable na, @variable nb, @timestamp ta, @timestamp tb) {
+    @enforced;
+    @event initA(pkA, pkB, na, nb)@ta;
+    @event acceptB(pkA, pkB, na, nb)@tb;
+    @constraint ta <= tb;
+}
+
+@correspondence (@variable pkA, @variable pkB, @variable na, @variable nb, @timestamp ta, @timestamp tb) {
+    @enforced;
+    @event initB(pkA, pkB, na, nb)@ta;
+    @event acceptA(pkA, pkB, na, nb)@tb;
+    @constraint ta <= tb;
+}

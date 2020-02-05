@@ -1,0 +1,99 @@
+@string true;
+
+@function (@variable skey) pk(skey);
+@function (@variable mess, @variable skey) sign(mess, skey);
+@function (@variable mess, @variable skey) check(sign(mess, skey), pk(skey)) -> true;
+@function (@variable mess, @variable skey) get(sign(mess, skey)) -> mess;
+@function (@variable mess, @variable pkey) aenc(mess, pkey);
+@function (@variable mess, @variable skey) adec(aenc(mess, pk(skey)), skey) -> mess;
+
+@string SKA;
+@string SKB;
+
+@join init;
+@accept accept;
+
+@parameter delay;
+@parameter thres;
+
+@clock ca @maxdrift pa;
+@process Pa(@variable skA, @variable pkB) {
+    @receive @variable pkR;
+    @new @nonce na;
+    @secrecy na;
+    @read @timestamp t1 @from ca;
+    @parallel {
+        @if (pkR != pkB) {
+            @open na;
+            @send aenc((na, pk(skA)), pkR);
+            @receive @variable m;
+            @let (== na, @variable nb, == pkR) = adec(m, skA) @then
+            @read @timestamp ta @from ca;
+            @engage init(pk(skA), pkR, na, nb)@ta;
+            @send aenc(nb, pkR);
+        } @else {
+            @send aenc((na, pk(skA)), pkR);
+            @receive @variable m;
+            @read @timestamp t2 @from ca;
+            @if (t2 - t1 <= thres) @then
+            @let (== na, @variable nb, == pkR) = adec(m, skA) @then
+            @read @timestamp ta @from ca;
+            @engage init(pk(skA), pkR, na, nb)@ta;
+            @send aenc(nb, pkR);
+        }
+        |
+        @wait t2 @until t2 - t1 >= delay;
+        @open na;
+        @send na;
+    }
+}
+
+@clock cb @maxdrift pb;
+@process Pb(@variable skB, @variable pkA) {
+    @receive @variable m;
+    @let (@variable na, @variable pkI) = adec(m, skB) @then
+    @new @nonce nb;
+    @secrecy nb;
+    @read @timestamp t1 @from cb;
+    @parallel {
+        @if (pkI != pkA) {
+            @open nb;
+            @send aenc((na, nb, pk(skB)), pkI);
+            @receive @variable m1;
+            @if (nb == adec(m1, skB)) @then
+            @read @timestamp tb @from cb;
+        } @else {
+            @send aenc((na, nb, pk(skB)), pkI);
+            @receive @variable m1;
+            @read @timestamp t2 @from cb;
+            @if (t2 - t1 <= thres) @then
+            @if (nb == adec(m1, skB)) @then
+            @read @timestamp tb @from cb;
+            @engage accept(pkI, pk(skB), na, nb)@tb;
+        }
+        |
+        @wait t2 @until t2 - t1 >= delay;
+        @open nb;
+        @send nb;
+    }
+}
+
+@process Pp(@variable pkB, @variable pkA) {
+    @send pkA;
+    @send pkB;
+}
+
+@system {
+    @parallel { 
+        !{ @invoke Pa(SKA, pk(SKB)); } | 
+        !{ @invoke Pb(SKB, pk(SKA)); } | 
+        !{ @invoke Pp(pk(SKA), pk(SKB)); } 
+    }
+}
+
+@correspondence (@variable pkA, @variable pkB, @variable na, @variable nb, @timestamp ta, @timestamp tb) {
+    @enforced;
+    @event init(pkA, pkB, na, nb)@ta;
+    @event accept(pkA, pkB, na, nb)@tb;
+    @constraint ta <= tb;
+}

@@ -1,0 +1,51 @@
+@ceiling 1;
+
+@decl @event initA(-, -, *) @group p;
+@decl @event initB(-, -, *) @group p;
+@decl @event init(*, *) @group p;
+@decl @event accept(-, -) @group c;
+@decl @event k(*, -) @group k;
+
+@decl @func tuple2/2;
+@decl @func tuple3/3;
+@decl @func pk/1;
+@decl @func aenc/2;
+@decl @func sign/2;
+
+@nosel initA;
+@nosel initB;
+@nosel init;
+@nosel accept;
+
+@provide k(mx, #t);
+@provide k(#c, #t);
+@provide k(#t, #t);
+
+@rule k(sk, #t1) -> k(pk(sk), #t) : #t1 - #t <= 0;
+
+@rule k(m, #t1), k(sk, #t2) -> k(sign(m, sk), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(sign(m, sk), #t1) -> k(m, #t) : #t1 - #t <= 0;
+
+@rule k(m, #t1), k(pk(sk), #t2) -> k(aenc(m, pk(sk)), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(sk, #t1), k(aenc(m, pk(sk)), #t2) -> k(m, #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+
+@rule k(x, #t1), k(y, #t2) -> k(tuple2(x, y), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(tuple2(x, y), #t1) -> k(x, #t) : #t1 - #t <= 0;
+@rule k(tuple2(x, y), #t1) -> k(y, #t) : #t1 - #t <= 0;
+
+@rule k(x, #t1), k(y, #t2), k(z, #t3) -> k(tuple3(x, y, z), #t) : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0;
+@rule k(tuple3(x, y, z), #t1) -> k(x, #t) : #t1 - #t <= 0;
+@rule k(tuple3(x, y, z), #t1) -> k(y, #t) : #t1 - #t <= 0;
+@rule k(tuple3(x, y, z), #t1) -> k(z, #t) : #t1 - #t <= 0;
+
+@rule k(pk(skA[]), #t);
+@rule k(pk(skB[]), #t);
+
+@rule initA(skA[], skR, [Na]) -> k(aenc(tuple2([Na], pk(skA[])), pk(skR)), #t);
+@rule initB(skI, skB[], [Nb]), k(aenc(tuple2(Na, pk(skI)), pk(skB[])), #t1)
+    -> k(aenc(tuple3(Na, [Nb], pk(skB[])), pk(skI)), #t);
+@rule initA(skA[], skR, [Na]), init(skA[], skR), k(aenc(tuple3([Na], Nb, pk(skR)), pk(skA[])), #t1) 
+    -> k(aenc(Nb, pk(skR)), #t);
+@rule initB(skA[], skB[], [Nb]), k(aenc([Nb], pk(skB[])), #t1) -> accept(skA[], skB[]);
+
+@query accept(skI, skR) <- init(skI, skR);

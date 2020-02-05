@@ -1,0 +1,52 @@
+% 1
+
+! <sk, #t1> -> <pk(sk), #t> : #t1 - #t <= 0;
+
+! <m, #t1>, <sk, #t2> -> <sign(m, sk), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <sign(m, sk), #t1> -> <m, #t> : #t1 - #t <= 0;
+
+! <m, #t1>, <pk(sk), #t2> -> <aenc(m, pk(sk)), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <sk, #t1>, <aenc(m, pk(sk)), #t2> -> <m, #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+
+! <x, #t1>, <y, #t2>, <z, #t3>, <k, #t4>, <l, #t5> -> <tuple5(x, y, z, k, l), #t> 
+    : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0, #t4 - #t <= 0, #t5 - #t <= 0;
+! <tuple5(x, y, z, k, l), #t1> -> <x, #t> : #t1 - #t <= 0;
+! <tuple5(x, y, z, k, l), #t1> -> <y, #t> : #t1 - #t <= 0;
+! <tuple5(x, y, z, k, l), #t1> -> <z, #t> : #t1 - #t <= 0;
+! <tuple5(x, y, z, k, l), #t1> -> <k, #t> : #t1 - #t <= 0;
+! <tuple5(x, y, z, k, l), #t1> -> <l, #t> : #t1 - #t <= 0;
+
+! <x, #t1>, <y, #t2>, <z, #t3>, <k, #t4>, <l, #t5>, <j, #t6> -> <tuple6(x, y, z, k, l, j), #t>
+    : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0, #t4 - #t <= 0, #t5 - #t <= 0, #t6 - #t <= 0;
+! <tuple6(x, y, z, k, l, j), #t1> -> <x, #t> : #t1 - #t <= 0;
+! <tuple6(x, y, z, k, l, j), #t1> -> <y, #t> : #t1 - #t <= 0;
+! <tuple6(x, y, z, k, l, j), #t1> -> <z, #t> : #t1 - #t <= 0;
+! <tuple6(x, y, z, k, l, j), #t1> -> <k, #t> : #t1 - #t <= 0;
+! <tuple6(x, y, z, k, l, j), #t1> -> <l, #t> : #t1 - #t <= 0;
+! <tuple6(x, y, z, k, l, j), #t1> -> <j, #t> : #t1 - #t <= 0;
+
+! <A[], #t>;
+! <B[], #t>;
+
+! <pk(skA[]), #t>;
+! <pk(skB[]), #t>;
+
+! <sk, #t1>, <pk, #t2> -> <X(sk, pk), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <sk, #t1>, <pk, #t2> -> <Y(sk, pk), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+
+! initA(skA[], skR, #ta, [Na]) 
+    -> <sign(tuple5(#ta, [Na], pk(skR), X(skA[], pk(skR)), aenc(Y(skA[], pk(skR)), pk(skR))), skA[]), #ta>;
+
+! initB(skI, skB[], #tb, [Nb]), 
+    <sign(tuple5(#ta, Na, pk(skB[]), X(skI, pk(skB[])), aenc(Y(skI, pk(skB[])), pk(skB[]))), skI), #t1>
+    -> <sign(tuple6(#tb, [Nb], pk(skI), Na, X(skB[], pk(skI)), aenc(Y(skB[], pk(skI)), pk(skI))), skB[]), #t>;
+    
+! initA(skA[], skR, #ta, [Na]), init(skA[], skR, #ta, Nb), 
+    <sign(tuple6(#tb, Nb, pk(skA[]), [Na], X(skR, pk(skA[])), aenc(Y(skR, pk(skA[])), pk(skA[]))), skR), #t1>
+    -> <sign(Nb, skA[]), #t>;
+    
+! initB(skA[], skB[], #tb, [Nb]), <sign([Nb], skA[]), #t1>
+    -> accept(skA[], skB[], #tb, [Nb]);
+
+? accept(skI, skR, #tb, Nb) <- init(skI, skR, #ta, Nb);
+

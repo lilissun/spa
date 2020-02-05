@@ -1,0 +1,73 @@
+@decl @event initA(-, -, -, *) @group p;
+@decl @event initB(-, -, -, *, -) @group p;
+@decl @event init(-, -, -, *, *) @group p;
+@decl @event accept(-, -, -, -, -) @group c;
+@decl @event k(*, -) @group k;
+
+@decl @func tuple5/5;
+@decl @func tuple6/6;
+@decl @func pk/1;
+@decl @func aenc/2;
+@decl @func sign/2;
+@decl @func X/2;
+@decl @func Y/2;
+
+@nosel init;
+@nosel initA;
+@nosel initB;
+@nosel accept;
+
+@provide k(mx, #t);
+@provide k(#c, #t);
+@provide k(#t, #t);
+
+@rule k(sk, #t1) -> k(pk(sk), #t) : #t1 - #t <= 0;
+
+@rule k(m, #t1), k(sk, #t2) -> k(sign(m, sk), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(sign(m, sk), #t1) -> k(m, #t) : #t1 - #t <= 0;
+
+@rule k(m, #t1), k(pk(sk), #t2) -> k(aenc(m, pk(sk)), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(sk, #t1), k(aenc(m, pk(sk)), #t2) -> k(m, #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+
+@rule k(x, #t1), k(y, #t2), k(z, #t3), k(k, #t4), k(l, #t5) -> k(tuple5(x, y, z, k, l), #t) 
+: #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0, #t4 - #t <= 0, #t5 - #t <= 0;
+@rule k(tuple5(x, y, z, k, l), #t1) -> k(x, #t) : #t1 - #t <= 0;
+@rule k(tuple5(x, y, z, k, l), #t1) -> k(y, #t) : #t1 - #t <= 0;
+@rule k(tuple5(x, y, z, k, l), #t1) -> k(z, #t) : #t1 - #t <= 0;
+@rule k(tuple5(x, y, z, k, l), #t1) -> k(k, #t) : #t1 - #t <= 0;
+@rule k(tuple5(x, y, z, k, l), #t1) -> k(l, #t) : #t1 - #t <= 0;
+
+@rule k(x, #t1), k(y, #t2), k(z, #t3), k(k, #t4), k(l, #t5), k(j, #t6) -> k(tuple6(x, y, z, k, l, j), #t)
+: #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0, #t4 - #t <= 0, #t5 - #t <= 0, #t6 - #t <= 0;
+@rule k(tuple6(x, y, z, k, l, j), #t1) -> k(x, #t) : #t1 - #t <= 0;
+@rule k(tuple6(x, y, z, k, l, j), #t1) -> k(y, #t) : #t1 - #t <= 0;
+@rule k(tuple6(x, y, z, k, l, j), #t1) -> k(z, #t) : #t1 - #t <= 0;
+@rule k(tuple6(x, y, z, k, l, j), #t1) -> k(k, #t) : #t1 - #t <= 0;
+@rule k(tuple6(x, y, z, k, l, j), #t1) -> k(l, #t) : #t1 - #t <= 0;
+@rule k(tuple6(x, y, z, k, l, j), #t1) -> k(l, #t) : #t1 - #t <= 0;
+
+@rule k(A[], #t);
+@rule k(B[], #t);
+
+@rule k(pk(skA[]), #t);
+@rule k(pk(skB[]), #t);
+
+@rule k(sk, #t1), k(pk, #t2) -> k(X(sk, pk), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(sk, #t1), k(pk, #t2) -> k(Y(sk, pk), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+
+@rule initA(skA[], skR, #ta, [Na])
+    -> k(sign(tuple5(#ta, [Na], pk(skR), X(skA[], pk(skR)), aenc(Y(skA[], pk(skR)), pk(skR))), skA[]), #ta);
+
+@rule initB(skI, skB[], #tb, [Nb], Na),
+    k(sign(tuple5(#ta, Na, pk(skB[]), X(skI, pk(skB[])), aenc(Y(skI, pk(skB[])), pk(skB[]))), skI), #t1)
+    -> k(sign(tuple6(#tb, [Nb], pk(skI), Na, X(skB[], pk(skI)), aenc(Y(skB[], pk(skI)), pk(skI))), skB[]), #t);
+    
+@rule initA(skA[], skR, #ta, [Na]), init(skA[], skR, #ta, Nb, [Na]),
+    k(sign(tuple6(#tb, Nb, pk(skA[]), [Na], X(skR, pk(skA[])), aenc(Y(skR, pk(skA[])), pk(skA[]))), skR), #t1)
+    -> k(sign(Nb, skA[]), #t);
+    
+@rule initB(skA[], skB[], #tb, [Nb], Na), k(sign([Nb], skA[]), #t1)
+    -> accept(skA[], skB[], #tb, [Nb], Na);
+
+@query accept(skI, skR, #tb, Nb, Na) <- init(skI, skR, #ta, Nb, Na);
+

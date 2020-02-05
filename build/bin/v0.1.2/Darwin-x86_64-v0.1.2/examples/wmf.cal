@@ -1,0 +1,75 @@
+@function (@variable m, @variable k) senc(m, k);
+@function (@variable m, @variable k) sdec(senc(m, k), k) -> m;
+@private @function (@variable u) key(u);
+
+@string A;
+@string B;
+
+@parameter pm;
+
+@init init;
+@join join;
+@accept accept;
+
+@process Pr() {
+    @receive @variable u;
+    @if (u != A) @then 
+    @if (u != B) @then 
+    @send key(u);
+}
+
+@process Pa() {
+    @receive @variable r;
+    @new @nonce k;
+    @secrecy k;
+    @read @timestamp ta;
+    @engage init(A, r, k)@ta;
+    @if (r == B) {
+        @send (A, senc((ta, r, k), key(A)));
+    } @else {
+        @open k;
+        @send (A, senc((ta, r, k), key(A)));
+    }
+}
+
+@process Ps() {
+    @receive (@variable i, @variable x);
+    @read @timestamp ts;
+    @let (@timestamp ti, @variable r, @variable k) = sdec(x, key(i)) @then
+    @if (ts - ti <= pm) @then
+    @engage join(i, r, k)@ts;
+    @send senc((ts, i, k), key(r));
+}
+
+@process Pb() {
+    @receive @variable m;
+    @read @timestamp tb;
+    @let (@timestamp ts, @variable i, @variable k) = sdec(m, key(B)) @then
+    @if (i == A) @then
+    @if (tb - ts <= pm) @then
+    @engage accept(i, B, k)@tb;
+}
+
+@process Pp() {
+    @send A;
+    @send B;
+}
+
+@system {
+    @parallel { 
+        !{ @invoke Pr(); } | 
+        !{ @invoke Pa(); } | 
+        !{ @invoke Ps(); } | 
+        !{ @invoke Pb(); } | 
+        !{ @invoke Pp(); } 
+    }
+}
+
+@correspondence (@variable i, @variable r, @variable k, @timestamp ti, @timestamp ts, @timestamp tr) {
+    @enforced;
+    @event init(i, r, k)@ti;
+    @event join(i, r, k)@ts;
+    @event accept(i, r, k)@tr;
+    @constraint ts - ti <= pm;
+    @constraint tr - ts <= pm;
+}

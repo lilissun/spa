@@ -1,0 +1,106 @@
+@function (@variable key, @variable mess) mac(key, mess);
+@function (@variable key) dk(key);
+@function (@variable key) f(key);
+@function (@variable skey) pk(skey);
+@function (@variable mess, @variable skey) sign(mess, skey);
+@function (@variable mess, @variable skey) check(sign(mess, skey), pk(skey)) -> mess;
+@function (@variable mess, @variable skey) get(sign(mess, skey)) -> mess;
+@function (@variable mess, @variable pkey) aenc(mess, pkey);
+@function (@variable mess, @variable skey) adec(aenc(mess, pk(skey)), skey) -> mess;
+@function (@variable mess, @variable skey) senc(mess, skey);
+@function (@variable mess, @variable skey) sdec(senc(mess, skey), skey) -> mess;
+
+@join init;
+@accept accept;
+
+@string zero;
+@string one;
+
+@parameter d;
+@string syn;
+@string boot;
+@process Sender(@variable ssk) {
+    @let @variable spk = pk(ssk) @then 
+    @parallel { 
+        ! { 
+            @receive @variable n; 
+            @read @timestamp ts; 
+            @send sign((ts, n, syn), ssk); // use this as an oracle for signning. 
+        } | 
+            @new @nonce k2p;
+            @let @variable k1p = mac(k2p, zero) @then
+            @let @variable k0p = mac(k1p, zero) @then
+            @let @variable k1 = mac(k1p, one) @then
+            @let @variable k2 = mac(k2p, one) @then
+            @read @timestamp t0;
+            @parallel { 
+                ! { 
+                    @send sign((t0, k0p, boot), ssk);
+                } | ! {
+                    @new @nonce m;
+                    @read @timestamp tsp;
+                    @if (tsp < t0 + d) {
+                        @engage init(spk, m, k1)@tsp;
+                        @send (m, mac(k1, m));
+                    } @else {
+                        @if (tsp < t0 + 2 * d) @then 
+                        @engage init(spk, m, k2)@tsp;
+                        @send (m, mac(k2, m));
+                        @send k1p;
+                    }
+                } | ! {
+                    @read @timestamp ts;
+                    @if (ts > t0 + 2 * d) @then 
+                    @send k2p;
+                }
+            }
+    }
+}
+
+@process Receiver(@variable spk) {
+    @read @timestamp tr;
+    @new @nonce n;
+    @send n;
+    @receive @variable sync;
+    @let (@timestamp ts, ==n, ==syn) = check(sync, spk) @then
+    @receive @variable sig;
+    @let (@timestamp t0, @variable k0p, ==boot) = check(sig, spk) @then
+    ! {
+        @receive (@variable m, @variable ck);
+        @read @timestamp trp;
+        @if (trp + ts - tr < t0 + d) {
+            @receive @variable kp;
+            @if (k0p == mac(kp, zero)) @then 
+            @if (ck == mac(mac(kp, one), m)) @then 
+            @engage accept(spk, m, mac(kp, one))@trp;
+        } @else {
+            @if (trp + ts - tr < t0 + 2 * d) @then 
+            @receive @variable kp;
+            @if (k0p == mac(mac(kp, zero), zero)) @then 
+            @if (ck == mac(mac(kp, one), m)) @then 
+            @engage accept(spk, m, mac(kp, one))@trp;
+        }
+    }
+}
+
+@process Pp(@variable spk) {
+    @send spk;
+    @send (one, zero);
+    @send (syn, boot);
+}
+
+@string SSK;
+@system {
+    @parallel { 
+        !{ @invoke Sender(SSK); } | 
+        !{ @invoke Receiver(pk(SSK)); } | 
+        !{ @invoke Pp(pk(SSK)); } 
+    }
+}
+
+@correspondence (@variable spk, @variable m, @variable mv, @timestamp tsp, @timestamp trp) {
+    @enforced;
+    @event init(spk, m, mv)@tsp;
+    @event accept(spk, m, mv)@trp;
+    @constraint tsp <= trp;
+}

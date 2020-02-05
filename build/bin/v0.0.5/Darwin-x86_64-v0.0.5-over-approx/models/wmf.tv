@@ -1,0 +1,18 @@
+! <m, #t1>, <k, #t2> -> <senc(m, k), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <k, #t1>, <senc(m, k), #t2> -> <m, #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+
+! <x, #t1>, <y, #t2>, <z, #t3> -> <tuple3(x, y, z), #t> : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0;
+! <tuple3(x, y, z), #t1> -> <x, #t> : #t1 - #t <= 0;
+! <tuple3(x, y, z), #t1> -> <y, #t> : #t1 - #t <= 0;
+! <tuple3(x, y, z), #t1> -> <z, #t> : #t1 - #t <= 0;
+
+! <senc(tuple3(#tI, R, k), key(I)), #t1>, <R, #t2> -> <senc(tuple3(#tS, I, k), key(R)), #tS>
+: #tS - #tI <= 2, #tS - #tI >= 0, #t1 - #tS <= 0, #t2 - #tS <= 0;
+
+! <A[], #t>;
+! <B[], #t>;
+
+! init(A[], R, [k], #tA) -> <senc(tuple3(#tA, R, [k]), key(A[])), #tA>;
+! <senc(tuple3(#tS, I, k), key(B[])), #t> -> accept(I, B[], k, #tB) : #tB - #tS <= 2, #t - #tR <= 0;
+
+? accept(I, R, k, #tB) <- init(I, R, k, #tA) : #tB - #tA <= 4;

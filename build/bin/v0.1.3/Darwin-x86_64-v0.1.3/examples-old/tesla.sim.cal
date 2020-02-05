@@ -1,0 +1,89 @@
+@function (@variable key, @variable mess) mac(key, mess);
+@function (@variable key) dk(key);
+@function (@variable key) f(key);
+@function (@variable skey) pk(skey);
+@function (@variable mess, @variable skey) sign(mess, skey);
+@function (@variable mess, @variable skey) check(sign(mess, skey), pk(skey)) -> mess;
+@function (@variable mess, @variable skey) get(sign(mess, skey)) -> mess;
+@function (@variable mess, @variable pkey) aenc(mess, pkey);
+@function (@variable mess, @variable skey) adec(aenc(mess, pk(skey)), skey) -> mess;
+@function (@variable mess, @variable skey) senc(mess, skey);
+@function (@variable mess, @variable skey) sdec(senc(mess, skey), skey) -> mess;
+
+@join init;
+@accept accept;
+
+// Initialization Phase: 
+// R reads timestamp tR
+// R -> S : n
+// S reads timestamp tS
+// S -> R : sign((tS, n), SKS)
+// Initialization Phase Result: 
+// whenever R reads timestamp tr, 
+// R believes S's timestamp ts <= tr - tR + tS
+
+// Bootstrap Phase: 
+// S reads timestamp ts
+// S -> R : sign((ts, ds, dkey), SKS)
+// Broadcast Phase: 
+// S -> R : (m, mac(f(rkey), m)), R accepts within ts + ds
+// S waits for a delay ds
+// S -> R : rkey 
+// R checks that dkey = dk(rkey)
+
+@parameter ds;
+@string root;
+@process Sender(@variable ssk) {
+    // @receive @variable n;
+    // @read @timestamp tS;
+    // @send sign((tS, n), ssk);
+
+    @new @nonce rootkey;
+    @read @timestamp ts;
+    @send sign((root, ts, dk(rootkey)), ssk);
+    @new @nonce message;
+    @engage init(message)@ts;
+    @send (message, mac(f(rootkey), message));
+    @wait t @until t - ts > ds;
+    @send rootkey;
+}
+
+@parameter dr;
+@process Receiver(@variable spk) {
+    // @read @timestamp tR;
+    // @new @nonce n;
+    // @send n;
+    // @receive @variable reply;
+    // @let (@timestamp tS, ==n) = check(reply, spk) @then
+
+    @receive @variable signature;
+    @let (==root, @timestamp ts, @variable dkey) = check(signature, spk) @then
+    @receive (@variable m, @variable macvalue);
+    @read @timestamp tr;
+    @if (tr - ts < dr) @then
+    @receive @variable rootkey;
+    @if (dkey == dk(rootkey)) @then 
+    @if (macvalue == mac(f(rootkey), m)) @then 
+    @engage accept(m)@tr;
+}
+
+@process Pp(@variable spk) {
+    @send spk;
+    @send root;
+}
+
+@string SSK;
+@system {
+    @parallel { 
+        !{ @invoke Sender(SSK); } | 
+        !{ @invoke Receiver(pk(SSK)); } | 
+        !{ @invoke Pp(pk(SSK)); } 
+    }
+}
+
+@correspondence (@variable m, @timestamp ts, @timestamp tr) {
+    @enforced;
+    @event init(m)@ts;
+    @event accept(m)@tr;
+    @constraint ts <= tr;
+}

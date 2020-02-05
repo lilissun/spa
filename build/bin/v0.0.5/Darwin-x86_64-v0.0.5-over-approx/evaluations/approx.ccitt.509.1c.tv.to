@@ -1,0 +1,454 @@
+Approximated : 1.
+
+Query satisfied.
+
+Service size : 65
+Verification time: 14
+
+Details:
+General services : 
+Select : NA	
+tknow<m@0, #t1@1> -> tknow<hash(m@0), #t@4>
+1:	[<=:0]	[<=:0]	
+4:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<sk@5, #t1@6> -> tknow<pk(sk@5), #t@8>
+6:	[<=:0]	[<=:0]	
+8:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<m@9, #t1@10>, tknow<sk@11, #t2@12> -> tknow<sign(m@9, sk@11), #t@14>
+10:	[<=:0]	[<=:0]	[ <:Max]	
+14:	[ <:Max]	[<=:0]	[ <:Max]	
+12:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : 0
+tknow<sign(m@15, sk@16), #t1@17> -> tknow<m@15, #t@18>
+17:	[<=:0]	[<=:0]	
+18:	[ <:Max]	[<=:0]	
+
+Select : 1
+tknow<m@19, #t1@20>, tknow<pk(sk@21), #t2@22> -> tknow<aenc(m@19, pk(sk@21)), #t@24>
+20:	[<=:0]	[<=:0]	[ <:Max]	
+24:	[ <:Max]	[<=:0]	[ <:Max]	
+22:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : NA	
+tknow<x@30, #t1@31>, tknow<y@32, #t2@33> -> tknow<tuple2(x@30, y@32), #t@35>
+31:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+35:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+33:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	
+36:	[ <:Max]	[<=:0]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple2(x@37, y@38), #t1@39> -> tknow<x@37, #t@40>
+39:	[<=:0]	[<=:0]	
+40:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple2(x@41, y@42), #t1@43> -> tknow<y@42, #t@44>
+43:	[<=:0]	[<=:0]	
+44:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<x@45, #t1@46>, tknow<y@47, #t2@48>, tknow<z@49, #t3@50>, tknow<k@51, #t4@52>, tknow<l@53, #t5@54> -> tknow<tuple5(x@45, y@47, z@49, k@51, l@53), #t@56>
+46:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+56:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+48:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+50:	[ <:Max]	[<=:0]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+52:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+54:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple5(x@57, y@58, z@59, k@60, l@61), #t1@62> -> tknow<x@57, #t@63>
+62:	[<=:0]	[<=:0]	
+63:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple5(x@64, y@65, z@66, k@67, l@68), #t1@69> -> tknow<y@65, #t@70>
+69:	[<=:0]	[<=:0]	
+70:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple5(x@71, y@72, z@73, k@74, l@75), #t1@76> -> tknow<z@73, #t@77>
+76:	[<=:0]	[<=:0]	
+77:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple5(x@78, y@79, z@80, k@81, l@82), #t1@83> -> tknow<k@81, #t@84>
+83:	[<=:0]	[<=:0]	
+84:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple5(x@85, y@86, z@87, k@88, l@89), #t1@90> -> tknow<l@89, #t@91>
+90:	[<=:0]	[<=:0]	
+91:	[ <:Max]	[<=:0]	
+
+Select : NA	
+ -> tknow<A[], #t@93>
+
+Select : NA	
+ -> tknow<B[], #t@95>
+
+Select : NA	
+ -> tknow<I[], #t@97>
+
+Select : NA	
+ -> tknow<pk(skA[]), #t@99>
+
+Select : NA	
+ -> tknow<pk(skB[]), #t@101>
+
+Select : NA	
+init<skA[], skR@102, #ta@103, *[Na@104]> -> tknow<sign(tuple5(#ta@103, [Na@104], pk(skR@102), X(pk(skR@102)), aenc(tuple2(Y(pk(skR@102)), sign(hash(Y(pk(skR@102))), skA[])), pk(skR@102))), skA[]), #ta@103>
+
+Select : 0
+tknow<sign(tuple5(#ta@108, Na@109, pk(skB[]), X(pk(skB[])), aenc(tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), skI@110)), pk(skB[]))), skI@110), #t1@111> -> accept<skI@110, skB[], #t@112, Na@109>
+
+Select : NA	
+tknow<sk@125, #t1@127>, tknow<m@124, #t1@128> -> tknow<aenc(m@124, pk(sk@125)), #t@126>
+128:	[<=:0]	[<=:0]	[ <:Max]	
+126:	[ <:Max]	[<=:0]	[ <:Max]	
+127:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : NA	
+tknow<m@194, #t1@196> -> tknow<aenc(m@194, pk(skA[])), #t@195>
+196:	[<=:0]	[<=:0]	
+195:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<m@197, #t1@199> -> tknow<aenc(m@197, pk(skB[])), #t@198>
+199:	[<=:0]	[<=:0]	
+198:	[ <:Max]	[<=:0]	
+
+Select : NA	
+init<skA[], skR@202, #ta@200, *[Na@201]> -> tknow<tuple5(#ta@200, [Na@201], pk(skR@202), X(pk(skR@202)), aenc(tuple2(Y(pk(skR@202)), sign(hash(Y(pk(skR@202))), skA[])), pk(skR@202))), #t@203>
+200:	[<=:0]	[<=:0]	
+203:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple5(#ta@207, Na@206, pk(skB[]), X(pk(skB[])), aenc(tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@204)), pk(skB[]))), #t1@208>, tknow<sk@204, #t2@209> -> accept<sk@204, skB[], #t@205, Na@206>
+208:	[<=:0]	[ <:Max]	
+209:	[ <:Max]	[<=:0]	
+
+Select : 1
+tknow<sk@25, #t1@26>, tknow<aenc(m@27, pk(sk@25)), #t2@28> -> tknow<m@27, #t@29>
+26:	[<=:0]	[<=:0]	[ <:Max]	
+29:	[ <:Max]	[<=:0]	[ <:Max]	
+28:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : NA	
+init<skA[], skR@219, #ta@220, *[Na@217]> -> tknow<[Na@217], #t@218>
+220:	[<=:0]	[<=:0]	
+218:	[ <:Max]	[<=:0]	
+
+Select : NA	
+init<skA[], skR@221, #ta@223, *[Na@224]> -> tknow<pk(skR@221), #t@222>
+223:	[<=:0]	[<=:0]	
+222:	[ <:Max]	[<=:0]	
+
+Select : NA	
+init<skA[], skR@225, #ta@227, *[Na@228]> -> tknow<X(pk(skR@225)), #t@226>
+227:	[<=:0]	[<=:0]	
+226:	[ <:Max]	[<=:0]	
+
+Select : NA	
+init<skA[], skR@229, #ta@231, *[Na@232]> -> tknow<aenc(tuple2(Y(pk(skR@229)), sign(hash(Y(pk(skR@229))), skA[])), pk(skR@229)), #t@230>
+231:	[<=:0]	[<=:0]	
+230:	[ <:Max]	[<=:0]	
+
+Select : 2
+tknow<#ta@236, #t1@237>, tknow<y@235, #t2@238>, tknow<pk(skB[]), #t3@239>, tknow<X(pk(skB[])), #t4@240>, tknow<aenc(tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@233)), pk(skB[])), #t5@241>, tknow<sk@233, #t2@242> -> accept<sk@233, skB[], #t@234, y@235>
+241:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+242:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+237:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+238:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+239:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+240:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<m@261, #t1@266>, init<skA[], skR@262, #ta@264, *[Na@265]> -> tknow<aenc(m@261, pk(skR@262)), #t@263>
+266:	[<=:0]	[<=:0]	[ <:Max]	
+263:	[ <:Max]	[<=:0]	[ <:Max]	
+264:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : NA	
+tknow<skR@267, #t1@271>, init<skA[], skR@267, #ta@269, *[Na@270]> -> tknow<tuple2(Y(pk(skR@267)), sign(hash(Y(pk(skR@267))), skA[])), #t@268>
+271:	[<=:0]	[<=:0]	[ <:Max]	
+268:	[ <:Max]	[<=:0]	[ <:Max]	
+269:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : 2
+tknow<#ta@285, #t1@286>, tknow<y@284, #t2@287>, tknow<X(pk(skB[])), #t4@288>, tknow<aenc(tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@282)), pk(skB[])), #t5@289>, tknow<sk@282, #t2@290> -> accept<sk@282, skB[], #t@283, y@284>
+289:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+290:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+286:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+287:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+288:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 2
+tknow<#ta@296, #t1@297>, tknow<y@293, #t2@298>, tknow<X(pk(skB[])), #t4@299>, tknow<aenc(tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@291)), pk(skB[])), #t5@300>, tknow<sk@291, #t2@301>, init<skA[], skB[], #ta@294, *[Na@295]> -> accept<sk@291, skB[], #t@292, y@293>
+300:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+301:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+297:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+298:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+294:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+299:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<skR@309, #t1@311>, init<skA[], skR@309, #ta@312, *[Na@313]> -> tknow<Y(pk(skR@309)), #t@310>
+311:	[<=:0]	[<=:0]	[ <:Max]	
+310:	[ <:Max]	[<=:0]	[ <:Max]	
+312:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : NA	
+tknow<skR@314, #t1@316>, init<skA[], skR@314, #ta@317, *[Na@318]> -> tknow<sign(hash(Y(pk(skR@314))), skA[]), #t@315>
+316:	[<=:0]	[<=:0]	[ <:Max]	
+315:	[ <:Max]	[<=:0]	[ <:Max]	
+317:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : 2
+tknow<#ta@324, #t1@325>, tknow<y@321, #t2@326>, tknow<aenc(tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@319)), pk(skB[])), #t5@327>, tknow<sk@319, #t2@328>, init<skA[], skB[], #ta@322, *[Na@323]> -> accept<sk@319, skB[], #t@320, y@321>
+327:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+328:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+325:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+326:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+322:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 2
+tknow<#ta@334, #t1@335>, tknow<y@331, #t2@336>, tknow<aenc(tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@329)), pk(skB[])), #t5@337>, tknow<sk@329, #t2@338>, init<skA[], skB[], #ta@332, *[Na@333]>, init<skA[], skB[], #ta@339, *[Na@340]> -> accept<sk@329, skB[], #t@330, y@331>
+337:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+338:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+335:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+336:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+339:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+332:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<skR@341, #t1@343>, init<skA[], skR@341, #ta@344, *[Na@345]> -> tknow<hash(Y(pk(skR@341))), #t@342>
+344:	[<=:0]	[<=:0]	[ <:Max]	
+342:	[ <:Max]	[<=:0]	[ <:Max]	
+343:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : 0
+tknow<tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@357)), #t1@360>, tknow<#ta@361, #t1@362>, tknow<y@359, #t2@363>, tknow<sk@357, #t2@364>, init<skA[], skB[], #ta@365, *[Na@366]> -> accept<sk@357, skB[], #t@358, y@359>
+360:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+364:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+362:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+363:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+365:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@377)), #t1@380>, tknow<#ta@383, #t1@384>, tknow<y@379, #t2@385>, tknow<sk@377, #t2@386>, init<skA[], skB[], #ta@381, *[Na@382]>, init<skA[], skB[], #ta@387, *[Na@388]> -> accept<sk@377, skB[], #t@378, y@379>
+380:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+386:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+384:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+385:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+387:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+381:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@402)), #t1@405>, tknow<#ta@406, #t1@407>, tknow<y@404, #t2@408>, tknow<sk@402, #t2@409>, init<skA[], skB[], #ta@410, *[Na@411]>, init<skA[], skB[], #ta@412, *[Na@413]> -> accept<sk@402, skB[], #t@403, y@404>
+405:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+409:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+407:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+408:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+412:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+410:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@426)), #t1@429>, tknow<#ta@432, #t1@433>, tknow<y@428, #t2@434>, tknow<sk@426, #t2@435>, init<skA[], skB[], #ta@430, *[Na@431]>, init<skA[], skB[], #ta@436, *[Na@437]>, init<skA[], skB[], #ta@438, *[Na@439]> -> accept<sk@426, skB[], #t@427, y@428>
+429:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+435:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+433:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+434:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+438:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+436:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+430:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<Y(pk(skB[])), #t1@443>, tknow<sign(hash(Y(pk(skB[]))), sk@440), #t2@444>, tknow<#ta@445, #t1@446>, tknow<y@442, #t2@447>, tknow<sk@440, #t2@448>, init<skA[], skB[], #ta@449, *[Na@450]> -> accept<sk@440, skB[], #t@441, y@442>
+444:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+448:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+446:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+447:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+449:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+443:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<Y(pk(skB[])), #t1@465>, tknow<sign(hash(Y(pk(skB[]))), sk@462), #t2@466>, tknow<#ta@467, #t1@468>, tknow<y@464, #t2@469>, tknow<sk@462, #t2@470>, init<skA[], skB[], #ta@471, *[Na@472]>, init<skA[], skB[], #ta@473, *[Na@474]> -> accept<sk@462, skB[], #t@463, y@464>
+466:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+470:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+468:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+469:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+473:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+471:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+465:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<Y(pk(skB[])), #t1@491>, tknow<sign(hash(Y(pk(skB[]))), sk@488), #t2@492>, tknow<#ta@493, #t1@494>, tknow<y@490, #t2@495>, tknow<sk@488, #t2@496>, init<skA[], skB[], #ta@497, *[Na@498]>, init<skA[], skB[], #ta@499, *[Na@500]> -> accept<sk@488, skB[], #t@489, y@490>
+492:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+496:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+494:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+495:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+499:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+497:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+491:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<Y(pk(skB[])), #t1@517>, tknow<sign(hash(Y(pk(skB[]))), sk@514), #t2@518>, tknow<#ta@519, #t1@520>, tknow<y@516, #t2@521>, tknow<sk@514, #t2@522>, init<skA[], skB[], #ta@523, *[Na@524]>, init<skA[], skB[], #ta@525, *[Na@526]>, init<skA[], skB[], #ta@527, *[Na@528]> -> accept<sk@514, skB[], #t@515, y@516>
+518:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+522:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+520:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+521:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+527:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+525:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+523:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+517:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+
+Non-unifiable services : 
+Reserve as input on 0 is not unifiable. 
+tknow<skA[], #t2@246>, init<skA[], skB[], #ta@245, *[Na@244]> -> accept<skA[], skB[], #t@243, [Na@244]>
+245:	[<=:0]	[ <:Max]	
+246:	[ <:Max]	[<=:0]	
+
+Reserve as input on 2 is not unifiable. 
+tknow<#ta@371, #t1@372>, tknow<y@368, #t2@373>, tknow<skA[], #t2@374>, init<skA[], skB[], #ta@369, *[Na@370]>, init<skA[], skB[], #ta@375, *[Na@376]> -> accept<skA[], skB[], #t@367, y@368>
+369:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+374:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+372:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+373:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+375:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 2 is not unifiable. 
+tknow<#ta@418, #t1@419>, tknow<y@415, #t2@420>, tknow<skA[], #t2@421>, init<skA[], skB[], #ta@416, *[Na@417]>, init<skA[], skB[], #ta@422, *[Na@423]>, init<skA[], skB[], #ta@424, *[Na@425]> -> accept<skA[], skB[], #t@414, y@415>
+416:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+421:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+419:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+420:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+424:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+422:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@275>, tknow<#ta@276, #t1@277>, tknow<y@274, #t2@278>, tknow<X(pk(skB[])), #t4@279>, tknow<aenc(tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@272)), pk(skB[])), #t5@280>, tknow<sk@272, #t2@281> -> accept<sk@272, skB[], #t@273, y@274>
+280:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+281:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+277:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+278:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+275:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+279:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@349>, tknow<tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@346)), #t1@350>, tknow<#ta@351, #t1@352>, tknow<y@348, #t2@353>, tknow<sk@346, #t2@354>, init<skA[], skB[], #ta@355, *[Na@356]> -> accept<sk@346, skB[], #t@347, y@348>
+350:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+354:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+352:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+353:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+355:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+349:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@392>, tknow<tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), sk@389)), #t1@393>, tknow<#ta@394, #t1@395>, tknow<y@391, #t2@396>, tknow<sk@389, #t2@397>, init<skA[], skB[], #ta@398, *[Na@399]>, init<skA[], skB[], #ta@400, *[Na@401]> -> accept<sk@389, skB[], #t@390, y@391>
+393:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+397:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+395:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+396:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+400:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+398:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+392:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@453>, tknow<#ta@456, #t1@457>, tknow<y@452, #t2@458>, tknow<skA[], #t2@459>, init<skA[], skB[], #ta@454, *[Na@455]>, init<skA[], skB[], #ta@460, *[Na@461]> -> accept<skA[], skB[], #t@451, y@452>
+453:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+459:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+457:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+458:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+460:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+454:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@477>, tknow<#ta@480, #t1@481>, tknow<y@476, #t2@482>, tknow<skA[], #t2@483>, init<skA[], skB[], #ta@478, *[Na@479]>, init<skA[], skB[], #ta@484, *[Na@485]>, init<skA[], skB[], #ta@486, *[Na@487]> -> accept<skA[], skB[], #t@475, y@476>
+477:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+483:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+481:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+482:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+486:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+484:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+478:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@503>, tknow<#ta@506, #t1@507>, tknow<y@502, #t2@508>, tknow<skA[], #t2@509>, init<skA[], skB[], #ta@504, *[Na@505]>, init<skA[], skB[], #ta@510, *[Na@511]>, init<skA[], skB[], #ta@512, *[Na@513]> -> accept<skA[], skB[], #t@501, y@502>
+503:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+509:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+507:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+508:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+512:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+510:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+504:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@531>, tknow<#ta@534, #t1@535>, tknow<y@530, #t2@536>, tknow<skA[], #t2@537>, init<skA[], skB[], #ta@532, *[Na@533]>, init<skA[], skB[], #ta@538, *[Na@539]>, init<skA[], skB[], #ta@540, *[Na@541]>, init<skA[], skB[], #ta@542, *[Na@543]> -> accept<skA[], skB[], #t@529, y@530>
+531:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+537:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+535:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+536:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+542:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+540:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+538:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+532:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@547>, tknow<sign(hash(Y(pk(skB[]))), sk@544), #t2@550>, tknow<#ta@551, #t1@552>, tknow<y@546, #t2@553>, tknow<sk@544, #t2@554>, init<skA[], skB[], #ta@548, *[Na@549]>, init<skA[], skB[], #ta@555, *[Na@556]> -> accept<sk@544, skB[], #t@545, y@546>
+550:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+554:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+552:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+553:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+555:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+548:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+547:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@560>, tknow<sign(hash(Y(pk(skB[]))), sk@557), #t2@563>, tknow<#ta@564, #t1@565>, tknow<y@559, #t2@566>, tknow<sk@557, #t2@567>, init<skA[], skB[], #ta@561, *[Na@562]>, init<skA[], skB[], #ta@568, *[Na@569]>, init<skA[], skB[], #ta@570, *[Na@571]> -> accept<sk@557, skB[], #t@558, y@559>
+563:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+567:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+565:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+566:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+570:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+568:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+561:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+560:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@575>, tknow<sign(hash(Y(pk(skB[]))), sk@572), #t2@578>, tknow<#ta@579, #t1@580>, tknow<y@574, #t2@581>, tknow<sk@572, #t2@582>, init<skA[], skB[], #ta@576, *[Na@577]>, init<skA[], skB[], #ta@583, *[Na@584]>, init<skA[], skB[], #ta@585, *[Na@586]> -> accept<sk@572, skB[], #t@573, y@574>
+578:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+582:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+580:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+581:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+585:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+583:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+576:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+575:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@590>, tknow<sign(hash(Y(pk(skB[]))), sk@587), #t2@593>, tknow<#ta@594, #t1@595>, tknow<y@589, #t2@596>, tknow<sk@587, #t2@597>, init<skA[], skB[], #ta@591, *[Na@592]>, init<skA[], skB[], #ta@598, *[Na@599]>, init<skA[], skB[], #ta@600, *[Na@601]>, init<skA[], skB[], #ta@602, *[Na@603]> -> accept<sk@587, skB[], #t@588, y@589>
+593:	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+597:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+595:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+596:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+602:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	
+600:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+598:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+591:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+590:	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+
+Final services : 
+init<skA[], skB[], #ta@212, *[Na@211]> -> accept<skA[], skB[], #t@210, [Na@211]>
+
+init<skA[], skR@215, #ta@213, *[Na@216]> -> tknow<#ta@213, #t@214>
+213:	[<=:0]	[<=:0]	
+214:	[ <:Max]	[<=:0]	
+
+

@@ -1,0 +1,34 @@
+@ceiling 15;
+
+@decl @event init(*, -) @group p;
+@decl @event accept(-, -) @group c;
+@decl @event k(*, -) @group k;
+
+@decl @func tuple2/2;
+@decl @func pk/1;
+@decl @func sign/2;
+
+@nosel init;
+@nosel accept;
+
+@provide k(mx, #t);
+@provide k(#c, #t);
+@provide k(#t, #t);
+
+@rule k(sk, #t1) -> k(pk(sk), #t) : #t1 - #t <= 0;
+
+@rule k(m, #t1), k(sk, #t2) -> k(sign(m, sk), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(sign(m, sk), #t1) -> k(m, #t) : #t1 - #t <= 0;
+
+@rule k(x, #t1), k(y, #t2) -> k(tuple2(x, y), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(tuple2(x, y), #t1) -> k(x, #t) : #t1 - #t <= 0;
+@rule k(tuple2(x, y), #t1) -> k(y, #t) : #t1 - #t <= 0;
+
+@rule k(pk(skB[]), #t);
+@rule k(d[], #t);
+
+@rule init([na], #ta) -> k([na], #t): #t - #ta >= 1;
+@rule k(na, #ta) -> k(sign(tuple2(na, d[]), skB[]), #tb) : #rv - #ta >= 1, #tb - #rv >= 4;
+@rule init([na], #ta), k(sign(tuple2([na], d[]), skB[]), #tb) -> accept([na], #tb) : #tb - #ta <= 7;
+
+@query accept(na, #tb) <- init(na, #ta) : #tb - #ta <= 7;

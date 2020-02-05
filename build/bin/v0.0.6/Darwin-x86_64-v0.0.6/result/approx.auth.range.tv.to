@@ -1,0 +1,112 @@
+Approximated : 15.
+
+Query satisfied.
+
+Service size : 18
+Verification time: 4
+
+Details:
+General services : 
+Select : NA	
+tknow<x@0, #t1@1>, tknow<y@3, #t2@4> -> tknow<tuple2(x@0, y@3), #t@6>
+1:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+6:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+4:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	
+7:	[ <:Max]	[<=:0]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple2(x@8, y@9), #t1@10> -> tknow<x@8, #t@11>
+10:	[<=:0]	[<=:0]	
+11:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple2(x@12, y@13), #t1@14> -> tknow<y@13, #t@15>
+14:	[<=:0]	[<=:0]	
+15:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<sk@16, #t1@17> -> tknow<pk(sk@16), #t@19>
+17:	[<=:0]	[<=:0]	
+19:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<m@20, #t1@21>, tknow<sk@22, #t2@23> -> tknow<sign(m@20, sk@22), #t@25>
+21:	[<=:0]	[<=:0]	[ <:Max]	
+25:	[ <:Max]	[<=:0]	[ <:Max]	
+23:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : 0
+tknow<sign(m@26, sk@27), #t1@28> -> tknow<m@26, #t@29>
+28:	[<=:0]	[<=:0]	
+29:	[ <:Max]	[<=:0]	
+
+Select : NA	
+ -> tknow<pk(skB[]), #t@31>
+
+Select : NA	
+ -> tknow<d[], #t@33>
+
+Select : NA	
+init<*[na@34], #ta@35> -> tknow<[na@34], #t@37>
+35:	[<=:0]	[<=:-1]	
+37:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<na@38, #ta@39> -> tknow<sign(tuple2(na@38, d[]), skB[]), #tb@40>
+39:	[<=:0]	[<=:-1]	[<=:-5]	
+41:	[ <:Max]	[<=:0]	[<=:-4]	
+40:	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 1
+init<*[na@42], #ta@43>, tknow<sign(tuple2([na@42], d[]), skB[]), #tb@44> -> accept<*[na@42], #tb@44>
+44:	[<=:0]	[<=:7]	
+43:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<na@64, #ta@66> -> tknow<tuple2(na@64, d[]), #t@65>
+66:	[<=:0]	[<=:-5]	
+65:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple2([na@67], d[]), #t1@69>, tknow<skB[], #t2@70>, init<*[na@67], #ta@71> -> accept<*[na@67], #t@68>
+68:	[<=:0]	[<=:7]	[ <:Max]	[ <:Max]	
+71:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+69:	[<=:0]	[<=:7]	[<=:0]	[ <:Max]	
+70:	[<=:0]	[<=:7]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<[na@72], #ta@74>, init<*[na@72], #ta@75> -> accept<*[na@72], #tb@73>
+73:	[<=:0]	[<=:7]	[ <:Max]	
+75:	[ <:Max]	[<=:0]	[ <:Max]	
+74:	[<=:-5]	[<=:2]	[<=:0]	
+
+Select : 0
+tknow<[na@82], #t1@84>, tknow<d[], #t2@85>, tknow<skB[], #t2@86>, init<*[na@82], #ta@87> -> accept<*[na@82], #t@83>
+83:	[<=:0]	[<=:7]	[ <:Max]	[ <:Max]	[ <:Max]	
+87:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	[ <:Max]	
+85:	[<=:0]	[<=:7]	[<=:0]	[ <:Max]	[ <:Max]	
+86:	[<=:0]	[<=:7]	[ <:Max]	[<=:0]	[ <:Max]	
+84:	[<=:0]	[<=:7]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<d[], #t2@108>, tknow<skB[], #t2@109>, init<*[na@106], #ta@110> -> accept<*[na@106], #t@107>
+107:	[<=:0]	[<=:7]	[ <:Max]	[ <:Max]	
+110:	[<=:-1]	[<=:0]	[ <:Max]	[ <:Max]	
+108:	[<=:0]	[<=:7]	[<=:0]	[ <:Max]	
+109:	[<=:0]	[<=:7]	[ <:Max]	[<=:0]	
+
+
+Non-unifiable services : 
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t2@113>, init<*[na@111], #ta@114> -> accept<*[na@111], #t@112>
+112:	[<=:0]	[<=:7]	[ <:Max]	
+114:	[<=:-1]	[<=:0]	[ <:Max]	
+113:	[<=:0]	[<=:7]	[<=:0]	
+
+
+Final services : 
+init<*[na@97], #ta@99> -> accept<*[na@97], #tb@98>
+98:	[<=:0]	[<=:7]	
+99:	[<=:-6]	[<=:0]	
+
+

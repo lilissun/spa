@@ -1,0 +1,18 @@
+% 15
+
+! <x, #t1>, <y, #t2> -> <tuple2(x, y), #t> : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0;
+! <tuple2(x, y), #t1> -> <x, #t> : #t1 - #t <= 0;
+! <tuple2(x, y), #t1> -> <y, #t> : #t1 - #t <= 0;
+
+! <sk, #t1> -> <pk(sk), #t> : #t1 - #t <= 0;
+! <m, #t1>, <sk, #t2> -> <sign(m, sk), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <sign(m, sk), #t1> -> <m, #t> : #t1 - #t <= 0;
+
+! <pk(skB[]), #t>;
+! <d[], #t>;
+
+! init([na], #ta) -> <[na], #t>: #t - #ta >= 1;
+! <na, #ta> -> <sign(tuple2(na, d[]), skB[]), #tb> : #rv - #ta >= 1, #tb - #rv >= 4;
+! init([na], #ta), <sign(tuple2([na], d[]), skB[]), #tb> -> accept([na], #tb) : #tb - #ta <= 7;
+
+? accept(na, #tb) <- init(na, #ta) : #tb - #ta <= 7;

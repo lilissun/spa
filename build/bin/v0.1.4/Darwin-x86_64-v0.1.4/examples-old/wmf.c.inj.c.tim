@@ -1,0 +1,317 @@
+@set @index 147;
+
+@declare @event new(1, 2);
+@provide @event new @removable @false;
+
+@declare @event unique(2, 3);
+@provide @event unique @removable @false;
+
+@declare @event accept(1, 3);
+@provide @event accept @removable @false;
+
+@declare @event init(1, 3);
+@provide @event init @removable @false;
+
+@declare @event join(1, 3);
+@provide @event join @removable @false;
+
+@declare @event open(1, 1);
+@provide @event open @removable @false;
+
+@declare @event know(1, 2);
+@provide @event know( m, #t) @removable @true;
+@provide @event know(#c, #t) @removable @true;
+@provide @event know(#t, #t) @removable @true;
+
+@declare @event leak(1, 1);
+@provide @event leak @removable @false;
+
+@rule {
+    @premise know(x0, #t0);
+    @constraint #t0 - #t <= 0;
+    @conclusion know((x0), #t);
+};
+
+@rule {
+    @premise know((x0), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t0 - #t >= 0;
+};
+
+@rule {
+    @premise know(x0, #t0);
+    @constraint #t0 - #t <= 0;
+    @premise know(x1, #t1);
+    @constraint #t1 - #t <= 0;
+    @conclusion know((x0, x1), #t);
+};
+
+@rule {
+    @premise know((x0, x1), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t0 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know(x0, #t0);
+    @constraint #t0 - #t <= 0;
+    @premise know(x1, #t1);
+    @constraint #t1 - #t <= 0;
+    @premise know(x2, #t2);
+    @constraint #t2 - #t <= 0;
+    @conclusion know((x0, x1, x2), #t);
+};
+
+@rule {
+    @premise know((x0, x1, x2), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t0 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2), #t);
+    @conclusion know(x2, #t2);
+    @constraint #t2 - #t >= 0;
+};
+
+@rule {
+    @premise know(x0, #t0);
+    @constraint #t0 - #t <= 0;
+    @premise know(x1, #t1);
+    @constraint #t1 - #t <= 0;
+    @premise know(x2, #t2);
+    @constraint #t2 - #t <= 0;
+    @premise know(x3, #t3);
+    @constraint #t3 - #t <= 0;
+    @conclusion know((x0, x1, x2, x3), #t);
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t0 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3), #t);
+    @conclusion know(x2, #t2);
+    @constraint #t2 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3), #t);
+    @conclusion know(x3, #t3);
+    @constraint #t3 - #t >= 0;
+};
+
+@rule {
+    @premise know(x0, #t0);
+    @constraint #t0 - #t <= 0;
+    @premise know(x1, #t1);
+    @constraint #t1 - #t <= 0;
+    @premise know(x2, #t2);
+    @constraint #t2 - #t <= 0;
+    @premise know(x3, #t3);
+    @constraint #t3 - #t <= 0;
+    @premise know(x4, #t4);
+    @constraint #t4 - #t <= 0;
+    @premise know(x5, #t5);
+    @constraint #t5 - #t <= 0;
+    @conclusion know((x0, x1, x2, x3, x4, x5), #t);
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t0 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x2, #t2);
+    @constraint #t2 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x3, #t3);
+    @constraint #t3 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x4, #t4);
+    @constraint #t4 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x5, #t5);
+    @constraint #t5 - #t >= 0;
+};
+
+@set @barrier;
+
+@declare @string l0[];
+@declare @string l1[];
+@declare @string l2[];
+
+@declare @string A[];
+@declare @string B[];
+@declare @string m1[];
+@declare @string m2[];
+@declare @string database[];
+
+@declare @parameter $pn;
+@declare @parameter $pm;
+@set @constraint $pn > 0;
+
+@declare @function key/1;
+@declare @function senc/2;
+
+@rule {
+    @premise know((senc(m@144, k@145), k@145), #t);
+    @conclusion know(m@144, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((m@146, k@147), #t);
+    @conclusion know(senc(m@146, k@147), #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule{
+    @guard u@105 != A[];
+    @guard u@105 != B[];
+    @premise know(u@105, #t@106);
+    @conclusion know(key(u@105), #t@107);
+    @constraint -$pn - #t@17 + #t@107 >= 0;
+    @constraint -#t@9 + #t@17 > 0;
+    @constraint #t@17 - #t@106 > 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(B[], #t@108);
+    @premise new([k@109], l0[]);
+    @premise unique([k@109], l0[], {B[], [k@109], #ta@110});
+    @premise know(#ta@110, #t@112);
+    @premise init([k@109], (A[], B[], [k@109]), #ta@110);
+    @conclusion know((A[], senc((#ta@110, B[], [k@109], m1[]), key(A[]))), #t@113);
+    @constraint -$pn - #ta@110 + #t@113 >= 0;
+    @constraint -#t@9 + #t@26 > 0;
+    @constraint -#t@26 + #ta@110 > 0;
+    @constraint #ta@110 - #t@112 > 0;
+    @constraint #t@26 - #t@108 > 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @guard r@114 != B[];
+    @premise know(r@114, #t@115);
+    @premise new([k@116], l0[]);
+    @premise unique([k@116], l0[], {r@114, [k@116], #ta@117});
+    @premise know(#ta@117, #t@119);
+    @premise init([k@116], (A[], r@114, [k@116]), #ta@117);
+    @premise open([k@116]);
+    @conclusion know((A[], senc((#ta@117, r@114, [k@116], m1[]), key(A[]))), #t@120);
+    @constraint -$pn - #ta@117 + #t@120 >= 0;
+    @constraint -#t@9 + #t@26 > 0;
+    @constraint -#t@26 + #ta@117 > 0;
+    @constraint #ta@117 - #t@119 > 0;
+    @constraint #t@26 - #t@115 > 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(r@121, #t@122);
+    @premise new([k@123], l0[]);
+    @premise unique([k@123], l0[], {r@121, [k@123], [k@123]});
+    @premise know([k@123], #t@125);
+    @conclusion leak([k@123]);
+    @constraint -#t@9 + #t@26 > 0;
+    @constraint #t@49 - #t@125 > 0;
+    @constraint #t@26 - #t@122 > 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know((u@126, senc((#ti@127, u@128, k@129, m1[]), key(u@126))), #t@130);
+    @premise know(#ts@131, #t@132);
+    @premise new([n@133], l1[]);
+    @premise unique([n@133], l1[], {(u@126, senc((#ti@127, u@128, k@129, m1[]), key(u@126))), #ts@131, [n@133]});
+    @premise join([n@133], (u@126, u@128, k@129), #ts@131);
+    @conclusion know(senc((#ts@131, u@126, k@129, m2[]), key(u@128)), #t@135);
+    @constraint -$pn - #ts@131 + #t@135 >= 0;
+    @constraint -#t@9 + #t@54 > 0;
+    @constraint -#t@54 + #ts@131 > 0;
+    @constraint -#ts@131 + $pm + #ti@127 >= 0;
+    @constraint #ts@131 - #t@132 > 0;
+    @constraint #t@54 - #t@130 > 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(senc((#ts@136, A[], k@137, m2[]), key(B[])), #t@138);
+    @premise know(#tb@139, #t@140);
+    @premise unique(k@137, l2[], {senc((#ts@136, A[], k@137, m2[]), key(B[])), #tb@139});
+    @conclusion accept((k@137, l2[]), (A[], B[], k@137), #tb@139);
+    @constraint -#t@9 + #t@78 > 0;
+    @constraint -#t@78 + #tb@139 > 0;
+    @constraint -#tb@139 + $pm + #ts@136 >= 0;
+    @constraint #tb@139 - #t@140 > 0;
+    @constraint #t@78 - #t@138 > 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @conclusion know(A[], #t@142);
+    @constraint -$pn - #t@9 + #t@142 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @conclusion know(B[], #t@143);
+    @constraint -$pn - #t@9 + #t@143 >= 0;
+    @constraint -$pn - #t@9 + #t@94 >= 0;
+    @constraint $pn > 0;
+};
+
+@correspondence{
+    @enforced;
+    @injective init(v@102, (i@96, r@97, k@98), #ti@99);
+    @premise join(v@103, (i@96, r@97, k@98), #ts@100);
+    @conclusion accept(v@104, (i@96, r@97, k@98), #tr@101);
+    @constraint $pm + #ts@100 - #tr@101 >= 0;
+    @constraint $pm + #ti@99 - #ts@100 >= 0;
+};
+
+@correspondence {
+    @conclusion leak(x);
+    @premise open(x);
+};

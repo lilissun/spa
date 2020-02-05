@@ -1,0 +1,3012 @@
+Rule in cache: 0
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@14, #t0@15);
+    @premise know(*x1@16, #t1@17);
+    @conclusion know(*tuple2(x0@14, x1@16), #t@18);
+    @constraint -#t0@15 + #t@18 >= 0;
+    @constraint #t@18 - #t1@17 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*x0@14, #t0@15);
+    @premise know(*x1@16, #t1@17);
+    @conclusion know(*tuple2(x0@14, x1@16), #t@18);
+    @constraint -#t0@15 + #t@18 >= 0;
+    @constraint #t@18 - #t1@17 >= 0;
+};
+
+Rule in cache: 1
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*tuple2(x0@19, x1@20), #t@21);
+    @conclusion know(*x0@19, #t0@22);
+    @constraint -#t@21 + #t0@22 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*tuple2(x0@19, x1@20), #t@21);
+    @conclusion know(*x0@19, #t0@22);
+    @constraint -#t@21 + #t0@22 >= 0;
+};
+
+Rule in cache: 2
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*tuple2(x0@23, x1@24), #t@25);
+    @conclusion know(*x1@24, #t1@26);
+    @constraint -#t@25 + #t1@26 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*tuple2(x0@23, x1@24), #t@25);
+    @conclusion know(*x1@24, #t1@26);
+    @constraint -#t@25 + #t1@26 >= 0;
+};
+
+Rule in cache: 3
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@28, #t0@29);
+    @premise know(*x1@30, #t1@31);
+    @premise know(*x2@32, #t2@33);
+    @conclusion know(*tuple3(x0@28, x1@30, x2@32), #t@34);
+    @constraint -#t0@29 + #t@34 >= 0;
+    @constraint #t@34 - #t1@31 >= 0;
+    @constraint #t@34 - #t2@33 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*x0@28, #t0@29);
+    @premise know(*x1@30, #t1@31);
+    @premise know(*x2@32, #t2@33);
+    @conclusion know(*tuple3(x0@28, x1@30, x2@32), #t@34);
+    @constraint -#t0@29 + #t@34 >= 0;
+    @constraint #t@34 - #t1@31 >= 0;
+    @constraint #t@34 - #t2@33 >= 0;
+};
+
+Rule in cache: 4
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*tuple3(x0@35, x1@36, x2@37), #t@38);
+    @conclusion know(*x0@35, #t0@39);
+    @constraint -#t@38 + #t0@39 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*tuple3(x0@35, x1@36, x2@37), #t@38);
+    @conclusion know(*x0@35, #t0@39);
+    @constraint -#t@38 + #t0@39 >= 0;
+};
+
+Rule in cache: 5
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*tuple3(x0@40, x1@41, x2@42), #t@43);
+    @conclusion know(*x1@41, #t1@44);
+    @constraint -#t@43 + #t1@44 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*tuple3(x0@40, x1@41, x2@42), #t@43);
+    @conclusion know(*x1@41, #t1@44);
+    @constraint -#t@43 + #t1@44 >= 0;
+};
+
+Rule in cache: 6
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*tuple3(x0@45, x1@46, x2@47), #t@48);
+    @conclusion know(*x2@47, #t2@49);
+    @constraint -#t@48 + #t2@49 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*tuple3(x0@45, x1@46, x2@47), #t@48);
+    @conclusion know(*x2@47, #t2@49);
+    @constraint -#t@48 + #t2@49 >= 0;
+};
+
+Rule in cache: 7
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@51, #t1@52);
+    @conclusion know(*pk(sk@51), #t@53);
+    @constraint -#t1@52 + #t@53 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*sk@51, #t1@52);
+    @conclusion know(*pk(sk@51), #t@53);
+    @constraint -#t1@52 + #t@53 >= 0;
+};
+
+Rule in cache: 8
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*m@55, #t1@56);
+    @premise know(*sk@57, #t2@58);
+    @conclusion know(*sign(m@55, sk@57), #t@59);
+    @constraint -#t1@56 + #t@59 >= 0;
+    @constraint #t@59 - #t2@58 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*m@55, #t1@56);
+    @premise know(*sk@57, #t2@58);
+    @conclusion know(*sign(m@55, sk@57), #t@59);
+    @constraint -#t1@56 + #t@59 >= 0;
+    @constraint #t@59 - #t2@58 >= 0;
+};
+
+Rule in cache: 9
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*sign(m@60, sk@61), #t1@62);
+    @conclusion know(*m@60, #t@63);
+    @constraint -#t1@62 + #t@63 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*sign(m@60, sk@61), #t1@62);
+    @conclusion know(*m@60, #t@63);
+    @constraint -#t1@62 + #t@63 >= 0;
+};
+
+Rule in cache: 10
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*m@65, #t1@66);
+    @premise know(*pk(sk@67), #t2@68);
+    @conclusion know(*aenc(m@65, pk(sk@67)), #t@69);
+    @constraint -#t1@66 + #t@69 >= 0;
+    @constraint #t@69 - #t2@68 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*m@65, #t1@66);
+    @premise know(*pk(sk@67), #t2@68);
+    @conclusion know(*aenc(m@65, pk(sk@67)), #t@69);
+    @constraint -#t1@66 + #t@69 >= 0;
+    @constraint #t@69 - #t2@68 >= 0;
+};
+
+Rule in cache: 11
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+
+Rule in cache: 12
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @conclusion know(*pk(skA()), #t@77);
+};
+Rule cached at priority 1: 
+@rule{
+    @conclusion know(*pk(skA()), #t@77);
+};
+
+Rule in cache: 13
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @conclusion know(*pk(skB()), #t@78);
+};
+Rule cached at priority 1: 
+@rule{
+    @conclusion know(*pk(skB()), #t@78);
+};
+
+Rule in cache: 14
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skR@80, *[Na@81]);
+    @premise new(*[Na@81], aliceNa(), tuple2(skA(), skR@80));
+    @conclusion know(*aenc(tuple2([Na@81], pk(skA())), pk(skR@80)), #t@82);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise initA(*skA(), *skR@80, *[Na@81]);
+    @premise new(*[Na@81], aliceNa(), tuple2(skA(), skR@80));
+    @conclusion know(*aenc(tuple2([Na@81], pk(skA())), pk(skR@80)), #t@82);
+};
+
+Rule in cache: 15
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise initB(*skI@84, *skB(), *[Nb@85]);
+    @premise new(*[Nb@85], bobNb(), tuple3(skI@84, skB(), Na@86));
+    @premise know(*aenc(tuple2(Na@86, pk(skI@84)), pk(skB())), #t1@87);
+    @conclusion know(*aenc(tuple2(Na@86, [Nb@85]), pk(skI@84)), #t@88);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise initB(*skI@84, *skB(), *[Nb@85]);
+    @premise new(*[Nb@85], bobNb(), tuple3(skI@84, skB(), Na@86));
+    @premise know(*aenc(tuple2(Na@86, pk(skI@84)), pk(skB())), #t1@87);
+    @conclusion know(*aenc(tuple2(Na@86, [Nb@85]), pk(skI@84)), #t@88);
+};
+
+Rule in cache: 16
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skR@89, *[Na@90]);
+    @premise init(*skA(), *skR@89);
+    @premise new(*[Na@90], aliceNa(), tuple2(skA(), skR@89));
+    @premise know(*aenc(tuple2([Na@90], Nb@91), pk(skA())), #t1@92);
+    @conclusion know(*aenc(Nb@91, pk(skR@89)), #t@93);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise initA(*skA(), *skR@89, *[Na@90]);
+    @premise init(*skA(), *skR@89);
+    @premise new(*[Na@90], aliceNa(), tuple2(skA(), skR@89));
+    @premise know(*aenc(tuple2([Na@90], Nb@91), pk(skA())), #t1@92);
+    @conclusion know(*aenc(Nb@91, pk(skR@89)), #t@93);
+};
+
+Rule in cache: 17
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise initB(*skA(), *skB(), *[Nb@94]);
+    @premise new(*[Nb@94], bobNb(), tuple3(skI@95, skB(), Na@96));
+    @premise know(*aenc([Nb@94], pk(skB())), #t1@97);
+    @conclusion accept(*skA(), *skB());
+};
+Rule cached at priority 1: 
+@rule{
+    @premise initB(*skA(), *skB(), *[Nb@94]);
+    @premise new(*[Nb@94], bobNb(), tuple3(skI@95, skB(), Na@96));
+    @premise know(*aenc([Nb@94], pk(skB())), #t1@97);
+    @conclusion accept(*skA(), *skB());
+};
+
+Stage rule: 
+@rule{
+    @premise know(*x0@14, #t0@15);
+    @premise know(*x1@16, #t1@17);
+    @conclusion know(*tuple2(x0@14, x1@16), #t@18);
+    @constraint -#t0@15 + #t@18 >= 0;
+    @constraint #t@18 - #t1@17 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*tuple2(x0@19, x1@20), #t@21);
+    @conclusion know(*x0@19, #t0@22);
+    @constraint -#t@21 + #t0@22 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*x0@14, #t0@15);
+    @premise know(*x1@16, #t1@17);
+    @conclusion know(*tuple2(x0@14, x1@16), #t@18);
+    @constraint -#t0@15 + #t@18 >= 0;
+    @constraint #t@18 - #t1@17 >= 0;
+};
+Rule in cache: 16
+Rule staged: 2
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@100, #t0@102);
+    @premise know(*x1@103, #t1@104);
+    @conclusion know(*x0@100, #t0@101);
+    @constraint #t0@101 - #t@18 >= 0;
+    @constraint #t@18 - #t1@104 >= 0;
+    @constraint -#t0@102 + #t@18 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise know(*tuple2(x0@23, x1@24), #t@25);
+    @conclusion know(*x1@24, #t1@26);
+    @constraint -#t@25 + #t1@26 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*x0@14, #t0@15);
+    @premise know(*x1@16, #t1@17);
+    @conclusion know(*tuple2(x0@14, x1@16), #t@18);
+    @constraint -#t0@15 + #t@18 >= 0;
+    @constraint #t@18 - #t1@17 >= 0;
+};
+Rule in cache: 15
+Rule staged: 3
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@107, #t0@108);
+    @premise know(*x1@105, #t1@109);
+    @conclusion know(*x1@105, #t1@106);
+    @constraint #t1@106 - #t@18 >= 0;
+    @constraint #t@18 - #t1@109 >= 0;
+    @constraint -#t0@108 + #t@18 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise know(*x0@28, #t0@29);
+    @premise know(*x1@30, #t1@31);
+    @premise know(*x2@32, #t2@33);
+    @conclusion know(*tuple3(x0@28, x1@30, x2@32), #t@34);
+    @constraint -#t0@29 + #t@34 >= 0;
+    @constraint #t@34 - #t1@31 >= 0;
+    @constraint #t@34 - #t2@33 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*tuple3(x0@35, x1@36, x2@37), #t@38);
+    @conclusion know(*x0@35, #t0@39);
+    @constraint -#t@38 + #t0@39 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*x0@28, #t0@29);
+    @premise know(*x1@30, #t1@31);
+    @premise know(*x2@32, #t2@33);
+    @conclusion know(*tuple3(x0@28, x1@30, x2@32), #t@34);
+    @constraint -#t0@29 + #t@34 >= 0;
+    @constraint #t@34 - #t1@31 >= 0;
+    @constraint #t@34 - #t2@33 >= 0;
+};
+Rule in cache: 13
+Rule staged: 5
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@110, #t0@112);
+    @premise know(*x1@113, #t1@114);
+    @premise know(*x2@115, #t2@116);
+    @conclusion know(*x0@110, #t0@111);
+    @constraint #t0@111 - #t@34 >= 0;
+    @constraint #t@34 - #t2@116 >= 0;
+    @constraint #t@34 - #t1@114 >= 0;
+    @constraint -#t0@112 + #t@34 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise know(*tuple3(x0@40, x1@41, x2@42), #t@43);
+    @conclusion know(*x1@41, #t1@44);
+    @constraint -#t@43 + #t1@44 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*x0@28, #t0@29);
+    @premise know(*x1@30, #t1@31);
+    @premise know(*x2@32, #t2@33);
+    @conclusion know(*tuple3(x0@28, x1@30, x2@32), #t@34);
+    @constraint -#t0@29 + #t@34 >= 0;
+    @constraint #t@34 - #t1@31 >= 0;
+    @constraint #t@34 - #t2@33 >= 0;
+};
+Rule in cache: 12
+Rule staged: 6
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@119, #t0@120);
+    @premise know(*x1@117, #t1@121);
+    @premise know(*x2@122, #t2@123);
+    @conclusion know(*x1@117, #t1@118);
+    @constraint #t1@118 - #t@34 >= 0;
+    @constraint #t@34 - #t2@123 >= 0;
+    @constraint #t@34 - #t1@121 >= 0;
+    @constraint -#t0@120 + #t@34 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise know(*tuple3(x0@45, x1@46, x2@47), #t@48);
+    @conclusion know(*x2@47, #t2@49);
+    @constraint -#t@48 + #t2@49 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*x0@28, #t0@29);
+    @premise know(*x1@30, #t1@31);
+    @premise know(*x2@32, #t2@33);
+    @conclusion know(*tuple3(x0@28, x1@30, x2@32), #t@34);
+    @constraint -#t0@29 + #t@34 >= 0;
+    @constraint #t@34 - #t1@31 >= 0;
+    @constraint #t@34 - #t2@33 >= 0;
+};
+Rule in cache: 11
+Rule staged: 7
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@126, #t0@127);
+    @premise know(*x1@128, #t1@129);
+    @premise know(*x2@124, #t2@130);
+    @conclusion know(*x2@124, #t2@125);
+    @constraint #t2@125 - #t@34 >= 0;
+    @constraint #t@34 - #t2@130 >= 0;
+    @constraint #t@34 - #t1@129 >= 0;
+    @constraint -#t0@127 + #t@34 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise know(*sk@51, #t1@52);
+    @conclusion know(*pk(sk@51), #t@53);
+    @constraint -#t1@52 + #t@53 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*m@55, #t1@56);
+    @premise know(*sk@57, #t2@58);
+    @conclusion know(*sign(m@55, sk@57), #t@59);
+    @constraint -#t1@56 + #t@59 >= 0;
+    @constraint #t@59 - #t2@58 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*sign(m@60, sk@61), #t1@62);
+    @conclusion know(*m@60, #t@63);
+    @constraint -#t1@62 + #t@63 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*m@55, #t1@56);
+    @premise know(*sk@57, #t2@58);
+    @conclusion know(*sign(m@55, sk@57), #t@59);
+    @constraint -#t1@56 + #t@59 >= 0;
+    @constraint #t@59 - #t2@58 >= 0;
+};
+Rule in cache: 8
+Rule staged: 10
+Rule before check and clean: 
+@rule{
+    @premise know(*m@131, #t1@133);
+    @premise know(*sk@134, #t2@135);
+    @conclusion know(*m@131, #t@132);
+    @constraint #t@132 - #t@59 >= 0;
+    @constraint #t@59 - #t2@135 >= 0;
+    @constraint -#t1@133 + #t@59 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise know(*m@65, #t1@66);
+    @premise know(*pk(sk@67), #t2@68);
+    @conclusion know(*aenc(m@65, pk(sk@67)), #t@69);
+    @constraint -#t1@66 + #t@69 >= 0;
+    @constraint #t@69 - #t2@68 >= 0;
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*sk@51, #t1@52);
+    @conclusion know(*pk(sk@51), #t@53);
+    @constraint -#t1@52 + #t@53 >= 0;
+};
+Rule in cache: 7
+Rule staged: 11
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@137, #t1@139);
+    @premise know(*m@136, #t1@140);
+    @conclusion know(*aenc(m@136, pk(sk@137)), #t@138);
+    @constraint -#t1@140 + #t@138 >= 0;
+    @constraint -#t1@139 + #t@53 >= 0;
+    @constraint #t@138 - #t@53 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*sk@137, #t1@139);
+    @premise know(*m@136, #t1@140);
+    @conclusion know(*aenc(m@136, pk(sk@137)), #t@138);
+    @constraint -#t1@140 + #t@138 >= 0;
+    @constraint #t@138 - #t1@139 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule added at 1.
+
+Stage rule: 
+@rule{
+    @conclusion know(*pk(skA()), #t@77);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*m@65, #t1@66);
+    @premise know(*pk(sk@67), #t2@68);
+    @conclusion know(*aenc(m@65, pk(sk@67)), #t@69);
+    @constraint -#t1@66 + #t@69 >= 0;
+    @constraint #t@69 - #t2@68 >= 0;
+};
+Rule in cache: 6
+Rule staged: 13
+Rule before check and clean: 
+@rule{
+    @premise know(*m@141, #t1@143);
+    @conclusion know(*aenc(m@141, pk(skA())), #t@142);
+    @constraint -#t1@143 + #t@142 >= 0;
+    @constraint #t@142 - #t@77 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*m@141, #t1@143);
+    @conclusion know(*aenc(m@141, pk(skA())), #t@142);
+    @constraint -#t1@143 + #t@142 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @conclusion know(*pk(skB()), #t@78);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*m@65, #t1@66);
+    @premise know(*pk(sk@67), #t2@68);
+    @conclusion know(*aenc(m@65, pk(sk@67)), #t@69);
+    @constraint -#t1@66 + #t@69 >= 0;
+    @constraint #t@69 - #t2@68 >= 0;
+};
+Rule in cache: 6
+Rule staged: 14
+Rule before check and clean: 
+@rule{
+    @premise know(*m@144, #t1@146);
+    @conclusion know(*aenc(m@144, pk(skB())), #t@145);
+    @constraint -#t1@146 + #t@145 >= 0;
+    @constraint #t@145 - #t@78 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*m@144, #t1@146);
+    @conclusion know(*aenc(m@144, pk(skB())), #t@145);
+    @constraint -#t1@146 + #t@145 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initA(*skA(), *skR@80, *[Na@81]);
+    @premise new(*[Na@81], aliceNa(), tuple2(skA(), skR@80));
+    @conclusion know(*aenc(tuple2([Na@81], pk(skA())), pk(skR@80)), #t@82);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 6
+Rule staged: 15
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skR@149, *[Na@147]);
+    @premise new(*[Na@147], aliceNa(), tuple2(skA(), skR@149));
+    @premise know(*skR@149, #t1@150);
+    @conclusion know(*tuple2([Na@147], pk(skA())), #t@148);
+    @constraint -#t1@150 + #t@148 >= 0;
+    @constraint #t@148 - #t@82 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise initA(*skA(), *skR@149, *[Na@147]);
+    @premise new(*[Na@147], aliceNa(), tuple2(skA(), skR@149));
+    @premise know(*skR@149, #t1@150);
+    @conclusion know(*tuple2([Na@147], pk(skA())), #t@148);
+    @constraint -#t1@150 + #t@148 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initB(*skI@84, *skB(), *[Nb@85]);
+    @premise new(*[Nb@85], bobNb(), tuple3(skI@84, skB(), Na@86));
+    @premise know(*aenc(tuple2(Na@86, pk(skI@84)), pk(skB())), #t1@87);
+    @conclusion know(*aenc(tuple2(Na@86, [Nb@85]), pk(skI@84)), #t@88);
+};
+Rule added at 2.
+
+Compose by at 2 : 
+@rule{
+    @premise initA(*skA(), *skR@80, *[Na@81]);
+    @premise new(*[Na@81], aliceNa(), tuple2(skA(), skR@80));
+    @conclusion know(*aenc(tuple2([Na@81], pk(skA())), pk(skR@80)), #t@82);
+};
+Rule in cache: 6
+Rule staged: 16
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skB(), *[Na@151]);
+    @premise new(*[Na@151], aliceNa(), tuple2(skA(), skB()));
+    @premise initB(*skA(), *skB(), *[Nb@152]);
+    @premise new(*[Nb@152], bobNb(), tuple3(skA(), skB(), [Na@151]));
+    @conclusion know(*aenc(tuple2([Na@151], [Nb@152]), pk(skA())), #t@153);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise initA(*skA(), *skB(), *[Na@151]);
+    @premise new(*[Na@151], aliceNa(), tuple2(skA(), skB()));
+    @premise initB(*skA(), *skB(), *[Nb@152]);
+    @premise new(*[Nb@152], bobNb(), tuple3(skA(), skB(), [Na@151]));
+    @conclusion know(*aenc(tuple2([Na@151], [Nb@152]), pk(skA())), #t@153);
+};
+
+Stage rule: 
+@rule{
+    @premise initA(*skA(), *skR@89, *[Na@90]);
+    @premise init(*skA(), *skR@89);
+    @premise new(*[Na@90], aliceNa(), tuple2(skA(), skR@89));
+    @premise know(*aenc(tuple2([Na@90], Nb@91), pk(skA())), #t1@92);
+    @conclusion know(*aenc(Nb@91, pk(skR@89)), #t@93);
+};
+Rule added at 3.
+
+Compose by at 3 : 
+@rule{
+    @premise initA(*skA(), *skR@80, *[Na@81]);
+    @premise new(*[Na@81], aliceNa(), tuple2(skA(), skR@80));
+    @conclusion know(*aenc(tuple2([Na@81], pk(skA())), pk(skR@80)), #t@82);
+};
+Rule in cache: 6
+Rule staged: 17
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skA(), *[Na@156]);
+    @premise new(*[Na@156], aliceNa(), tuple2(skA(), skA()));
+    @premise initA(*skA(), *skR@154, *[Na@156]);
+    @premise init(*skA(), *skR@154);
+    @premise new(*[Na@156], aliceNa(), tuple2(skA(), skR@154));
+    @conclusion know(*aenc(pk(skA()), pk(skR@154)), #t@155);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise initA(*skA(), *skA(), *[Na@156]);
+    @premise new(*[Na@156], aliceNa(), tuple2(skA(), skA()));
+    @premise init(*skA(), *skA());
+    @conclusion know(*aenc(pk(skA()), pk(skA())), #t@155);
+};
+
+Stage rule: 
+@rule{
+    @premise initB(*skA(), *skB(), *[Nb@94]);
+    @premise new(*[Nb@94], bobNb(), tuple3(skI@95, skB(), Na@96));
+    @premise know(*aenc([Nb@94], pk(skB())), #t1@97);
+    @conclusion accept(*skA(), *skB());
+};
+Rule added at 2.
+
+Stage rule: 
+@rule{
+    @premise know(*sk@137, #t1@139);
+    @premise know(*m@136, #t1@140);
+    @conclusion know(*aenc(m@136, pk(sk@137)), #t@138);
+    @constraint -#t1@140 + #t@138 >= 0;
+    @constraint #t@138 - #t1@139 >= 0;
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 5
+Rule staged: 19
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@159, #t1@160);
+    @premise know(*m@157, #t1@161);
+    @premise know(*sk@159, #t1@162);
+    @conclusion know(*m@157, #t@158);
+    @constraint -#t1@162 + #t@158 >= 0;
+    @constraint #t@138 - #t1@160 >= 0;
+    @constraint -#t1@161 + #t@138 >= 0;
+    @constraint #t@158 - #t@138 >= 0;
+};
+Rule invalid. 
+
+Compose to at 2 : 
+@rule{
+    @premise initB(*skI@84, *skB(), *[Nb@85]);
+    @premise new(*[Nb@85], bobNb(), tuple3(skI@84, skB(), Na@86));
+    @premise know(*aenc(tuple2(Na@86, pk(skI@84)), pk(skB())), #t1@87);
+    @conclusion know(*aenc(tuple2(Na@86, [Nb@85]), pk(skI@84)), #t@88);
+};
+Rule in cache: 5
+Rule staged: 19
+Rule before check and clean: 
+@rule{
+    @premise know(*skB(), #t1@167);
+    @premise know(*tuple2(Na@163, pk(skI@165)), #t1@168);
+    @premise initB(*skI@165, *skB(), *[Nb@164]);
+    @premise new(*[Nb@164], bobNb(), tuple3(skI@165, skB(), Na@163));
+    @conclusion know(*aenc(tuple2(Na@163, [Nb@164]), pk(skI@165)), #t@166);
+    @constraint -#t1@168 + #t@138 >= 0;
+    @constraint #t@138 - #t1@167 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*skB(), #t1@167);
+    @premise know(*tuple2(Na@163, pk(skI@165)), #t1@168);
+    @premise initB(*skI@165, *skB(), *[Nb@164]);
+    @premise new(*[Nb@164], bobNb(), tuple3(skI@165, skB(), Na@163));
+    @conclusion know(*aenc(tuple2(Na@163, [Nb@164]), pk(skI@165)), #t@166);
+};
+
+Compose to at 3 : 
+@rule{
+    @premise initA(*skA(), *skR@89, *[Na@90]);
+    @premise init(*skA(), *skR@89);
+    @premise new(*[Na@90], aliceNa(), tuple2(skA(), skR@89));
+    @premise know(*aenc(tuple2([Na@90], Nb@91), pk(skA())), #t1@92);
+    @conclusion know(*aenc(Nb@91, pk(skR@89)), #t@93);
+};
+Rule in cache: 6
+Rule staged: 19
+Rule before check and clean: 
+@rule{
+    @premise know(*skA(), #t1@172);
+    @premise know(*tuple2([Na@173], Nb@169), #t1@174);
+    @premise initA(*skA(), *skR@170, *[Na@173]);
+    @premise init(*skA(), *skR@170);
+    @premise new(*[Na@173], aliceNa(), tuple2(skA(), skR@170));
+    @conclusion know(*aenc(Nb@169, pk(skR@170)), #t@171);
+    @constraint -#t1@174 + #t@138 >= 0;
+    @constraint #t@138 - #t1@172 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Na@173], aliceNa(), tuple2(skA(), skR@170));
+    @premise know(*tuple2([Na@173], Nb@169), #t1@174);
+    @premise initA(*skA(), *skR@170, *[Na@173]);
+    @premise know(*skA(), #t1@172);
+    @premise init(*skA(), *skR@170);
+    @conclusion know(*aenc(Nb@169, pk(skR@170)), #t@171);
+};
+
+Compose to at 2 : 
+@rule{
+    @premise initB(*skA(), *skB(), *[Nb@94]);
+    @premise new(*[Nb@94], bobNb(), tuple3(skI@95, skB(), Na@96));
+    @premise know(*aenc([Nb@94], pk(skB())), #t1@97);
+    @conclusion accept(*skA(), *skB());
+};
+Rule in cache: 7
+Rule staged: 19
+Rule before check and clean: 
+@rule{
+    @premise know(*skB(), #t1@175);
+    @premise know(*[Nb@176], #t1@177);
+    @premise initB(*skA(), *skB(), *[Nb@176]);
+    @premise new(*[Nb@176], bobNb(), tuple3(skI@178, skB(), Na@179));
+    @conclusion accept(*skA(), *skB());
+    @constraint -#t1@177 + #t@138 >= 0;
+    @constraint #t@138 - #t1@175 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*skB(), #t1@175);
+    @premise know(*[Nb@176], #t1@177);
+    @premise initB(*skA(), *skB(), *[Nb@176]);
+    @premise new(*[Nb@176], bobNb(), tuple3(skI@178, skB(), Na@179));
+    @conclusion accept(*skA(), *skB());
+};
+
+Stage rule: 
+@rule{
+    @premise know(*m@141, #t1@143);
+    @conclusion know(*aenc(m@141, pk(skA())), #t@142);
+    @constraint -#t1@143 + #t@142 >= 0;
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 7
+Rule staged: 20
+Rule before check and clean: 
+@rule{
+    @premise know(*m@180, #t1@182);
+    @premise know(*skA(), #t1@183);
+    @conclusion know(*m@180, #t@181);
+    @constraint -#t1@183 + #t@181 >= 0;
+    @constraint -#t1@182 + #t@142 >= 0;
+    @constraint #t@181 - #t@142 >= 0;
+};
+Rule invalid. 
+
+Compose to at 3 : 
+@rule{
+    @premise initA(*skA(), *skR@89, *[Na@90]);
+    @premise init(*skA(), *skR@89);
+    @premise new(*[Na@90], aliceNa(), tuple2(skA(), skR@89));
+    @premise know(*aenc(tuple2([Na@90], Nb@91), pk(skA())), #t1@92);
+    @conclusion know(*aenc(Nb@91, pk(skR@89)), #t@93);
+};
+Rule in cache: 7
+Rule staged: 20
+Rule before check and clean: 
+@rule{
+    @premise know(*tuple2([Na@187], Nb@184), #t1@188);
+    @premise initA(*skA(), *skR@185, *[Na@187]);
+    @premise init(*skA(), *skR@185);
+    @premise new(*[Na@187], aliceNa(), tuple2(skA(), skR@185));
+    @conclusion know(*aenc(Nb@184, pk(skR@185)), #t@186);
+    @constraint -#t1@188 + #t@142 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*tuple2([Na@187], Nb@184), #t1@188);
+    @premise initA(*skA(), *skR@185, *[Na@187]);
+    @premise init(*skA(), *skR@185);
+    @premise new(*[Na@187], aliceNa(), tuple2(skA(), skR@185));
+    @conclusion know(*aenc(Nb@184, pk(skR@185)), #t@186);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*m@144, #t1@146);
+    @conclusion know(*aenc(m@144, pk(skB())), #t@145);
+    @constraint -#t1@146 + #t@145 >= 0;
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 7
+Rule staged: 21
+Rule before check and clean: 
+@rule{
+    @premise know(*m@189, #t1@191);
+    @premise know(*skB(), #t1@192);
+    @conclusion know(*m@189, #t@190);
+    @constraint -#t1@192 + #t@190 >= 0;
+    @constraint -#t1@191 + #t@145 >= 0;
+    @constraint #t@190 - #t@145 >= 0;
+};
+Rule invalid. 
+
+Compose to at 2 : 
+@rule{
+    @premise initB(*skI@84, *skB(), *[Nb@85]);
+    @premise new(*[Nb@85], bobNb(), tuple3(skI@84, skB(), Na@86));
+    @premise know(*aenc(tuple2(Na@86, pk(skI@84)), pk(skB())), #t1@87);
+    @conclusion know(*aenc(tuple2(Na@86, [Nb@85]), pk(skI@84)), #t@88);
+};
+Rule in cache: 7
+Rule staged: 21
+Rule before check and clean: 
+@rule{
+    @premise know(*tuple2(Na@193, pk(skI@195)), #t1@197);
+    @premise initB(*skI@195, *skB(), *[Nb@194]);
+    @premise new(*[Nb@194], bobNb(), tuple3(skI@195, skB(), Na@193));
+    @conclusion know(*aenc(tuple2(Na@193, [Nb@194]), pk(skI@195)), #t@196);
+    @constraint -#t1@197 + #t@145 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*tuple2(Na@193, pk(skI@195)), #t1@197);
+    @premise initB(*skI@195, *skB(), *[Nb@194]);
+    @premise new(*[Nb@194], bobNb(), tuple3(skI@195, skB(), Na@193));
+    @conclusion know(*aenc(tuple2(Na@193, [Nb@194]), pk(skI@195)), #t@196);
+};
+
+Compose to at 2 : 
+@rule{
+    @premise initB(*skA(), *skB(), *[Nb@94]);
+    @premise new(*[Nb@94], bobNb(), tuple3(skI@95, skB(), Na@96));
+    @premise know(*aenc([Nb@94], pk(skB())), #t1@97);
+    @conclusion accept(*skA(), *skB());
+};
+Rule in cache: 8
+Rule staged: 21
+Rule before check and clean: 
+@rule{
+    @premise know(*[Nb@198], #t1@199);
+    @premise initB(*skA(), *skB(), *[Nb@198]);
+    @premise new(*[Nb@198], bobNb(), tuple3(skI@200, skB(), Na@201));
+    @conclusion accept(*skA(), *skB());
+    @constraint -#t1@199 + #t@145 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*[Nb@198], #t1@199);
+    @premise initB(*skA(), *skB(), *[Nb@198]);
+    @premise new(*[Nb@198], bobNb(), tuple3(skI@200, skB(), Na@201));
+    @conclusion accept(*skA(), *skB());
+};
+
+Stage rule: 
+@rule{
+    @premise initA(*skA(), *skR@149, *[Na@147]);
+    @premise new(*[Na@147], aliceNa(), tuple2(skA(), skR@149));
+    @premise know(*skR@149, #t1@150);
+    @conclusion know(*tuple2([Na@147], pk(skA())), #t@148);
+    @constraint -#t1@150 + #t@148 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise know(*tuple2(x0@19, x1@20), #t@21);
+    @conclusion know(*x0@19, #t0@22);
+    @constraint -#t@21 + #t0@22 >= 0;
+};
+Rule in cache: 8
+Rule staged: 22
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skR@204, *[Na@202]);
+    @premise new(*[Na@202], aliceNa(), tuple2(skA(), skR@204));
+    @premise know(*skR@204, #t1@205);
+    @conclusion know(*[Na@202], #t0@203);
+    @constraint #t0@203 - #t@148 >= 0;
+    @constraint -#t1@205 + #t@148 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise initA(*skA(), *skR@204, *[Na@202]);
+    @premise new(*[Na@202], aliceNa(), tuple2(skA(), skR@204));
+    @premise know(*skR@204, #t1@205);
+    @conclusion know(*[Na@202], #t0@203);
+    @constraint #t0@203 - #t1@205 >= 0;
+};
+
+Compose to at 0 : 
+@rule{
+    @premise know(*tuple2(x0@23, x1@24), #t@25);
+    @conclusion know(*x1@24, #t1@26);
+    @constraint -#t@25 + #t1@26 >= 0;
+};
+Rule in cache: 9
+Rule staged: 22
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skR@207, *[Na@208]);
+    @premise new(*[Na@208], aliceNa(), tuple2(skA(), skR@207));
+    @premise know(*skR@207, #t1@209);
+    @conclusion know(*pk(skA()), #t1@206);
+    @constraint #t1@206 - #t@148 >= 0;
+    @constraint -#t1@209 + #t@148 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise initA(*skA(), *skR@207, *[Na@208]);
+    @premise new(*[Na@208], aliceNa(), tuple2(skA(), skR@207));
+    @premise know(*skR@207, #t1@209);
+    @conclusion know(*pk(skA()), #t1@206);
+    @constraint #t1@206 - #t1@209 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise initA(*skA(), *skB(), *[Na@151]);
+    @premise new(*[Na@151], aliceNa(), tuple2(skA(), skB()));
+    @premise initB(*skA(), *skB(), *[Nb@152]);
+    @premise new(*[Nb@152], bobNb(), tuple3(skA(), skB(), [Na@151]));
+    @conclusion know(*aenc(tuple2([Na@151], [Nb@152]), pk(skA())), #t@153);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 9
+Rule staged: 23
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skB(), *[Na@210]);
+    @premise new(*[Na@210], aliceNa(), tuple2(skA(), skB()));
+    @premise initB(*skA(), *skB(), *[Nb@211]);
+    @premise new(*[Nb@211], bobNb(), tuple3(skA(), skB(), [Na@210]));
+    @premise know(*skA(), #t1@213);
+    @conclusion know(*tuple2([Na@210], [Nb@211]), #t@212);
+    @constraint -#t1@213 + #t@212 >= 0;
+    @constraint #t@212 - #t@153 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Nb@211], bobNb(), tuple3(skA(), skB(), [Na@210]));
+    @premise new(*[Na@210], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@210]);
+    @premise initB(*skA(), *skB(), *[Nb@211]);
+    @premise know(*skA(), #t1@213);
+    @conclusion know(*tuple2([Na@210], [Nb@211]), #t@212);
+    @constraint -#t1@213 + #t@212 >= 0;
+};
+
+Compose to at 3 : 
+@rule{
+    @premise initA(*skA(), *skR@89, *[Na@90]);
+    @premise init(*skA(), *skR@89);
+    @premise new(*[Na@90], aliceNa(), tuple2(skA(), skR@89));
+    @premise know(*aenc(tuple2([Na@90], Nb@91), pk(skA())), #t1@92);
+    @conclusion know(*aenc(Nb@91, pk(skR@89)), #t@93);
+};
+Rule in cache: 10
+Rule staged: 23
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skB(), *[Na@217]);
+    @premise new(*[Na@217], aliceNa(), tuple2(skA(), skB()));
+    @premise initB(*skA(), *skB(), *[Nb@214]);
+    @premise new(*[Nb@214], bobNb(), tuple3(skA(), skB(), [Na@217]));
+    @premise initA(*skA(), *skR@215, *[Na@217]);
+    @premise init(*skA(), *skR@215);
+    @premise new(*[Na@217], aliceNa(), tuple2(skA(), skR@215));
+    @conclusion know(*aenc([Nb@214], pk(skR@215)), #t@216);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Nb@214], bobNb(), tuple3(skA(), skB(), [Na@217]));
+    @premise new(*[Na@217], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@217]);
+    @premise initB(*skA(), *skB(), *[Nb@214]);
+    @premise init(*skA(), *skB());
+    @conclusion know(*aenc([Nb@214], pk(skB())), #t@216);
+};
+
+Stage rule: 
+@rule{
+    @premise initA(*skA(), *skA(), *[Na@156]);
+    @premise new(*[Na@156], aliceNa(), tuple2(skA(), skA()));
+    @premise init(*skA(), *skA());
+    @conclusion know(*aenc(pk(skA()), pk(skA())), #t@155);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 10
+Rule staged: 24
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skA(), *[Na@219]);
+    @premise new(*[Na@219], aliceNa(), tuple2(skA(), skA()));
+    @premise init(*skA(), *skA());
+    @premise know(*skA(), #t1@220);
+    @conclusion know(*pk(skA()), #t@218);
+    @constraint -#t1@220 + #t@218 >= 0;
+    @constraint #t@218 - #t@155 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise initA(*skA(), *skA(), *[Na@219]);
+    @premise new(*[Na@219], aliceNa(), tuple2(skA(), skA()));
+    @premise init(*skA(), *skA());
+    @premise know(*skA(), #t1@220);
+    @conclusion know(*pk(skA()), #t@218);
+    @constraint -#t1@220 + #t@218 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*skB(), #t1@167);
+    @premise know(*tuple2(Na@163, pk(skI@165)), #t1@168);
+    @premise initB(*skI@165, *skB(), *[Nb@164]);
+    @premise new(*[Nb@164], bobNb(), tuple3(skI@165, skB(), Na@163));
+    @conclusion know(*aenc(tuple2(Na@163, [Nb@164]), pk(skI@165)), #t@166);
+};
+Rule added at 0.
+
+Stage rule: 
+@rule{
+    @premise new(*[Na@173], aliceNa(), tuple2(skA(), skR@170));
+    @premise know(*tuple2([Na@173], Nb@169), #t1@174);
+    @premise initA(*skA(), *skR@170, *[Na@173]);
+    @premise know(*skA(), #t1@172);
+    @premise init(*skA(), *skR@170);
+    @conclusion know(*aenc(Nb@169, pk(skR@170)), #t@171);
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*x0@14, #t0@15);
+    @premise know(*x1@16, #t1@17);
+    @conclusion know(*tuple2(x0@14, x1@16), #t@18);
+    @constraint -#t0@15 + #t@18 >= 0;
+    @constraint #t@18 - #t1@17 >= 0;
+};
+Rule in cache: 9
+Rule staged: 26
+Rule before check and clean: 
+@rule{
+    @premise know(*[Na@224], #t0@225);
+    @premise know(*x1@221, #t1@226);
+    @premise new(*[Na@224], aliceNa(), tuple2(skA(), skR@222));
+    @premise initA(*skA(), *skR@222, *[Na@224]);
+    @premise know(*skA(), #t1@227);
+    @premise init(*skA(), *skR@222);
+    @conclusion know(*aenc(x1@221, pk(skR@222)), #t@223);
+    @constraint #t@18 - #t1@226 >= 0;
+    @constraint -#t0@225 + #t@18 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Na@224], aliceNa(), tuple2(skA(), skR@222));
+    @premise initA(*skA(), *skR@222, *[Na@224]);
+    @premise know(*skA(), #t1@227);
+    @premise init(*skA(), *skR@222);
+    @premise know(*[Na@224], #t0@225);
+    @premise know(*x1@221, #t1@226);
+    @conclusion know(*aenc(x1@221, pk(skR@222)), #t@223);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*skB(), #t1@175);
+    @premise know(*[Nb@176], #t1@177);
+    @premise initB(*skA(), *skB(), *[Nb@176]);
+    @premise new(*[Nb@176], bobNb(), tuple3(skI@178, skB(), Na@179));
+    @conclusion accept(*skA(), *skB());
+};
+Rule added at 0.
+
+Stage rule: 
+@rule{
+    @premise know(*tuple2([Na@187], Nb@184), #t1@188);
+    @premise initA(*skA(), *skR@185, *[Na@187]);
+    @premise init(*skA(), *skR@185);
+    @premise new(*[Na@187], aliceNa(), tuple2(skA(), skR@185));
+    @conclusion know(*aenc(Nb@184, pk(skR@185)), #t@186);
+};
+Rule deleted: 
+@rule{
+    @premise new(*[Na@173], aliceNa(), tuple2(skA(), skR@170));
+    @premise know(*tuple2([Na@173], Nb@169), #t1@174);
+    @premise initA(*skA(), *skR@170, *[Na@173]);
+    @premise know(*skA(), #t1@172);
+    @premise init(*skA(), *skR@170);
+    @conclusion know(*aenc(Nb@169, pk(skR@170)), #t@171);
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*x0@14, #t0@15);
+    @premise know(*x1@16, #t1@17);
+    @conclusion know(*tuple2(x0@14, x1@16), #t@18);
+    @constraint -#t0@15 + #t@18 >= 0;
+    @constraint #t@18 - #t1@17 >= 0;
+};
+Rule in cache: 8
+Rule staged: 28
+Rule before check and clean: 
+@rule{
+    @premise know(*[Na@231], #t0@232);
+    @premise know(*x1@228, #t1@233);
+    @premise initA(*skA(), *skR@229, *[Na@231]);
+    @premise init(*skA(), *skR@229);
+    @premise new(*[Na@231], aliceNa(), tuple2(skA(), skR@229));
+    @conclusion know(*aenc(x1@228, pk(skR@229)), #t@230);
+    @constraint #t@18 - #t1@233 >= 0;
+    @constraint -#t0@232 + #t@18 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Na@231], aliceNa(), tuple2(skA(), skR@229));
+    @premise initA(*skA(), *skR@229, *[Na@231]);
+    @premise init(*skA(), *skR@229);
+    @premise know(*[Na@231], #t0@232);
+    @premise know(*x1@228, #t1@233);
+    @conclusion know(*aenc(x1@228, pk(skR@229)), #t@230);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*tuple2(Na@193, pk(skI@195)), #t1@197);
+    @premise initB(*skI@195, *skB(), *[Nb@194]);
+    @premise new(*[Nb@194], bobNb(), tuple3(skI@195, skB(), Na@193));
+    @conclusion know(*aenc(tuple2(Na@193, [Nb@194]), pk(skI@195)), #t@196);
+};
+Rule deleted: 
+@rule{
+    @premise know(*skB(), #t1@167);
+    @premise know(*tuple2(Na@163, pk(skI@165)), #t1@168);
+    @premise initB(*skI@165, *skB(), *[Nb@164]);
+    @premise new(*[Nb@164], bobNb(), tuple3(skI@165, skB(), Na@163));
+    @conclusion know(*aenc(tuple2(Na@163, [Nb@164]), pk(skI@165)), #t@166);
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*x0@14, #t0@15);
+    @premise know(*x1@16, #t1@17);
+    @conclusion know(*tuple2(x0@14, x1@16), #t@18);
+    @constraint -#t0@15 + #t@18 >= 0;
+    @constraint #t@18 - #t1@17 >= 0;
+};
+Rule in cache: 8
+Rule staged: 29
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@234, #t0@238);
+    @premise know(*pk(skI@236), #t1@239);
+    @premise initB(*skI@236, *skB(), *[Nb@235]);
+    @premise new(*[Nb@235], bobNb(), tuple3(skI@236, skB(), x0@234));
+    @conclusion know(*aenc(tuple2(x0@234, [Nb@235]), pk(skI@236)), #t@237);
+    @constraint #t@18 - #t1@239 >= 0;
+    @constraint -#t0@238 + #t@18 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*x0@234, #t0@238);
+    @premise know(*pk(skI@236), #t1@239);
+    @premise initB(*skI@236, *skB(), *[Nb@235]);
+    @premise new(*[Nb@235], bobNb(), tuple3(skI@236, skB(), x0@234));
+    @conclusion know(*aenc(tuple2(x0@234, [Nb@235]), pk(skI@236)), #t@237);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*[Nb@198], #t1@199);
+    @premise initB(*skA(), *skB(), *[Nb@198]);
+    @premise new(*[Nb@198], bobNb(), tuple3(skI@200, skB(), Na@201));
+    @conclusion accept(*skA(), *skB());
+};
+Rule deleted: 
+@rule{
+    @premise know(*skB(), #t1@175);
+    @premise know(*[Nb@176], #t1@177);
+    @premise initB(*skA(), *skB(), *[Nb@176]);
+    @premise new(*[Nb@176], bobNb(), tuple3(skI@178, skB(), Na@179));
+    @conclusion accept(*skA(), *skB());
+};
+Rule added at 0.
+
+Stage rule: 
+@rule{
+    @premise initA(*skA(), *skR@204, *[Na@202]);
+    @premise new(*[Na@202], aliceNa(), tuple2(skA(), skR@204));
+    @premise know(*skR@204, #t1@205);
+    @conclusion know(*[Na@202], #t0@203);
+    @constraint #t0@203 - #t1@205 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise know(*[Nb@198], #t1@199);
+    @premise initB(*skA(), *skB(), *[Nb@198]);
+    @premise new(*[Nb@198], bobNb(), tuple3(skI@200, skB(), Na@201));
+    @conclusion accept(*skA(), *skB());
+};
+Rule in cache: 7
+Rule staged: 31
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skR@240, *[Na@241]);
+    @premise new(*[Na@241], aliceNa(), tuple2(skA(), skR@240));
+    @premise know(*skR@240, #t1@242);
+    @premise initB(*skA(), *skB(), *[Na@241]);
+    @premise new(*[Na@241], bobNb(), tuple3(skI@243, skB(), Na@244));
+    @conclusion accept(*skA(), *skB());
+    @constraint #t0@203 - #t1@242 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise initA(*skA(), *skR@207, *[Na@208]);
+    @premise new(*[Na@208], aliceNa(), tuple2(skA(), skR@207));
+    @premise know(*skR@207, #t1@209);
+    @conclusion know(*pk(skA()), #t1@206);
+    @constraint #t1@206 - #t1@209 >= 0;
+};
+Rule implied by: 
+@rule{
+    @conclusion know(*pk(skA()), #t@77);
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise new(*[Nb@211], bobNb(), tuple3(skA(), skB(), [Na@210]));
+    @premise new(*[Na@210], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@210]);
+    @premise initB(*skA(), *skB(), *[Nb@211]);
+    @premise know(*skA(), #t1@213);
+    @conclusion know(*tuple2([Na@210], [Nb@211]), #t@212);
+    @constraint -#t1@213 + #t@212 >= 0;
+};
+Rule added at 4.
+
+Stage rule: 
+@rule{
+    @premise new(*[Nb@214], bobNb(), tuple3(skA(), skB(), [Na@217]));
+    @premise new(*[Na@217], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@217]);
+    @premise initB(*skA(), *skB(), *[Nb@214]);
+    @premise init(*skA(), *skB());
+    @conclusion know(*aenc([Nb@214], pk(skB())), #t@216);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 4
+Rule staged: 33
+Rule before check and clean: 
+@rule{
+    @premise new(*[Nb@245], bobNb(), tuple3(skA(), skB(), [Na@247]));
+    @premise new(*[Na@247], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@247]);
+    @premise initB(*skA(), *skB(), *[Nb@245]);
+    @premise init(*skA(), *skB());
+    @premise know(*skB(), #t1@248);
+    @conclusion know(*[Nb@245], #t@246);
+    @constraint -#t1@248 + #t@246 >= 0;
+    @constraint #t@246 - #t@216 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Nb@245], bobNb(), tuple3(skA(), skB(), [Na@247]));
+    @premise new(*[Na@247], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@247]);
+    @premise initB(*skA(), *skB(), *[Nb@245]);
+    @premise init(*skA(), *skB());
+    @premise know(*skB(), #t1@248);
+    @conclusion know(*[Nb@245], #t@246);
+    @constraint -#t1@248 + #t@246 >= 0;
+};
+
+Compose to at 2 : 
+@rule{
+    @premise initB(*skA(), *skB(), *[Nb@94]);
+    @premise new(*[Nb@94], bobNb(), tuple3(skI@95, skB(), Na@96));
+    @premise know(*aenc([Nb@94], pk(skB())), #t1@97);
+    @conclusion accept(*skA(), *skB());
+};
+Rule in cache: 5
+Rule staged: 33
+Rule before check and clean: 
+@rule{
+    @premise new(*[Nb@249], bobNb(), tuple3(skA(), skB(), [Na@250]));
+    @premise new(*[Na@250], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@250]);
+    @premise initB(*skA(), *skB(), *[Nb@249]);
+    @premise init(*skA(), *skB());
+    @premise initB(*skA(), *skB(), *[Nb@249]);
+    @premise new(*[Nb@249], bobNb(), tuple3(skI@251, skB(), Na@252));
+    @conclusion accept(*skA(), *skB());
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Nb@249], bobNb(), tuple3(skA(), skB(), [Na@250]));
+    @premise new(*[Na@250], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@250]);
+    @premise initB(*skA(), *skB(), *[Nb@249]);
+    @premise init(*skA(), *skB());
+    @conclusion accept(*skA(), *skB());
+};
+
+Stage rule: 
+@rule{
+    @premise initA(*skA(), *skA(), *[Na@219]);
+    @premise new(*[Na@219], aliceNa(), tuple2(skA(), skA()));
+    @premise init(*skA(), *skA());
+    @premise know(*skA(), #t1@220);
+    @conclusion know(*pk(skA()), #t@218);
+    @constraint -#t1@220 + #t@218 >= 0;
+};
+Rule implied by: 
+@rule{
+    @premise know(*sk@51, #t1@52);
+    @conclusion know(*pk(sk@51), #t@53);
+    @constraint -#t1@52 + #t@53 >= 0;
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise new(*[Na@224], aliceNa(), tuple2(skA(), skR@222));
+    @premise initA(*skA(), *skR@222, *[Na@224]);
+    @premise know(*skA(), #t1@227);
+    @premise init(*skA(), *skR@222);
+    @premise know(*[Na@224], #t0@225);
+    @premise know(*x1@221, #t1@226);
+    @conclusion know(*aenc(x1@221, pk(skR@222)), #t@223);
+};
+Rule added at 2.
+
+Stage rule: 
+@rule{
+    @premise new(*[Na@231], aliceNa(), tuple2(skA(), skR@229));
+    @premise initA(*skA(), *skR@229, *[Na@231]);
+    @premise init(*skA(), *skR@229);
+    @premise know(*[Na@231], #t0@232);
+    @premise know(*x1@228, #t1@233);
+    @conclusion know(*aenc(x1@228, pk(skR@229)), #t@230);
+};
+Rule deleted: 
+@rule{
+    @premise new(*[Na@224], aliceNa(), tuple2(skA(), skR@222));
+    @premise initA(*skA(), *skR@222, *[Na@224]);
+    @premise know(*skA(), #t1@227);
+    @premise init(*skA(), *skR@222);
+    @premise know(*[Na@224], #t0@225);
+    @premise know(*x1@221, #t1@226);
+    @conclusion know(*aenc(x1@221, pk(skR@222)), #t@223);
+};
+Rule added at 3.
+
+Compose by at 3 : 
+@rule{
+    @premise initA(*skA(), *skR@204, *[Na@202]);
+    @premise new(*[Na@202], aliceNa(), tuple2(skA(), skR@204));
+    @premise know(*skR@204, #t1@205);
+    @conclusion know(*[Na@202], #t0@203);
+    @constraint #t0@203 - #t1@205 >= 0;
+};
+Rule in cache: 3
+Rule staged: 35
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skR@256, *[Na@257]);
+    @premise new(*[Na@257], aliceNa(), tuple2(skA(), skR@256));
+    @premise know(*skR@256, #t1@258);
+    @premise new(*[Na@257], aliceNa(), tuple2(skA(), skR@254));
+    @premise initA(*skA(), *skR@254, *[Na@257]);
+    @premise init(*skA(), *skR@254);
+    @premise know(*x1@253, #t1@259);
+    @conclusion know(*aenc(x1@253, pk(skR@254)), #t@255);
+    @constraint #t0@203 - #t1@258 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Na@257], aliceNa(), tuple2(skA(), skR@256));
+    @premise initA(*skA(), *skR@256, *[Na@257]);
+    @premise init(*skA(), *skR@256);
+    @premise know(*skR@256, #t1@258);
+    @premise know(*x1@253, #t1@259);
+    @conclusion know(*aenc(x1@253, pk(skR@256)), #t@255);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*x0@234, #t0@238);
+    @premise know(*pk(skI@236), #t1@239);
+    @premise initB(*skI@236, *skB(), *[Nb@235]);
+    @premise new(*[Nb@235], bobNb(), tuple3(skI@236, skB(), x0@234));
+    @conclusion know(*aenc(tuple2(x0@234, [Nb@235]), pk(skI@236)), #t@237);
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*sk@51, #t1@52);
+    @conclusion know(*pk(sk@51), #t@53);
+    @constraint -#t1@52 + #t@53 >= 0;
+};
+Rule in cache: 3
+Rule staged: 36
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@262, #t1@264);
+    @premise know(*x0@260, #t0@265);
+    @premise initB(*sk@262, *skB(), *[Nb@261]);
+    @premise new(*[Nb@261], bobNb(), tuple3(sk@262, skB(), x0@260));
+    @conclusion know(*aenc(tuple2(x0@260, [Nb@261]), pk(sk@262)), #t@263);
+    @constraint -#t1@264 + #t@53 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*sk@262, #t1@264);
+    @premise know(*x0@260, #t0@265);
+    @premise initB(*sk@262, *skB(), *[Nb@261]);
+    @premise new(*[Nb@261], bobNb(), tuple3(sk@262, skB(), x0@260));
+    @conclusion know(*aenc(tuple2(x0@260, [Nb@261]), pk(sk@262)), #t@263);
+};
+
+Compose by at 1 : 
+@rule{
+    @conclusion know(*pk(skA()), #t@77);
+};
+Rule in cache: 4
+Rule staged: 36
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@266, #t0@269);
+    @premise initB(*skA(), *skB(), *[Nb@267]);
+    @premise new(*[Nb@267], bobNb(), tuple3(skA(), skB(), x0@266));
+    @conclusion know(*aenc(tuple2(x0@266, [Nb@267]), pk(skA())), #t@268);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*x0@266, #t0@269);
+    @premise initB(*skA(), *skB(), *[Nb@267]);
+    @premise new(*[Nb@267], bobNb(), tuple3(skA(), skB(), x0@266));
+    @conclusion know(*aenc(tuple2(x0@266, [Nb@267]), pk(skA())), #t@268);
+};
+
+Compose by at 1 : 
+@rule{
+    @conclusion know(*pk(skB()), #t@78);
+};
+Rule in cache: 5
+Rule staged: 36
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@270, #t0@273);
+    @premise initB(*skB(), *skB(), *[Nb@271]);
+    @premise new(*[Nb@271], bobNb(), tuple3(skB(), skB(), x0@270));
+    @conclusion know(*aenc(tuple2(x0@270, [Nb@271]), pk(skB())), #t@272);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*x0@270, #t0@273);
+    @premise initB(*skB(), *skB(), *[Nb@271]);
+    @premise new(*[Nb@271], bobNb(), tuple3(skB(), skB(), x0@270));
+    @conclusion know(*aenc(tuple2(x0@270, [Nb@271]), pk(skB())), #t@272);
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[Nb@245], bobNb(), tuple3(skA(), skB(), [Na@247]));
+    @premise new(*[Na@247], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@247]);
+    @premise initB(*skA(), *skB(), *[Nb@245]);
+    @premise init(*skA(), *skB());
+    @premise know(*skB(), #t1@248);
+    @conclusion know(*[Nb@245], #t@246);
+    @constraint -#t1@248 + #t@246 >= 0;
+};
+Rule added at 5.
+
+Stage rule: 
+@rule{
+    @premise new(*[Nb@249], bobNb(), tuple3(skA(), skB(), [Na@250]));
+    @premise new(*[Na@250], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@250]);
+    @premise initB(*skA(), *skB(), *[Nb@249]);
+    @premise init(*skA(), *skB());
+    @conclusion accept(*skA(), *skB());
+};
+Rule added.
+
+Check rule against queries: 
+@rule{
+    @premise new(*[Nb@249], bobNb(), tuple3(skA(), skB(), [Na@250]));
+    @premise new(*[Na@250], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@250]);
+    @premise initB(*skA(), *skB(), *[Nb@249]);
+    @premise init(*skA(), *skB());
+    @conclusion accept(*skA(), *skB());
+};
+Before checking:
+0. Requested parameter relation:
+[@universe]
+
+After checking:
+0. Requested parameter relation:
+[@universe]
+
+
+Stage rule: 
+@rule{
+    @premise new(*[Na@257], aliceNa(), tuple2(skA(), skR@256));
+    @premise initA(*skA(), *skR@256, *[Na@257]);
+    @premise init(*skA(), *skR@256);
+    @premise know(*skR@256, #t1@258);
+    @premise know(*x1@253, #t1@259);
+    @conclusion know(*aenc(x1@253, pk(skR@256)), #t@255);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 3
+Rule staged: 39
+Rule before check and clean: 
+@rule{
+    @premise new(*[Na@276], aliceNa(), tuple2(skA(), skR@277));
+    @premise initA(*skA(), *skR@277, *[Na@276]);
+    @premise init(*skA(), *skR@277);
+    @premise know(*skR@277, #t1@278);
+    @premise know(*x1@274, #t1@279);
+    @premise know(*skR@277, #t1@280);
+    @conclusion know(*x1@274, #t@275);
+    @constraint -#t1@280 + #t@275 >= 0;
+    @constraint #t@275 - #t@255 >= 0;
+};
+Rule invalid. 
+
+Compose to at 2 : 
+@rule{
+    @premise initB(*skI@84, *skB(), *[Nb@85]);
+    @premise new(*[Nb@85], bobNb(), tuple3(skI@84, skB(), Na@86));
+    @premise know(*aenc(tuple2(Na@86, pk(skI@84)), pk(skB())), #t1@87);
+    @conclusion know(*aenc(tuple2(Na@86, [Nb@85]), pk(skI@84)), #t@88);
+};
+Rule in cache: 3
+Rule staged: 39
+Rule before check and clean: 
+@rule{
+    @premise new(*[Na@285], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@285]);
+    @premise init(*skA(), *skB());
+    @premise know(*skB(), #t1@286);
+    @premise know(*tuple2(Na@281, pk(skI@283)), #t1@287);
+    @premise initB(*skI@283, *skB(), *[Nb@282]);
+    @premise new(*[Nb@282], bobNb(), tuple3(skI@283, skB(), Na@281));
+    @conclusion know(*aenc(tuple2(Na@281, [Nb@282]), pk(skI@283)), #t@284);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Na@285], aliceNa(), tuple2(skA(), skB()));
+    @premise new(*[Nb@282], bobNb(), tuple3(skI@283, skB(), Na@281));
+    @premise initA(*skA(), *skB(), *[Na@285]);
+    @premise know(*tuple2(Na@281, pk(skI@283)), #t1@287);
+    @premise init(*skA(), *skB());
+    @premise initB(*skI@283, *skB(), *[Nb@282]);
+    @premise know(*skB(), #t1@286);
+    @conclusion know(*aenc(tuple2(Na@281, [Nb@282]), pk(skI@283)), #t@284);
+};
+
+Compose to at 3 : 
+@rule{
+    @premise initA(*skA(), *skR@89, *[Na@90]);
+    @premise init(*skA(), *skR@89);
+    @premise new(*[Na@90], aliceNa(), tuple2(skA(), skR@89));
+    @premise know(*aenc(tuple2([Na@90], Nb@91), pk(skA())), #t1@92);
+    @conclusion know(*aenc(Nb@91, pk(skR@89)), #t@93);
+};
+Rule in cache: 4
+Rule staged: 39
+Rule before check and clean: 
+@rule{
+    @premise new(*[Na@291], aliceNa(), tuple2(skA(), skA()));
+    @premise initA(*skA(), *skA(), *[Na@291]);
+    @premise init(*skA(), *skA());
+    @premise know(*skA(), #t1@292);
+    @premise know(*tuple2([Na@293], Nb@288), #t1@294);
+    @premise initA(*skA(), *skR@289, *[Na@293]);
+    @premise init(*skA(), *skR@289);
+    @premise new(*[Na@293], aliceNa(), tuple2(skA(), skR@289));
+    @conclusion know(*aenc(Nb@288, pk(skR@289)), #t@290);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Na@291], aliceNa(), tuple2(skA(), skA()));
+    @premise new(*[Na@293], aliceNa(), tuple2(skA(), skR@289));
+    @premise initA(*skA(), *skA(), *[Na@291]);
+    @premise init(*skA(), *skA());
+    @premise know(*tuple2([Na@293], Nb@288), #t1@294);
+    @premise initA(*skA(), *skR@289, *[Na@293]);
+    @premise know(*skA(), #t1@292);
+    @premise init(*skA(), *skR@289);
+    @conclusion know(*aenc(Nb@288, pk(skR@289)), #t@290);
+};
+
+Compose to at 2 : 
+@rule{
+    @premise initB(*skA(), *skB(), *[Nb@94]);
+    @premise new(*[Nb@94], bobNb(), tuple3(skI@95, skB(), Na@96));
+    @premise know(*aenc([Nb@94], pk(skB())), #t1@97);
+    @conclusion accept(*skA(), *skB());
+};
+Rule in cache: 5
+Rule staged: 39
+Rule before check and clean: 
+@rule{
+    @premise new(*[Na@295], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@295]);
+    @premise init(*skA(), *skB());
+    @premise know(*skB(), #t1@296);
+    @premise know(*[Nb@297], #t1@298);
+    @premise initB(*skA(), *skB(), *[Nb@297]);
+    @premise new(*[Nb@297], bobNb(), tuple3(skI@299, skB(), Na@300));
+    @conclusion accept(*skA(), *skB());
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Na@295], aliceNa(), tuple2(skA(), skB()));
+    @premise new(*[Nb@297], bobNb(), tuple3(skI@299, skB(), Na@300));
+    @premise initA(*skA(), *skB(), *[Na@295]);
+    @premise initB(*skA(), *skB(), *[Nb@297]);
+    @premise init(*skA(), *skB());
+    @premise know(*skB(), #t1@296);
+    @premise know(*[Nb@297], #t1@298);
+    @conclusion accept(*skA(), *skB());
+};
+
+Stage rule: 
+@rule{
+    @premise know(*sk@262, #t1@264);
+    @premise know(*x0@260, #t0@265);
+    @premise initB(*sk@262, *skB(), *[Nb@261]);
+    @premise new(*[Nb@261], bobNb(), tuple3(sk@262, skB(), x0@260));
+    @conclusion know(*aenc(tuple2(x0@260, [Nb@261]), pk(sk@262)), #t@263);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 5
+Rule staged: 40
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@304, #t1@305);
+    @premise know(*x0@301, #t0@306);
+    @premise initB(*sk@304, *skB(), *[Nb@302]);
+    @premise new(*[Nb@302], bobNb(), tuple3(sk@304, skB(), x0@301));
+    @premise know(*sk@304, #t1@307);
+    @conclusion know(*tuple2(x0@301, [Nb@302]), #t@303);
+    @constraint -#t1@307 + #t@303 >= 0;
+    @constraint #t@303 - #t@263 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*sk@304, #t1@305);
+    @premise know(*x0@301, #t0@306);
+    @premise initB(*sk@304, *skB(), *[Nb@302]);
+    @premise new(*[Nb@302], bobNb(), tuple3(sk@304, skB(), x0@301));
+    @conclusion know(*tuple2(x0@301, [Nb@302]), #t@303);
+    @constraint #t@303 - #t1@305 >= 0;
+};
+
+Compose to at 3 : 
+@rule{
+    @premise initA(*skA(), *skR@89, *[Na@90]);
+    @premise init(*skA(), *skR@89);
+    @premise new(*[Na@90], aliceNa(), tuple2(skA(), skR@89));
+    @premise know(*aenc(tuple2([Na@90], Nb@91), pk(skA())), #t1@92);
+    @conclusion know(*aenc(Nb@91, pk(skR@89)), #t@93);
+};
+Rule in cache: 6
+Rule staged: 40
+Rule before check and clean: 
+@rule{
+    @premise know(*skA(), #t1@311);
+    @premise know(*[Na@312], #t0@313);
+    @premise initB(*skA(), *skB(), *[Nb@308]);
+    @premise new(*[Nb@308], bobNb(), tuple3(skA(), skB(), [Na@312]));
+    @premise initA(*skA(), *skR@309, *[Na@312]);
+    @premise init(*skA(), *skR@309);
+    @premise new(*[Na@312], aliceNa(), tuple2(skA(), skR@309));
+    @conclusion know(*aenc([Nb@308], pk(skR@309)), #t@310);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Nb@308], bobNb(), tuple3(skA(), skB(), [Na@312]));
+    @premise new(*[Na@312], aliceNa(), tuple2(skA(), skR@309));
+    @premise initB(*skA(), *skB(), *[Nb@308]);
+    @premise initA(*skA(), *skR@309, *[Na@312]);
+    @premise know(*skA(), #t1@311);
+    @premise init(*skA(), *skR@309);
+    @premise know(*[Na@312], #t0@313);
+    @conclusion know(*aenc([Nb@308], pk(skR@309)), #t@310);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*x0@266, #t0@269);
+    @premise initB(*skA(), *skB(), *[Nb@267]);
+    @premise new(*[Nb@267], bobNb(), tuple3(skA(), skB(), x0@266));
+    @conclusion know(*aenc(tuple2(x0@266, [Nb@267]), pk(skA())), #t@268);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 6
+Rule staged: 41
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@314, #t0@317);
+    @premise initB(*skA(), *skB(), *[Nb@315]);
+    @premise new(*[Nb@315], bobNb(), tuple3(skA(), skB(), x0@314));
+    @premise know(*skA(), #t1@318);
+    @conclusion know(*tuple2(x0@314, [Nb@315]), #t@316);
+    @constraint -#t1@318 + #t@316 >= 0;
+    @constraint #t@316 - #t@268 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*x0@314, #t0@317);
+    @premise initB(*skA(), *skB(), *[Nb@315]);
+    @premise new(*[Nb@315], bobNb(), tuple3(skA(), skB(), x0@314));
+    @premise know(*skA(), #t1@318);
+    @conclusion know(*tuple2(x0@314, [Nb@315]), #t@316);
+    @constraint -#t1@318 + #t@316 >= 0;
+};
+
+Compose to at 3 : 
+@rule{
+    @premise initA(*skA(), *skR@89, *[Na@90]);
+    @premise init(*skA(), *skR@89);
+    @premise new(*[Na@90], aliceNa(), tuple2(skA(), skR@89));
+    @premise know(*aenc(tuple2([Na@90], Nb@91), pk(skA())), #t1@92);
+    @conclusion know(*aenc(Nb@91, pk(skR@89)), #t@93);
+};
+Rule in cache: 7
+Rule staged: 41
+Rule before check and clean: 
+@rule{
+    @premise know(*[Na@322], #t0@323);
+    @premise initB(*skA(), *skB(), *[Nb@319]);
+    @premise new(*[Nb@319], bobNb(), tuple3(skA(), skB(), [Na@322]));
+    @premise initA(*skA(), *skR@320, *[Na@322]);
+    @premise init(*skA(), *skR@320);
+    @premise new(*[Na@322], aliceNa(), tuple2(skA(), skR@320));
+    @conclusion know(*aenc([Nb@319], pk(skR@320)), #t@321);
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Nb@319], bobNb(), tuple3(skA(), skB(), [Na@322]));
+    @premise new(*[Na@322], aliceNa(), tuple2(skA(), skR@320));
+    @premise initB(*skA(), *skB(), *[Nb@319]);
+    @premise initA(*skA(), *skR@320, *[Na@322]);
+    @premise init(*skA(), *skR@320);
+    @premise know(*[Na@322], #t0@323);
+    @conclusion know(*aenc([Nb@319], pk(skR@320)), #t@321);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*x0@270, #t0@273);
+    @premise initB(*skB(), *skB(), *[Nb@271]);
+    @premise new(*[Nb@271], bobNb(), tuple3(skB(), skB(), x0@270));
+    @conclusion know(*aenc(tuple2(x0@270, [Nb@271]), pk(skB())), #t@272);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 7
+Rule staged: 42
+Rule before check and clean: 
+@rule{
+    @premise know(*x0@324, #t0@327);
+    @premise initB(*skB(), *skB(), *[Nb@325]);
+    @premise new(*[Nb@325], bobNb(), tuple3(skB(), skB(), x0@324));
+    @premise know(*skB(), #t1@328);
+    @conclusion know(*tuple2(x0@324, [Nb@325]), #t@326);
+    @constraint -#t1@328 + #t@326 >= 0;
+    @constraint #t@326 - #t@272 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*x0@324, #t0@327);
+    @premise initB(*skB(), *skB(), *[Nb@325]);
+    @premise new(*[Nb@325], bobNb(), tuple3(skB(), skB(), x0@324));
+    @premise know(*skB(), #t1@328);
+    @conclusion know(*tuple2(x0@324, [Nb@325]), #t@326);
+    @constraint -#t1@328 + #t@326 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[Na@285], aliceNa(), tuple2(skA(), skB()));
+    @premise new(*[Nb@282], bobNb(), tuple3(skI@283, skB(), Na@281));
+    @premise initA(*skA(), *skB(), *[Na@285]);
+    @premise know(*tuple2(Na@281, pk(skI@283)), #t1@287);
+    @premise init(*skA(), *skB());
+    @premise initB(*skI@283, *skB(), *[Nb@282]);
+    @premise know(*skB(), #t1@286);
+    @conclusion know(*aenc(tuple2(Na@281, [Nb@282]), pk(skI@283)), #t@284);
+};
+Rule implied by: 
+@rule{
+    @premise know(*tuple2(Na@193, pk(skI@195)), #t1@197);
+    @premise initB(*skI@195, *skB(), *[Nb@194]);
+    @premise new(*[Nb@194], bobNb(), tuple3(skI@195, skB(), Na@193));
+    @conclusion know(*aenc(tuple2(Na@193, [Nb@194]), pk(skI@195)), #t@196);
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise new(*[Na@291], aliceNa(), tuple2(skA(), skA()));
+    @premise new(*[Na@293], aliceNa(), tuple2(skA(), skR@289));
+    @premise initA(*skA(), *skA(), *[Na@291]);
+    @premise init(*skA(), *skA());
+    @premise know(*tuple2([Na@293], Nb@288), #t1@294);
+    @premise initA(*skA(), *skR@289, *[Na@293]);
+    @premise know(*skA(), #t1@292);
+    @premise init(*skA(), *skR@289);
+    @conclusion know(*aenc(Nb@288, pk(skR@289)), #t@290);
+};
+Rule implied by: 
+@rule{
+    @premise know(*tuple2([Na@187], Nb@184), #t1@188);
+    @premise initA(*skA(), *skR@185, *[Na@187]);
+    @premise init(*skA(), *skR@185);
+    @premise new(*[Na@187], aliceNa(), tuple2(skA(), skR@185));
+    @conclusion know(*aenc(Nb@184, pk(skR@185)), #t@186);
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise new(*[Na@295], aliceNa(), tuple2(skA(), skB()));
+    @premise new(*[Nb@297], bobNb(), tuple3(skI@299, skB(), Na@300));
+    @premise initA(*skA(), *skB(), *[Na@295]);
+    @premise initB(*skA(), *skB(), *[Nb@297]);
+    @premise init(*skA(), *skB());
+    @premise know(*skB(), #t1@296);
+    @premise know(*[Nb@297], #t1@298);
+    @conclusion accept(*skA(), *skB());
+};
+Rule implied by: 
+@rule{
+    @premise know(*[Nb@198], #t1@199);
+    @premise initB(*skA(), *skB(), *[Nb@198]);
+    @premise new(*[Nb@198], bobNb(), tuple3(skI@200, skB(), Na@201));
+    @conclusion accept(*skA(), *skB());
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise know(*sk@304, #t1@305);
+    @premise know(*x0@301, #t0@306);
+    @premise initB(*sk@304, *skB(), *[Nb@302]);
+    @premise new(*[Nb@302], bobNb(), tuple3(sk@304, skB(), x0@301));
+    @conclusion know(*tuple2(x0@301, [Nb@302]), #t@303);
+    @constraint #t@303 - #t1@305 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise know(*tuple2(x0@19, x1@20), #t@21);
+    @conclusion know(*x0@19, #t0@22);
+    @constraint -#t@21 + #t0@22 >= 0;
+};
+Rule in cache: 4
+Rule staged: 43
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@331, #t1@332);
+    @premise know(*x0@329, #t0@333);
+    @premise initB(*sk@331, *skB(), *[Nb@334]);
+    @premise new(*[Nb@334], bobNb(), tuple3(sk@331, skB(), x0@329));
+    @conclusion know(*x0@329, #t0@330);
+    @constraint #t@303 - #t1@332 >= 0;
+    @constraint #t0@330 - #t@303 >= 0;
+};
+Rule invalid. 
+
+Compose to at 0 : 
+@rule{
+    @premise know(*tuple2(x0@23, x1@24), #t@25);
+    @conclusion know(*x1@24, #t1@26);
+    @constraint -#t@25 + #t1@26 >= 0;
+};
+Rule in cache: 4
+Rule staged: 43
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@337, #t1@338);
+    @premise know(*x0@339, #t0@340);
+    @premise initB(*sk@337, *skB(), *[Nb@335]);
+    @premise new(*[Nb@335], bobNb(), tuple3(sk@337, skB(), x0@339));
+    @conclusion know(*[Nb@335], #t1@336);
+    @constraint #t@303 - #t1@338 >= 0;
+    @constraint #t1@336 - #t@303 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise know(*sk@337, #t1@338);
+    @premise know(*x0@339, #t0@340);
+    @premise initB(*sk@337, *skB(), *[Nb@335]);
+    @premise new(*[Nb@335], bobNb(), tuple3(sk@337, skB(), x0@339));
+    @conclusion know(*[Nb@335], #t1@336);
+    @constraint #t1@336 - #t1@338 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[Nb@308], bobNb(), tuple3(skA(), skB(), [Na@312]));
+    @premise new(*[Na@312], aliceNa(), tuple2(skA(), skR@309));
+    @premise initB(*skA(), *skB(), *[Nb@308]);
+    @premise initA(*skA(), *skR@309, *[Na@312]);
+    @premise know(*skA(), #t1@311);
+    @premise init(*skA(), *skR@309);
+    @premise know(*[Na@312], #t0@313);
+    @conclusion know(*aenc([Nb@308], pk(skR@309)), #t@310);
+};
+Rule added at 4.
+
+Stage rule: 
+@rule{
+    @premise know(*x0@314, #t0@317);
+    @premise initB(*skA(), *skB(), *[Nb@315]);
+    @premise new(*[Nb@315], bobNb(), tuple3(skA(), skB(), x0@314));
+    @premise know(*skA(), #t1@318);
+    @conclusion know(*tuple2(x0@314, [Nb@315]), #t@316);
+    @constraint -#t1@318 + #t@316 >= 0;
+};
+Rule implied by: 
+@rule{
+    @premise know(*sk@304, #t1@305);
+    @premise know(*x0@301, #t0@306);
+    @premise initB(*sk@304, *skB(), *[Nb@302]);
+    @premise new(*[Nb@302], bobNb(), tuple3(sk@304, skB(), x0@301));
+    @conclusion know(*tuple2(x0@301, [Nb@302]), #t@303);
+    @constraint #t@303 - #t1@305 >= 0;
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise new(*[Nb@319], bobNb(), tuple3(skA(), skB(), [Na@322]));
+    @premise new(*[Na@322], aliceNa(), tuple2(skA(), skR@320));
+    @premise initB(*skA(), *skB(), *[Nb@319]);
+    @premise initA(*skA(), *skR@320, *[Na@322]);
+    @premise init(*skA(), *skR@320);
+    @premise know(*[Na@322], #t0@323);
+    @conclusion know(*aenc([Nb@319], pk(skR@320)), #t@321);
+};
+Rule deleted: 
+@rule{
+    @premise new(*[Nb@308], bobNb(), tuple3(skA(), skB(), [Na@312]));
+    @premise new(*[Na@312], aliceNa(), tuple2(skA(), skR@309));
+    @premise initB(*skA(), *skB(), *[Nb@308]);
+    @premise initA(*skA(), *skR@309, *[Na@312]);
+    @premise know(*skA(), #t1@311);
+    @premise init(*skA(), *skR@309);
+    @premise know(*[Na@312], #t0@313);
+    @conclusion know(*aenc([Nb@308], pk(skR@309)), #t@310);
+};
+Rule added at 5.
+
+Compose by at 5 : 
+@rule{
+    @premise initA(*skA(), *skR@204, *[Na@202]);
+    @premise new(*[Na@202], aliceNa(), tuple2(skA(), skR@204));
+    @premise know(*skR@204, #t1@205);
+    @conclusion know(*[Na@202], #t0@203);
+    @constraint #t0@203 - #t1@205 >= 0;
+};
+Rule in cache: 2
+Rule staged: 45
+Rule before check and clean: 
+@rule{
+    @premise initA(*skA(), *skR@344, *[Na@345]);
+    @premise new(*[Na@345], aliceNa(), tuple2(skA(), skR@344));
+    @premise know(*skR@344, #t1@346);
+    @premise new(*[Nb@341], bobNb(), tuple3(skA(), skB(), [Na@345]));
+    @premise new(*[Na@345], aliceNa(), tuple2(skA(), skR@342));
+    @premise initB(*skA(), *skB(), *[Nb@341]);
+    @premise initA(*skA(), *skR@342, *[Na@345]);
+    @premise init(*skA(), *skR@342);
+    @conclusion know(*aenc([Nb@341], pk(skR@342)), #t@343);
+    @constraint #t0@203 - #t1@346 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Nb@341], bobNb(), tuple3(skA(), skB(), [Na@345]));
+    @premise new(*[Na@345], aliceNa(), tuple2(skA(), skR@344));
+    @premise initB(*skA(), *skB(), *[Nb@341]);
+    @premise initA(*skA(), *skR@344, *[Na@345]);
+    @premise init(*skA(), *skR@344);
+    @premise know(*skR@344, #t1@346);
+    @conclusion know(*aenc([Nb@341], pk(skR@344)), #t@343);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*x0@324, #t0@327);
+    @premise initB(*skB(), *skB(), *[Nb@325]);
+    @premise new(*[Nb@325], bobNb(), tuple3(skB(), skB(), x0@324));
+    @premise know(*skB(), #t1@328);
+    @conclusion know(*tuple2(x0@324, [Nb@325]), #t@326);
+    @constraint -#t1@328 + #t@326 >= 0;
+};
+Rule implied by: 
+@rule{
+    @premise know(*sk@304, #t1@305);
+    @premise know(*x0@301, #t0@306);
+    @premise initB(*sk@304, *skB(), *[Nb@302]);
+    @premise new(*[Nb@302], bobNb(), tuple3(sk@304, skB(), x0@301));
+    @conclusion know(*tuple2(x0@301, [Nb@302]), #t@303);
+    @constraint #t@303 - #t1@305 >= 0;
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise know(*sk@337, #t1@338);
+    @premise know(*x0@339, #t0@340);
+    @premise initB(*sk@337, *skB(), *[Nb@335]);
+    @premise new(*[Nb@335], bobNb(), tuple3(sk@337, skB(), x0@339));
+    @conclusion know(*[Nb@335], #t1@336);
+    @constraint #t1@336 - #t1@338 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise know(*[Nb@198], #t1@199);
+    @premise initB(*skA(), *skB(), *[Nb@198]);
+    @premise new(*[Nb@198], bobNb(), tuple3(skI@200, skB(), Na@201));
+    @conclusion accept(*skA(), *skB());
+};
+Rule in cache: 1
+Rule staged: 46
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@347, #t1@348);
+    @premise know(*x0@349, #t0@350);
+    @premise initB(*sk@347, *skB(), *[Nb@351]);
+    @premise new(*[Nb@351], bobNb(), tuple3(sk@347, skB(), x0@349));
+    @premise initB(*skA(), *skB(), *[Nb@351]);
+    @premise new(*[Nb@351], bobNb(), tuple3(skI@352, skB(), Na@353));
+    @conclusion accept(*skA(), *skB());
+    @constraint #t1@336 - #t1@348 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Nb@351], bobNb(), tuple3(sk@347, skB(), x0@349));
+    @premise initB(*skA(), *skB(), *[Nb@351]);
+    @premise initB(*sk@347, *skB(), *[Nb@351]);
+    @premise know(*sk@347, #t1@348);
+    @premise know(*x0@349, #t0@350);
+    @conclusion accept(*skA(), *skB());
+};
+
+Compose to at 3 : 
+@rule{
+    @premise new(*[Na@231], aliceNa(), tuple2(skA(), skR@229));
+    @premise initA(*skA(), *skR@229, *[Na@231]);
+    @premise init(*skA(), *skR@229);
+    @premise know(*[Na@231], #t0@232);
+    @premise know(*x1@228, #t1@233);
+    @conclusion know(*aenc(x1@228, pk(skR@229)), #t@230);
+};
+Rule in cache: 2
+Rule staged: 46
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@357, #t1@358);
+    @premise know(*x0@359, #t0@360);
+    @premise initB(*sk@357, *skB(), *[Nb@361]);
+    @premise new(*[Nb@361], bobNb(), tuple3(sk@357, skB(), x0@359));
+    @premise new(*[Nb@361], aliceNa(), tuple2(skA(), skR@355));
+    @premise initA(*skA(), *skR@355, *[Nb@361]);
+    @premise init(*skA(), *skR@355);
+    @premise know(*x1@354, #t1@362);
+    @conclusion know(*aenc(x1@354, pk(skR@355)), #t@356);
+    @constraint #t1@336 - #t1@358 >= 0;
+};
+Rule invalid. 
+
+Compose to at 5 : 
+@rule{
+    @premise new(*[Nb@319], bobNb(), tuple3(skA(), skB(), [Na@322]));
+    @premise new(*[Na@322], aliceNa(), tuple2(skA(), skR@320));
+    @premise initB(*skA(), *skB(), *[Nb@319]);
+    @premise initA(*skA(), *skR@320, *[Na@322]);
+    @premise init(*skA(), *skR@320);
+    @premise know(*[Na@322], #t0@323);
+    @conclusion know(*aenc([Nb@319], pk(skR@320)), #t@321);
+};
+Rule in cache: 2
+Rule staged: 46
+Rule before check and clean: 
+@rule{
+    @premise know(*sk@366, #t1@367);
+    @premise know(*x0@368, #t0@369);
+    @premise initB(*sk@366, *skB(), *[Nb@370]);
+    @premise new(*[Nb@370], bobNb(), tuple3(sk@366, skB(), x0@368));
+    @premise new(*[Nb@363], bobNb(), tuple3(skA(), skB(), [Nb@370]));
+    @premise new(*[Nb@370], aliceNa(), tuple2(skA(), skR@364));
+    @premise initB(*skA(), *skB(), *[Nb@363]);
+    @premise initA(*skA(), *skR@364, *[Nb@370]);
+    @premise init(*skA(), *skR@364);
+    @conclusion know(*aenc([Nb@363], pk(skR@364)), #t@365);
+    @constraint #t1@336 - #t1@367 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise new(*[Nb@341], bobNb(), tuple3(skA(), skB(), [Na@345]));
+    @premise new(*[Na@345], aliceNa(), tuple2(skA(), skR@344));
+    @premise initB(*skA(), *skB(), *[Nb@341]);
+    @premise initA(*skA(), *skR@344, *[Na@345]);
+    @premise init(*skA(), *skR@344);
+    @premise know(*skR@344, #t1@346);
+    @conclusion know(*aenc([Nb@341], pk(skR@344)), #t@343);
+};
+Rule added.
+
+Compose to at 1 : 
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+Rule in cache: 1
+Rule staged: 47
+Rule before check and clean: 
+@rule{
+    @premise new(*[Nb@371], bobNb(), tuple3(skA(), skB(), [Na@373]));
+    @premise new(*[Na@373], aliceNa(), tuple2(skA(), skR@374));
+    @premise initB(*skA(), *skB(), *[Nb@371]);
+    @premise initA(*skA(), *skR@374, *[Na@373]);
+    @premise init(*skA(), *skR@374);
+    @premise know(*skR@374, #t1@375);
+    @premise know(*skR@374, #t1@376);
+    @conclusion know(*[Nb@371], #t@372);
+    @constraint -#t1@376 + #t@372 >= 0;
+    @constraint #t@372 - #t@343 >= 0;
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Nb@371], bobNb(), tuple3(skA(), skB(), [Na@373]));
+    @premise new(*[Na@373], aliceNa(), tuple2(skA(), skR@374));
+    @premise initB(*skA(), *skB(), *[Nb@371]);
+    @premise initA(*skA(), *skR@374, *[Na@373]);
+    @premise init(*skA(), *skR@374);
+    @premise know(*skR@374, #t1@375);
+    @conclusion know(*[Nb@371], #t@372);
+    @constraint #t@372 - #t1@375 >= 0;
+};
+
+Compose to at 2 : 
+@rule{
+    @premise initB(*skA(), *skB(), *[Nb@94]);
+    @premise new(*[Nb@94], bobNb(), tuple3(skI@95, skB(), Na@96));
+    @premise know(*aenc([Nb@94], pk(skB())), #t1@97);
+    @conclusion accept(*skA(), *skB());
+};
+Rule in cache: 2
+Rule staged: 47
+Rule before check and clean: 
+@rule{
+    @premise new(*[Nb@377], bobNb(), tuple3(skA(), skB(), [Na@378]));
+    @premise new(*[Na@378], aliceNa(), tuple2(skA(), skB()));
+    @premise initB(*skA(), *skB(), *[Nb@377]);
+    @premise initA(*skA(), *skB(), *[Na@378]);
+    @premise init(*skA(), *skB());
+    @premise know(*skB(), #t1@379);
+    @premise initB(*skA(), *skB(), *[Nb@377]);
+    @premise new(*[Nb@377], bobNb(), tuple3(skI@380, skB(), Na@381));
+    @conclusion accept(*skA(), *skB());
+};
+Rule cached at priority 1: 
+@rule{
+    @premise new(*[Nb@377], bobNb(), tuple3(skA(), skB(), [Na@378]));
+    @premise new(*[Na@378], aliceNa(), tuple2(skA(), skB()));
+    @premise initB(*skA(), *skB(), *[Nb@377]);
+    @premise initA(*skA(), *skB(), *[Na@378]);
+    @premise init(*skA(), *skB());
+    @premise know(*skB(), #t1@379);
+    @conclusion accept(*skA(), *skB());
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[Nb@351], bobNb(), tuple3(sk@347, skB(), x0@349));
+    @premise initB(*skA(), *skB(), *[Nb@351]);
+    @premise initB(*sk@347, *skB(), *[Nb@351]);
+    @premise know(*sk@347, #t1@348);
+    @premise know(*x0@349, #t0@350);
+    @conclusion accept(*skA(), *skB());
+};
+Rule added.
+
+Check rule against queries: 
+@rule{
+    @premise new(*[Nb@351], bobNb(), tuple3(sk@347, skB(), x0@349));
+    @premise initB(*skA(), *skB(), *[Nb@351]);
+    @premise initB(*sk@347, *skB(), *[Nb@351]);
+    @premise know(*sk@347, #t1@348);
+    @premise know(*x0@349, #t0@350);
+    @conclusion accept(*skA(), *skB());
+};
+Before checking:
+0. Requested parameter relation:
+[@universe]
+
+After checking:
+Cannot find any parameter relation satisfying the requested properties.
+
+
+Details:
+General Rules: 
+Rule No. [0.0]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*x0@14, #t0@15);
+    @premise know(*x1@16, #t1@17);
+    @conclusion know(*tuple2(x0@14, x1@16), #t@18);
+    @constraint -#t0@15 + #t@18 >= 0;
+    @constraint #t@18 - #t1@17 >= 0;
+};
+
+Rule No. [0.1]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*tuple2(x0@19, x1@20), #t@21);
+    @conclusion know(*x0@19, #t0@22);
+    @constraint -#t@21 + #t0@22 >= 0;
+};
+
+Rule No. [0.2]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*tuple2(x0@23, x1@24), #t@25);
+    @conclusion know(*x1@24, #t1@26);
+    @constraint -#t@25 + #t1@26 >= 0;
+};
+
+Rule No. [0.3]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*x0@28, #t0@29);
+    @premise know(*x1@30, #t1@31);
+    @premise know(*x2@32, #t2@33);
+    @conclusion know(*tuple3(x0@28, x1@30, x2@32), #t@34);
+    @constraint -#t0@29 + #t@34 >= 0;
+    @constraint #t@34 - #t1@31 >= 0;
+    @constraint #t@34 - #t2@33 >= 0;
+};
+
+Rule No. [0.4]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*tuple3(x0@35, x1@36, x2@37), #t@38);
+    @conclusion know(*x0@35, #t0@39);
+    @constraint -#t@38 + #t0@39 >= 0;
+};
+
+Rule No. [0.5]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*tuple3(x0@40, x1@41, x2@42), #t@43);
+    @conclusion know(*x1@41, #t1@44);
+    @constraint -#t@43 + #t1@44 >= 0;
+};
+
+Rule No. [0.6]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*tuple3(x0@45, x1@46, x2@47), #t@48);
+    @conclusion know(*x2@47, #t2@49);
+    @constraint -#t@48 + #t2@49 >= 0;
+};
+
+Rule No. [1.0]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*sk@51, #t1@52);
+    @conclusion know(*pk(sk@51), #t@53);
+    @constraint -#t1@52 + #t@53 >= 0;
+};
+
+Rule No. [1.1]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*m@55, #t1@56);
+    @premise know(*sk@57, #t2@58);
+    @conclusion know(*sign(m@55, sk@57), #t@59);
+    @constraint -#t1@56 + #t@59 >= 0;
+    @constraint #t@59 - #t2@58 >= 0;
+};
+
+Rule No. [1.2]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*sign(m@60, sk@61), #t1@62);
+    @conclusion know(*m@60, #t@63);
+    @constraint -#t1@62 + #t@63 >= 0;
+};
+
+Rule No. [1.3]
+Valid Rule
+Intial Rule
+Selectable at 1:
+@rule{
+    @premise know(*m@65, #t1@66);
+    @premise know(*pk(sk@67), #t2@68);
+    @conclusion know(*aenc(m@65, pk(sk@67)), #t@69);
+    @constraint -#t1@66 + #t@69 >= 0;
+    @constraint #t@69 - #t2@68 >= 0;
+};
+
+Rule No. [1.4]
+Valid Rule
+Intial Rule
+Selectable at 1:
+@rule{
+    @premise know(*sk@70, #t1@71);
+    @premise know(*aenc(m@72, pk(sk@70)), #t2@73);
+    @conclusion know(*m@72, #t@74);
+    @constraint -#t1@71 + #t@74 >= 0;
+    @constraint #t@74 - #t2@73 >= 0;
+};
+
+Rule No. [1.5]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @conclusion know(*pk(skA()), #t@77);
+};
+
+Rule No. [1.6]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @conclusion know(*pk(skB()), #t@78);
+};
+
+Rule No. [1.7]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise initA(*skA(), *skR@80, *[Na@81]);
+    @premise new(*[Na@81], aliceNa(), tuple2(skA(), skR@80));
+    @conclusion know(*aenc(tuple2([Na@81], pk(skA())), pk(skR@80)), #t@82);
+};
+
+Rule No. [1.8]
+Valid Rule
+Intial Rule
+Selectable at 2:
+@rule{
+    @premise initB(*skI@84, *skB(), *[Nb@85]);
+    @premise new(*[Nb@85], bobNb(), tuple3(skI@84, skB(), Na@86));
+    @premise know(*aenc(tuple2(Na@86, pk(skI@84)), pk(skB())), #t1@87);
+    @conclusion know(*aenc(tuple2(Na@86, [Nb@85]), pk(skI@84)), #t@88);
+};
+
+Rule No. [1.9]
+Valid Rule
+Intial Rule
+Selectable at 3:
+@rule{
+    @premise initA(*skA(), *skR@89, *[Na@90]);
+    @premise init(*skA(), *skR@89);
+    @premise new(*[Na@90], aliceNa(), tuple2(skA(), skR@89));
+    @premise know(*aenc(tuple2([Na@90], Nb@91), pk(skA())), #t1@92);
+    @conclusion know(*aenc(Nb@91, pk(skR@89)), #t@93);
+};
+
+Rule No. [1.10]
+Valid Rule
+Intial Rule
+Selectable at 2:
+@rule{
+    @premise initB(*skA(), *skB(), *[Nb@94]);
+    @premise new(*[Nb@94], bobNb(), tuple3(skI@95, skB(), Na@96));
+    @premise know(*aenc([Nb@94], pk(skB())), #t1@97);
+    @conclusion accept(*skA(), *skB());
+};
+
+Rule No. [1.11]
+Valid Rule
+Composed by Rule [1.0] and [1.3]
+Not Selectable : 
+@rule{
+    @premise know(*sk@137, #t1@139);
+    @premise know(*m@136, #t1@140);
+    @conclusion know(*aenc(m@136, pk(sk@137)), #t@138);
+    @constraint -#t1@140 + #t@138 >= 0;
+    @constraint #t@138 - #t1@139 >= 0;
+};
+
+Rule No. [1.12]
+Valid Rule
+Composed by Rule [1.5] and [1.3]
+Not Selectable : 
+@rule{
+    @premise know(*m@141, #t1@143);
+    @conclusion know(*aenc(m@141, pk(skA())), #t@142);
+    @constraint -#t1@143 + #t@142 >= 0;
+};
+
+Rule No. [1.13]
+Valid Rule
+Composed by Rule [1.6] and [1.3]
+Not Selectable : 
+@rule{
+    @premise know(*m@144, #t1@146);
+    @conclusion know(*aenc(m@144, pk(skB())), #t@145);
+    @constraint -#t1@146 + #t@145 >= 0;
+};
+
+Rule No. [1.14]
+Valid Rule
+Composed by Rule [1.7] and [1.4]
+Not Selectable : 
+@rule{
+    @premise initA(*skA(), *skR@149, *[Na@147]);
+    @premise new(*[Na@147], aliceNa(), tuple2(skA(), skR@149));
+    @premise know(*skR@149, #t1@150);
+    @conclusion know(*tuple2([Na@147], pk(skA())), #t@148);
+    @constraint -#t1@150 + #t@148 >= 0;
+};
+
+Rule No. [1.15]
+Valid Rule
+Composed by Rule [1.7] and [1.8]
+Not Selectable : 
+@rule{
+    @premise initA(*skA(), *skB(), *[Na@151]);
+    @premise new(*[Na@151], aliceNa(), tuple2(skA(), skB()));
+    @premise initB(*skA(), *skB(), *[Nb@152]);
+    @premise new(*[Nb@152], bobNb(), tuple3(skA(), skB(), [Na@151]));
+    @conclusion know(*aenc(tuple2([Na@151], [Nb@152]), pk(skA())), #t@153);
+};
+
+Rule No. [1.16]
+Valid Rule
+Composed by Rule [1.7] and [1.9]
+Not Selectable : 
+@rule{
+    @premise initA(*skA(), *skA(), *[Na@156]);
+    @premise new(*[Na@156], aliceNa(), tuple2(skA(), skA()));
+    @premise init(*skA(), *skA());
+    @conclusion know(*aenc(pk(skA()), pk(skA())), #t@155);
+};
+
+Rule No. [1.17]
+Replaced by Rule [1.21]
+Composed by Rule [1.11] and [1.8]
+Selectable at 0:
+@rule{
+    @premise know(*skB(), #t1@167);
+    @premise know(*tuple2(Na@163, pk(skI@165)), #t1@168);
+    @premise initB(*skI@165, *skB(), *[Nb@164]);
+    @premise new(*[Nb@164], bobNb(), tuple3(skI@165, skB(), Na@163));
+    @conclusion know(*aenc(tuple2(Na@163, [Nb@164]), pk(skI@165)), #t@166);
+};
+
+Rule No. [1.18]
+Replaced by Rule [1.20]
+Composed by Rule [1.11] and [1.9]
+Selectable at 1:
+@rule{
+    @premise new(*[Na@173], aliceNa(), tuple2(skA(), skR@170));
+    @premise know(*tuple2([Na@173], Nb@169), #t1@174);
+    @premise initA(*skA(), *skR@170, *[Na@173]);
+    @premise know(*skA(), #t1@172);
+    @premise init(*skA(), *skR@170);
+    @conclusion know(*aenc(Nb@169, pk(skR@170)), #t@171);
+};
+
+Rule No. [1.19]
+Replaced by Rule [1.22]
+Composed by Rule [1.11] and [1.10]
+Selectable at 0:
+@rule{
+    @premise know(*skB(), #t1@175);
+    @premise know(*[Nb@176], #t1@177);
+    @premise initB(*skA(), *skB(), *[Nb@176]);
+    @premise new(*[Nb@176], bobNb(), tuple3(skI@178, skB(), Na@179));
+    @conclusion accept(*skA(), *skB());
+};
+
+Rule No. [1.20]
+Valid Rule
+Composed by Rule [1.12] and [1.9]
+Selectable at 0:
+@rule{
+    @premise know(*tuple2([Na@187], Nb@184), #t1@188);
+    @premise initA(*skA(), *skR@185, *[Na@187]);
+    @premise init(*skA(), *skR@185);
+    @premise new(*[Na@187], aliceNa(), tuple2(skA(), skR@185));
+    @conclusion know(*aenc(Nb@184, pk(skR@185)), #t@186);
+};
+
+Rule No. [1.21]
+Valid Rule
+Composed by Rule [1.13] and [1.8]
+Selectable at 0:
+@rule{
+    @premise know(*tuple2(Na@193, pk(skI@195)), #t1@197);
+    @premise initB(*skI@195, *skB(), *[Nb@194]);
+    @premise new(*[Nb@194], bobNb(), tuple3(skI@195, skB(), Na@193));
+    @conclusion know(*aenc(tuple2(Na@193, [Nb@194]), pk(skI@195)), #t@196);
+};
+
+Rule No. [1.22]
+Valid Rule
+Composed by Rule [1.13] and [1.10]
+Selectable at 0:
+@rule{
+    @premise know(*[Nb@198], #t1@199);
+    @premise initB(*skA(), *skB(), *[Nb@198]);
+    @premise new(*[Nb@198], bobNb(), tuple3(skI@200, skB(), Na@201));
+    @conclusion accept(*skA(), *skB());
+};
+
+Rule No. [1.23]
+Valid Rule
+Composed by Rule [1.14] and [0.1]
+Not Selectable : 
+@rule{
+    @premise initA(*skA(), *skR@204, *[Na@202]);
+    @premise new(*[Na@202], aliceNa(), tuple2(skA(), skR@204));
+    @premise know(*skR@204, #t1@205);
+    @conclusion know(*[Na@202], #t0@203);
+    @constraint #t0@203 - #t1@205 >= 0;
+};
+
+Rule No. [1.24]
+Valid Rule
+Composed by Rule [1.15] and [1.4]
+Selectable at 4:
+@rule{
+    @premise new(*[Nb@211], bobNb(), tuple3(skA(), skB(), [Na@210]));
+    @premise new(*[Na@210], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@210]);
+    @premise initB(*skA(), *skB(), *[Nb@211]);
+    @premise know(*skA(), #t1@213);
+    @conclusion know(*tuple2([Na@210], [Nb@211]), #t@212);
+    @constraint -#t1@213 + #t@212 >= 0;
+};
+
+Rule No. [1.25]
+Valid Rule
+Composed by Rule [1.15] and [1.9]
+Not Selectable : 
+@rule{
+    @premise new(*[Nb@214], bobNb(), tuple3(skA(), skB(), [Na@217]));
+    @premise new(*[Na@217], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@217]);
+    @premise initB(*skA(), *skB(), *[Nb@214]);
+    @premise init(*skA(), *skB());
+    @conclusion know(*aenc([Nb@214], pk(skB())), #t@216);
+};
+
+Rule No. [1.26]
+Replaced by Rule [1.27]
+Composed by Rule [0.0] and [1.18]
+Selectable at 2:
+@rule{
+    @premise new(*[Na@224], aliceNa(), tuple2(skA(), skR@222));
+    @premise initA(*skA(), *skR@222, *[Na@224]);
+    @premise know(*skA(), #t1@227);
+    @premise init(*skA(), *skR@222);
+    @premise know(*[Na@224], #t0@225);
+    @premise know(*x1@221, #t1@226);
+    @conclusion know(*aenc(x1@221, pk(skR@222)), #t@223);
+};
+
+Rule No. [1.27]
+Valid Rule
+Composed by Rule [0.0] and [1.20]
+Selectable at 3:
+@rule{
+    @premise new(*[Na@231], aliceNa(), tuple2(skA(), skR@229));
+    @premise initA(*skA(), *skR@229, *[Na@231]);
+    @premise init(*skA(), *skR@229);
+    @premise know(*[Na@231], #t0@232);
+    @premise know(*x1@228, #t1@233);
+    @conclusion know(*aenc(x1@228, pk(skR@229)), #t@230);
+};
+
+Rule No. [1.28]
+Valid Rule
+Composed by Rule [0.0] and [1.21]
+Selectable at 1:
+@rule{
+    @premise know(*x0@234, #t0@238);
+    @premise know(*pk(skI@236), #t1@239);
+    @premise initB(*skI@236, *skB(), *[Nb@235]);
+    @premise new(*[Nb@235], bobNb(), tuple3(skI@236, skB(), x0@234));
+    @conclusion know(*aenc(tuple2(x0@234, [Nb@235]), pk(skI@236)), #t@237);
+};
+
+Rule No. [1.29]
+Valid Rule
+Composed by Rule [1.25] and [1.4]
+Selectable at 5:
+@rule{
+    @premise new(*[Nb@245], bobNb(), tuple3(skA(), skB(), [Na@247]));
+    @premise new(*[Na@247], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@247]);
+    @premise initB(*skA(), *skB(), *[Nb@245]);
+    @premise init(*skA(), *skB());
+    @premise know(*skB(), #t1@248);
+    @conclusion know(*[Nb@245], #t@246);
+    @constraint -#t1@248 + #t@246 >= 0;
+};
+
+Rule No. [1.31]
+Valid Rule
+Composed by Rule [1.23] and [1.27]
+Not Selectable : 
+@rule{
+    @premise new(*[Na@257], aliceNa(), tuple2(skA(), skR@256));
+    @premise initA(*skA(), *skR@256, *[Na@257]);
+    @premise init(*skA(), *skR@256);
+    @premise know(*skR@256, #t1@258);
+    @premise know(*x1@253, #t1@259);
+    @conclusion know(*aenc(x1@253, pk(skR@256)), #t@255);
+};
+
+Rule No. [1.32]
+Valid Rule
+Composed by Rule [1.0] and [1.28]
+Not Selectable : 
+@rule{
+    @premise know(*sk@262, #t1@264);
+    @premise know(*x0@260, #t0@265);
+    @premise initB(*sk@262, *skB(), *[Nb@261]);
+    @premise new(*[Nb@261], bobNb(), tuple3(sk@262, skB(), x0@260));
+    @conclusion know(*aenc(tuple2(x0@260, [Nb@261]), pk(sk@262)), #t@263);
+};
+
+Rule No. [1.33]
+Valid Rule
+Composed by Rule [1.5] and [1.28]
+Not Selectable : 
+@rule{
+    @premise know(*x0@266, #t0@269);
+    @premise initB(*skA(), *skB(), *[Nb@267]);
+    @premise new(*[Nb@267], bobNb(), tuple3(skA(), skB(), x0@266));
+    @conclusion know(*aenc(tuple2(x0@266, [Nb@267]), pk(skA())), #t@268);
+};
+
+Rule No. [1.34]
+Valid Rule
+Composed by Rule [1.6] and [1.28]
+Not Selectable : 
+@rule{
+    @premise know(*x0@270, #t0@273);
+    @premise initB(*skB(), *skB(), *[Nb@271]);
+    @premise new(*[Nb@271], bobNb(), tuple3(skB(), skB(), x0@270));
+    @conclusion know(*aenc(tuple2(x0@270, [Nb@271]), pk(skB())), #t@272);
+};
+
+Rule No. [1.35]
+Valid Rule
+Composed by Rule [1.32] and [1.4]
+Not Selectable : 
+@rule{
+    @premise know(*sk@304, #t1@305);
+    @premise know(*x0@301, #t0@306);
+    @premise initB(*sk@304, *skB(), *[Nb@302]);
+    @premise new(*[Nb@302], bobNb(), tuple3(sk@304, skB(), x0@301));
+    @conclusion know(*tuple2(x0@301, [Nb@302]), #t@303);
+    @constraint #t@303 - #t1@305 >= 0;
+};
+
+Rule No. [1.36]
+Replaced by Rule [1.37]
+Composed by Rule [1.32] and [1.9]
+Selectable at 4:
+@rule{
+    @premise new(*[Nb@308], bobNb(), tuple3(skA(), skB(), [Na@312]));
+    @premise new(*[Na@312], aliceNa(), tuple2(skA(), skR@309));
+    @premise initB(*skA(), *skB(), *[Nb@308]);
+    @premise initA(*skA(), *skR@309, *[Na@312]);
+    @premise know(*skA(), #t1@311);
+    @premise init(*skA(), *skR@309);
+    @premise know(*[Na@312], #t0@313);
+    @conclusion know(*aenc([Nb@308], pk(skR@309)), #t@310);
+};
+
+Rule No. [1.37]
+Valid Rule
+Composed by Rule [1.33] and [1.9]
+Selectable at 5:
+@rule{
+    @premise new(*[Nb@319], bobNb(), tuple3(skA(), skB(), [Na@322]));
+    @premise new(*[Na@322], aliceNa(), tuple2(skA(), skR@320));
+    @premise initB(*skA(), *skB(), *[Nb@319]);
+    @premise initA(*skA(), *skR@320, *[Na@322]);
+    @premise init(*skA(), *skR@320);
+    @premise know(*[Na@322], #t0@323);
+    @conclusion know(*aenc([Nb@319], pk(skR@320)), #t@321);
+};
+
+Rule No. [1.38]
+Valid Rule
+Composed by Rule [1.35] and [0.2]
+Not Selectable : 
+@rule{
+    @premise know(*sk@337, #t1@338);
+    @premise know(*x0@339, #t0@340);
+    @premise initB(*sk@337, *skB(), *[Nb@335]);
+    @premise new(*[Nb@335], bobNb(), tuple3(sk@337, skB(), x0@339));
+    @conclusion know(*[Nb@335], #t1@336);
+    @constraint #t1@336 - #t1@338 >= 0;
+};
+
+Rule No. [1.39]
+Valid Rule
+Composed by Rule [1.23] and [1.37]
+Not Selectable : 
+@rule{
+    @premise new(*[Nb@341], bobNb(), tuple3(skA(), skB(), [Na@345]));
+    @premise new(*[Na@345], aliceNa(), tuple2(skA(), skR@344));
+    @premise initB(*skA(), *skB(), *[Nb@341]);
+    @premise initA(*skA(), *skR@344, *[Na@345]);
+    @premise init(*skA(), *skR@344);
+    @premise know(*skR@344, #t1@346);
+    @conclusion know(*aenc([Nb@341], pk(skR@344)), #t@343);
+};
+
+
+Final Rules: 
+Rule No. [1.30]
+Valid Rule
+Composed by Rule [1.25] and [1.10]
+@rule{
+    @premise new(*[Nb@249], bobNb(), tuple3(skA(), skB(), [Na@250]));
+    @premise new(*[Na@250], aliceNa(), tuple2(skA(), skB()));
+    @premise initA(*skA(), *skB(), *[Na@250]);
+    @premise initB(*skA(), *skB(), *[Nb@249]);
+    @premise init(*skA(), *skB());
+    @conclusion accept(*skA(), *skB());
+};
+with parameter relation:
+[@universe]
+
+Rule No. [1.40]
+Valid Rule
+Composed by Rule [1.38] and [1.22]
+@rule{
+    @premise new(*[Nb@351], bobNb(), tuple3(sk@347, skB(), x0@349));
+    @premise initB(*skA(), *skB(), *[Nb@351]);
+    @premise initB(*sk@347, *skB(), *[Nb@351]);
+    @premise know(*sk@347, #t1@348);
+    @premise know(*x0@349, #t0@350);
+    @conclusion accept(*skA(), *skB());
+};
+with parameter relation:
+[@universe]
+
+
+Cannot find any parameter relation satisfying the requested properties.
+
+
+Overall generated rule count : 71
+Basis size : 50
+Verification time: 45
+
+An attack exists.
+

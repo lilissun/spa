@@ -1,0 +1,2840 @@
+Rule in cache: 0
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*y@12, #t0@13);
+    @premise know(*I@14, #t1@15);
+    @premise know(*D@16, #t2@17);
+    @premise know(*s@18, #t3@19);
+    @conclusion know(*sysall(y@12, I@14, D@16, s@18), #t@20);
+    @constraint -#t0@13 + #t@20 >= 0;
+    @constraint #t@20 - #t1@15 >= 0;
+    @constraint #t@20 - #t2@17 >= 0;
+    @constraint #t@20 - #t3@19 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@12, #t0@13);
+    @premise know(*I@14, #t1@15);
+    @premise know(*D@16, #t2@17);
+    @premise know(*s@18, #t3@19);
+    @conclusion know(*sysall(y@12, I@14, D@16, s@18), #t@20);
+    @constraint -#t0@13 + #t@20 >= 0;
+    @constraint #t@20 - #t1@15 >= 0;
+    @constraint #t@20 - #t2@17 >= 0;
+    @constraint #t@20 - #t3@19 >= 0;
+};
+
+Rule in cache: 1
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*r@22, #t0@23);
+    @conclusion know(*sysgr(r@22), #t@24);
+    @constraint -#t0@23 + #t@24 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*r@22, #t0@23);
+    @conclusion know(*sysgr(r@22), #t@24);
+    @constraint -#t0@23 + #t@24 >= 0;
+};
+
+Rule in cache: 2
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*r@26, #t0@27);
+    @premise know(*e@28, #t1@29);
+    @conclusion know(*sysger(e@28, r@26), #t@30);
+    @constraint -#t0@27 + #t@30 >= 0;
+    @constraint #t@30 - #t1@29 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*r@26, #t0@27);
+    @premise know(*e@28, #t1@29);
+    @conclusion know(*sysger(e@28, r@26), #t@30);
+    @constraint -#t0@27 + #t@30 >= 0;
+    @constraint #t@30 - #t1@29 >= 0;
+};
+
+Rule in cache: 3
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*sysgr(r@31), #t0@32);
+    @premise know(*e@33, #t1@34);
+    @conclusion know(*sysger(e@33, r@31), #t@35);
+    @constraint -#t0@32 + #t@35 >= 0;
+    @constraint #t@35 - #t1@34 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysgr(r@31), #t0@32);
+    @premise know(*e@33, #t1@34);
+    @conclusion know(*sysger(e@33, r@31), #t@35);
+    @constraint -#t0@32 + #t@35 >= 0;
+    @constraint #t@35 - #t1@34 >= 0;
+};
+
+Rule in cache: 4
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*y@37, #t0@38);
+    @premise know(*I@39, #t1@40);
+    @premise know(*D@41, #t2@42);
+    @premise know(*s@43, #t3@44);
+    @premise know(*e@45, #t4@46);
+    @premise know(*r@47, #t5@48);
+    @conclusion know(*sysA(y@37, I@39, D@41, s@43, e@45, r@47), #t@49);
+    @constraint -#t0@38 + #t@49 >= 0;
+    @constraint #t@49 - #t1@40 >= 0;
+    @constraint #t@49 - #t2@42 >= 0;
+    @constraint #t@49 - #t3@44 >= 0;
+    @constraint #t@49 - #t4@46 >= 0;
+    @constraint #t@49 - #t5@48 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@37, #t0@38);
+    @premise know(*I@39, #t1@40);
+    @premise know(*D@41, #t2@42);
+    @premise know(*s@43, #t3@44);
+    @premise know(*e@45, #t4@46);
+    @premise know(*r@47, #t5@48);
+    @conclusion know(*sysA(y@37, I@39, D@41, s@43, e@45, r@47), #t@49);
+    @constraint -#t0@38 + #t@49 >= 0;
+    @constraint #t@49 - #t1@40 >= 0;
+    @constraint #t@49 - #t2@42 >= 0;
+    @constraint #t@49 - #t3@44 >= 0;
+    @constraint #t@49 - #t4@46 >= 0;
+    @constraint #t@49 - #t5@48 >= 0;
+};
+
+Rule in cache: 5
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*sysa@51, #t1@52);
+    @conclusion know(*syse(sysa@51), #t@53);
+    @constraint #t@53 - #t0@54 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysa@51, #t1@52);
+    @conclusion know(*syse(sysa@51), #t@53);
+};
+
+Rule in cache: 6
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*sysA(y@55, I@56, D@57, s@58, e@59, r@60), #t0@61);
+    @premise know(*sysger(e@59, r@60), #t1@62);
+    @conclusion know(*syse(sysall(y@55, I@56, D@57, s@58)), #t@63);
+    @constraint -#t0@61 + #t@63 >= 0;
+    @constraint #t@63 - #t1@62 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysA(y@55, I@56, D@57, s@58, e@59, r@60), #t0@61);
+    @premise know(*sysger(e@59, r@60), #t1@62);
+    @conclusion know(*syse(sysall(y@55, I@56, D@57, s@58)), #t@63);
+    @constraint -#t0@61 + #t@63 >= 0;
+    @constraint #t@63 - #t1@62 >= 0;
+};
+
+Rule in cache: 7
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*y@65, #t0@66);
+    @premise know(*s@67, #t1@68);
+    @conclusion know(*resC(y@65, s@67), #t@69);
+    @constraint -#t0@66 + #t@69 >= 0;
+    @constraint #t@69 - #t1@68 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@65, #t0@66);
+    @premise know(*s@67, #t1@68);
+    @conclusion know(*resC(y@65, s@67), #t@69);
+    @constraint -#t0@66 + #t@69 >= 0;
+    @constraint #t@69 - #t1@68 >= 0;
+};
+
+Rule in cache: 8
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*resC(y@70, s@71), #t0@72);
+    @premise know(*I@73, #t1@74);
+    @premise know(*D@75, #t2@76);
+    @premise know(*e@77, #t3@78);
+    @premise know(*r@79, #t4@80);
+    @conclusion know(*sysA(y@70, I@73, D@75, s@71, e@77, r@79), #t@81);
+    @constraint -#t0@72 + #t@81 >= 0;
+    @constraint #t@81 - #t1@74 >= 0;
+    @constraint #t@81 - #t2@76 >= 0;
+    @constraint #t@81 - #t3@78 >= 0;
+    @constraint #t@81 - #t4@80 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*resC(y@70, s@71), #t0@72);
+    @premise know(*I@73, #t1@74);
+    @premise know(*D@75, #t2@76);
+    @premise know(*e@77, #t3@78);
+    @premise know(*r@79, #t4@80);
+    @conclusion know(*sysA(y@70, I@73, D@75, s@71, e@77, r@79), #t@81);
+    @constraint -#t0@72 + #t@81 >= 0;
+    @constraint #t@81 - #t1@74 >= 0;
+    @constraint #t@81 - #t2@76 >= 0;
+    @constraint #t@81 - #t3@78 >= 0;
+    @constraint #t@81 - #t4@80 >= 0;
+};
+
+Rule in cache: 9
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*y@83, #t0@84);
+    @premise know(*I@85, #t1@86);
+    @premise know(*oB@87, #t2@88);
+    @premise know(*s@89, #t3@90);
+    @conclusion know(*chtC(y@83, I@85, oB@87, s@89), #t@91);
+    @constraint -#t0@84 + #t@91 >= 0;
+    @constraint #t@91 - #t1@86 >= 0;
+    @constraint #t@91 - #t2@88 >= 0;
+    @constraint #t@91 - #t3@90 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@83, #t0@84);
+    @premise know(*I@85, #t1@86);
+    @premise know(*oB@87, #t2@88);
+    @premise know(*s@89, #t3@90);
+    @conclusion know(*chtC(y@83, I@85, oB@87, s@89), #t@91);
+    @constraint -#t0@84 + #t@91 >= 0;
+    @constraint #t@91 - #t1@86 >= 0;
+    @constraint #t@91 - #t2@88 >= 0;
+    @constraint #t@91 - #t3@90 >= 0;
+};
+
+Rule in cache: 10
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*chtC(y@92, I@93, B@94, s@95), #t0@96);
+    @premise know(*e@97, #t1@98);
+    @premise know(*r@99, #t2@100);
+    @conclusion know(*sysA(y@92, I@93, B@94, s@95, e@97, r@99), #t@101);
+    @constraint -#t0@96 + #t@101 >= 0;
+    @constraint #t@101 - #t1@98 >= 0;
+    @constraint #t@101 - #t2@100 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*chtC(y@92, I@93, B@94, s@95), #t0@96);
+    @premise know(*e@97, #t1@98);
+    @premise know(*r@99, #t2@100);
+    @conclusion know(*sysA(y@92, I@93, B@94, s@95, e@97, r@99), #t@101);
+    @constraint -#t0@96 + #t@101 >= 0;
+    @constraint #t@101 - #t1@98 >= 0;
+    @constraint #t@101 - #t2@100 >= 0;
+};
+
+Rule in cache: 11
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*c@103, #t0@104);
+    @premise know(*y@105, #t1@106);
+    @premise know(*s@107, #t2@108);
+    @conclusion know(*regZK(c@103, y@105, s@107), #t@109);
+    @constraint -#t0@104 + #t@109 >= 0;
+    @constraint #t@109 - #t1@106 >= 0;
+    @constraint #t@109 - #t2@108 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*c@103, #t0@104);
+    @premise know(*y@105, #t1@106);
+    @premise know(*s@107, #t2@108);
+    @conclusion know(*regZK(c@103, y@105, s@107), #t@109);
+    @constraint -#t0@104 + #t@109 >= 0;
+    @constraint #t@109 - #t1@106 >= 0;
+    @constraint #t@109 - #t2@108 >= 0;
+};
+
+Rule in cache: 12
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*c@111, #t0@112);
+    @premise know(*oA@113, #t1@114);
+    @premise know(*oe@115, #t2@116);
+    @premise know(*oy@117, #t3@118);
+    @premise know(*I@119, #t4@120);
+    @premise know(*oB@121, #t5@122);
+    @premise know(*y@123, #t6@124);
+    @premise know(*s@125, #t7@126);
+    @conclusion know(*chtZK(c@111, oA@113, oe@115, oy@117, I@119, oB@121, y@123, s@125), #t@127);
+    @constraint -#t0@112 + #t@127 >= 0;
+    @constraint #t@127 - #t1@114 >= 0;
+    @constraint #t@127 - #t2@116 >= 0;
+    @constraint #t@127 - #t3@118 >= 0;
+    @constraint #t@127 - #t4@120 >= 0;
+    @constraint #t@127 - #t5@122 >= 0;
+    @constraint #t@127 - #t6@124 >= 0;
+    @constraint #t@127 - #t7@126 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*c@111, #t0@112);
+    @premise know(*oA@113, #t1@114);
+    @premise know(*oe@115, #t2@116);
+    @premise know(*oy@117, #t3@118);
+    @premise know(*I@119, #t4@120);
+    @premise know(*oB@121, #t5@122);
+    @premise know(*y@123, #t6@124);
+    @premise know(*s@125, #t7@126);
+    @conclusion know(*chtZK(c@111, oA@113, oe@115, oy@117, I@119, oB@121, y@123, s@125), #t@127);
+    @constraint -#t0@112 + #t@127 >= 0;
+    @constraint #t@127 - #t1@114 >= 0;
+    @constraint #t@127 - #t2@116 >= 0;
+    @constraint #t@127 - #t3@118 >= 0;
+    @constraint #t@127 - #t4@120 >= 0;
+    @constraint #t@127 - #t5@122 >= 0;
+    @constraint #t@127 - #t6@124 >= 0;
+    @constraint #t@127 - #t7@126 >= 0;
+};
+
+Rule in cache: 13
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @conclusion know(*r(), #t@132);
+};
+Rule cached at priority 0: 
+@rule{
+    @conclusion know(*r(), #t@132);
+};
+
+Rule in cache: 14
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @conclusion know(*ba(), #t@134);
+};
+Rule cached at priority 0: 
+@rule{
+    @conclusion know(*ba(), #t@134);
+};
+
+Rule in cache: 15
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@137], UserY(), tuple2([s@138], I@139));
+    @premise new(*[s@138], UserS(), tuple2([y@137], I@139));
+    @premise know(*I@139, #t0@140);
+    @conclusion know(*resC([y@137], [s@138]), #t@141);
+    @constraint -#t0@140 + #t@141 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@137], UserY(), tuple2([s@138], I@139));
+    @premise new(*[s@138], UserS(), tuple2([y@137], I@139));
+    @premise know(*I@139, #t0@140);
+    @conclusion know(*resC([y@137], [s@138]), #t@141);
+    @constraint -#t0@140 + #t@141 >= 0;
+};
+
+Rule in cache: 16
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@142], UserY(), tuple2([s@143], I@144));
+    @premise new(*[s@143], UserS(), tuple2([y@142], I@144));
+    @premise know(*I@144, #t0@145);
+    @conclusion know(*regZK(resC([y@142], [s@143]), [y@142], [s@143]), #t@146);
+    @constraint -#t0@145 + #t@146 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@142], UserY(), tuple2([s@143], I@144));
+    @premise new(*[s@143], UserS(), tuple2([y@142], I@144));
+    @premise know(*I@144, #t0@145);
+    @conclusion know(*regZK(resC([y@142], [s@143]), [y@142], [s@143]), #t@146);
+    @constraint -#t0@145 + #t@146 >= 0;
+};
+
+Rule in cache: 17
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise new(*[oy@147], UserY(), tuple2([os@148], I@149));
+    @premise new(*[os@148], UserS(), tuple2([oy@147], I@149));
+    @premise know(*sysA([oy@147], I@149, oB@150, [os@148], oe@151, r()), #t0@152);
+    @premise know(*oe@151, #t1@153);
+    @premise new(*[y@154], UserY(), tuple2([s@155], I@149));
+    @premise new(*[s@155], UserS(), tuple2([y@154], I@149));
+    @premise reveal(*[os@148], #t@156);
+    @conclusion know(*chtC([y@154], I@149, oB@150, [s@155]), #t@156);
+    @constraint -#t0@152 + #t@156 >= 0;
+    @constraint #t@156 - #t1@153 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysA([oy@147], I@149, oB@150, [os@148], oe@151, r()), #t0@152);
+    @premise new(*[oy@147], UserY(), tuple2([os@148], I@149));
+    @premise new(*[os@148], UserS(), tuple2([oy@147], I@149));
+    @premise new(*[s@155], UserS(), tuple2([y@154], I@149));
+    @premise new(*[y@154], UserY(), tuple2([s@155], I@149));
+    @premise reveal(*[os@148], #t@156);
+    @premise know(*oe@151, #t1@153);
+    @conclusion know(*chtC([y@154], I@149, oB@150, [s@155]), #t@156);
+    @constraint -#t0@152 + #t@156 >= 0;
+    @constraint #t@156 - #t1@153 >= 0;
+};
+
+Rule in cache: 18
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise new(*[oy@157], UserY(), tuple2([os@158], I@159));
+    @premise new(*[os@158], UserS(), tuple2([oy@157], I@159));
+    @premise know(*sysA([oy@157], I@159, oB@160, [os@158], oe@161, r()), #t0@162);
+    @premise know(*oe@161, #t1@163);
+    @premise new(*[y@164], UserY(), tuple2([s@165], I@159));
+    @premise new(*[s@165], UserS(), tuple2([y@164], I@159));
+    @premise reveal(*[os@158], #t@166);
+    @conclusion know(*chtZK(chtC([y@164], I@159, oB@160, [s@165]), sysA([oy@157], I@159, oB@160, [os@158], oe@161, r()), oe@161, [oy@157], I@159, oB@160, [y@164], [s@165]), #t@166);
+    @constraint -#t0@162 + #t@166 >= 0;
+    @constraint #t@166 - #t1@163 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysA([oy@157], I@159, oB@160, [os@158], oe@161, r()), #t0@162);
+    @premise new(*[oy@157], UserY(), tuple2([os@158], I@159));
+    @premise new(*[os@158], UserS(), tuple2([oy@157], I@159));
+    @premise new(*[s@165], UserS(), tuple2([y@164], I@159));
+    @premise new(*[y@164], UserY(), tuple2([s@165], I@159));
+    @premise reveal(*[os@158], #t@166);
+    @premise know(*oe@161, #t1@163);
+    @conclusion know(*chtZK(chtC([y@164], I@159, oB@160, [s@165]), sysA([oy@157], I@159, oB@160, [os@158], oe@161, r()), oe@161, [oy@157], I@159, oB@160, [y@164], [s@165]), #t@166);
+    @constraint -#t0@162 + #t@166 >= 0;
+    @constraint #t@166 - #t1@163 >= 0;
+};
+
+Rule in cache: 19
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise new(*[oy@167], UserY(), tuple2([os@168], I@169));
+    @premise new(*[os@168], UserS(), tuple2([oy@167], I@169));
+    @premise know(*sysA([oy@167], I@169, oB@170, [os@168], oe@171, r()), #t0@172);
+    @premise know(*oe@171, #t1@173);
+    @premise new(*[y@174], UserY(), tuple2([s@175], I@169));
+    @premise new(*[s@175], UserS(), tuple2([y@174], I@169));
+    @premise reveal(*[os@168], #t@176);
+    @conclusion know(*[os@168], #t@176);
+    @constraint -#t0@172 + #t@176 >= 0;
+    @constraint #t@176 - #t1@173 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysA([oy@167], I@169, oB@170, [os@168], oe@171, r()), #t0@172);
+    @premise new(*[oy@167], UserY(), tuple2([os@168], I@169));
+    @premise new(*[os@168], UserS(), tuple2([oy@167], I@169));
+    @premise new(*[s@175], UserS(), tuple2([y@174], I@169));
+    @premise new(*[y@174], UserY(), tuple2([s@175], I@169));
+    @premise reveal(*[os@168], #t@176);
+    @premise know(*oe@171, #t1@173);
+    @conclusion know(*[os@168], #t@176);
+    @constraint -#t0@172 + #t@176 >= 0;
+    @constraint #t@176 - #t1@173 >= 0;
+};
+
+Rule in cache: 20
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise new(*[os@177], UserS(), m@178);
+    @premise reveal(*[os@177], #t0@179);
+    @premise know(*[os@177], #t@180);
+    @conclusion leak([os@177]);
+    @constraint #t0@179 - #t@180 > 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[os@177], UserS(), m@178);
+    @premise reveal(*[os@177], #t0@179);
+    @premise know(*[os@177], #t@180);
+    @conclusion leak([os@177]);
+    @constraint #t0@179 - #t@180 > 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*y@12, #t0@13);
+    @premise know(*I@14, #t1@15);
+    @premise know(*D@16, #t2@17);
+    @premise know(*s@18, #t3@19);
+    @conclusion know(*sysall(y@12, I@14, D@16, s@18), #t@20);
+    @constraint -#t0@13 + #t@20 >= 0;
+    @constraint #t@20 - #t1@15 >= 0;
+    @constraint #t@20 - #t2@17 >= 0;
+    @constraint #t@20 - #t3@19 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*r@22, #t0@23);
+    @conclusion know(*sysgr(r@22), #t@24);
+    @constraint -#t0@23 + #t@24 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*r@26, #t0@27);
+    @premise know(*e@28, #t1@29);
+    @conclusion know(*sysger(e@28, r@26), #t@30);
+    @constraint -#t0@27 + #t@30 >= 0;
+    @constraint #t@30 - #t1@29 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*sysgr(r@31), #t0@32);
+    @premise know(*e@33, #t1@34);
+    @conclusion know(*sysger(e@33, r@31), #t@35);
+    @constraint -#t0@32 + #t@35 >= 0;
+    @constraint #t@35 - #t1@34 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*r@22, #t0@23);
+    @conclusion know(*sysgr(r@22), #t@24);
+    @constraint -#t0@23 + #t@24 >= 0;
+};
+Rule in cache: 17
+Rule staged: 4
+Rule before check and clean: 
+@rule{
+    @premise know(*r@183, #t0@185);
+    @premise know(*e@182, #t1@186);
+    @conclusion know(*sysger(e@182, r@183), #t@184);
+    @constraint #t@184 - #t@24 >= 0;
+    @constraint -#t0@185 + #t@24 >= 0;
+    @constraint #t@184 - #t1@186 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*r@183, #t0@185);
+    @premise know(*e@182, #t1@186);
+    @conclusion know(*sysger(e@182, r@183), #t@184);
+    @constraint #t@184 - #t1@186 >= 0;
+    @constraint #t@184 - #t0@185 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*y@37, #t0@38);
+    @premise know(*I@39, #t1@40);
+    @premise know(*D@41, #t2@42);
+    @premise know(*s@43, #t3@44);
+    @premise know(*e@45, #t4@46);
+    @premise know(*r@47, #t5@48);
+    @conclusion know(*sysA(y@37, I@39, D@41, s@43, e@45, r@47), #t@49);
+    @constraint -#t0@38 + #t@49 >= 0;
+    @constraint #t@49 - #t1@40 >= 0;
+    @constraint #t@49 - #t2@42 >= 0;
+    @constraint #t@49 - #t3@44 >= 0;
+    @constraint #t@49 - #t4@46 >= 0;
+    @constraint #t@49 - #t5@48 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*sysa@51, #t1@52);
+    @conclusion know(*syse(sysa@51), #t@53);
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*sysA(y@55, I@56, D@57, s@58, e@59, r@60), #t0@61);
+    @premise know(*sysger(e@59, r@60), #t1@62);
+    @conclusion know(*syse(sysall(y@55, I@56, D@57, s@58)), #t@63);
+    @constraint -#t0@61 + #t@63 >= 0;
+    @constraint #t@63 - #t1@62 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*y@37, #t0@38);
+    @premise know(*I@39, #t1@40);
+    @premise know(*D@41, #t2@42);
+    @premise know(*s@43, #t3@44);
+    @premise know(*e@45, #t4@46);
+    @premise know(*r@47, #t5@48);
+    @conclusion know(*sysA(y@37, I@39, D@41, s@43, e@45, r@47), #t@49);
+    @constraint -#t0@38 + #t@49 >= 0;
+    @constraint #t@49 - #t1@40 >= 0;
+    @constraint #t@49 - #t2@42 >= 0;
+    @constraint #t@49 - #t3@44 >= 0;
+    @constraint #t@49 - #t4@46 >= 0;
+    @constraint #t@49 - #t5@48 >= 0;
+};
+Rule in cache: 15
+Rule staged: 7
+Rule before check and clean: 
+@rule{
+    @premise know(*y@187, #t0@192);
+    @premise know(*I@188, #t1@193);
+    @premise know(*D@189, #t2@194);
+    @premise know(*s@190, #t3@195);
+    @premise know(*e@196, #t4@197);
+    @premise know(*r@198, #t5@199);
+    @premise know(*sysger(e@196, r@198), #t1@200);
+    @conclusion know(*syse(sysall(y@187, I@188, D@189, s@190)), #t@191);
+    @constraint #t@49 - #t2@194 >= 0;
+    @constraint #t@191 - #t@49 >= 0;
+    @constraint #t@49 - #t5@199 >= 0;
+    @constraint #t@49 - #t4@197 >= 0;
+    @constraint #t@49 - #t3@195 >= 0;
+    @constraint #t@49 - #t1@193 >= 0;
+    @constraint -#t0@192 + #t@49 >= 0;
+    @constraint #t@191 - #t1@200 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysger(e@196, r@198), #t1@200);
+    @premise know(*I@188, #t1@193);
+    @premise know(*D@189, #t2@194);
+    @premise know(*y@187, #t0@192);
+    @premise know(*e@196, #t4@197);
+    @premise know(*r@198, #t5@199);
+    @premise know(*s@190, #t3@195);
+    @conclusion know(*syse(sysall(y@187, I@188, D@189, s@190)), #t@191);
+    @constraint #t@191 - #t1@200 >= 0;
+    @constraint #t@191 - #t5@199 >= 0;
+    @constraint #t@191 - #t4@197 >= 0;
+    @constraint #t@191 - #t3@195 >= 0;
+    @constraint #t@191 - #t0@192 >= 0;
+    @constraint #t@191 - #t1@193 >= 0;
+    @constraint #t@191 - #t2@194 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*y@65, #t0@66);
+    @premise know(*s@67, #t1@68);
+    @conclusion know(*resC(y@65, s@67), #t@69);
+    @constraint -#t0@66 + #t@69 >= 0;
+    @constraint #t@69 - #t1@68 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*resC(y@70, s@71), #t0@72);
+    @premise know(*I@73, #t1@74);
+    @premise know(*D@75, #t2@76);
+    @premise know(*e@77, #t3@78);
+    @premise know(*r@79, #t4@80);
+    @conclusion know(*sysA(y@70, I@73, D@75, s@71, e@77, r@79), #t@81);
+    @constraint -#t0@72 + #t@81 >= 0;
+    @constraint #t@81 - #t1@74 >= 0;
+    @constraint #t@81 - #t2@76 >= 0;
+    @constraint #t@81 - #t3@78 >= 0;
+    @constraint #t@81 - #t4@80 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*y@65, #t0@66);
+    @premise know(*s@67, #t1@68);
+    @conclusion know(*resC(y@65, s@67), #t@69);
+    @constraint -#t0@66 + #t@69 >= 0;
+    @constraint #t@69 - #t1@68 >= 0;
+};
+Rule in cache: 14
+Rule staged: 9
+Rule before check and clean: 
+@rule{
+    @premise know(*y@201, #t0@208);
+    @premise know(*s@204, #t1@209);
+    @premise know(*I@202, #t1@210);
+    @premise know(*D@203, #t2@211);
+    @premise know(*e@205, #t3@212);
+    @premise know(*r@206, #t4@213);
+    @conclusion know(*sysA(y@201, I@202, D@203, s@204, e@205, r@206), #t@207);
+    @constraint #t@207 - #t@69 >= 0;
+    @constraint #t@69 - #t1@209 >= 0;
+    @constraint -#t0@208 + #t@69 >= 0;
+    @constraint #t@207 - #t4@213 >= 0;
+    @constraint #t@207 - #t3@212 >= 0;
+    @constraint #t@207 - #t2@211 >= 0;
+    @constraint #t@207 - #t1@210 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@201, #t0@208);
+    @premise know(*s@204, #t1@209);
+    @premise know(*I@202, #t1@210);
+    @premise know(*D@203, #t2@211);
+    @premise know(*e@205, #t3@212);
+    @premise know(*r@206, #t4@213);
+    @conclusion know(*sysA(y@201, I@202, D@203, s@204, e@205, r@206), #t@207);
+    @constraint #t@207 - #t1@210 >= 0;
+    @constraint #t@207 - #t4@213 >= 0;
+    @constraint #t@207 - #t3@212 >= 0;
+    @constraint #t@207 - #t2@211 >= 0;
+    @constraint #t@207 - #t1@209 >= 0;
+    @constraint #t@207 - #t0@208 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*y@83, #t0@84);
+    @premise know(*I@85, #t1@86);
+    @premise know(*oB@87, #t2@88);
+    @premise know(*s@89, #t3@90);
+    @conclusion know(*chtC(y@83, I@85, oB@87, s@89), #t@91);
+    @constraint -#t0@84 + #t@91 >= 0;
+    @constraint #t@91 - #t1@86 >= 0;
+    @constraint #t@91 - #t2@88 >= 0;
+    @constraint #t@91 - #t3@90 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*chtC(y@92, I@93, B@94, s@95), #t0@96);
+    @premise know(*e@97, #t1@98);
+    @premise know(*r@99, #t2@100);
+    @conclusion know(*sysA(y@92, I@93, B@94, s@95, e@97, r@99), #t@101);
+    @constraint -#t0@96 + #t@101 >= 0;
+    @constraint #t@101 - #t1@98 >= 0;
+    @constraint #t@101 - #t2@100 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*y@83, #t0@84);
+    @premise know(*I@85, #t1@86);
+    @premise know(*oB@87, #t2@88);
+    @premise know(*s@89, #t3@90);
+    @conclusion know(*chtC(y@83, I@85, oB@87, s@89), #t@91);
+    @constraint -#t0@84 + #t@91 >= 0;
+    @constraint #t@91 - #t1@86 >= 0;
+    @constraint #t@91 - #t2@88 >= 0;
+    @constraint #t@91 - #t3@90 >= 0;
+};
+Rule in cache: 13
+Rule staged: 11
+Rule before check and clean: 
+@rule{
+    @premise know(*y@214, #t0@221);
+    @premise know(*I@215, #t1@222);
+    @premise know(*oB@216, #t2@223);
+    @premise know(*s@217, #t3@224);
+    @premise know(*e@218, #t1@225);
+    @premise know(*r@219, #t2@226);
+    @conclusion know(*sysA(y@214, I@215, oB@216, s@217, e@218, r@219), #t@220);
+    @constraint #t@91 - #t1@222 >= 0;
+    @constraint #t@220 - #t@91 >= 0;
+    @constraint #t@91 - #t3@224 >= 0;
+    @constraint #t@91 - #t2@223 >= 0;
+    @constraint -#t0@221 + #t@91 >= 0;
+    @constraint #t@220 - #t2@226 >= 0;
+    @constraint #t@220 - #t1@225 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@214, #t0@221);
+    @premise know(*I@215, #t1@222);
+    @premise know(*oB@216, #t2@223);
+    @premise know(*s@217, #t3@224);
+    @premise know(*e@218, #t1@225);
+    @premise know(*r@219, #t2@226);
+    @conclusion know(*sysA(y@214, I@215, oB@216, s@217, e@218, r@219), #t@220);
+    @constraint #t@220 - #t1@225 >= 0;
+    @constraint #t@220 - #t2@226 >= 0;
+    @constraint #t@220 - #t3@224 >= 0;
+    @constraint #t@220 - #t2@223 >= 0;
+    @constraint #t@220 - #t1@222 >= 0;
+    @constraint #t@220 - #t0@221 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*c@103, #t0@104);
+    @premise know(*y@105, #t1@106);
+    @premise know(*s@107, #t2@108);
+    @conclusion know(*regZK(c@103, y@105, s@107), #t@109);
+    @constraint -#t0@104 + #t@109 >= 0;
+    @constraint #t@109 - #t1@106 >= 0;
+    @constraint #t@109 - #t2@108 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*c@111, #t0@112);
+    @premise know(*oA@113, #t1@114);
+    @premise know(*oe@115, #t2@116);
+    @premise know(*oy@117, #t3@118);
+    @premise know(*I@119, #t4@120);
+    @premise know(*oB@121, #t5@122);
+    @premise know(*y@123, #t6@124);
+    @premise know(*s@125, #t7@126);
+    @conclusion know(*chtZK(c@111, oA@113, oe@115, oy@117, I@119, oB@121, y@123, s@125), #t@127);
+    @constraint -#t0@112 + #t@127 >= 0;
+    @constraint #t@127 - #t1@114 >= 0;
+    @constraint #t@127 - #t2@116 >= 0;
+    @constraint #t@127 - #t3@118 >= 0;
+    @constraint #t@127 - #t4@120 >= 0;
+    @constraint #t@127 - #t5@122 >= 0;
+    @constraint #t@127 - #t6@124 >= 0;
+    @constraint #t@127 - #t7@126 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @conclusion know(*r(), #t@132);
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @conclusion know(*ba(), #t@134);
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise new(*[y@137], UserY(), tuple2([s@138], I@139));
+    @premise new(*[s@138], UserS(), tuple2([y@137], I@139));
+    @premise know(*I@139, #t0@140);
+    @conclusion know(*resC([y@137], [s@138]), #t@141);
+    @constraint -#t0@140 + #t@141 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise know(*resC(y@70, s@71), #t0@72);
+    @premise know(*I@73, #t1@74);
+    @premise know(*D@75, #t2@76);
+    @premise know(*e@77, #t3@78);
+    @premise know(*r@79, #t4@80);
+    @conclusion know(*sysA(y@70, I@73, D@75, s@71, e@77, r@79), #t@81);
+    @constraint -#t0@72 + #t@81 >= 0;
+    @constraint #t@81 - #t1@74 >= 0;
+    @constraint #t@81 - #t2@76 >= 0;
+    @constraint #t@81 - #t3@78 >= 0;
+    @constraint #t@81 - #t4@80 >= 0;
+};
+Rule in cache: 9
+Rule staged: 16
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@227], UserY(), tuple2([s@230], I@234));
+    @premise new(*[s@230], UserS(), tuple2([y@227], I@234));
+    @premise know(*I@234, #t0@235);
+    @premise know(*I@228, #t1@236);
+    @premise know(*D@229, #t2@237);
+    @premise know(*e@231, #t3@238);
+    @premise know(*r@232, #t4@239);
+    @conclusion know(*sysA([y@227], I@228, D@229, [s@230], e@231, r@232), #t@233);
+    @constraint #t@233 - #t@141 >= 0;
+    @constraint -#t0@235 + #t@141 >= 0;
+    @constraint #t@233 - #t4@239 >= 0;
+    @constraint #t@233 - #t3@238 >= 0;
+    @constraint #t@233 - #t2@237 >= 0;
+    @constraint #t@233 - #t1@236 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@227], UserY(), tuple2([s@230], I@234));
+    @premise new(*[s@230], UserS(), tuple2([y@227], I@234));
+    @premise know(*I@234, #t0@235);
+    @premise know(*I@228, #t1@236);
+    @premise know(*D@229, #t2@237);
+    @premise know(*e@231, #t3@238);
+    @premise know(*r@232, #t4@239);
+    @conclusion know(*sysA([y@227], I@228, D@229, [s@230], e@231, r@232), #t@233);
+    @constraint #t@233 - #t4@239 >= 0;
+    @constraint #t@233 - #t3@238 >= 0;
+    @constraint #t@233 - #t2@237 >= 0;
+    @constraint #t@233 - #t1@236 >= 0;
+    @constraint #t@233 - #t0@235 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[y@142], UserY(), tuple2([s@143], I@144));
+    @premise new(*[s@143], UserS(), tuple2([y@142], I@144));
+    @premise know(*I@144, #t0@145);
+    @conclusion know(*regZK(resC([y@142], [s@143]), [y@142], [s@143]), #t@146);
+    @constraint -#t0@145 + #t@146 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*sysA([oy@147], I@149, oB@150, [os@148], oe@151, r()), #t0@152);
+    @premise new(*[oy@147], UserY(), tuple2([os@148], I@149));
+    @premise new(*[os@148], UserS(), tuple2([oy@147], I@149));
+    @premise new(*[s@155], UserS(), tuple2([y@154], I@149));
+    @premise new(*[y@154], UserY(), tuple2([s@155], I@149));
+    @premise reveal(*[os@148], #t@156);
+    @premise know(*oe@151, #t1@153);
+    @conclusion know(*chtC([y@154], I@149, oB@150, [s@155]), #t@156);
+    @constraint -#t0@152 + #t@156 >= 0;
+    @constraint #t@156 - #t1@153 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*y@37, #t0@38);
+    @premise know(*I@39, #t1@40);
+    @premise know(*D@41, #t2@42);
+    @premise know(*s@43, #t3@44);
+    @premise know(*e@45, #t4@46);
+    @premise know(*r@47, #t5@48);
+    @conclusion know(*sysA(y@37, I@39, D@41, s@43, e@45, r@47), #t@49);
+    @constraint -#t0@38 + #t@49 >= 0;
+    @constraint #t@49 - #t1@40 >= 0;
+    @constraint #t@49 - #t2@42 >= 0;
+    @constraint #t@49 - #t3@44 >= 0;
+    @constraint #t@49 - #t4@46 >= 0;
+    @constraint #t@49 - #t5@48 >= 0;
+};
+Rule in cache: 8
+Rule staged: 18
+Rule before check and clean: 
+@rule{
+    @premise know(*[oy@245], #t0@246);
+    @premise know(*I@241, #t1@247);
+    @premise know(*D@242, #t2@248);
+    @premise know(*[os@249], #t3@250);
+    @premise know(*e@251, #t4@252);
+    @premise know(*r(), #t5@253);
+    @premise new(*[oy@245], UserY(), tuple2([os@249], I@241));
+    @premise new(*[os@249], UserS(), tuple2([oy@245], I@241));
+    @premise new(*[s@243], UserS(), tuple2([y@240], I@241));
+    @premise new(*[y@240], UserY(), tuple2([s@243], I@241));
+    @premise reveal(*[os@249], #t@244);
+    @premise know(*e@251, #t1@254);
+    @conclusion know(*chtC([y@240], I@241, D@242, [s@243]), #t@244);
+    @constraint #t@49 - #t2@248 >= 0;
+    @constraint #t@244 - #t@49 >= 0;
+    @constraint #t@49 - #t5@253 >= 0;
+    @constraint #t@49 - #t4@252 >= 0;
+    @constraint #t@49 - #t3@250 >= 0;
+    @constraint #t@49 - #t1@247 >= 0;
+    @constraint -#t0@246 + #t@49 >= 0;
+    @constraint #t@244 - #t1@254 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[oy@245], UserY(), tuple2([os@249], I@241));
+    @premise new(*[y@240], UserY(), tuple2([s@243], I@241));
+    @premise new(*[s@243], UserS(), tuple2([y@240], I@241));
+    @premise new(*[os@249], UserS(), tuple2([oy@245], I@241));
+    @premise know(*r(), #t5@253);
+    @premise know(*[oy@245], #t0@246);
+    @premise know(*[os@249], #t3@250);
+    @premise reveal(*[os@249], #t@244);
+    @premise know(*D@242, #t2@248);
+    @premise know(*I@241, #t1@247);
+    @conclusion know(*chtC([y@240], I@241, D@242, [s@243]), #t@244);
+    @constraint #t@244 - #t5@253 >= 0;
+    @constraint #t@244 - #t3@250 >= 0;
+    @constraint #t@244 - #t0@246 >= 0;
+    @constraint #t@244 - #t1@247 >= 0;
+    @constraint #t@244 - #t2@248 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*sysA([oy@157], I@159, oB@160, [os@158], oe@161, r()), #t0@162);
+    @premise new(*[oy@157], UserY(), tuple2([os@158], I@159));
+    @premise new(*[os@158], UserS(), tuple2([oy@157], I@159));
+    @premise new(*[s@165], UserS(), tuple2([y@164], I@159));
+    @premise new(*[y@164], UserY(), tuple2([s@165], I@159));
+    @premise reveal(*[os@158], #t@166);
+    @premise know(*oe@161, #t1@163);
+    @conclusion know(*chtZK(chtC([y@164], I@159, oB@160, [s@165]), sysA([oy@157], I@159, oB@160, [os@158], oe@161, r()), oe@161, [oy@157], I@159, oB@160, [y@164], [s@165]), #t@166);
+    @constraint -#t0@162 + #t@166 >= 0;
+    @constraint #t@166 - #t1@163 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*y@37, #t0@38);
+    @premise know(*I@39, #t1@40);
+    @premise know(*D@41, #t2@42);
+    @premise know(*s@43, #t3@44);
+    @premise know(*e@45, #t4@46);
+    @premise know(*r@47, #t5@48);
+    @conclusion know(*sysA(y@37, I@39, D@41, s@43, e@45, r@47), #t@49);
+    @constraint -#t0@38 + #t@49 >= 0;
+    @constraint #t@49 - #t1@40 >= 0;
+    @constraint #t@49 - #t2@42 >= 0;
+    @constraint #t@49 - #t3@44 >= 0;
+    @constraint #t@49 - #t4@46 >= 0;
+    @constraint #t@49 - #t5@48 >= 0;
+};
+Rule in cache: 8
+Rule staged: 19
+Rule before check and clean: 
+@rule{
+    @premise know(*[oy@259], #t0@263);
+    @premise know(*I@256, #t1@264);
+    @premise know(*D@257, #t2@265);
+    @premise know(*[os@260], #t3@266);
+    @premise know(*e@261, #t4@267);
+    @premise know(*r(), #t5@268);
+    @premise new(*[oy@259], UserY(), tuple2([os@260], I@256));
+    @premise new(*[os@260], UserS(), tuple2([oy@259], I@256));
+    @premise new(*[s@258], UserS(), tuple2([y@255], I@256));
+    @premise new(*[y@255], UserY(), tuple2([s@258], I@256));
+    @premise reveal(*[os@260], #t@262);
+    @premise know(*e@261, #t1@269);
+    @conclusion know(*chtZK(chtC([y@255], I@256, D@257, [s@258]), sysA([oy@259], I@256, D@257, [os@260], e@261, r()), e@261, [oy@259], I@256, D@257, [y@255], [s@258]), #t@262);
+    @constraint #t@49 - #t2@265 >= 0;
+    @constraint #t@262 - #t@49 >= 0;
+    @constraint #t@49 - #t5@268 >= 0;
+    @constraint #t@49 - #t4@267 >= 0;
+    @constraint #t@49 - #t3@266 >= 0;
+    @constraint #t@49 - #t1@264 >= 0;
+    @constraint -#t0@263 + #t@49 >= 0;
+    @constraint #t@262 - #t1@269 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@255], UserY(), tuple2([s@258], I@256));
+    @premise new(*[s@258], UserS(), tuple2([y@255], I@256));
+    @premise new(*[os@260], UserS(), tuple2([oy@259], I@256));
+    @premise new(*[oy@259], UserY(), tuple2([os@260], I@256));
+    @premise know(*r(), #t5@268);
+    @premise know(*[oy@259], #t0@263);
+    @premise know(*[os@260], #t3@266);
+    @premise reveal(*[os@260], #t@262);
+    @premise know(*e@261, #t4@267);
+    @premise know(*D@257, #t2@265);
+    @premise know(*I@256, #t1@264);
+    @conclusion know(*chtZK(chtC([y@255], I@256, D@257, [s@258]), sysA([oy@259], I@256, D@257, [os@260], e@261, r()), e@261, [oy@259], I@256, D@257, [y@255], [s@258]), #t@262);
+    @constraint #t@262 - #t5@268 >= 0;
+    @constraint #t@262 - #t4@267 >= 0;
+    @constraint #t@262 - #t0@263 >= 0;
+    @constraint #t@262 - #t1@264 >= 0;
+    @constraint #t@262 - #t2@265 >= 0;
+    @constraint #t@262 - #t3@266 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*sysA([oy@167], I@169, oB@170, [os@168], oe@171, r()), #t0@172);
+    @premise new(*[oy@167], UserY(), tuple2([os@168], I@169));
+    @premise new(*[os@168], UserS(), tuple2([oy@167], I@169));
+    @premise new(*[s@175], UserS(), tuple2([y@174], I@169));
+    @premise new(*[y@174], UserY(), tuple2([s@175], I@169));
+    @premise reveal(*[os@168], #t@176);
+    @premise know(*oe@171, #t1@173);
+    @conclusion know(*[os@168], #t@176);
+    @constraint -#t0@172 + #t@176 >= 0;
+    @constraint #t@176 - #t1@173 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*y@37, #t0@38);
+    @premise know(*I@39, #t1@40);
+    @premise know(*D@41, #t2@42);
+    @premise know(*s@43, #t3@44);
+    @premise know(*e@45, #t4@46);
+    @premise know(*r@47, #t5@48);
+    @conclusion know(*sysA(y@37, I@39, D@41, s@43, e@45, r@47), #t@49);
+    @constraint -#t0@38 + #t@49 >= 0;
+    @constraint #t@49 - #t1@40 >= 0;
+    @constraint #t@49 - #t2@42 >= 0;
+    @constraint #t@49 - #t3@44 >= 0;
+    @constraint #t@49 - #t4@46 >= 0;
+    @constraint #t@49 - #t5@48 >= 0;
+};
+Rule in cache: 8
+Rule staged: 20
+Rule before check and clean: 
+@rule{
+    @premise know(*[oy@272], #t0@273);
+    @premise know(*I@274, #t1@275);
+    @premise know(*D@276, #t2@277);
+    @premise know(*[os@270], #t3@278);
+    @premise know(*e@279, #t4@280);
+    @premise know(*r(), #t5@281);
+    @premise new(*[oy@272], UserY(), tuple2([os@270], I@274));
+    @premise new(*[os@270], UserS(), tuple2([oy@272], I@274));
+    @premise new(*[s@282], UserS(), tuple2([y@283], I@274));
+    @premise new(*[y@283], UserY(), tuple2([s@282], I@274));
+    @premise reveal(*[os@270], #t@271);
+    @premise know(*e@279, #t1@284);
+    @conclusion know(*[os@270], #t@271);
+    @constraint #t@49 - #t2@277 >= 0;
+    @constraint #t@271 - #t@49 >= 0;
+    @constraint #t@49 - #t5@281 >= 0;
+    @constraint #t@49 - #t4@280 >= 0;
+    @constraint #t@49 - #t3@278 >= 0;
+    @constraint #t@49 - #t1@275 >= 0;
+    @constraint -#t0@273 + #t@49 >= 0;
+    @constraint #t@271 - #t1@284 >= 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise new(*[os@177], UserS(), m@178);
+    @premise reveal(*[os@177], #t0@179);
+    @premise know(*[os@177], #t@180);
+    @conclusion leak([os@177]);
+    @constraint #t0@179 - #t@180 > 0;
+};
+Rule added at 2.
+
+Stage rule: 
+@rule{
+    @premise know(*r@183, #t0@185);
+    @premise know(*e@182, #t1@186);
+    @conclusion know(*sysger(e@182, r@183), #t@184);
+    @constraint #t@184 - #t1@186 >= 0;
+    @constraint #t@184 - #t0@185 >= 0;
+};
+Rule implied by: 
+@rule{
+    @premise know(*r@26, #t0@27);
+    @premise know(*e@28, #t1@29);
+    @conclusion know(*sysger(e@28, r@26), #t@30);
+    @constraint -#t0@27 + #t@30 >= 0;
+    @constraint #t@30 - #t1@29 >= 0;
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise know(*sysger(e@196, r@198), #t1@200);
+    @premise know(*I@188, #t1@193);
+    @premise know(*D@189, #t2@194);
+    @premise know(*y@187, #t0@192);
+    @premise know(*e@196, #t4@197);
+    @premise know(*r@198, #t5@199);
+    @premise know(*s@190, #t3@195);
+    @conclusion know(*syse(sysall(y@187, I@188, D@189, s@190)), #t@191);
+    @constraint #t@191 - #t1@200 >= 0;
+    @constraint #t@191 - #t5@199 >= 0;
+    @constraint #t@191 - #t4@197 >= 0;
+    @constraint #t@191 - #t3@195 >= 0;
+    @constraint #t@191 - #t0@192 >= 0;
+    @constraint #t@191 - #t1@193 >= 0;
+    @constraint #t@191 - #t2@194 >= 0;
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*r@26, #t0@27);
+    @premise know(*e@28, #t1@29);
+    @conclusion know(*sysger(e@28, r@26), #t@30);
+    @constraint -#t0@27 + #t@30 >= 0;
+    @constraint #t@30 - #t1@29 >= 0;
+};
+Rule in cache: 5
+Rule staged: 22
+Rule before check and clean: 
+@rule{
+    @premise know(*r@290, #t0@291);
+    @premise know(*e@292, #t1@293);
+    @premise know(*I@286, #t1@294);
+    @premise know(*D@287, #t2@295);
+    @premise know(*y@285, #t0@296);
+    @premise know(*e@292, #t4@297);
+    @premise know(*r@290, #t5@298);
+    @premise know(*s@288, #t3@299);
+    @conclusion know(*syse(sysall(y@285, I@286, D@287, s@288)), #t@289);
+    @constraint #t@30 - #t1@293 >= 0;
+    @constraint -#t0@291 + #t@30 >= 0;
+    @constraint #t@289 - #t@30 >= 0;
+    @constraint #t@289 - #t5@298 >= 0;
+    @constraint #t@289 - #t4@297 >= 0;
+    @constraint #t@289 - #t3@299 >= 0;
+    @constraint #t@289 - #t2@295 >= 0;
+    @constraint #t@289 - #t1@294 >= 0;
+    @constraint #t@289 - #t0@296 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*I@286, #t1@294);
+    @premise know(*D@287, #t2@295);
+    @premise know(*y@285, #t0@296);
+    @premise know(*s@288, #t3@299);
+    @conclusion know(*syse(sysall(y@285, I@286, D@287, s@288)), #t@289);
+    @constraint #t@289 - #t3@299 >= 0;
+    @constraint #t@289 - #t2@295 >= 0;
+    @constraint #t@289 - #t1@294 >= 0;
+    @constraint #t@289 - #t0@296 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*y@201, #t0@208);
+    @premise know(*s@204, #t1@209);
+    @premise know(*I@202, #t1@210);
+    @premise know(*D@203, #t2@211);
+    @premise know(*e@205, #t3@212);
+    @premise know(*r@206, #t4@213);
+    @conclusion know(*sysA(y@201, I@202, D@203, s@204, e@205, r@206), #t@207);
+    @constraint #t@207 - #t1@210 >= 0;
+    @constraint #t@207 - #t4@213 >= 0;
+    @constraint #t@207 - #t3@212 >= 0;
+    @constraint #t@207 - #t2@211 >= 0;
+    @constraint #t@207 - #t1@209 >= 0;
+    @constraint #t@207 - #t0@208 >= 0;
+};
+Rule implied by: 
+@rule{
+    @premise know(*y@37, #t0@38);
+    @premise know(*I@39, #t1@40);
+    @premise know(*D@41, #t2@42);
+    @premise know(*s@43, #t3@44);
+    @premise know(*e@45, #t4@46);
+    @premise know(*r@47, #t5@48);
+    @conclusion know(*sysA(y@37, I@39, D@41, s@43, e@45, r@47), #t@49);
+    @constraint -#t0@38 + #t@49 >= 0;
+    @constraint #t@49 - #t1@40 >= 0;
+    @constraint #t@49 - #t2@42 >= 0;
+    @constraint #t@49 - #t3@44 >= 0;
+    @constraint #t@49 - #t4@46 >= 0;
+    @constraint #t@49 - #t5@48 >= 0;
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise know(*y@214, #t0@221);
+    @premise know(*I@215, #t1@222);
+    @premise know(*oB@216, #t2@223);
+    @premise know(*s@217, #t3@224);
+    @premise know(*e@218, #t1@225);
+    @premise know(*r@219, #t2@226);
+    @conclusion know(*sysA(y@214, I@215, oB@216, s@217, e@218, r@219), #t@220);
+    @constraint #t@220 - #t1@225 >= 0;
+    @constraint #t@220 - #t2@226 >= 0;
+    @constraint #t@220 - #t3@224 >= 0;
+    @constraint #t@220 - #t2@223 >= 0;
+    @constraint #t@220 - #t1@222 >= 0;
+    @constraint #t@220 - #t0@221 >= 0;
+};
+Rule implied by: 
+@rule{
+    @premise know(*y@37, #t0@38);
+    @premise know(*I@39, #t1@40);
+    @premise know(*D@41, #t2@42);
+    @premise know(*s@43, #t3@44);
+    @premise know(*e@45, #t4@46);
+    @premise know(*r@47, #t5@48);
+    @conclusion know(*sysA(y@37, I@39, D@41, s@43, e@45, r@47), #t@49);
+    @constraint -#t0@38 + #t@49 >= 0;
+    @constraint #t@49 - #t1@40 >= 0;
+    @constraint #t@49 - #t2@42 >= 0;
+    @constraint #t@49 - #t3@44 >= 0;
+    @constraint #t@49 - #t4@46 >= 0;
+    @constraint #t@49 - #t5@48 >= 0;
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise new(*[y@227], UserY(), tuple2([s@230], I@234));
+    @premise new(*[s@230], UserS(), tuple2([y@227], I@234));
+    @premise know(*I@234, #t0@235);
+    @premise know(*I@228, #t1@236);
+    @premise know(*D@229, #t2@237);
+    @premise know(*e@231, #t3@238);
+    @premise know(*r@232, #t4@239);
+    @conclusion know(*sysA([y@227], I@228, D@229, [s@230], e@231, r@232), #t@233);
+    @constraint #t@233 - #t4@239 >= 0;
+    @constraint #t@233 - #t3@238 >= 0;
+    @constraint #t@233 - #t2@237 >= 0;
+    @constraint #t@233 - #t1@236 >= 0;
+    @constraint #t@233 - #t0@235 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise know(*sysA(y@55, I@56, D@57, s@58, e@59, r@60), #t0@61);
+    @premise know(*sysger(e@59, r@60), #t1@62);
+    @conclusion know(*syse(sysall(y@55, I@56, D@57, s@58)), #t@63);
+    @constraint -#t0@61 + #t@63 >= 0;
+    @constraint #t@63 - #t1@62 >= 0;
+};
+Rule in cache: 3
+Rule staged: 23
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@300], UserY(), tuple2([s@303], I@305));
+    @premise new(*[s@303], UserS(), tuple2([y@300], I@305));
+    @premise know(*I@305, #t0@306);
+    @premise know(*I@301, #t1@307);
+    @premise know(*D@302, #t2@308);
+    @premise know(*e@309, #t3@310);
+    @premise know(*r@311, #t4@312);
+    @premise know(*sysger(e@309, r@311), #t1@313);
+    @conclusion know(*syse(sysall([y@300], I@301, D@302, [s@303])), #t@304);
+    @constraint #t@233 - #t0@306 >= 0;
+    @constraint #t@304 - #t@233 >= 0;
+    @constraint #t@233 - #t4@312 >= 0;
+    @constraint #t@233 - #t3@310 >= 0;
+    @constraint #t@233 - #t2@308 >= 0;
+    @constraint #t@233 - #t1@307 >= 0;
+    @constraint #t@304 - #t1@313 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@300], UserY(), tuple2([s@303], I@305));
+    @premise new(*[s@303], UserS(), tuple2([y@300], I@305));
+    @premise know(*sysger(e@309, r@311), #t1@313);
+    @premise know(*I@301, #t1@307);
+    @premise know(*I@305, #t0@306);
+    @premise know(*e@309, #t3@310);
+    @premise know(*r@311, #t4@312);
+    @premise know(*D@302, #t2@308);
+    @conclusion know(*syse(sysall([y@300], I@301, D@302, [s@303])), #t@304);
+    @constraint #t@304 - #t1@313 >= 0;
+    @constraint #t@304 - #t0@306 >= 0;
+    @constraint #t@304 - #t4@312 >= 0;
+    @constraint #t@304 - #t3@310 >= 0;
+    @constraint #t@304 - #t1@307 >= 0;
+    @constraint #t@304 - #t2@308 >= 0;
+};
+
+Compose to at 0 : 
+@rule{
+    @premise know(*sysA([oy@147], I@149, oB@150, [os@148], oe@151, r()), #t0@152);
+    @premise new(*[oy@147], UserY(), tuple2([os@148], I@149));
+    @premise new(*[os@148], UserS(), tuple2([oy@147], I@149));
+    @premise new(*[s@155], UserS(), tuple2([y@154], I@149));
+    @premise new(*[y@154], UserY(), tuple2([s@155], I@149));
+    @premise reveal(*[os@148], #t@156);
+    @premise know(*oe@151, #t1@153);
+    @conclusion know(*chtC([y@154], I@149, oB@150, [s@155]), #t@156);
+    @constraint -#t0@152 + #t@156 >= 0;
+    @constraint #t@156 - #t1@153 >= 0;
+};
+Rule in cache: 4
+Rule staged: 23
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@319], UserY(), tuple2([s@320], I@321));
+    @premise new(*[s@320], UserS(), tuple2([y@319], I@321));
+    @premise know(*I@321, #t0@322);
+    @premise know(*I@315, #t1@323);
+    @premise know(*D@316, #t2@324);
+    @premise know(*e@325, #t3@326);
+    @premise know(*r(), #t4@327);
+    @premise new(*[y@319], UserY(), tuple2([s@320], I@315));
+    @premise new(*[s@320], UserS(), tuple2([y@319], I@315));
+    @premise new(*[s@317], UserS(), tuple2([y@314], I@315));
+    @premise new(*[y@314], UserY(), tuple2([s@317], I@315));
+    @premise reveal(*[s@320], #t@318);
+    @premise know(*e@325, #t1@328);
+    @conclusion know(*chtC([y@314], I@315, D@316, [s@317]), #t@318);
+    @constraint #t@233 - #t0@322 >= 0;
+    @constraint #t@318 - #t@233 >= 0;
+    @constraint #t@233 - #t4@327 >= 0;
+    @constraint #t@233 - #t3@326 >= 0;
+    @constraint #t@233 - #t2@324 >= 0;
+    @constraint #t@233 - #t1@323 >= 0;
+    @constraint #t@318 - #t1@328 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@319], UserY(), tuple2([s@320], I@321));
+    @premise new(*[s@320], UserS(), tuple2([y@319], I@321));
+    @premise new(*[y@314], UserY(), tuple2([s@317], I@321));
+    @premise new(*[s@317], UserS(), tuple2([y@314], I@321));
+    @premise know(*r(), #t4@327);
+    @premise reveal(*[s@320], #t@318);
+    @premise know(*D@316, #t2@324);
+    @premise know(*I@321, #t0@322);
+    @conclusion know(*chtC([y@314], I@321, D@316, [s@317]), #t@318);
+    @constraint #t@318 - #t0@322 >= 0;
+    @constraint #t@318 - #t4@327 >= 0;
+    @constraint #t@318 - #t2@324 >= 0;
+};
+
+Compose to at 0 : 
+@rule{
+    @premise know(*sysA([oy@157], I@159, oB@160, [os@158], oe@161, r()), #t0@162);
+    @premise new(*[oy@157], UserY(), tuple2([os@158], I@159));
+    @premise new(*[os@158], UserS(), tuple2([oy@157], I@159));
+    @premise new(*[s@165], UserS(), tuple2([y@164], I@159));
+    @premise new(*[y@164], UserY(), tuple2([s@165], I@159));
+    @premise reveal(*[os@158], #t@166);
+    @premise know(*oe@161, #t1@163);
+    @conclusion know(*chtZK(chtC([y@164], I@159, oB@160, [s@165]), sysA([oy@157], I@159, oB@160, [os@158], oe@161, r()), oe@161, [oy@157], I@159, oB@160, [y@164], [s@165]), #t@166);
+    @constraint -#t0@162 + #t@166 >= 0;
+    @constraint #t@166 - #t1@163 >= 0;
+};
+Rule in cache: 5
+Rule staged: 23
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@333], UserY(), tuple2([s@334], I@337));
+    @premise new(*[s@334], UserS(), tuple2([y@333], I@337));
+    @premise know(*I@337, #t0@338);
+    @premise know(*I@330, #t1@339);
+    @premise know(*D@331, #t2@340);
+    @premise know(*e@335, #t3@341);
+    @premise know(*r(), #t4@342);
+    @premise new(*[y@333], UserY(), tuple2([s@334], I@330));
+    @premise new(*[s@334], UserS(), tuple2([y@333], I@330));
+    @premise new(*[s@332], UserS(), tuple2([y@329], I@330));
+    @premise new(*[y@329], UserY(), tuple2([s@332], I@330));
+    @premise reveal(*[s@334], #t@336);
+    @premise know(*e@335, #t1@343);
+    @conclusion know(*chtZK(chtC([y@329], I@330, D@331, [s@332]), sysA([y@333], I@330, D@331, [s@334], e@335, r()), e@335, [y@333], I@330, D@331, [y@329], [s@332]), #t@336);
+    @constraint #t@233 - #t0@338 >= 0;
+    @constraint #t@336 - #t@233 >= 0;
+    @constraint #t@233 - #t4@342 >= 0;
+    @constraint #t@233 - #t3@341 >= 0;
+    @constraint #t@233 - #t2@340 >= 0;
+    @constraint #t@233 - #t1@339 >= 0;
+    @constraint #t@336 - #t1@343 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@333], UserY(), tuple2([s@334], I@337));
+    @premise new(*[s@334], UserS(), tuple2([y@333], I@337));
+    @premise new(*[y@329], UserY(), tuple2([s@332], I@337));
+    @premise new(*[s@332], UserS(), tuple2([y@329], I@337));
+    @premise know(*r(), #t4@342);
+    @premise reveal(*[s@334], #t@336);
+    @premise know(*D@331, #t2@340);
+    @premise know(*I@337, #t0@338);
+    @premise know(*e@335, #t3@341);
+    @conclusion know(*chtZK(chtC([y@329], I@337, D@331, [s@332]), sysA([y@333], I@337, D@331, [s@334], e@335, r()), e@335, [y@333], I@337, D@331, [y@329], [s@332]), #t@336);
+    @constraint #t@336 - #t0@338 >= 0;
+    @constraint #t@336 - #t4@342 >= 0;
+    @constraint #t@336 - #t2@340 >= 0;
+    @constraint #t@336 - #t3@341 >= 0;
+};
+
+Compose to at 0 : 
+@rule{
+    @premise know(*sysA([oy@167], I@169, oB@170, [os@168], oe@171, r()), #t0@172);
+    @premise new(*[oy@167], UserY(), tuple2([os@168], I@169));
+    @premise new(*[os@168], UserS(), tuple2([oy@167], I@169));
+    @premise new(*[s@175], UserS(), tuple2([y@174], I@169));
+    @premise new(*[y@174], UserY(), tuple2([s@175], I@169));
+    @premise reveal(*[os@168], #t@176);
+    @premise know(*oe@171, #t1@173);
+    @conclusion know(*[os@168], #t@176);
+    @constraint -#t0@172 + #t@176 >= 0;
+    @constraint #t@176 - #t1@173 >= 0;
+};
+Rule in cache: 6
+Rule staged: 23
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@346], UserY(), tuple2([s@344], I@347));
+    @premise new(*[s@344], UserS(), tuple2([y@346], I@347));
+    @premise know(*I@347, #t0@348);
+    @premise know(*I@349, #t1@350);
+    @premise know(*D@351, #t2@352);
+    @premise know(*e@353, #t3@354);
+    @premise know(*r(), #t4@355);
+    @premise new(*[y@346], UserY(), tuple2([s@344], I@349));
+    @premise new(*[s@344], UserS(), tuple2([y@346], I@349));
+    @premise new(*[s@356], UserS(), tuple2([y@357], I@349));
+    @premise new(*[y@357], UserY(), tuple2([s@356], I@349));
+    @premise reveal(*[s@344], #t@345);
+    @premise know(*e@353, #t1@358);
+    @conclusion know(*[s@344], #t@345);
+    @constraint #t@233 - #t0@348 >= 0;
+    @constraint #t@345 - #t@233 >= 0;
+    @constraint #t@233 - #t4@355 >= 0;
+    @constraint #t@233 - #t3@354 >= 0;
+    @constraint #t@233 - #t2@352 >= 0;
+    @constraint #t@233 - #t1@350 >= 0;
+    @constraint #t@345 - #t1@358 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@346], UserY(), tuple2([s@344], I@347));
+    @premise new(*[s@344], UserS(), tuple2([y@346], I@347));
+    @premise new(*[y@357], UserY(), tuple2([s@356], I@347));
+    @premise new(*[s@356], UserS(), tuple2([y@357], I@347));
+    @premise know(*r(), #t4@355);
+    @premise reveal(*[s@344], #t@345);
+    @premise know(*I@347, #t0@348);
+    @conclusion know(*[s@344], #t@345);
+    @constraint #t@345 - #t0@348 >= 0;
+    @constraint #t@345 - #t4@355 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[oy@245], UserY(), tuple2([os@249], I@241));
+    @premise new(*[y@240], UserY(), tuple2([s@243], I@241));
+    @premise new(*[s@243], UserS(), tuple2([y@240], I@241));
+    @premise new(*[os@249], UserS(), tuple2([oy@245], I@241));
+    @premise know(*r(), #t5@253);
+    @premise know(*[oy@245], #t0@246);
+    @premise know(*[os@249], #t3@250);
+    @premise reveal(*[os@249], #t@244);
+    @premise know(*D@242, #t2@248);
+    @premise know(*I@241, #t1@247);
+    @conclusion know(*chtC([y@240], I@241, D@242, [s@243]), #t@244);
+    @constraint #t@244 - #t5@253 >= 0;
+    @constraint #t@244 - #t3@250 >= 0;
+    @constraint #t@244 - #t0@246 >= 0;
+    @constraint #t@244 - #t1@247 >= 0;
+    @constraint #t@244 - #t2@248 >= 0;
+};
+Rule added at 4.
+
+Compose by at 4 : 
+@rule{
+    @conclusion know(*r(), #t@132);
+};
+Rule in cache: 6
+Rule staged: 24
+Rule before check and clean: 
+@rule{
+    @premise new(*[oy@364], UserY(), tuple2([os@365], I@360));
+    @premise new(*[y@359], UserY(), tuple2([s@362], I@360));
+    @premise new(*[s@362], UserS(), tuple2([y@359], I@360));
+    @premise new(*[os@365], UserS(), tuple2([oy@364], I@360));
+    @premise know(*[oy@364], #t0@366);
+    @premise know(*[os@365], #t3@367);
+    @premise reveal(*[os@365], #t@363);
+    @premise know(*D@361, #t2@368);
+    @premise know(*I@360, #t1@369);
+    @conclusion know(*chtC([y@359], I@360, D@361, [s@362]), #t@363);
+    @constraint #t@363 - #t0@366 >= 0;
+    @constraint #t@363 - #t1@369 >= 0;
+    @constraint #t@363 - #t2@368 >= 0;
+    @constraint #t@363 - #t3@367 >= 0;
+    @constraint #t@363 - #t@132 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[oy@364], UserY(), tuple2([os@365], I@360));
+    @premise new(*[y@359], UserY(), tuple2([s@362], I@360));
+    @premise new(*[s@362], UserS(), tuple2([y@359], I@360));
+    @premise new(*[os@365], UserS(), tuple2([oy@364], I@360));
+    @premise know(*[oy@364], #t0@366);
+    @premise know(*[os@365], #t3@367);
+    @premise reveal(*[os@365], #t@363);
+    @premise know(*D@361, #t2@368);
+    @premise know(*I@360, #t1@369);
+    @conclusion know(*chtC([y@359], I@360, D@361, [s@362]), #t@363);
+    @constraint #t@363 - #t1@369 >= 0;
+    @constraint #t@363 - #t3@367 >= 0;
+    @constraint #t@363 - #t2@368 >= 0;
+    @constraint #t@363 - #t0@366 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[y@255], UserY(), tuple2([s@258], I@256));
+    @premise new(*[s@258], UserS(), tuple2([y@255], I@256));
+    @premise new(*[os@260], UserS(), tuple2([oy@259], I@256));
+    @premise new(*[oy@259], UserY(), tuple2([os@260], I@256));
+    @premise know(*r(), #t5@268);
+    @premise know(*[oy@259], #t0@263);
+    @premise know(*[os@260], #t3@266);
+    @premise reveal(*[os@260], #t@262);
+    @premise know(*e@261, #t4@267);
+    @premise know(*D@257, #t2@265);
+    @premise know(*I@256, #t1@264);
+    @conclusion know(*chtZK(chtC([y@255], I@256, D@257, [s@258]), sysA([oy@259], I@256, D@257, [os@260], e@261, r()), e@261, [oy@259], I@256, D@257, [y@255], [s@258]), #t@262);
+    @constraint #t@262 - #t5@268 >= 0;
+    @constraint #t@262 - #t4@267 >= 0;
+    @constraint #t@262 - #t0@263 >= 0;
+    @constraint #t@262 - #t1@264 >= 0;
+    @constraint #t@262 - #t2@265 >= 0;
+    @constraint #t@262 - #t3@266 >= 0;
+};
+Rule added at 4.
+
+Compose by at 4 : 
+@rule{
+    @conclusion know(*r(), #t@132);
+};
+Rule in cache: 6
+Rule staged: 25
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@370], UserY(), tuple2([s@373], I@371));
+    @premise new(*[s@373], UserS(), tuple2([y@370], I@371));
+    @premise new(*[os@375], UserS(), tuple2([oy@374], I@371));
+    @premise new(*[oy@374], UserY(), tuple2([os@375], I@371));
+    @premise know(*[oy@374], #t0@378);
+    @premise know(*[os@375], #t3@379);
+    @premise reveal(*[os@375], #t@377);
+    @premise know(*e@376, #t4@380);
+    @premise know(*D@372, #t2@381);
+    @premise know(*I@371, #t1@382);
+    @conclusion know(*chtZK(chtC([y@370], I@371, D@372, [s@373]), sysA([oy@374], I@371, D@372, [os@375], e@376, r()), e@376, [oy@374], I@371, D@372, [y@370], [s@373]), #t@377);
+    @constraint #t@377 - #t0@378 >= 0;
+    @constraint #t@377 - #t1@382 >= 0;
+    @constraint #t@377 - #t2@381 >= 0;
+    @constraint #t@377 - #t3@379 >= 0;
+    @constraint #t@377 - #t4@380 >= 0;
+    @constraint #t@377 - #t@132 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@370], UserY(), tuple2([s@373], I@371));
+    @premise new(*[s@373], UserS(), tuple2([y@370], I@371));
+    @premise new(*[os@375], UserS(), tuple2([oy@374], I@371));
+    @premise new(*[oy@374], UserY(), tuple2([os@375], I@371));
+    @premise know(*[oy@374], #t0@378);
+    @premise know(*[os@375], #t3@379);
+    @premise reveal(*[os@375], #t@377);
+    @premise know(*e@376, #t4@380);
+    @premise know(*D@372, #t2@381);
+    @premise know(*I@371, #t1@382);
+    @conclusion know(*chtZK(chtC([y@370], I@371, D@372, [s@373]), sysA([oy@374], I@371, D@372, [os@375], e@376, r()), e@376, [oy@374], I@371, D@372, [y@370], [s@373]), #t@377);
+    @constraint #t@377 - #t2@381 >= 0;
+    @constraint #t@377 - #t4@380 >= 0;
+    @constraint #t@377 - #t3@379 >= 0;
+    @constraint #t@377 - #t1@382 >= 0;
+    @constraint #t@377 - #t0@378 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise know(*I@286, #t1@294);
+    @premise know(*D@287, #t2@295);
+    @premise know(*y@285, #t0@296);
+    @premise know(*s@288, #t3@299);
+    @conclusion know(*syse(sysall(y@285, I@286, D@287, s@288)), #t@289);
+    @constraint #t@289 - #t3@299 >= 0;
+    @constraint #t@289 - #t2@295 >= 0;
+    @constraint #t@289 - #t1@294 >= 0;
+    @constraint #t@289 - #t0@296 >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise know(*sysger(e@196, r@198), #t1@200);
+    @premise know(*I@188, #t1@193);
+    @premise know(*D@189, #t2@194);
+    @premise know(*y@187, #t0@192);
+    @premise know(*e@196, #t4@197);
+    @premise know(*r@198, #t5@199);
+    @premise know(*s@190, #t3@195);
+    @conclusion know(*syse(sysall(y@187, I@188, D@189, s@190)), #t@191);
+    @constraint #t@191 - #t1@200 >= 0;
+    @constraint #t@191 - #t5@199 >= 0;
+    @constraint #t@191 - #t4@197 >= 0;
+    @constraint #t@191 - #t3@195 >= 0;
+    @constraint #t@191 - #t0@192 >= 0;
+    @constraint #t@191 - #t1@193 >= 0;
+    @constraint #t@191 - #t2@194 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise new(*[y@300], UserY(), tuple2([s@303], I@305));
+    @premise new(*[s@303], UserS(), tuple2([y@300], I@305));
+    @premise know(*sysger(e@309, r@311), #t1@313);
+    @premise know(*I@301, #t1@307);
+    @premise know(*I@305, #t0@306);
+    @premise know(*e@309, #t3@310);
+    @premise know(*r@311, #t4@312);
+    @premise know(*D@302, #t2@308);
+    @conclusion know(*syse(sysall([y@300], I@301, D@302, [s@303])), #t@304);
+    @constraint #t@304 - #t1@313 >= 0;
+    @constraint #t@304 - #t0@306 >= 0;
+    @constraint #t@304 - #t4@312 >= 0;
+    @constraint #t@304 - #t3@310 >= 0;
+    @constraint #t@304 - #t1@307 >= 0;
+    @constraint #t@304 - #t2@308 >= 0;
+};
+Rule added at 2.
+
+Compose by at 2 : 
+@rule{
+    @premise know(*r@26, #t0@27);
+    @premise know(*e@28, #t1@29);
+    @conclusion know(*sysger(e@28, r@26), #t@30);
+    @constraint -#t0@27 + #t@30 >= 0;
+    @constraint #t@30 - #t1@29 >= 0;
+};
+Rule in cache: 5
+Rule staged: 27
+Rule before check and clean: 
+@rule{
+    @premise know(*r@388, #t0@389);
+    @premise know(*e@390, #t1@391);
+    @premise new(*[y@383], UserY(), tuple2([s@386], I@392));
+    @premise new(*[s@386], UserS(), tuple2([y@383], I@392));
+    @premise know(*I@384, #t1@393);
+    @premise know(*I@392, #t0@394);
+    @premise know(*e@390, #t3@395);
+    @premise know(*r@388, #t4@396);
+    @premise know(*D@385, #t2@397);
+    @conclusion know(*syse(sysall([y@383], I@384, D@385, [s@386])), #t@387);
+    @constraint #t@30 - #t1@391 >= 0;
+    @constraint -#t0@389 + #t@30 >= 0;
+    @constraint #t@387 - #t@30 >= 0;
+    @constraint #t@387 - #t0@394 >= 0;
+    @constraint #t@387 - #t4@396 >= 0;
+    @constraint #t@387 - #t3@395 >= 0;
+    @constraint #t@387 - #t2@397 >= 0;
+    @constraint #t@387 - #t1@393 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@383], UserY(), tuple2([s@386], I@392));
+    @premise new(*[s@386], UserS(), tuple2([y@383], I@392));
+    @premise know(*I@384, #t1@393);
+    @premise know(*I@392, #t0@394);
+    @premise know(*D@385, #t2@397);
+    @conclusion know(*syse(sysall([y@383], I@384, D@385, [s@386])), #t@387);
+    @constraint #t@387 - #t0@394 >= 0;
+    @constraint #t@387 - #t2@397 >= 0;
+    @constraint #t@387 - #t1@393 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[y@319], UserY(), tuple2([s@320], I@321));
+    @premise new(*[s@320], UserS(), tuple2([y@319], I@321));
+    @premise new(*[y@314], UserY(), tuple2([s@317], I@321));
+    @premise new(*[s@317], UserS(), tuple2([y@314], I@321));
+    @premise know(*r(), #t4@327);
+    @premise reveal(*[s@320], #t@318);
+    @premise know(*D@316, #t2@324);
+    @premise know(*I@321, #t0@322);
+    @conclusion know(*chtC([y@314], I@321, D@316, [s@317]), #t@318);
+    @constraint #t@318 - #t0@322 >= 0;
+    @constraint #t@318 - #t4@327 >= 0;
+    @constraint #t@318 - #t2@324 >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise new(*[oy@245], UserY(), tuple2([os@249], I@241));
+    @premise new(*[y@240], UserY(), tuple2([s@243], I@241));
+    @premise new(*[s@243], UserS(), tuple2([y@240], I@241));
+    @premise new(*[os@249], UserS(), tuple2([oy@245], I@241));
+    @premise know(*r(), #t5@253);
+    @premise know(*[oy@245], #t0@246);
+    @premise know(*[os@249], #t3@250);
+    @premise reveal(*[os@249], #t@244);
+    @premise know(*D@242, #t2@248);
+    @premise know(*I@241, #t1@247);
+    @conclusion know(*chtC([y@240], I@241, D@242, [s@243]), #t@244);
+    @constraint #t@244 - #t5@253 >= 0;
+    @constraint #t@244 - #t3@250 >= 0;
+    @constraint #t@244 - #t0@246 >= 0;
+    @constraint #t@244 - #t1@247 >= 0;
+    @constraint #t@244 - #t2@248 >= 0;
+};
+Rule added at 4.
+
+Compose by at 4 : 
+@rule{
+    @conclusion know(*r(), #t@132);
+};
+Rule in cache: 5
+Rule staged: 28
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@403], UserY(), tuple2([s@404], I@399));
+    @premise new(*[s@404], UserS(), tuple2([y@403], I@399));
+    @premise new(*[y@398], UserY(), tuple2([s@401], I@399));
+    @premise new(*[s@401], UserS(), tuple2([y@398], I@399));
+    @premise reveal(*[s@404], #t@402);
+    @premise know(*D@400, #t2@405);
+    @premise know(*I@399, #t0@406);
+    @conclusion know(*chtC([y@398], I@399, D@400, [s@401]), #t@402);
+    @constraint #t@402 - #t2@405 >= 0;
+    @constraint #t@402 - #t@132 >= 0;
+    @constraint #t@402 - #t0@406 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@403], UserY(), tuple2([s@404], I@399));
+    @premise new(*[s@404], UserS(), tuple2([y@403], I@399));
+    @premise new(*[y@398], UserY(), tuple2([s@401], I@399));
+    @premise new(*[s@401], UserS(), tuple2([y@398], I@399));
+    @premise reveal(*[s@404], #t@402);
+    @premise know(*D@400, #t2@405);
+    @premise know(*I@399, #t0@406);
+    @conclusion know(*chtC([y@398], I@399, D@400, [s@401]), #t@402);
+    @constraint #t@402 - #t2@405 >= 0;
+    @constraint #t@402 - #t0@406 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[y@333], UserY(), tuple2([s@334], I@337));
+    @premise new(*[s@334], UserS(), tuple2([y@333], I@337));
+    @premise new(*[y@329], UserY(), tuple2([s@332], I@337));
+    @premise new(*[s@332], UserS(), tuple2([y@329], I@337));
+    @premise know(*r(), #t4@342);
+    @premise reveal(*[s@334], #t@336);
+    @premise know(*D@331, #t2@340);
+    @premise know(*I@337, #t0@338);
+    @premise know(*e@335, #t3@341);
+    @conclusion know(*chtZK(chtC([y@329], I@337, D@331, [s@332]), sysA([y@333], I@337, D@331, [s@334], e@335, r()), e@335, [y@333], I@337, D@331, [y@329], [s@332]), #t@336);
+    @constraint #t@336 - #t0@338 >= 0;
+    @constraint #t@336 - #t4@342 >= 0;
+    @constraint #t@336 - #t2@340 >= 0;
+    @constraint #t@336 - #t3@341 >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise new(*[y@255], UserY(), tuple2([s@258], I@256));
+    @premise new(*[s@258], UserS(), tuple2([y@255], I@256));
+    @premise new(*[os@260], UserS(), tuple2([oy@259], I@256));
+    @premise new(*[oy@259], UserY(), tuple2([os@260], I@256));
+    @premise know(*r(), #t5@268);
+    @premise know(*[oy@259], #t0@263);
+    @premise know(*[os@260], #t3@266);
+    @premise reveal(*[os@260], #t@262);
+    @premise know(*e@261, #t4@267);
+    @premise know(*D@257, #t2@265);
+    @premise know(*I@256, #t1@264);
+    @conclusion know(*chtZK(chtC([y@255], I@256, D@257, [s@258]), sysA([oy@259], I@256, D@257, [os@260], e@261, r()), e@261, [oy@259], I@256, D@257, [y@255], [s@258]), #t@262);
+    @constraint #t@262 - #t5@268 >= 0;
+    @constraint #t@262 - #t4@267 >= 0;
+    @constraint #t@262 - #t0@263 >= 0;
+    @constraint #t@262 - #t1@264 >= 0;
+    @constraint #t@262 - #t2@265 >= 0;
+    @constraint #t@262 - #t3@266 >= 0;
+};
+Rule added at 4.
+
+Compose by at 4 : 
+@rule{
+    @conclusion know(*r(), #t@132);
+};
+Rule in cache: 5
+Rule staged: 29
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@411], UserY(), tuple2([s@412], I@408));
+    @premise new(*[s@412], UserS(), tuple2([y@411], I@408));
+    @premise new(*[y@407], UserY(), tuple2([s@410], I@408));
+    @premise new(*[s@410], UserS(), tuple2([y@407], I@408));
+    @premise reveal(*[s@412], #t@414);
+    @premise know(*D@409, #t2@415);
+    @premise know(*I@408, #t0@416);
+    @premise know(*e@413, #t3@417);
+    @conclusion know(*chtZK(chtC([y@407], I@408, D@409, [s@410]), sysA([y@411], I@408, D@409, [s@412], e@413, r()), e@413, [y@411], I@408, D@409, [y@407], [s@410]), #t@414);
+    @constraint #t@414 - #t2@415 >= 0;
+    @constraint #t@414 - #t3@417 >= 0;
+    @constraint #t@414 - #t@132 >= 0;
+    @constraint #t@414 - #t0@416 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@411], UserY(), tuple2([s@412], I@408));
+    @premise new(*[s@412], UserS(), tuple2([y@411], I@408));
+    @premise new(*[y@407], UserY(), tuple2([s@410], I@408));
+    @premise new(*[s@410], UserS(), tuple2([y@407], I@408));
+    @premise reveal(*[s@412], #t@414);
+    @premise know(*D@409, #t2@415);
+    @premise know(*I@408, #t0@416);
+    @premise know(*e@413, #t3@417);
+    @conclusion know(*chtZK(chtC([y@407], I@408, D@409, [s@410]), sysA([y@411], I@408, D@409, [s@412], e@413, r()), e@413, [y@411], I@408, D@409, [y@407], [s@410]), #t@414);
+    @constraint #t@414 - #t3@417 >= 0;
+    @constraint #t@414 - #t0@416 >= 0;
+    @constraint #t@414 - #t2@415 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[y@346], UserY(), tuple2([s@344], I@347));
+    @premise new(*[s@344], UserS(), tuple2([y@346], I@347));
+    @premise new(*[y@357], UserY(), tuple2([s@356], I@347));
+    @premise new(*[s@356], UserS(), tuple2([y@357], I@347));
+    @premise know(*r(), #t4@355);
+    @premise reveal(*[s@344], #t@345);
+    @premise know(*I@347, #t0@348);
+    @conclusion know(*[s@344], #t@345);
+    @constraint #t@345 - #t0@348 >= 0;
+    @constraint #t@345 - #t4@355 >= 0;
+};
+Rule added at 4.
+
+Compose by at 4 : 
+@rule{
+    @conclusion know(*r(), #t@132);
+};
+Rule in cache: 5
+Rule staged: 30
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@420], UserY(), tuple2([s@418], I@421));
+    @premise new(*[s@418], UserS(), tuple2([y@420], I@421));
+    @premise new(*[y@422], UserY(), tuple2([s@423], I@421));
+    @premise new(*[s@423], UserS(), tuple2([y@422], I@421));
+    @premise reveal(*[s@418], #t@419);
+    @premise know(*I@421, #t0@424);
+    @conclusion know(*[s@418], #t@419);
+    @constraint #t@419 - #t@132 >= 0;
+    @constraint #t@419 - #t0@424 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@420], UserY(), tuple2([s@418], I@421));
+    @premise new(*[s@418], UserS(), tuple2([y@420], I@421));
+    @premise new(*[y@422], UserY(), tuple2([s@423], I@421));
+    @premise new(*[s@423], UserS(), tuple2([y@422], I@421));
+    @premise reveal(*[s@418], #t@419);
+    @premise know(*I@421, #t0@424);
+    @conclusion know(*[s@418], #t@419);
+    @constraint #t@419 - #t0@424 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[oy@364], UserY(), tuple2([os@365], I@360));
+    @premise new(*[y@359], UserY(), tuple2([s@362], I@360));
+    @premise new(*[s@362], UserS(), tuple2([y@359], I@360));
+    @premise new(*[os@365], UserS(), tuple2([oy@364], I@360));
+    @premise know(*[oy@364], #t0@366);
+    @premise know(*[os@365], #t3@367);
+    @premise reveal(*[os@365], #t@363);
+    @premise know(*D@361, #t2@368);
+    @premise know(*I@360, #t1@369);
+    @conclusion know(*chtC([y@359], I@360, D@361, [s@362]), #t@363);
+    @constraint #t@363 - #t1@369 >= 0;
+    @constraint #t@363 - #t3@367 >= 0;
+    @constraint #t@363 - #t2@368 >= 0;
+    @constraint #t@363 - #t0@366 >= 0;
+};
+Rule added at 4.
+
+Stage rule: 
+@rule{
+    @premise new(*[y@370], UserY(), tuple2([s@373], I@371));
+    @premise new(*[s@373], UserS(), tuple2([y@370], I@371));
+    @premise new(*[os@375], UserS(), tuple2([oy@374], I@371));
+    @premise new(*[oy@374], UserY(), tuple2([os@375], I@371));
+    @premise know(*[oy@374], #t0@378);
+    @premise know(*[os@375], #t3@379);
+    @premise reveal(*[os@375], #t@377);
+    @premise know(*e@376, #t4@380);
+    @premise know(*D@372, #t2@381);
+    @premise know(*I@371, #t1@382);
+    @conclusion know(*chtZK(chtC([y@370], I@371, D@372, [s@373]), sysA([oy@374], I@371, D@372, [os@375], e@376, r()), e@376, [oy@374], I@371, D@372, [y@370], [s@373]), #t@377);
+    @constraint #t@377 - #t2@381 >= 0;
+    @constraint #t@377 - #t4@380 >= 0;
+    @constraint #t@377 - #t3@379 >= 0;
+    @constraint #t@377 - #t1@382 >= 0;
+    @constraint #t@377 - #t0@378 >= 0;
+};
+Rule added at 4.
+
+Stage rule: 
+@rule{
+    @premise new(*[y@383], UserY(), tuple2([s@386], I@392));
+    @premise new(*[s@386], UserS(), tuple2([y@383], I@392));
+    @premise know(*I@384, #t1@393);
+    @premise know(*I@392, #t0@394);
+    @premise know(*D@385, #t2@397);
+    @conclusion know(*syse(sysall([y@383], I@384, D@385, [s@386])), #t@387);
+    @constraint #t@387 - #t0@394 >= 0;
+    @constraint #t@387 - #t2@397 >= 0;
+    @constraint #t@387 - #t1@393 >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise new(*[y@300], UserY(), tuple2([s@303], I@305));
+    @premise new(*[s@303], UserS(), tuple2([y@300], I@305));
+    @premise know(*sysger(e@309, r@311), #t1@313);
+    @premise know(*I@301, #t1@307);
+    @premise know(*I@305, #t0@306);
+    @premise know(*e@309, #t3@310);
+    @premise know(*r@311, #t4@312);
+    @premise know(*D@302, #t2@308);
+    @conclusion know(*syse(sysall([y@300], I@301, D@302, [s@303])), #t@304);
+    @constraint #t@304 - #t1@313 >= 0;
+    @constraint #t@304 - #t0@306 >= 0;
+    @constraint #t@304 - #t4@312 >= 0;
+    @constraint #t@304 - #t3@310 >= 0;
+    @constraint #t@304 - #t1@307 >= 0;
+    @constraint #t@304 - #t2@308 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise new(*[y@403], UserY(), tuple2([s@404], I@399));
+    @premise new(*[s@404], UserS(), tuple2([y@403], I@399));
+    @premise new(*[y@398], UserY(), tuple2([s@401], I@399));
+    @premise new(*[s@401], UserS(), tuple2([y@398], I@399));
+    @premise reveal(*[s@404], #t@402);
+    @premise know(*D@400, #t2@405);
+    @premise know(*I@399, #t0@406);
+    @conclusion know(*chtC([y@398], I@399, D@400, [s@401]), #t@402);
+    @constraint #t@402 - #t2@405 >= 0;
+    @constraint #t@402 - #t0@406 >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise new(*[y@319], UserY(), tuple2([s@320], I@321));
+    @premise new(*[s@320], UserS(), tuple2([y@319], I@321));
+    @premise new(*[y@314], UserY(), tuple2([s@317], I@321));
+    @premise new(*[s@317], UserS(), tuple2([y@314], I@321));
+    @premise know(*r(), #t4@327);
+    @premise reveal(*[s@320], #t@318);
+    @premise know(*D@316, #t2@324);
+    @premise know(*I@321, #t0@322);
+    @conclusion know(*chtC([y@314], I@321, D@316, [s@317]), #t@318);
+    @constraint #t@318 - #t0@322 >= 0;
+    @constraint #t@318 - #t4@327 >= 0;
+    @constraint #t@318 - #t2@324 >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise new(*[oy@364], UserY(), tuple2([os@365], I@360));
+    @premise new(*[y@359], UserY(), tuple2([s@362], I@360));
+    @premise new(*[s@362], UserS(), tuple2([y@359], I@360));
+    @premise new(*[os@365], UserS(), tuple2([oy@364], I@360));
+    @premise know(*[oy@364], #t0@366);
+    @premise know(*[os@365], #t3@367);
+    @premise reveal(*[os@365], #t@363);
+    @premise know(*D@361, #t2@368);
+    @premise know(*I@360, #t1@369);
+    @conclusion know(*chtC([y@359], I@360, D@361, [s@362]), #t@363);
+    @constraint #t@363 - #t1@369 >= 0;
+    @constraint #t@363 - #t3@367 >= 0;
+    @constraint #t@363 - #t2@368 >= 0;
+    @constraint #t@363 - #t0@366 >= 0;
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise know(*chtC(y@92, I@93, B@94, s@95), #t0@96);
+    @premise know(*e@97, #t1@98);
+    @premise know(*r@99, #t2@100);
+    @conclusion know(*sysA(y@92, I@93, B@94, s@95, e@97, r@99), #t@101);
+    @constraint -#t0@96 + #t@101 >= 0;
+    @constraint #t@101 - #t1@98 >= 0;
+    @constraint #t@101 - #t2@100 >= 0;
+};
+Rule in cache: 2
+Rule staged: 34
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@432], UserY(), tuple2([s@433], I@426));
+    @premise new(*[s@433], UserS(), tuple2([y@432], I@426));
+    @premise new(*[y@425], UserY(), tuple2([s@428], I@426));
+    @premise new(*[s@428], UserS(), tuple2([y@425], I@426));
+    @premise reveal(*[s@433], #t@434);
+    @premise know(*D@427, #t2@435);
+    @premise know(*I@426, #t0@436);
+    @premise know(*e@429, #t1@437);
+    @premise know(*r@430, #t2@438);
+    @conclusion know(*sysA([y@425], I@426, D@427, [s@428], e@429, r@430), #t@431);
+    @constraint #t@434 - #t0@436 >= 0;
+    @constraint #t@431 - #t@434 >= 0;
+    @constraint #t@434 - #t2@435 >= 0;
+    @constraint #t@431 - #t2@438 >= 0;
+    @constraint #t@431 - #t1@437 >= 0;
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[y@432], UserY(), tuple2([s@433], I@426));
+    @premise new(*[s@433], UserS(), tuple2([y@432], I@426));
+    @premise new(*[y@425], UserY(), tuple2([s@428], I@426));
+    @premise new(*[s@428], UserS(), tuple2([y@425], I@426));
+    @premise reveal(*[s@433], #t@434);
+    @premise know(*D@427, #t2@435);
+    @premise know(*I@426, #t0@436);
+    @premise know(*e@429, #t1@437);
+    @premise know(*r@430, #t2@438);
+    @conclusion know(*sysA([y@425], I@426, D@427, [s@428], e@429, r@430), #t@431);
+    @constraint #t@434 - #t0@436 >= 0;
+    @constraint #t@431 - #t@434 >= 0;
+    @constraint #t@434 - #t2@435 >= 0;
+    @constraint #t@431 - #t2@438 >= 0;
+    @constraint #t@431 - #t1@437 >= 0;
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[y@411], UserY(), tuple2([s@412], I@408));
+    @premise new(*[s@412], UserS(), tuple2([y@411], I@408));
+    @premise new(*[y@407], UserY(), tuple2([s@410], I@408));
+    @premise new(*[s@410], UserS(), tuple2([y@407], I@408));
+    @premise reveal(*[s@412], #t@414);
+    @premise know(*D@409, #t2@415);
+    @premise know(*I@408, #t0@416);
+    @premise know(*e@413, #t3@417);
+    @conclusion know(*chtZK(chtC([y@407], I@408, D@409, [s@410]), sysA([y@411], I@408, D@409, [s@412], e@413, r()), e@413, [y@411], I@408, D@409, [y@407], [s@410]), #t@414);
+    @constraint #t@414 - #t3@417 >= 0;
+    @constraint #t@414 - #t0@416 >= 0;
+    @constraint #t@414 - #t2@415 >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise new(*[y@333], UserY(), tuple2([s@334], I@337));
+    @premise new(*[s@334], UserS(), tuple2([y@333], I@337));
+    @premise new(*[y@329], UserY(), tuple2([s@332], I@337));
+    @premise new(*[s@332], UserS(), tuple2([y@329], I@337));
+    @premise know(*r(), #t4@342);
+    @premise reveal(*[s@334], #t@336);
+    @premise know(*D@331, #t2@340);
+    @premise know(*I@337, #t0@338);
+    @premise know(*e@335, #t3@341);
+    @conclusion know(*chtZK(chtC([y@329], I@337, D@331, [s@332]), sysA([y@333], I@337, D@331, [s@334], e@335, r()), e@335, [y@333], I@337, D@331, [y@329], [s@332]), #t@336);
+    @constraint #t@336 - #t0@338 >= 0;
+    @constraint #t@336 - #t4@342 >= 0;
+    @constraint #t@336 - #t2@340 >= 0;
+    @constraint #t@336 - #t3@341 >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise new(*[y@370], UserY(), tuple2([s@373], I@371));
+    @premise new(*[s@373], UserS(), tuple2([y@370], I@371));
+    @premise new(*[os@375], UserS(), tuple2([oy@374], I@371));
+    @premise new(*[oy@374], UserY(), tuple2([os@375], I@371));
+    @premise know(*[oy@374], #t0@378);
+    @premise know(*[os@375], #t3@379);
+    @premise reveal(*[os@375], #t@377);
+    @premise know(*e@376, #t4@380);
+    @premise know(*D@372, #t2@381);
+    @premise know(*I@371, #t1@382);
+    @conclusion know(*chtZK(chtC([y@370], I@371, D@372, [s@373]), sysA([oy@374], I@371, D@372, [os@375], e@376, r()), e@376, [oy@374], I@371, D@372, [y@370], [s@373]), #t@377);
+    @constraint #t@377 - #t2@381 >= 0;
+    @constraint #t@377 - #t4@380 >= 0;
+    @constraint #t@377 - #t3@379 >= 0;
+    @constraint #t@377 - #t1@382 >= 0;
+    @constraint #t@377 - #t0@378 >= 0;
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise new(*[y@420], UserY(), tuple2([s@418], I@421));
+    @premise new(*[s@418], UserS(), tuple2([y@420], I@421));
+    @premise new(*[y@422], UserY(), tuple2([s@423], I@421));
+    @premise new(*[s@423], UserS(), tuple2([y@422], I@421));
+    @premise reveal(*[s@418], #t@419);
+    @premise know(*I@421, #t0@424);
+    @conclusion know(*[s@418], #t@419);
+    @constraint #t@419 - #t0@424 >= 0;
+};
+Rule deleted: 
+@rule{
+    @premise new(*[y@346], UserY(), tuple2([s@344], I@347));
+    @premise new(*[s@344], UserS(), tuple2([y@346], I@347));
+    @premise new(*[y@357], UserY(), tuple2([s@356], I@347));
+    @premise new(*[s@356], UserS(), tuple2([y@357], I@347));
+    @premise know(*r(), #t4@355);
+    @premise reveal(*[s@344], #t@345);
+    @premise know(*I@347, #t0@348);
+    @conclusion know(*[s@344], #t@345);
+    @constraint #t@345 - #t0@348 >= 0;
+    @constraint #t@345 - #t4@355 >= 0;
+};
+Rule added.
+
+Compose to at 2 : 
+@rule{
+    @premise new(*[os@177], UserS(), m@178);
+    @premise reveal(*[os@177], #t0@179);
+    @premise know(*[os@177], #t@180);
+    @conclusion leak([os@177]);
+    @constraint #t0@179 - #t@180 > 0;
+};
+Rule in cache: 1
+Rule staged: 36
+Rule before check and clean: 
+@rule{
+    @premise new(*[y@440], UserY(), tuple2([s@439], I@441));
+    @premise new(*[s@439], UserS(), tuple2([y@440], I@441));
+    @premise new(*[y@442], UserY(), tuple2([s@443], I@441));
+    @premise new(*[s@443], UserS(), tuple2([y@442], I@441));
+    @premise reveal(*[s@439], #t@444);
+    @premise know(*I@441, #t0@445);
+    @premise new(*[s@439], UserS(), m@446);
+    @premise reveal(*[s@439], #t0@447);
+    @conclusion leak([s@439]);
+    @constraint #t@444 - #t0@445 >= 0;
+    @constraint #t0@447 - #t@444 > 0;
+};
+Rule invalid. 
+
+Stage rule: 
+@rule{
+    @premise new(*[y@432], UserY(), tuple2([s@433], I@426));
+    @premise new(*[s@433], UserS(), tuple2([y@432], I@426));
+    @premise new(*[y@425], UserY(), tuple2([s@428], I@426));
+    @premise new(*[s@428], UserS(), tuple2([y@425], I@426));
+    @premise reveal(*[s@433], #t@434);
+    @premise know(*D@427, #t2@435);
+    @premise know(*I@426, #t0@436);
+    @premise know(*e@429, #t1@437);
+    @premise know(*r@430, #t2@438);
+    @conclusion know(*sysA([y@425], I@426, D@427, [s@428], e@429, r@430), #t@431);
+    @constraint #t@434 - #t0@436 >= 0;
+    @constraint #t@431 - #t@434 >= 0;
+    @constraint #t@434 - #t2@435 >= 0;
+    @constraint #t@431 - #t2@438 >= 0;
+    @constraint #t@431 - #t1@437 >= 0;
+};
+Rule implied by: 
+@rule{
+    @premise new(*[y@227], UserY(), tuple2([s@230], I@234));
+    @premise new(*[s@230], UserS(), tuple2([y@227], I@234));
+    @premise know(*I@234, #t0@235);
+    @premise know(*I@228, #t1@236);
+    @premise know(*D@229, #t2@237);
+    @premise know(*e@231, #t3@238);
+    @premise know(*r@232, #t4@239);
+    @conclusion know(*sysA([y@227], I@228, D@229, [s@230], e@231, r@232), #t@233);
+    @constraint #t@233 - #t4@239 >= 0;
+    @constraint #t@233 - #t3@238 >= 0;
+    @constraint #t@233 - #t2@237 >= 0;
+    @constraint #t@233 - #t1@236 >= 0;
+    @constraint #t@233 - #t0@235 >= 0;
+};
+Rule not added.
+
+Details:
+General Rules: 
+Rule No. [0.0]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*y@12, #t0@13);
+    @premise know(*I@14, #t1@15);
+    @premise know(*D@16, #t2@17);
+    @premise know(*s@18, #t3@19);
+    @conclusion know(*sysall(y@12, I@14, D@16, s@18), #t@20);
+    @constraint -#t0@13 + #t@20 >= 0;
+    @constraint #t@20 - #t1@15 >= 0;
+    @constraint #t@20 - #t2@17 >= 0;
+    @constraint #t@20 - #t3@19 >= 0;
+};
+
+Rule No. [0.1]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*r@22, #t0@23);
+    @conclusion know(*sysgr(r@22), #t@24);
+    @constraint -#t0@23 + #t@24 >= 0;
+};
+
+Rule No. [0.2]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*r@26, #t0@27);
+    @premise know(*e@28, #t1@29);
+    @conclusion know(*sysger(e@28, r@26), #t@30);
+    @constraint -#t0@27 + #t@30 >= 0;
+    @constraint #t@30 - #t1@29 >= 0;
+};
+
+Rule No. [0.3]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*sysgr(r@31), #t0@32);
+    @premise know(*e@33, #t1@34);
+    @conclusion know(*sysger(e@33, r@31), #t@35);
+    @constraint -#t0@32 + #t@35 >= 0;
+    @constraint #t@35 - #t1@34 >= 0;
+};
+
+Rule No. [0.4]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*y@37, #t0@38);
+    @premise know(*I@39, #t1@40);
+    @premise know(*D@41, #t2@42);
+    @premise know(*s@43, #t3@44);
+    @premise know(*e@45, #t4@46);
+    @premise know(*r@47, #t5@48);
+    @conclusion know(*sysA(y@37, I@39, D@41, s@43, e@45, r@47), #t@49);
+    @constraint -#t0@38 + #t@49 >= 0;
+    @constraint #t@49 - #t1@40 >= 0;
+    @constraint #t@49 - #t2@42 >= 0;
+    @constraint #t@49 - #t3@44 >= 0;
+    @constraint #t@49 - #t4@46 >= 0;
+    @constraint #t@49 - #t5@48 >= 0;
+};
+
+Rule No. [0.5]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*sysa@51, #t1@52);
+    @conclusion know(*syse(sysa@51), #t@53);
+};
+
+Rule No. [0.6]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*sysA(y@55, I@56, D@57, s@58, e@59, r@60), #t0@61);
+    @premise know(*sysger(e@59, r@60), #t1@62);
+    @conclusion know(*syse(sysall(y@55, I@56, D@57, s@58)), #t@63);
+    @constraint -#t0@61 + #t@63 >= 0;
+    @constraint #t@63 - #t1@62 >= 0;
+};
+
+Rule No. [0.7]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*y@65, #t0@66);
+    @premise know(*s@67, #t1@68);
+    @conclusion know(*resC(y@65, s@67), #t@69);
+    @constraint -#t0@66 + #t@69 >= 0;
+    @constraint #t@69 - #t1@68 >= 0;
+};
+
+Rule No. [0.8]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*resC(y@70, s@71), #t0@72);
+    @premise know(*I@73, #t1@74);
+    @premise know(*D@75, #t2@76);
+    @premise know(*e@77, #t3@78);
+    @premise know(*r@79, #t4@80);
+    @conclusion know(*sysA(y@70, I@73, D@75, s@71, e@77, r@79), #t@81);
+    @constraint -#t0@72 + #t@81 >= 0;
+    @constraint #t@81 - #t1@74 >= 0;
+    @constraint #t@81 - #t2@76 >= 0;
+    @constraint #t@81 - #t3@78 >= 0;
+    @constraint #t@81 - #t4@80 >= 0;
+};
+
+Rule No. [0.9]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*y@83, #t0@84);
+    @premise know(*I@85, #t1@86);
+    @premise know(*oB@87, #t2@88);
+    @premise know(*s@89, #t3@90);
+    @conclusion know(*chtC(y@83, I@85, oB@87, s@89), #t@91);
+    @constraint -#t0@84 + #t@91 >= 0;
+    @constraint #t@91 - #t1@86 >= 0;
+    @constraint #t@91 - #t2@88 >= 0;
+    @constraint #t@91 - #t3@90 >= 0;
+};
+
+Rule No. [0.10]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*chtC(y@92, I@93, B@94, s@95), #t0@96);
+    @premise know(*e@97, #t1@98);
+    @premise know(*r@99, #t2@100);
+    @conclusion know(*sysA(y@92, I@93, B@94, s@95, e@97, r@99), #t@101);
+    @constraint -#t0@96 + #t@101 >= 0;
+    @constraint #t@101 - #t1@98 >= 0;
+    @constraint #t@101 - #t2@100 >= 0;
+};
+
+Rule No. [0.11]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*c@103, #t0@104);
+    @premise know(*y@105, #t1@106);
+    @premise know(*s@107, #t2@108);
+    @conclusion know(*regZK(c@103, y@105, s@107), #t@109);
+    @constraint -#t0@104 + #t@109 >= 0;
+    @constraint #t@109 - #t1@106 >= 0;
+    @constraint #t@109 - #t2@108 >= 0;
+};
+
+Rule No. [0.12]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*c@111, #t0@112);
+    @premise know(*oA@113, #t1@114);
+    @premise know(*oe@115, #t2@116);
+    @premise know(*oy@117, #t3@118);
+    @premise know(*I@119, #t4@120);
+    @premise know(*oB@121, #t5@122);
+    @premise know(*y@123, #t6@124);
+    @premise know(*s@125, #t7@126);
+    @conclusion know(*chtZK(c@111, oA@113, oe@115, oy@117, I@119, oB@121, y@123, s@125), #t@127);
+    @constraint -#t0@112 + #t@127 >= 0;
+    @constraint #t@127 - #t1@114 >= 0;
+    @constraint #t@127 - #t2@116 >= 0;
+    @constraint #t@127 - #t3@118 >= 0;
+    @constraint #t@127 - #t4@120 >= 0;
+    @constraint #t@127 - #t5@122 >= 0;
+    @constraint #t@127 - #t6@124 >= 0;
+    @constraint #t@127 - #t7@126 >= 0;
+};
+
+Rule No. [0.13]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @conclusion know(*r(), #t@132);
+};
+
+Rule No. [0.14]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @conclusion know(*ba(), #t@134);
+};
+
+Rule No. [0.15]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise new(*[y@137], UserY(), tuple2([s@138], I@139));
+    @premise new(*[s@138], UserS(), tuple2([y@137], I@139));
+    @premise know(*I@139, #t0@140);
+    @conclusion know(*resC([y@137], [s@138]), #t@141);
+    @constraint -#t0@140 + #t@141 >= 0;
+};
+
+Rule No. [0.16]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise new(*[y@142], UserY(), tuple2([s@143], I@144));
+    @premise new(*[s@143], UserS(), tuple2([y@142], I@144));
+    @premise know(*I@144, #t0@145);
+    @conclusion know(*regZK(resC([y@142], [s@143]), [y@142], [s@143]), #t@146);
+    @constraint -#t0@145 + #t@146 >= 0;
+};
+
+Rule No. [0.17]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*sysA([oy@147], I@149, oB@150, [os@148], oe@151, r()), #t0@152);
+    @premise new(*[oy@147], UserY(), tuple2([os@148], I@149));
+    @premise new(*[os@148], UserS(), tuple2([oy@147], I@149));
+    @premise new(*[s@155], UserS(), tuple2([y@154], I@149));
+    @premise new(*[y@154], UserY(), tuple2([s@155], I@149));
+    @premise reveal(*[os@148], #t@156);
+    @premise know(*oe@151, #t1@153);
+    @conclusion know(*chtC([y@154], I@149, oB@150, [s@155]), #t@156);
+    @constraint -#t0@152 + #t@156 >= 0;
+    @constraint #t@156 - #t1@153 >= 0;
+};
+
+Rule No. [0.18]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*sysA([oy@157], I@159, oB@160, [os@158], oe@161, r()), #t0@162);
+    @premise new(*[oy@157], UserY(), tuple2([os@158], I@159));
+    @premise new(*[os@158], UserS(), tuple2([oy@157], I@159));
+    @premise new(*[s@165], UserS(), tuple2([y@164], I@159));
+    @premise new(*[y@164], UserY(), tuple2([s@165], I@159));
+    @premise reveal(*[os@158], #t@166);
+    @premise know(*oe@161, #t1@163);
+    @conclusion know(*chtZK(chtC([y@164], I@159, oB@160, [s@165]), sysA([oy@157], I@159, oB@160, [os@158], oe@161, r()), oe@161, [oy@157], I@159, oB@160, [y@164], [s@165]), #t@166);
+    @constraint -#t0@162 + #t@166 >= 0;
+    @constraint #t@166 - #t1@163 >= 0;
+};
+
+Rule No. [0.19]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*sysA([oy@167], I@169, oB@170, [os@168], oe@171, r()), #t0@172);
+    @premise new(*[oy@167], UserY(), tuple2([os@168], I@169));
+    @premise new(*[os@168], UserS(), tuple2([oy@167], I@169));
+    @premise new(*[s@175], UserS(), tuple2([y@174], I@169));
+    @premise new(*[y@174], UserY(), tuple2([s@175], I@169));
+    @premise reveal(*[os@168], #t@176);
+    @premise know(*oe@171, #t1@173);
+    @conclusion know(*[os@168], #t@176);
+    @constraint -#t0@172 + #t@176 >= 0;
+    @constraint #t@176 - #t1@173 >= 0;
+};
+
+Rule No. [0.20]
+Valid Rule
+Intial Rule
+Selectable at 2:
+@rule{
+    @premise new(*[os@177], UserS(), m@178);
+    @premise reveal(*[os@177], #t0@179);
+    @premise know(*[os@177], #t@180);
+    @conclusion leak([os@177]);
+    @constraint #t0@179 - #t@180 > 0;
+};
+
+Rule No. [0.21]
+Replaced by Rule [0.25]
+Composed by Rule [0.4] and [0.6]
+Selectable at 0:
+@rule{
+    @premise know(*sysger(e@196, r@198), #t1@200);
+    @premise know(*I@188, #t1@193);
+    @premise know(*D@189, #t2@194);
+    @premise know(*y@187, #t0@192);
+    @premise know(*e@196, #t4@197);
+    @premise know(*r@198, #t5@199);
+    @premise know(*s@190, #t3@195);
+    @conclusion know(*syse(sysall(y@187, I@188, D@189, s@190)), #t@191);
+    @constraint #t@191 - #t1@200 >= 0;
+    @constraint #t@191 - #t5@199 >= 0;
+    @constraint #t@191 - #t4@197 >= 0;
+    @constraint #t@191 - #t3@195 >= 0;
+    @constraint #t@191 - #t0@192 >= 0;
+    @constraint #t@191 - #t1@193 >= 0;
+    @constraint #t@191 - #t2@194 >= 0;
+};
+
+Rule No. [0.22]
+Valid Rule
+Composed by Rule [0.15] and [0.8]
+Not Selectable : 
+@rule{
+    @premise new(*[y@227], UserY(), tuple2([s@230], I@234));
+    @premise new(*[s@230], UserS(), tuple2([y@227], I@234));
+    @premise know(*I@234, #t0@235);
+    @premise know(*I@228, #t1@236);
+    @premise know(*D@229, #t2@237);
+    @premise know(*e@231, #t3@238);
+    @premise know(*r@232, #t4@239);
+    @conclusion know(*sysA([y@227], I@228, D@229, [s@230], e@231, r@232), #t@233);
+    @constraint #t@233 - #t4@239 >= 0;
+    @constraint #t@233 - #t3@238 >= 0;
+    @constraint #t@233 - #t2@237 >= 0;
+    @constraint #t@233 - #t1@236 >= 0;
+    @constraint #t@233 - #t0@235 >= 0;
+};
+
+Rule No. [0.23]
+Replaced by Rule [0.27]
+Composed by Rule [0.4] and [0.17]
+Selectable at 4:
+@rule{
+    @premise new(*[oy@245], UserY(), tuple2([os@249], I@241));
+    @premise new(*[y@240], UserY(), tuple2([s@243], I@241));
+    @premise new(*[s@243], UserS(), tuple2([y@240], I@241));
+    @premise new(*[os@249], UserS(), tuple2([oy@245], I@241));
+    @premise know(*r(), #t5@253);
+    @premise know(*[oy@245], #t0@246);
+    @premise know(*[os@249], #t3@250);
+    @premise reveal(*[os@249], #t@244);
+    @premise know(*D@242, #t2@248);
+    @premise know(*I@241, #t1@247);
+    @conclusion know(*chtC([y@240], I@241, D@242, [s@243]), #t@244);
+    @constraint #t@244 - #t5@253 >= 0;
+    @constraint #t@244 - #t3@250 >= 0;
+    @constraint #t@244 - #t0@246 >= 0;
+    @constraint #t@244 - #t1@247 >= 0;
+    @constraint #t@244 - #t2@248 >= 0;
+};
+
+Rule No. [0.24]
+Replaced by Rule [0.28]
+Composed by Rule [0.4] and [0.18]
+Selectable at 4:
+@rule{
+    @premise new(*[y@255], UserY(), tuple2([s@258], I@256));
+    @premise new(*[s@258], UserS(), tuple2([y@255], I@256));
+    @premise new(*[os@260], UserS(), tuple2([oy@259], I@256));
+    @premise new(*[oy@259], UserY(), tuple2([os@260], I@256));
+    @premise know(*r(), #t5@268);
+    @premise know(*[oy@259], #t0@263);
+    @premise know(*[os@260], #t3@266);
+    @premise reveal(*[os@260], #t@262);
+    @premise know(*e@261, #t4@267);
+    @premise know(*D@257, #t2@265);
+    @premise know(*I@256, #t1@264);
+    @conclusion know(*chtZK(chtC([y@255], I@256, D@257, [s@258]), sysA([oy@259], I@256, D@257, [os@260], e@261, r()), e@261, [oy@259], I@256, D@257, [y@255], [s@258]), #t@262);
+    @constraint #t@262 - #t5@268 >= 0;
+    @constraint #t@262 - #t4@267 >= 0;
+    @constraint #t@262 - #t0@263 >= 0;
+    @constraint #t@262 - #t1@264 >= 0;
+    @constraint #t@262 - #t2@265 >= 0;
+    @constraint #t@262 - #t3@266 >= 0;
+};
+
+Rule No. [0.25]
+Valid Rule
+Composed by Rule [0.2] and [0.21]
+Not Selectable : 
+@rule{
+    @premise know(*I@286, #t1@294);
+    @premise know(*D@287, #t2@295);
+    @premise know(*y@285, #t0@296);
+    @premise know(*s@288, #t3@299);
+    @conclusion know(*syse(sysall(y@285, I@286, D@287, s@288)), #t@289);
+    @constraint #t@289 - #t3@299 >= 0;
+    @constraint #t@289 - #t2@295 >= 0;
+    @constraint #t@289 - #t1@294 >= 0;
+    @constraint #t@289 - #t0@296 >= 0;
+};
+
+Rule No. [0.26]
+Replaced by Rule [0.32]
+Composed by Rule [0.22] and [0.6]
+Selectable at 2:
+@rule{
+    @premise new(*[y@300], UserY(), tuple2([s@303], I@305));
+    @premise new(*[s@303], UserS(), tuple2([y@300], I@305));
+    @premise know(*sysger(e@309, r@311), #t1@313);
+    @premise know(*I@301, #t1@307);
+    @premise know(*I@305, #t0@306);
+    @premise know(*e@309, #t3@310);
+    @premise know(*r@311, #t4@312);
+    @premise know(*D@302, #t2@308);
+    @conclusion know(*syse(sysall([y@300], I@301, D@302, [s@303])), #t@304);
+    @constraint #t@304 - #t1@313 >= 0;
+    @constraint #t@304 - #t0@306 >= 0;
+    @constraint #t@304 - #t4@312 >= 0;
+    @constraint #t@304 - #t3@310 >= 0;
+    @constraint #t@304 - #t1@307 >= 0;
+    @constraint #t@304 - #t2@308 >= 0;
+};
+
+Rule No. [0.27]
+Replaced by Rule [0.33]
+Composed by Rule [0.22] and [0.17]
+Selectable at 4:
+@rule{
+    @premise new(*[y@319], UserY(), tuple2([s@320], I@321));
+    @premise new(*[s@320], UserS(), tuple2([y@319], I@321));
+    @premise new(*[y@314], UserY(), tuple2([s@317], I@321));
+    @premise new(*[s@317], UserS(), tuple2([y@314], I@321));
+    @premise know(*r(), #t4@327);
+    @premise reveal(*[s@320], #t@318);
+    @premise know(*D@316, #t2@324);
+    @premise know(*I@321, #t0@322);
+    @conclusion know(*chtC([y@314], I@321, D@316, [s@317]), #t@318);
+    @constraint #t@318 - #t0@322 >= 0;
+    @constraint #t@318 - #t4@327 >= 0;
+    @constraint #t@318 - #t2@324 >= 0;
+};
+
+Rule No. [0.28]
+Replaced by Rule [0.34]
+Composed by Rule [0.22] and [0.18]
+Selectable at 4:
+@rule{
+    @premise new(*[y@333], UserY(), tuple2([s@334], I@337));
+    @premise new(*[s@334], UserS(), tuple2([y@333], I@337));
+    @premise new(*[y@329], UserY(), tuple2([s@332], I@337));
+    @premise new(*[s@332], UserS(), tuple2([y@329], I@337));
+    @premise know(*r(), #t4@342);
+    @premise reveal(*[s@334], #t@336);
+    @premise know(*D@331, #t2@340);
+    @premise know(*I@337, #t0@338);
+    @premise know(*e@335, #t3@341);
+    @conclusion know(*chtZK(chtC([y@329], I@337, D@331, [s@332]), sysA([y@333], I@337, D@331, [s@334], e@335, r()), e@335, [y@333], I@337, D@331, [y@329], [s@332]), #t@336);
+    @constraint #t@336 - #t0@338 >= 0;
+    @constraint #t@336 - #t4@342 >= 0;
+    @constraint #t@336 - #t2@340 >= 0;
+    @constraint #t@336 - #t3@341 >= 0;
+};
+
+Rule No. [0.29]
+Replaced by Rule [0.35]
+Composed by Rule [0.22] and [0.19]
+Selectable at 4:
+@rule{
+    @premise new(*[y@346], UserY(), tuple2([s@344], I@347));
+    @premise new(*[s@344], UserS(), tuple2([y@346], I@347));
+    @premise new(*[y@357], UserY(), tuple2([s@356], I@347));
+    @premise new(*[s@356], UserS(), tuple2([y@357], I@347));
+    @premise know(*r(), #t4@355);
+    @premise reveal(*[s@344], #t@345);
+    @premise know(*I@347, #t0@348);
+    @conclusion know(*[s@344], #t@345);
+    @constraint #t@345 - #t0@348 >= 0;
+    @constraint #t@345 - #t4@355 >= 0;
+};
+
+Rule No. [0.30]
+Replaced by Rule [0.33]
+Composed by Rule [0.13] and [0.23]
+Selectable at 4:
+@rule{
+    @premise new(*[oy@364], UserY(), tuple2([os@365], I@360));
+    @premise new(*[y@359], UserY(), tuple2([s@362], I@360));
+    @premise new(*[s@362], UserS(), tuple2([y@359], I@360));
+    @premise new(*[os@365], UserS(), tuple2([oy@364], I@360));
+    @premise know(*[oy@364], #t0@366);
+    @premise know(*[os@365], #t3@367);
+    @premise reveal(*[os@365], #t@363);
+    @premise know(*D@361, #t2@368);
+    @premise know(*I@360, #t1@369);
+    @conclusion know(*chtC([y@359], I@360, D@361, [s@362]), #t@363);
+    @constraint #t@363 - #t1@369 >= 0;
+    @constraint #t@363 - #t3@367 >= 0;
+    @constraint #t@363 - #t2@368 >= 0;
+    @constraint #t@363 - #t0@366 >= 0;
+};
+
+Rule No. [0.31]
+Replaced by Rule [0.34]
+Composed by Rule [0.13] and [0.24]
+Selectable at 4:
+@rule{
+    @premise new(*[y@370], UserY(), tuple2([s@373], I@371));
+    @premise new(*[s@373], UserS(), tuple2([y@370], I@371));
+    @premise new(*[os@375], UserS(), tuple2([oy@374], I@371));
+    @premise new(*[oy@374], UserY(), tuple2([os@375], I@371));
+    @premise know(*[oy@374], #t0@378);
+    @premise know(*[os@375], #t3@379);
+    @premise reveal(*[os@375], #t@377);
+    @premise know(*e@376, #t4@380);
+    @premise know(*D@372, #t2@381);
+    @premise know(*I@371, #t1@382);
+    @conclusion know(*chtZK(chtC([y@370], I@371, D@372, [s@373]), sysA([oy@374], I@371, D@372, [os@375], e@376, r()), e@376, [oy@374], I@371, D@372, [y@370], [s@373]), #t@377);
+    @constraint #t@377 - #t2@381 >= 0;
+    @constraint #t@377 - #t4@380 >= 0;
+    @constraint #t@377 - #t3@379 >= 0;
+    @constraint #t@377 - #t1@382 >= 0;
+    @constraint #t@377 - #t0@378 >= 0;
+};
+
+Rule No. [0.32]
+Valid Rule
+Composed by Rule [0.2] and [0.26]
+Not Selectable : 
+@rule{
+    @premise new(*[y@383], UserY(), tuple2([s@386], I@392));
+    @premise new(*[s@386], UserS(), tuple2([y@383], I@392));
+    @premise know(*I@384, #t1@393);
+    @premise know(*I@392, #t0@394);
+    @premise know(*D@385, #t2@397);
+    @conclusion know(*syse(sysall([y@383], I@384, D@385, [s@386])), #t@387);
+    @constraint #t@387 - #t0@394 >= 0;
+    @constraint #t@387 - #t2@397 >= 0;
+    @constraint #t@387 - #t1@393 >= 0;
+};
+
+Rule No. [0.33]
+Valid Rule
+Composed by Rule [0.13] and [0.27]
+Not Selectable : 
+@rule{
+    @premise new(*[y@403], UserY(), tuple2([s@404], I@399));
+    @premise new(*[s@404], UserS(), tuple2([y@403], I@399));
+    @premise new(*[y@398], UserY(), tuple2([s@401], I@399));
+    @premise new(*[s@401], UserS(), tuple2([y@398], I@399));
+    @premise reveal(*[s@404], #t@402);
+    @premise know(*D@400, #t2@405);
+    @premise know(*I@399, #t0@406);
+    @conclusion know(*chtC([y@398], I@399, D@400, [s@401]), #t@402);
+    @constraint #t@402 - #t2@405 >= 0;
+    @constraint #t@402 - #t0@406 >= 0;
+};
+
+Rule No. [0.34]
+Valid Rule
+Composed by Rule [0.13] and [0.28]
+Not Selectable : 
+@rule{
+    @premise new(*[y@411], UserY(), tuple2([s@412], I@408));
+    @premise new(*[s@412], UserS(), tuple2([y@411], I@408));
+    @premise new(*[y@407], UserY(), tuple2([s@410], I@408));
+    @premise new(*[s@410], UserS(), tuple2([y@407], I@408));
+    @premise reveal(*[s@412], #t@414);
+    @premise know(*D@409, #t2@415);
+    @premise know(*I@408, #t0@416);
+    @premise know(*e@413, #t3@417);
+    @conclusion know(*chtZK(chtC([y@407], I@408, D@409, [s@410]), sysA([y@411], I@408, D@409, [s@412], e@413, r()), e@413, [y@411], I@408, D@409, [y@407], [s@410]), #t@414);
+    @constraint #t@414 - #t3@417 >= 0;
+    @constraint #t@414 - #t0@416 >= 0;
+    @constraint #t@414 - #t2@415 >= 0;
+};
+
+Rule No. [0.35]
+Valid Rule
+Composed by Rule [0.13] and [0.29]
+Not Selectable : 
+@rule{
+    @premise new(*[y@420], UserY(), tuple2([s@418], I@421));
+    @premise new(*[s@418], UserS(), tuple2([y@420], I@421));
+    @premise new(*[y@422], UserY(), tuple2([s@423], I@421));
+    @premise new(*[s@423], UserS(), tuple2([y@422], I@421));
+    @premise reveal(*[s@418], #t@419);
+    @premise know(*I@421, #t0@424);
+    @conclusion know(*[s@418], #t@419);
+    @constraint #t@419 - #t0@424 >= 0;
+};
+
+
+Final Rules: 
+[@empty]
+
+
+0. Requested parameter relation:
+[@universe]
+
+
+Overall generated rule count : 42
+Basis size : 36
+Verification time: 45
+
+Proved as secure.
+

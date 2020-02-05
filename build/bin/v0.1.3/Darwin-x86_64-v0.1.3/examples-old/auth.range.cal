@@ -1,0 +1,53 @@
+@function (@variable skey) pk(skey);
+@function (@variable mess, @variable skey) sign(mess, skey);
+@function (@variable mess, @variable skey) check(sign(mess, skey), pk(skey)) -> mess;
+@function (@variable mess, @variable skey) get(sign(mess, skey)) -> mess;
+@function (@variable mess, @variable pkey) aenc(mess, pkey);
+@function (@variable mess, @variable skey) adec(aenc(mess, pk(skey)), skey) -> mess;
+
+@string SK;
+@string agree;
+
+@parameter threshold;
+
+@init init;
+@accept accept;
+
+@process Car(@variable pkey) {
+    @receive @variable pkI;
+    @read @timestamp t1;
+    @new @nonce n;
+    @engage init(pkI, n)@t1;
+    @send n;
+    @receive @variable m;
+    @read @timestamp t2;
+    @if ((n, agree) == check(m, pkey)) @then
+    @if (t2 - t1 < threshold) @then
+    @if (pkI == pkey) @then
+    @engage accept(pkI, n)@t2;
+}
+
+@process User(@variable skey) {
+    @send pk(skey);
+    @receive @variable n;
+    @send sign((n, agree), skey);
+}
+
+@process Pp(@variable pkX) {
+    @send pkX;
+}
+
+@system {
+    @parallel { 
+        !{ @invoke Car(pk(SK)); } | 
+        !{ @invoke User(SK); } | 
+        !{ @invoke Pp(pk(SK)); } 
+    }
+}
+
+@correspondence (@variable pkI, @variable n, @timestamp t1, @timestamp t2) {
+    @enforced;
+    @event init(pkI, n)@t1;
+    @event accept(pkI, n)@t2;
+    @constraint t2 - t1 < threshold;
+}

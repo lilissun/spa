@@ -1,0 +1,211 @@
+@declare @event new(*, -, -);
+@provide @event new @removable @false;
+
+@declare @event unique(*, *, -);
+@provide @event unique @removable @false;
+
+@declare @event reveal(*, -);
+@provide @event reveal @removable @false;
+
+@declare @event know(*, -);
+@provide @event know(mx, #t) @removable @true;
+@provide @event know(#c, #t) @removable @true;
+@provide @event know(#t, #t) @removable @true;
+
+@declare @event leak(-);
+
+@declare @function sysall/4;
+@rule {
+    @premise know(y, #t0);
+    @premise know(I, #t1);
+    @premise know(D, #t2);
+    @premise know(s, #t3);
+    @conclusion know(sysall(y, I, D, s), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+    @constraint #t3 - #t <= 0;
+};
+
+@declare @function sysgr/1;
+@rule {
+    @premise know(r, #t0);
+    @conclusion know(sysgr(r), #t);
+    @constraint #t0 - #t <= 0;
+};
+
+@declare @function sysger/2;
+@rule {
+    @premise know(r, #t0);
+    @premise know(e, #t1);
+    @conclusion know(sysger(e, r), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+};
+@rule {
+    @premise know(sysgr(r), #t0);
+    @premise know(e, #t1);
+    @conclusion know(sysger(e, r), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+};
+
+@declare @function sysA/6;
+@rule {
+    @premise know(y, #t0);
+    @premise know(I, #t1);
+    @premise know(D, #t2);
+    @premise know(s, #t3);
+    @premise know(e, #t4);
+    @premise know(r, #t5);
+    @conclusion know(sysA(y, I, D, s, e, r), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+    @constraint #t3 - #t <= 0;
+    @constraint #t4 - #t <= 0;
+    @constraint #t5 - #t <= 0;
+};
+
+@declare @function syse/1;
+@rule {
+    @premise know(sysa, #t1);
+    @conclusion know(syse(sysa), #t);
+    @constraint #t0 - #t <= 0;
+};
+@rule {
+    @premise know(sysA(y, I, D, s, e, r), #t0);
+    @premise know(sysger(e, r), #t1);
+    @conclusion know(syse(sysall(y, I, D, s)), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+};
+
+@declare @function resC/2;
+@rule {
+    @premise know(y, #t0);
+    @premise know(s, #t1);
+    @conclusion know(resC(y, s), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+};
+@rule {
+    @premise know(resC(y, s), #t0);
+    @premise know(I, #t1);
+    @premise know(D, #t2);
+    @premise know(e, #t3);
+    @premise know(r, #t4);
+    @conclusion know(sysA(y, I, D, s, e, r), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+    @constraint #t3 - #t <= 0;
+    @constraint #t4 - #t <= 0;
+};
+
+@declare @function chtC/4;
+@rule {
+    @premise know(y, #t0);
+    @premise know(I, #t1);
+    @premise know(oB, #t2);
+    @premise know(s, #t3);
+    @conclusion know(chtC(y, I, oB, s), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+    @constraint #t3 - #t <= 0;
+};
+@rule {
+    @premise know(chtC(y, I, B, s), #t0);
+    @premise know(e, #t1);
+    @premise know(r, #t2);
+    @conclusion know(sysA(y, I, B, s, e, r), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+
+// zero knowledge
+@declare @function regZK/3;
+@rule {
+    @premise know(c, #t0);
+    @premise know(y, #t1);
+    @premise know(s, #t2);
+    @conclusion know(regZK(c, y, s), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+
+@declare @function chtZK/8;
+@rule {
+    @premise know(c, #t0);
+    @premise know(oA, #t1);
+    @premise know(oe, #t2);
+    @premise know(oy, #t3);
+    @premise know(I, #t4);
+    @premise know(oB, #t5);
+    @premise know(y, #t6);
+    @premise know(s, #t7);
+    @conclusion know(chtZK(c, oA, oe, oy, I, oB, y, s), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+    @constraint #t3 - #t <= 0;
+    @constraint #t4 - #t <= 0;
+    @constraint #t5 - #t <= 0;
+    @constraint #t6 - #t <= 0;
+    @constraint #t7 - #t <= 0;
+};
+
+@declare @function tuple2/2;
+@declare @function tuple3/3;
+@declare @function tuple4/4;
+
+@declare @string r[];
+@rule {
+    @conclusion know(r[], #t);
+};
+
+@declare @string ba[];
+@rule {
+    @conclusion know(ba[], #t);
+};
+
+@declare @string UserY[];
+@declare @string UserS[];
+@rule {
+    @premise new([y], UserY[], tuple2([s], I));
+    @premise new([s], UserS[], tuple2([y], I));
+    @premise know(I, #t0);
+    @conclusion know(resC([y], [s]), #t);
+    @conclusion know(regZK(resC([y], [s]), [y], [s]), #t);
+    @constraint #t0 - #t <= 0;
+};
+
+@rule {
+    @premise new([oy], UserY[], tuple2([os], I));
+    @premise new([os], UserS[], tuple2([oy], I));
+    @premise know(sysA([oy], I, oB, [os], oe, r[]), #t0);
+    @premise know(oe, #t1);
+    @premise new([y], UserY[], tuple2([s], I));
+    @premise new([s], UserS[], tuple2([y], I));
+    @premise reveal([os], #t);
+    @conclusion know(chtC([y], I, oB, [s]), #t);
+    @conclusion know(chtZK(chtC([y], I, oB, [s]), sysA([oy], I, oB, [os], oe, r[]), oe, [oy], I, oB, [y], [s]), #t);
+    @conclusion know([os], #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+};
+
+@rule {
+    @premise new([os], UserS[], m);
+    @premise reveal([os], #t0);
+    @premise know([os], #t);
+    @conclusion leak([os]);
+    @constraint #t - #t0 < 0;
+};
+
+@secrecy {
+    @conclusion leak(s);
+}; 

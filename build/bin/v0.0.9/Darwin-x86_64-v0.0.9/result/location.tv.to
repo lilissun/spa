@@ -1,0 +1,2481 @@
+Rule in cache: 0
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*y@8);
+    @premise know(*I@9);
+    @premise know(*D@10);
+    @premise know(*s@11);
+    @conclusion know(*sysall(y@8, I@9, D@10, s@11));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@8);
+    @premise know(*I@9);
+    @premise know(*D@10);
+    @premise know(*s@11);
+    @conclusion know(*sysall(y@8, I@9, D@10, s@11));
+};
+
+Rule in cache: 1
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*r@13);
+    @conclusion know(*sysgr(r@13));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*r@13);
+    @conclusion know(*sysgr(r@13));
+};
+
+Rule in cache: 2
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*r@15);
+    @premise know(*e@16);
+    @conclusion know(*sysger(e@16, r@15));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*r@15);
+    @premise know(*e@16);
+    @conclusion know(*sysger(e@16, r@15));
+};
+
+Rule in cache: 3
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*sysgr(r@17));
+    @premise know(*e@18);
+    @conclusion know(*sysger(e@18, r@17));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysgr(r@17));
+    @premise know(*e@18);
+    @conclusion know(*sysger(e@18, r@17));
+};
+
+Rule in cache: 4
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*y@20);
+    @premise know(*I@21);
+    @premise know(*D@22);
+    @premise know(*s@23);
+    @premise know(*e@24);
+    @premise know(*r@25);
+    @conclusion know(*sysA(y@20, I@21, D@22, s@23, e@24, r@25));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@20);
+    @premise know(*I@21);
+    @premise know(*D@22);
+    @premise know(*s@23);
+    @premise know(*e@24);
+    @premise know(*r@25);
+    @conclusion know(*sysA(y@20, I@21, D@22, s@23, e@24, r@25));
+};
+
+Rule in cache: 5
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*sysa@27);
+    @conclusion know(*syse(sysa@27));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysa@27);
+    @conclusion know(*syse(sysa@27));
+};
+
+Rule in cache: 6
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*sysA(y@28, I@29, D@30, s@31, e@32, r@33));
+    @premise know(*sysger(e@32, r@33));
+    @conclusion know(*syse(sysall(y@28, I@29, D@30, s@31)));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysA(y@28, I@29, D@30, s@31, e@32, r@33));
+    @premise know(*sysger(e@32, r@33));
+    @conclusion know(*syse(sysall(y@28, I@29, D@30, s@31)));
+};
+
+Rule in cache: 7
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*y@35);
+    @premise know(*s@36);
+    @conclusion know(*resC(y@35, s@36));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@35);
+    @premise know(*s@36);
+    @conclusion know(*resC(y@35, s@36));
+};
+
+Rule in cache: 8
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*resC(y@37, s@38));
+    @premise know(*I@39);
+    @premise know(*D@40);
+    @premise know(*e@41);
+    @premise know(*r@42);
+    @conclusion know(*sysA(y@37, I@39, D@40, s@38, e@41, r@42));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*resC(y@37, s@38));
+    @premise know(*I@39);
+    @premise know(*D@40);
+    @premise know(*e@41);
+    @premise know(*r@42);
+    @conclusion know(*sysA(y@37, I@39, D@40, s@38, e@41, r@42));
+};
+
+Rule in cache: 9
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*y@44);
+    @premise know(*I@45);
+    @premise know(*oB@46);
+    @premise know(*s@47);
+    @conclusion know(*chtC(y@44, I@45, oB@46, s@47));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@44);
+    @premise know(*I@45);
+    @premise know(*oB@46);
+    @premise know(*s@47);
+    @conclusion know(*chtC(y@44, I@45, oB@46, s@47));
+};
+
+Rule in cache: 10
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*chtC(y@48, I@49, B@50, s@51));
+    @premise know(*e@52);
+    @premise know(*r@53);
+    @conclusion know(*sysA(y@48, I@49, B@50, s@51, e@52, r@53));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*chtC(y@48, I@49, B@50, s@51));
+    @premise know(*e@52);
+    @premise know(*r@53);
+    @conclusion know(*sysA(y@48, I@49, B@50, s@51, e@52, r@53));
+};
+
+Rule in cache: 11
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*c@55);
+    @premise know(*y@56);
+    @premise know(*s@57);
+    @conclusion know(*regZK(c@55, y@56, s@57));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*c@55);
+    @premise know(*y@56);
+    @premise know(*s@57);
+    @conclusion know(*regZK(c@55, y@56, s@57));
+};
+
+Rule in cache: 12
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*c@59);
+    @premise know(*oA@60);
+    @premise know(*oe@61);
+    @premise know(*oy@62);
+    @premise know(*I@63);
+    @premise know(*oB@64);
+    @premise know(*y@65);
+    @premise know(*s@66);
+    @conclusion know(*chtZK(c@59, oA@60, oe@61, oy@62, I@63, oB@64, y@65, s@66));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*c@59);
+    @premise know(*oA@60);
+    @premise know(*oe@61);
+    @premise know(*oy@62);
+    @premise know(*I@63);
+    @premise know(*oB@64);
+    @premise know(*y@65);
+    @premise know(*s@66);
+    @conclusion know(*chtZK(c@59, oA@60, oe@61, oy@62, I@63, oB@64, y@65, s@66));
+};
+
+Rule in cache: 13
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*c@68);
+    @premise know(*I@69);
+    @premise know(*oB@70);
+    @premise know(*oA@71);
+    @premise know(*oe@72);
+    @premise know(*oy@73);
+    @premise know(*y@74);
+    @premise know(*s@75);
+    @conclusion know(*chtZK(c@68, I@69, oB@70, oA@71, oe@72, oy@73, y@74, s@75));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*c@68);
+    @premise know(*I@69);
+    @premise know(*oB@70);
+    @premise know(*oA@71);
+    @premise know(*oe@72);
+    @premise know(*oy@73);
+    @premise know(*y@74);
+    @premise know(*s@75);
+    @conclusion know(*chtZK(c@68, I@69, oB@70, oA@71, oe@72, oy@73, y@74, s@75));
+};
+
+Rule in cache: 14
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*resC(y@81, s@82));
+    @premise know(*regZK(resC(y@81, s@82), y@81, s@82));
+    @premise know(*I@83);
+    @premise new(*[e@84], ServerRes(), tuple3(resC(y@81, s@82), regZK(resC(y@81, s@82), y@81, s@82), I@83));
+    @premise init(*I@83, *s@82);
+    @conclusion know(*sysA(y@81, I@83, ba(), s@82, [e@84], r()));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@84], ServerRes(), tuple3(resC(y@81, s@82), regZK(resC(y@81, s@82), y@81, s@82), I@83));
+    @premise know(*regZK(resC(y@81, s@82), y@81, s@82));
+    @premise know(*resC(y@81, s@82));
+    @premise init(*I@83, *s@82);
+    @premise know(*I@83);
+    @conclusion know(*sysA(y@81, I@83, ba(), s@82, [e@84], r()));
+};
+
+Rule in cache: 15
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*resC(y@85, s@86));
+    @premise know(*regZK(resC(y@85, s@86), y@85, s@86));
+    @premise know(*I@87);
+    @premise new(*[e@88], ServerRes(), tuple3(resC(y@85, s@86), regZK(resC(y@85, s@86), y@85, s@86), I@87));
+    @premise init(*I@87, *s@86);
+    @conclusion know(*[e@88]);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@88], ServerRes(), tuple3(resC(y@85, s@86), regZK(resC(y@85, s@86), y@85, s@86), I@87));
+    @premise know(*regZK(resC(y@85, s@86), y@85, s@86));
+    @premise know(*resC(y@85, s@86));
+    @premise init(*I@87, *s@86);
+    @premise know(*I@87);
+    @conclusion know(*[e@88]);
+};
+
+Rule in cache: 16
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*chtC(y@90, I@91, oB@92, s@93));
+    @premise know(*chtZK(chtC(y@90, I@91, oB@92, s@93), sysA(oy@94, I@91, oB@92, os@95, oe@96, r()), oe@96, oy@94, I@91, oB@92, y@90, s@93));
+    @premise know(*os@95);
+    @premise new(*[e@97], ServerCht(), tuple3(chtC(y@90, I@91, oB@92, s@93), chtZK(chtC(y@90, I@91, oB@92, s@93), sysA(oy@94, I@91, oB@92, os@95, oe@96, r()), oe@96, oy@94, I@91, oB@92, y@90, s@93), os@95));
+    @premise init(*I@91, *s@93);
+    @conclusion know(*sysA(y@90, I@91, oB@92, s@93, [e@97], r()));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@97], ServerCht(), tuple3(chtC(y@90, I@91, oB@92, s@93), chtZK(chtC(y@90, I@91, oB@92, s@93), sysA(oy@94, I@91, oB@92, os@95, oe@96, r()), oe@96, oy@94, I@91, oB@92, y@90, s@93), os@95));
+    @premise know(*chtZK(chtC(y@90, I@91, oB@92, s@93), sysA(oy@94, I@91, oB@92, os@95, oe@96, r()), oe@96, oy@94, I@91, oB@92, y@90, s@93));
+    @premise know(*chtC(y@90, I@91, oB@92, s@93));
+    @premise init(*I@91, *s@93);
+    @premise know(*os@95);
+    @conclusion know(*sysA(y@90, I@91, oB@92, s@93, [e@97], r()));
+};
+
+Rule in cache: 17
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*chtC(y@98, I@99, oB@100, s@101));
+    @premise know(*chtZK(chtC(y@98, I@99, oB@100, s@101), sysA(oy@102, I@99, oB@100, os@103, oe@104, r()), oe@104, oy@102, I@99, oB@100, y@98, s@101));
+    @premise know(*os@103);
+    @premise new(*[e@105], ServerCht(), tuple3(chtC(y@98, I@99, oB@100, s@101), chtZK(chtC(y@98, I@99, oB@100, s@101), sysA(oy@102, I@99, oB@100, os@103, oe@104, r()), oe@104, oy@102, I@99, oB@100, y@98, s@101), os@103));
+    @premise init(*I@99, *s@101);
+    @conclusion know(*[e@105]);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@105], ServerCht(), tuple3(chtC(y@98, I@99, oB@100, s@101), chtZK(chtC(y@98, I@99, oB@100, s@101), sysA(oy@102, I@99, oB@100, os@103, oe@104, r()), oe@104, oy@102, I@99, oB@100, y@98, s@101), os@103));
+    @premise know(*chtZK(chtC(y@98, I@99, oB@100, s@101), sysA(oy@102, I@99, oB@100, os@103, oe@104, r()), oe@104, oy@102, I@99, oB@100, y@98, s@101));
+    @premise know(*chtC(y@98, I@99, oB@100, s@101));
+    @premise init(*I@99, *s@101);
+    @premise know(*os@103);
+    @conclusion know(*[e@105]);
+};
+
+Rule in cache: 18
+Rule staged: 0
+Rule before check and clean: 
+@rule{
+    @premise know(*sysA(y@106, I@107, B@108, s@109, e@110, r()));
+    @premise know(*e@110);
+    @conclusion accept(I@107, s@109);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysA(y@106, I@107, B@108, s@109, e@110, r()));
+    @premise know(*e@110);
+    @conclusion accept(I@107, s@109);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*y@8);
+    @premise know(*I@9);
+    @premise know(*D@10);
+    @premise know(*s@11);
+    @conclusion know(*sysall(y@8, I@9, D@10, s@11));
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*r@13);
+    @conclusion know(*sysgr(r@13));
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*r@15);
+    @premise know(*e@16);
+    @conclusion know(*sysger(e@16, r@15));
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*sysgr(r@17));
+    @premise know(*e@18);
+    @conclusion know(*sysger(e@18, r@17));
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*r@13);
+    @conclusion know(*sysgr(r@13));
+};
+Rule in cache: 15
+Rule staged: 4
+Rule before check and clean: 
+@rule{
+    @premise know(*r@114);
+    @premise know(*e@113);
+    @conclusion know(*sysger(e@113, r@114));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*r@114);
+    @premise know(*e@113);
+    @conclusion know(*sysger(e@113, r@114));
+};
+
+Stage rule: 
+@rule{
+    @premise know(*y@20);
+    @premise know(*I@21);
+    @premise know(*D@22);
+    @premise know(*s@23);
+    @premise know(*e@24);
+    @premise know(*r@25);
+    @conclusion know(*sysA(y@20, I@21, D@22, s@23, e@24, r@25));
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*sysa@27);
+    @conclusion know(*syse(sysa@27));
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*sysA(y@28, I@29, D@30, s@31, e@32, r@33));
+    @premise know(*sysger(e@32, r@33));
+    @conclusion know(*syse(sysall(y@28, I@29, D@30, s@31)));
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*y@20);
+    @premise know(*I@21);
+    @premise know(*D@22);
+    @premise know(*s@23);
+    @premise know(*e@24);
+    @premise know(*r@25);
+    @conclusion know(*sysA(y@20, I@21, D@22, s@23, e@24, r@25));
+};
+Rule in cache: 13
+Rule staged: 7
+Rule before check and clean: 
+@rule{
+    @premise know(*y@115);
+    @premise know(*I@116);
+    @premise know(*D@117);
+    @premise know(*s@118);
+    @premise know(*e@119);
+    @premise know(*r@120);
+    @premise know(*sysger(e@119, r@120));
+    @conclusion know(*syse(sysall(y@115, I@116, D@117, s@118)));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*sysger(e@119, r@120));
+    @premise know(*I@116);
+    @premise know(*D@117);
+    @premise know(*y@115);
+    @premise know(*e@119);
+    @premise know(*r@120);
+    @premise know(*s@118);
+    @conclusion know(*syse(sysall(y@115, I@116, D@117, s@118)));
+};
+
+Stage rule: 
+@rule{
+    @premise know(*y@35);
+    @premise know(*s@36);
+    @conclusion know(*resC(y@35, s@36));
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*resC(y@37, s@38));
+    @premise know(*I@39);
+    @premise know(*D@40);
+    @premise know(*e@41);
+    @premise know(*r@42);
+    @conclusion know(*sysA(y@37, I@39, D@40, s@38, e@41, r@42));
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*y@35);
+    @premise know(*s@36);
+    @conclusion know(*resC(y@35, s@36));
+};
+Rule in cache: 12
+Rule staged: 9
+Rule before check and clean: 
+@rule{
+    @premise know(*y@121);
+    @premise know(*s@124);
+    @premise know(*I@122);
+    @premise know(*D@123);
+    @premise know(*e@125);
+    @premise know(*r@126);
+    @conclusion know(*sysA(y@121, I@122, D@123, s@124, e@125, r@126));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@121);
+    @premise know(*s@124);
+    @premise know(*I@122);
+    @premise know(*D@123);
+    @premise know(*e@125);
+    @premise know(*r@126);
+    @conclusion know(*sysA(y@121, I@122, D@123, s@124, e@125, r@126));
+};
+
+Stage rule: 
+@rule{
+    @premise know(*y@44);
+    @premise know(*I@45);
+    @premise know(*oB@46);
+    @premise know(*s@47);
+    @conclusion know(*chtC(y@44, I@45, oB@46, s@47));
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*chtC(y@48, I@49, B@50, s@51));
+    @premise know(*e@52);
+    @premise know(*r@53);
+    @conclusion know(*sysA(y@48, I@49, B@50, s@51, e@52, r@53));
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*y@44);
+    @premise know(*I@45);
+    @premise know(*oB@46);
+    @premise know(*s@47);
+    @conclusion know(*chtC(y@44, I@45, oB@46, s@47));
+};
+Rule in cache: 11
+Rule staged: 11
+Rule before check and clean: 
+@rule{
+    @premise know(*y@127);
+    @premise know(*I@128);
+    @premise know(*oB@129);
+    @premise know(*s@130);
+    @premise know(*e@131);
+    @premise know(*r@132);
+    @conclusion know(*sysA(y@127, I@128, oB@129, s@130, e@131, r@132));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*y@127);
+    @premise know(*I@128);
+    @premise know(*oB@129);
+    @premise know(*s@130);
+    @premise know(*e@131);
+    @premise know(*r@132);
+    @conclusion know(*sysA(y@127, I@128, oB@129, s@130, e@131, r@132));
+};
+
+Stage rule: 
+@rule{
+    @premise know(*c@55);
+    @premise know(*y@56);
+    @premise know(*s@57);
+    @conclusion know(*regZK(c@55, y@56, s@57));
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*c@59);
+    @premise know(*oA@60);
+    @premise know(*oe@61);
+    @premise know(*oy@62);
+    @premise know(*I@63);
+    @premise know(*oB@64);
+    @premise know(*y@65);
+    @premise know(*s@66);
+    @conclusion know(*chtZK(c@59, oA@60, oe@61, oy@62, I@63, oB@64, y@65, s@66));
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise know(*c@68);
+    @premise know(*I@69);
+    @premise know(*oB@70);
+    @premise know(*oA@71);
+    @premise know(*oe@72);
+    @premise know(*oy@73);
+    @premise know(*y@74);
+    @premise know(*s@75);
+    @conclusion know(*chtZK(c@68, I@69, oB@70, oA@71, oe@72, oy@73, y@74, s@75));
+};
+Rule implied by: 
+@rule{
+    @premise know(*c@59);
+    @premise know(*oA@60);
+    @premise know(*oe@61);
+    @premise know(*oy@62);
+    @premise know(*I@63);
+    @premise know(*oB@64);
+    @premise know(*y@65);
+    @premise know(*s@66);
+    @conclusion know(*chtZK(c@59, oA@60, oe@61, oy@62, I@63, oB@64, y@65, s@66));
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise new(*[e@84], ServerRes(), tuple3(resC(y@81, s@82), regZK(resC(y@81, s@82), y@81, s@82), I@83));
+    @premise know(*regZK(resC(y@81, s@82), y@81, s@82));
+    @premise know(*resC(y@81, s@82));
+    @premise init(*I@83, *s@82);
+    @premise know(*I@83);
+    @conclusion know(*sysA(y@81, I@83, ba(), s@82, [e@84], r()));
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*c@55);
+    @premise know(*y@56);
+    @premise know(*s@57);
+    @conclusion know(*regZK(c@55, y@56, s@57));
+};
+Rule in cache: 8
+Rule staged: 14
+Rule before check and clean: 
+@rule{
+    @premise know(*resC(y@133, s@135));
+    @premise know(*y@133);
+    @premise know(*s@135);
+    @premise new(*[e@136], ServerRes(), tuple3(resC(y@133, s@135), regZK(resC(y@133, s@135), y@133, s@135), I@134));
+    @premise know(*resC(y@133, s@135));
+    @premise init(*I@134, *s@135);
+    @premise know(*I@134);
+    @conclusion know(*sysA(y@133, I@134, ba(), s@135, [e@136], r()));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@136], ServerRes(), tuple3(resC(y@133, s@135), regZK(resC(y@133, s@135), y@133, s@135), I@134));
+    @premise know(*resC(y@133, s@135));
+    @premise init(*I@134, *s@135);
+    @premise know(*y@133);
+    @premise know(*s@135);
+    @premise know(*I@134);
+    @conclusion know(*sysA(y@133, I@134, ba(), s@135, [e@136], r()));
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@88], ServerRes(), tuple3(resC(y@85, s@86), regZK(resC(y@85, s@86), y@85, s@86), I@87));
+    @premise know(*regZK(resC(y@85, s@86), y@85, s@86));
+    @premise know(*resC(y@85, s@86));
+    @premise init(*I@87, *s@86);
+    @premise know(*I@87);
+    @conclusion know(*[e@88]);
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*c@55);
+    @premise know(*y@56);
+    @premise know(*s@57);
+    @conclusion know(*regZK(c@55, y@56, s@57));
+};
+Rule in cache: 8
+Rule staged: 15
+Rule before check and clean: 
+@rule{
+    @premise know(*resC(y@138, s@139));
+    @premise know(*y@138);
+    @premise know(*s@139);
+    @premise new(*[e@137], ServerRes(), tuple3(resC(y@138, s@139), regZK(resC(y@138, s@139), y@138, s@139), I@140));
+    @premise know(*resC(y@138, s@139));
+    @premise init(*I@140, *s@139);
+    @premise know(*I@140);
+    @conclusion know(*[e@137]);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@137], ServerRes(), tuple3(resC(y@138, s@139), regZK(resC(y@138, s@139), y@138, s@139), I@140));
+    @premise know(*resC(y@138, s@139));
+    @premise init(*I@140, *s@139);
+    @premise know(*y@138);
+    @premise know(*s@139);
+    @premise know(*I@140);
+    @conclusion know(*[e@137]);
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@97], ServerCht(), tuple3(chtC(y@90, I@91, oB@92, s@93), chtZK(chtC(y@90, I@91, oB@92, s@93), sysA(oy@94, I@91, oB@92, os@95, oe@96, r()), oe@96, oy@94, I@91, oB@92, y@90, s@93), os@95));
+    @premise know(*chtZK(chtC(y@90, I@91, oB@92, s@93), sysA(oy@94, I@91, oB@92, os@95, oe@96, r()), oe@96, oy@94, I@91, oB@92, y@90, s@93));
+    @premise know(*chtC(y@90, I@91, oB@92, s@93));
+    @premise init(*I@91, *s@93);
+    @premise know(*os@95);
+    @conclusion know(*sysA(y@90, I@91, oB@92, s@93, [e@97], r()));
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*c@59);
+    @premise know(*oA@60);
+    @premise know(*oe@61);
+    @premise know(*oy@62);
+    @premise know(*I@63);
+    @premise know(*oB@64);
+    @premise know(*y@65);
+    @premise know(*s@66);
+    @conclusion know(*chtZK(c@59, oA@60, oe@61, oy@62, I@63, oB@64, y@65, s@66));
+};
+Rule in cache: 8
+Rule staged: 16
+Rule before check and clean: 
+@rule{
+    @premise know(*chtC(y@141, I@142, oB@143, s@144));
+    @premise know(*sysA(oy@146, I@142, oB@143, os@147, oe@148, r()));
+    @premise know(*oe@148);
+    @premise know(*oy@146);
+    @premise know(*I@142);
+    @premise know(*oB@143);
+    @premise know(*y@141);
+    @premise know(*s@144);
+    @premise new(*[e@145], ServerCht(), tuple3(chtC(y@141, I@142, oB@143, s@144), chtZK(chtC(y@141, I@142, oB@143, s@144), sysA(oy@146, I@142, oB@143, os@147, oe@148, r()), oe@148, oy@146, I@142, oB@143, y@141, s@144), os@147));
+    @premise know(*chtC(y@141, I@142, oB@143, s@144));
+    @premise init(*I@142, *s@144);
+    @premise know(*os@147);
+    @conclusion know(*sysA(y@141, I@142, oB@143, s@144, [e@145], r()));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@145], ServerCht(), tuple3(chtC(y@141, I@142, oB@143, s@144), chtZK(chtC(y@141, I@142, oB@143, s@144), sysA(oy@146, I@142, oB@143, os@147, oe@148, r()), oe@148, oy@146, I@142, oB@143, y@141, s@144), os@147));
+    @premise know(*sysA(oy@146, I@142, oB@143, os@147, oe@148, r()));
+    @premise know(*chtC(y@141, I@142, oB@143, s@144));
+    @premise init(*I@142, *s@144);
+    @premise know(*I@142);
+    @premise know(*oB@143);
+    @premise know(*y@141);
+    @premise know(*s@144);
+    @premise know(*oy@146);
+    @premise know(*oe@148);
+    @premise know(*os@147);
+    @conclusion know(*sysA(y@141, I@142, oB@143, s@144, [e@145], r()));
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@105], ServerCht(), tuple3(chtC(y@98, I@99, oB@100, s@101), chtZK(chtC(y@98, I@99, oB@100, s@101), sysA(oy@102, I@99, oB@100, os@103, oe@104, r()), oe@104, oy@102, I@99, oB@100, y@98, s@101), os@103));
+    @premise know(*chtZK(chtC(y@98, I@99, oB@100, s@101), sysA(oy@102, I@99, oB@100, os@103, oe@104, r()), oe@104, oy@102, I@99, oB@100, y@98, s@101));
+    @premise know(*chtC(y@98, I@99, oB@100, s@101));
+    @premise init(*I@99, *s@101);
+    @premise know(*os@103);
+    @conclusion know(*[e@105]);
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*c@59);
+    @premise know(*oA@60);
+    @premise know(*oe@61);
+    @premise know(*oy@62);
+    @premise know(*I@63);
+    @premise know(*oB@64);
+    @premise know(*y@65);
+    @premise know(*s@66);
+    @conclusion know(*chtZK(c@59, oA@60, oe@61, oy@62, I@63, oB@64, y@65, s@66));
+};
+Rule in cache: 8
+Rule staged: 17
+Rule before check and clean: 
+@rule{
+    @premise know(*chtC(y@150, I@151, oB@152, s@153));
+    @premise know(*sysA(oy@154, I@151, oB@152, os@155, oe@156, r()));
+    @premise know(*oe@156);
+    @premise know(*oy@154);
+    @premise know(*I@151);
+    @premise know(*oB@152);
+    @premise know(*y@150);
+    @premise know(*s@153);
+    @premise new(*[e@149], ServerCht(), tuple3(chtC(y@150, I@151, oB@152, s@153), chtZK(chtC(y@150, I@151, oB@152, s@153), sysA(oy@154, I@151, oB@152, os@155, oe@156, r()), oe@156, oy@154, I@151, oB@152, y@150, s@153), os@155));
+    @premise know(*chtC(y@150, I@151, oB@152, s@153));
+    @premise init(*I@151, *s@153);
+    @premise know(*os@155);
+    @conclusion know(*[e@149]);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@149], ServerCht(), tuple3(chtC(y@150, I@151, oB@152, s@153), chtZK(chtC(y@150, I@151, oB@152, s@153), sysA(oy@154, I@151, oB@152, os@155, oe@156, r()), oe@156, oy@154, I@151, oB@152, y@150, s@153), os@155));
+    @premise know(*sysA(oy@154, I@151, oB@152, os@155, oe@156, r()));
+    @premise know(*chtC(y@150, I@151, oB@152, s@153));
+    @premise init(*I@151, *s@153);
+    @premise know(*I@151);
+    @premise know(*oB@152);
+    @premise know(*y@150);
+    @premise know(*s@153);
+    @premise know(*oy@154);
+    @premise know(*oe@156);
+    @premise know(*os@155);
+    @conclusion know(*[e@149]);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*sysA(y@106, I@107, B@108, s@109, e@110, r()));
+    @premise know(*e@110);
+    @conclusion accept(I@107, s@109);
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*y@20);
+    @premise know(*I@21);
+    @premise know(*D@22);
+    @premise know(*s@23);
+    @premise know(*e@24);
+    @premise know(*r@25);
+    @conclusion know(*sysA(y@20, I@21, D@22, s@23, e@24, r@25));
+};
+Rule in cache: 8
+Rule staged: 18
+Rule before check and clean: 
+@rule{
+    @premise know(*y@159);
+    @premise know(*I@157);
+    @premise know(*D@160);
+    @premise know(*s@158);
+    @premise know(*e@161);
+    @premise know(*r());
+    @premise know(*e@161);
+    @conclusion accept(I@157, s@158);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*I@157);
+    @premise know(*s@158);
+    @premise know(*r());
+    @conclusion accept(I@157, s@158);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*r@114);
+    @premise know(*e@113);
+    @conclusion know(*sysger(e@113, r@114));
+};
+Rule implied by: 
+@rule{
+    @premise know(*r@15);
+    @premise know(*e@16);
+    @conclusion know(*sysger(e@16, r@15));
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise know(*sysger(e@119, r@120));
+    @premise know(*I@116);
+    @premise know(*D@117);
+    @premise know(*y@115);
+    @premise know(*e@119);
+    @premise know(*r@120);
+    @premise know(*s@118);
+    @conclusion know(*syse(sysall(y@115, I@116, D@117, s@118)));
+};
+Rule added at 0.
+
+Compose by at 0 : 
+@rule{
+    @premise know(*r@15);
+    @premise know(*e@16);
+    @conclusion know(*sysger(e@16, r@15));
+};
+Rule in cache: 7
+Rule staged: 19
+Rule before check and clean: 
+@rule{
+    @premise know(*r@166);
+    @premise know(*e@167);
+    @premise know(*I@163);
+    @premise know(*D@164);
+    @premise know(*y@162);
+    @premise know(*e@167);
+    @premise know(*r@166);
+    @premise know(*s@165);
+    @conclusion know(*syse(sysall(y@162, I@163, D@164, s@165)));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise know(*I@163);
+    @premise know(*D@164);
+    @premise know(*y@162);
+    @premise know(*s@165);
+    @conclusion know(*syse(sysall(y@162, I@163, D@164, s@165)));
+};
+
+Stage rule: 
+@rule{
+    @premise know(*y@121);
+    @premise know(*s@124);
+    @premise know(*I@122);
+    @premise know(*D@123);
+    @premise know(*e@125);
+    @premise know(*r@126);
+    @conclusion know(*sysA(y@121, I@122, D@123, s@124, e@125, r@126));
+};
+Rule implied by: 
+@rule{
+    @premise know(*y@20);
+    @premise know(*I@21);
+    @premise know(*D@22);
+    @premise know(*s@23);
+    @premise know(*e@24);
+    @premise know(*r@25);
+    @conclusion know(*sysA(y@20, I@21, D@22, s@23, e@24, r@25));
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise know(*y@127);
+    @premise know(*I@128);
+    @premise know(*oB@129);
+    @premise know(*s@130);
+    @premise know(*e@131);
+    @premise know(*r@132);
+    @conclusion know(*sysA(y@127, I@128, oB@129, s@130, e@131, r@132));
+};
+Rule implied by: 
+@rule{
+    @premise know(*y@20);
+    @premise know(*I@21);
+    @premise know(*D@22);
+    @premise know(*s@23);
+    @premise know(*e@24);
+    @premise know(*r@25);
+    @conclusion know(*sysA(y@20, I@21, D@22, s@23, e@24, r@25));
+};
+Rule not added.
+
+Stage rule: 
+@rule{
+    @premise new(*[e@136], ServerRes(), tuple3(resC(y@133, s@135), regZK(resC(y@133, s@135), y@133, s@135), I@134));
+    @premise know(*resC(y@133, s@135));
+    @premise init(*I@134, *s@135);
+    @premise know(*y@133);
+    @premise know(*s@135);
+    @premise know(*I@134);
+    @conclusion know(*sysA(y@133, I@134, ba(), s@135, [e@136], r()));
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*y@35);
+    @premise know(*s@36);
+    @conclusion know(*resC(y@35, s@36));
+};
+Rule in cache: 5
+Rule staged: 20
+Rule before check and clean: 
+@rule{
+    @premise know(*y@168);
+    @premise know(*s@170);
+    @premise new(*[e@171], ServerRes(), tuple3(resC(y@168, s@170), regZK(resC(y@168, s@170), y@168, s@170), I@169));
+    @premise init(*I@169, *s@170);
+    @premise know(*y@168);
+    @premise know(*s@170);
+    @premise know(*I@169);
+    @conclusion know(*sysA(y@168, I@169, ba(), s@170, [e@171], r()));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@171], ServerRes(), tuple3(resC(y@168, s@170), regZK(resC(y@168, s@170), y@168, s@170), I@169));
+    @premise init(*I@169, *s@170);
+    @premise know(*y@168);
+    @premise know(*s@170);
+    @premise know(*I@169);
+    @conclusion know(*sysA(y@168, I@169, ba(), s@170, [e@171], r()));
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@137], ServerRes(), tuple3(resC(y@138, s@139), regZK(resC(y@138, s@139), y@138, s@139), I@140));
+    @premise know(*resC(y@138, s@139));
+    @premise init(*I@140, *s@139);
+    @premise know(*y@138);
+    @premise know(*s@139);
+    @premise know(*I@140);
+    @conclusion know(*[e@137]);
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*y@35);
+    @premise know(*s@36);
+    @conclusion know(*resC(y@35, s@36));
+};
+Rule in cache: 5
+Rule staged: 21
+Rule before check and clean: 
+@rule{
+    @premise know(*y@173);
+    @premise know(*s@174);
+    @premise new(*[e@172], ServerRes(), tuple3(resC(y@173, s@174), regZK(resC(y@173, s@174), y@173, s@174), I@175));
+    @premise init(*I@175, *s@174);
+    @premise know(*y@173);
+    @premise know(*s@174);
+    @premise know(*I@175);
+    @conclusion know(*[e@172]);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@172], ServerRes(), tuple3(resC(y@173, s@174), regZK(resC(y@173, s@174), y@173, s@174), I@175));
+    @premise init(*I@175, *s@174);
+    @premise know(*y@173);
+    @premise know(*s@174);
+    @premise know(*I@175);
+    @conclusion know(*[e@172]);
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@145], ServerCht(), tuple3(chtC(y@141, I@142, oB@143, s@144), chtZK(chtC(y@141, I@142, oB@143, s@144), sysA(oy@146, I@142, oB@143, os@147, oe@148, r()), oe@148, oy@146, I@142, oB@143, y@141, s@144), os@147));
+    @premise know(*sysA(oy@146, I@142, oB@143, os@147, oe@148, r()));
+    @premise know(*chtC(y@141, I@142, oB@143, s@144));
+    @premise init(*I@142, *s@144);
+    @premise know(*I@142);
+    @premise know(*oB@143);
+    @premise know(*y@141);
+    @premise know(*s@144);
+    @premise know(*oy@146);
+    @premise know(*oe@148);
+    @premise know(*os@147);
+    @conclusion know(*sysA(y@141, I@142, oB@143, s@144, [e@145], r()));
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*y@20);
+    @premise know(*I@21);
+    @premise know(*D@22);
+    @premise know(*s@23);
+    @premise know(*e@24);
+    @premise know(*r@25);
+    @conclusion know(*sysA(y@20, I@21, D@22, s@23, e@24, r@25));
+};
+Rule in cache: 5
+Rule staged: 22
+Rule before check and clean: 
+@rule{
+    @premise know(*y@181);
+    @premise know(*I@177);
+    @premise know(*D@178);
+    @premise know(*s@182);
+    @premise know(*e@183);
+    @premise know(*r());
+    @premise new(*[e@180], ServerCht(), tuple3(chtC(y@176, I@177, D@178, s@179), chtZK(chtC(y@176, I@177, D@178, s@179), sysA(y@181, I@177, D@178, s@182, e@183, r()), e@183, y@181, I@177, D@178, y@176, s@179), s@182));
+    @premise know(*chtC(y@176, I@177, D@178, s@179));
+    @premise init(*I@177, *s@179);
+    @premise know(*I@177);
+    @premise know(*D@178);
+    @premise know(*y@176);
+    @premise know(*s@179);
+    @premise know(*y@181);
+    @premise know(*e@183);
+    @premise know(*s@182);
+    @conclusion know(*sysA(y@176, I@177, D@178, s@179, [e@180], r()));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@180], ServerCht(), tuple3(chtC(y@176, I@177, D@178, s@179), chtZK(chtC(y@176, I@177, D@178, s@179), sysA(y@181, I@177, D@178, s@182, e@183, r()), e@183, y@181, I@177, D@178, y@176, s@179), s@182));
+    @premise know(*chtC(y@176, I@177, D@178, s@179));
+    @premise know(*r());
+    @premise init(*I@177, *s@179);
+    @premise know(*e@183);
+    @premise know(*y@181);
+    @premise know(*s@182);
+    @premise know(*D@178);
+    @premise know(*I@177);
+    @premise know(*y@176);
+    @premise know(*s@179);
+    @conclusion know(*sysA(y@176, I@177, D@178, s@179, [e@180], r()));
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@149], ServerCht(), tuple3(chtC(y@150, I@151, oB@152, s@153), chtZK(chtC(y@150, I@151, oB@152, s@153), sysA(oy@154, I@151, oB@152, os@155, oe@156, r()), oe@156, oy@154, I@151, oB@152, y@150, s@153), os@155));
+    @premise know(*sysA(oy@154, I@151, oB@152, os@155, oe@156, r()));
+    @premise know(*chtC(y@150, I@151, oB@152, s@153));
+    @premise init(*I@151, *s@153);
+    @premise know(*I@151);
+    @premise know(*oB@152);
+    @premise know(*y@150);
+    @premise know(*s@153);
+    @premise know(*oy@154);
+    @premise know(*oe@156);
+    @premise know(*os@155);
+    @conclusion know(*[e@149]);
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*y@20);
+    @premise know(*I@21);
+    @premise know(*D@22);
+    @premise know(*s@23);
+    @premise know(*e@24);
+    @premise know(*r@25);
+    @conclusion know(*sysA(y@20, I@21, D@22, s@23, e@24, r@25));
+};
+Rule in cache: 5
+Rule staged: 23
+Rule before check and clean: 
+@rule{
+    @premise know(*y@185);
+    @premise know(*I@186);
+    @premise know(*D@187);
+    @premise know(*s@188);
+    @premise know(*e@189);
+    @premise know(*r());
+    @premise new(*[e@184], ServerCht(), tuple3(chtC(y@190, I@186, D@187, s@191), chtZK(chtC(y@190, I@186, D@187, s@191), sysA(y@185, I@186, D@187, s@188, e@189, r()), e@189, y@185, I@186, D@187, y@190, s@191), s@188));
+    @premise know(*chtC(y@190, I@186, D@187, s@191));
+    @premise init(*I@186, *s@191);
+    @premise know(*I@186);
+    @premise know(*D@187);
+    @premise know(*y@190);
+    @premise know(*s@191);
+    @premise know(*y@185);
+    @premise know(*e@189);
+    @premise know(*s@188);
+    @conclusion know(*[e@184]);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@184], ServerCht(), tuple3(chtC(y@190, I@186, D@187, s@191), chtZK(chtC(y@190, I@186, D@187, s@191), sysA(y@185, I@186, D@187, s@188, e@189, r()), e@189, y@185, I@186, D@187, y@190, s@191), s@188));
+    @premise know(*chtC(y@190, I@186, D@187, s@191));
+    @premise know(*r());
+    @premise init(*I@186, *s@191);
+    @premise know(*e@189);
+    @premise know(*y@185);
+    @premise know(*s@188);
+    @premise know(*D@187);
+    @premise know(*I@186);
+    @premise know(*y@190);
+    @premise know(*s@191);
+    @conclusion know(*[e@184]);
+};
+
+Stage rule: 
+@rule{
+    @premise know(*I@157);
+    @premise know(*s@158);
+    @premise know(*r());
+    @conclusion accept(I@157, s@158);
+};
+Rule added at 2.
+
+Stage rule: 
+@rule{
+    @premise know(*I@163);
+    @premise know(*D@164);
+    @premise know(*y@162);
+    @premise know(*s@165);
+    @conclusion know(*syse(sysall(y@162, I@163, D@164, s@165)));
+};
+Rule deleted: 
+@rule{
+    @premise know(*sysger(e@119, r@120));
+    @premise know(*I@116);
+    @premise know(*D@117);
+    @premise know(*y@115);
+    @premise know(*e@119);
+    @premise know(*r@120);
+    @premise know(*s@118);
+    @conclusion know(*syse(sysall(y@115, I@116, D@117, s@118)));
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise new(*[e@171], ServerRes(), tuple3(resC(y@168, s@170), regZK(resC(y@168, s@170), y@168, s@170), I@169));
+    @premise init(*I@169, *s@170);
+    @premise know(*y@168);
+    @premise know(*s@170);
+    @premise know(*I@169);
+    @conclusion know(*sysA(y@168, I@169, ba(), s@170, [e@171], r()));
+};
+Rule deleted: 
+@rule{
+    @premise new(*[e@136], ServerRes(), tuple3(resC(y@133, s@135), regZK(resC(y@133, s@135), y@133, s@135), I@134));
+    @premise know(*resC(y@133, s@135));
+    @premise init(*I@134, *s@135);
+    @premise know(*y@133);
+    @premise know(*s@135);
+    @premise know(*I@134);
+    @conclusion know(*sysA(y@133, I@134, ba(), s@135, [e@136], r()));
+};
+Rule added.
+
+Compose to at 0 : 
+@rule{
+    @premise know(*sysA(y@28, I@29, D@30, s@31, e@32, r@33));
+    @premise know(*sysger(e@32, r@33));
+    @conclusion know(*syse(sysall(y@28, I@29, D@30, s@31)));
+};
+Rule in cache: 3
+Rule staged: 26
+Rule before check and clean: 
+@rule{
+    @premise new(*[e@195], ServerRes(), tuple3(resC(y@192, s@194), regZK(resC(y@192, s@194), y@192, s@194), I@193));
+    @premise init(*I@193, *s@194);
+    @premise know(*y@192);
+    @premise know(*s@194);
+    @premise know(*I@193);
+    @premise know(*sysger([e@195], r()));
+    @conclusion know(*syse(sysall(y@192, I@193, ba(), s@194)));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@195], ServerRes(), tuple3(resC(y@192, s@194), regZK(resC(y@192, s@194), y@192, s@194), I@193));
+    @premise know(*sysger([e@195], r()));
+    @premise init(*I@193, *s@194);
+    @premise know(*y@192);
+    @premise know(*s@194);
+    @premise know(*I@193);
+    @conclusion know(*syse(sysall(y@192, I@193, ba(), s@194)));
+};
+
+Compose to at 0 : 
+@rule{
+    @premise know(*sysA(y@106, I@107, B@108, s@109, e@110, r()));
+    @premise know(*e@110);
+    @conclusion accept(I@107, s@109);
+};
+Rule in cache: 4
+Rule staged: 26
+Rule before check and clean: 
+@rule{
+    @premise new(*[e@198], ServerRes(), tuple3(resC(y@199, s@197), regZK(resC(y@199, s@197), y@199, s@197), I@196));
+    @premise init(*I@196, *s@197);
+    @premise know(*y@199);
+    @premise know(*s@197);
+    @premise know(*I@196);
+    @premise know(*[e@198]);
+    @conclusion accept(I@196, s@197);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@198], ServerRes(), tuple3(resC(y@199, s@197), regZK(resC(y@199, s@197), y@199, s@197), I@196));
+    @premise know(*[e@198]);
+    @premise init(*I@196, *s@197);
+    @premise know(*y@199);
+    @premise know(*s@197);
+    @premise know(*I@196);
+    @conclusion accept(I@196, s@197);
+};
+
+Compose to at 1 : 
+@rule{
+    @premise new(*[e@145], ServerCht(), tuple3(chtC(y@141, I@142, oB@143, s@144), chtZK(chtC(y@141, I@142, oB@143, s@144), sysA(oy@146, I@142, oB@143, os@147, oe@148, r()), oe@148, oy@146, I@142, oB@143, y@141, s@144), os@147));
+    @premise know(*sysA(oy@146, I@142, oB@143, os@147, oe@148, r()));
+    @premise know(*chtC(y@141, I@142, oB@143, s@144));
+    @premise init(*I@142, *s@144);
+    @premise know(*I@142);
+    @premise know(*oB@143);
+    @premise know(*y@141);
+    @premise know(*s@144);
+    @premise know(*oy@146);
+    @premise know(*oe@148);
+    @premise know(*os@147);
+    @conclusion know(*sysA(y@141, I@142, oB@143, s@144, [e@145], r()));
+};
+Rule in cache: 5
+Rule staged: 26
+Rule before check and clean: 
+@rule{
+    @premise new(*[e@204], ServerRes(), tuple3(resC(y@205, s@206), regZK(resC(y@205, s@206), y@205, s@206), I@201));
+    @premise init(*I@201, *s@206);
+    @premise know(*y@205);
+    @premise know(*s@206);
+    @premise know(*I@201);
+    @premise new(*[e@203], ServerCht(), tuple3(chtC(y@200, I@201, ba(), s@202), chtZK(chtC(y@200, I@201, ba(), s@202), sysA(y@205, I@201, ba(), s@206, [e@204], r()), [e@204], y@205, I@201, ba(), y@200, s@202), s@206));
+    @premise know(*chtC(y@200, I@201, ba(), s@202));
+    @premise init(*I@201, *s@202);
+    @premise know(*I@201);
+    @premise know(*ba());
+    @premise know(*y@200);
+    @premise know(*s@202);
+    @premise know(*y@205);
+    @premise know(*[e@204]);
+    @premise know(*s@206);
+    @conclusion know(*sysA(y@200, I@201, ba(), s@202, [e@203], r()));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@203], ServerCht(), tuple3(chtC(y@200, I@201, ba(), s@202), chtZK(chtC(y@200, I@201, ba(), s@202), sysA(y@205, I@201, ba(), s@206, [e@204], r()), [e@204], y@205, I@201, ba(), y@200, s@202), s@206));
+    @premise new(*[e@204], ServerRes(), tuple3(resC(y@205, s@206), regZK(resC(y@205, s@206), y@205, s@206), I@201));
+    @premise know(*chtC(y@200, I@201, ba(), s@202));
+    @premise know(*ba());
+    @premise know(*[e@204]);
+    @premise init(*I@201, *s@206);
+    @premise init(*I@201, *s@202);
+    @premise know(*y@205);
+    @premise know(*I@201);
+    @premise know(*y@200);
+    @premise know(*s@202);
+    @premise know(*s@206);
+    @conclusion know(*sysA(y@200, I@201, ba(), s@202, [e@203], r()));
+};
+
+Compose to at 1 : 
+@rule{
+    @premise new(*[e@149], ServerCht(), tuple3(chtC(y@150, I@151, oB@152, s@153), chtZK(chtC(y@150, I@151, oB@152, s@153), sysA(oy@154, I@151, oB@152, os@155, oe@156, r()), oe@156, oy@154, I@151, oB@152, y@150, s@153), os@155));
+    @premise know(*sysA(oy@154, I@151, oB@152, os@155, oe@156, r()));
+    @premise know(*chtC(y@150, I@151, oB@152, s@153));
+    @premise init(*I@151, *s@153);
+    @premise know(*I@151);
+    @premise know(*oB@152);
+    @premise know(*y@150);
+    @premise know(*s@153);
+    @premise know(*oy@154);
+    @premise know(*oe@156);
+    @premise know(*os@155);
+    @conclusion know(*[e@149]);
+};
+Rule in cache: 6
+Rule staged: 26
+Rule before check and clean: 
+@rule{
+    @premise new(*[e@208], ServerRes(), tuple3(resC(y@209, s@210), regZK(resC(y@209, s@210), y@209, s@210), I@211));
+    @premise init(*I@211, *s@210);
+    @premise know(*y@209);
+    @premise know(*s@210);
+    @premise know(*I@211);
+    @premise new(*[e@207], ServerCht(), tuple3(chtC(y@212, I@211, ba(), s@213), chtZK(chtC(y@212, I@211, ba(), s@213), sysA(y@209, I@211, ba(), s@210, [e@208], r()), [e@208], y@209, I@211, ba(), y@212, s@213), s@210));
+    @premise know(*chtC(y@212, I@211, ba(), s@213));
+    @premise init(*I@211, *s@213);
+    @premise know(*I@211);
+    @premise know(*ba());
+    @premise know(*y@212);
+    @premise know(*s@213);
+    @premise know(*y@209);
+    @premise know(*[e@208]);
+    @premise know(*s@210);
+    @conclusion know(*[e@207]);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@207], ServerCht(), tuple3(chtC(y@212, I@211, ba(), s@213), chtZK(chtC(y@212, I@211, ba(), s@213), sysA(y@209, I@211, ba(), s@210, [e@208], r()), [e@208], y@209, I@211, ba(), y@212, s@213), s@210));
+    @premise new(*[e@208], ServerRes(), tuple3(resC(y@209, s@210), regZK(resC(y@209, s@210), y@209, s@210), I@211));
+    @premise know(*chtC(y@212, I@211, ba(), s@213));
+    @premise know(*ba());
+    @premise know(*[e@208]);
+    @premise init(*I@211, *s@210);
+    @premise init(*I@211, *s@213);
+    @premise know(*y@209);
+    @premise know(*I@211);
+    @premise know(*y@212);
+    @premise know(*s@213);
+    @premise know(*s@210);
+    @conclusion know(*[e@207]);
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@172], ServerRes(), tuple3(resC(y@173, s@174), regZK(resC(y@173, s@174), y@173, s@174), I@175));
+    @premise init(*I@175, *s@174);
+    @premise know(*y@173);
+    @premise know(*s@174);
+    @premise know(*I@175);
+    @conclusion know(*[e@172]);
+};
+Rule deleted: 
+@rule{
+    @premise new(*[e@137], ServerRes(), tuple3(resC(y@138, s@139), regZK(resC(y@138, s@139), y@138, s@139), I@140));
+    @premise know(*resC(y@138, s@139));
+    @premise init(*I@140, *s@139);
+    @premise know(*y@138);
+    @premise know(*s@139);
+    @premise know(*I@140);
+    @conclusion know(*[e@137]);
+};
+Rule added.
+
+Stage rule: 
+@rule{
+    @premise new(*[e@180], ServerCht(), tuple3(chtC(y@176, I@177, D@178, s@179), chtZK(chtC(y@176, I@177, D@178, s@179), sysA(y@181, I@177, D@178, s@182, e@183, r()), e@183, y@181, I@177, D@178, y@176, s@179), s@182));
+    @premise know(*chtC(y@176, I@177, D@178, s@179));
+    @premise know(*r());
+    @premise init(*I@177, *s@179);
+    @premise know(*e@183);
+    @premise know(*y@181);
+    @premise know(*s@182);
+    @premise know(*D@178);
+    @premise know(*I@177);
+    @premise know(*y@176);
+    @premise know(*s@179);
+    @conclusion know(*sysA(y@176, I@177, D@178, s@179, [e@180], r()));
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*y@44);
+    @premise know(*I@45);
+    @premise know(*oB@46);
+    @premise know(*s@47);
+    @conclusion know(*chtC(y@44, I@45, oB@46, s@47));
+};
+Rule in cache: 5
+Rule staged: 28
+Rule before check and clean: 
+@rule{
+    @premise know(*y@214);
+    @premise know(*I@215);
+    @premise know(*oB@216);
+    @premise know(*s@217);
+    @premise new(*[e@218], ServerCht(), tuple3(chtC(y@214, I@215, oB@216, s@217), chtZK(chtC(y@214, I@215, oB@216, s@217), sysA(y@219, I@215, oB@216, s@220, e@221, r()), e@221, y@219, I@215, oB@216, y@214, s@217), s@220));
+    @premise know(*r());
+    @premise init(*I@215, *s@217);
+    @premise know(*e@221);
+    @premise know(*y@219);
+    @premise know(*s@220);
+    @premise know(*oB@216);
+    @premise know(*I@215);
+    @premise know(*y@214);
+    @premise know(*s@217);
+    @conclusion know(*sysA(y@214, I@215, oB@216, s@217, [e@218], r()));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@218], ServerCht(), tuple3(chtC(y@214, I@215, oB@216, s@217), chtZK(chtC(y@214, I@215, oB@216, s@217), sysA(y@219, I@215, oB@216, s@220, e@221, r()), e@221, y@219, I@215, oB@216, y@214, s@217), s@220));
+    @premise know(*r());
+    @premise init(*I@215, *s@217);
+    @premise know(*s@217);
+    @premise know(*oB@216);
+    @premise know(*y@214);
+    @premise know(*I@215);
+    @premise know(*e@221);
+    @premise know(*y@219);
+    @premise know(*s@220);
+    @conclusion know(*sysA(y@214, I@215, oB@216, s@217, [e@218], r()));
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@184], ServerCht(), tuple3(chtC(y@190, I@186, D@187, s@191), chtZK(chtC(y@190, I@186, D@187, s@191), sysA(y@185, I@186, D@187, s@188, e@189, r()), e@189, y@185, I@186, D@187, y@190, s@191), s@188));
+    @premise know(*chtC(y@190, I@186, D@187, s@191));
+    @premise know(*r());
+    @premise init(*I@186, *s@191);
+    @premise know(*e@189);
+    @premise know(*y@185);
+    @premise know(*s@188);
+    @premise know(*D@187);
+    @premise know(*I@186);
+    @premise know(*y@190);
+    @premise know(*s@191);
+    @conclusion know(*[e@184]);
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*y@44);
+    @premise know(*I@45);
+    @premise know(*oB@46);
+    @premise know(*s@47);
+    @conclusion know(*chtC(y@44, I@45, oB@46, s@47));
+};
+Rule in cache: 5
+Rule staged: 29
+Rule before check and clean: 
+@rule{
+    @premise know(*y@223);
+    @premise know(*I@224);
+    @premise know(*oB@225);
+    @premise know(*s@226);
+    @premise new(*[e@222], ServerCht(), tuple3(chtC(y@223, I@224, oB@225, s@226), chtZK(chtC(y@223, I@224, oB@225, s@226), sysA(y@227, I@224, oB@225, s@228, e@229, r()), e@229, y@227, I@224, oB@225, y@223, s@226), s@228));
+    @premise know(*r());
+    @premise init(*I@224, *s@226);
+    @premise know(*e@229);
+    @premise know(*y@227);
+    @premise know(*s@228);
+    @premise know(*oB@225);
+    @premise know(*I@224);
+    @premise know(*y@223);
+    @premise know(*s@226);
+    @conclusion know(*[e@222]);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@222], ServerCht(), tuple3(chtC(y@223, I@224, oB@225, s@226), chtZK(chtC(y@223, I@224, oB@225, s@226), sysA(y@227, I@224, oB@225, s@228, e@229, r()), e@229, y@227, I@224, oB@225, y@223, s@226), s@228));
+    @premise know(*r());
+    @premise init(*I@224, *s@226);
+    @premise know(*s@226);
+    @premise know(*oB@225);
+    @premise know(*y@223);
+    @premise know(*I@224);
+    @premise know(*e@229);
+    @premise know(*y@227);
+    @premise know(*s@228);
+    @conclusion know(*[e@222]);
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@195], ServerRes(), tuple3(resC(y@192, s@194), regZK(resC(y@192, s@194), y@192, s@194), I@193));
+    @premise know(*sysger([e@195], r()));
+    @premise init(*I@193, *s@194);
+    @premise know(*y@192);
+    @premise know(*s@194);
+    @premise know(*I@193);
+    @conclusion know(*syse(sysall(y@192, I@193, ba(), s@194)));
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise know(*r@15);
+    @premise know(*e@16);
+    @conclusion know(*sysger(e@16, r@15));
+};
+Rule in cache: 5
+Rule staged: 30
+Rule before check and clean: 
+@rule{
+    @premise know(*r());
+    @premise know(*[e@233]);
+    @premise new(*[e@233], ServerRes(), tuple3(resC(y@230, s@232), regZK(resC(y@230, s@232), y@230, s@232), I@231));
+    @premise init(*I@231, *s@232);
+    @premise know(*y@230);
+    @premise know(*s@232);
+    @premise know(*I@231);
+    @conclusion know(*syse(sysall(y@230, I@231, ba(), s@232)));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@233], ServerRes(), tuple3(resC(y@230, s@232), regZK(resC(y@230, s@232), y@230, s@232), I@231));
+    @premise know(*r());
+    @premise know(*[e@233]);
+    @premise init(*I@231, *s@232);
+    @premise know(*y@230);
+    @premise know(*s@232);
+    @premise know(*I@231);
+    @conclusion know(*syse(sysall(y@230, I@231, ba(), s@232)));
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@198], ServerRes(), tuple3(resC(y@199, s@197), regZK(resC(y@199, s@197), y@199, s@197), I@196));
+    @premise know(*[e@198]);
+    @premise init(*I@196, *s@197);
+    @premise know(*y@199);
+    @premise know(*s@197);
+    @premise know(*I@196);
+    @conclusion accept(I@196, s@197);
+};
+Rule added at 1.
+
+Compose by at 1 : 
+@rule{
+    @premise new(*[e@172], ServerRes(), tuple3(resC(y@173, s@174), regZK(resC(y@173, s@174), y@173, s@174), I@175));
+    @premise init(*I@175, *s@174);
+    @premise know(*y@173);
+    @premise know(*s@174);
+    @premise know(*I@175);
+    @conclusion know(*[e@172]);
+};
+Rule in cache: 5
+Rule staged: 31
+Rule before check and clean: 
+@rule{
+    @premise new(*[e@236], ServerRes(), tuple3(resC(y@237, s@238), regZK(resC(y@237, s@238), y@237, s@238), I@239));
+    @premise init(*I@239, *s@238);
+    @premise know(*y@237);
+    @premise know(*s@238);
+    @premise know(*I@239);
+    @premise new(*[e@236], ServerRes(), tuple3(resC(y@240, s@235), regZK(resC(y@240, s@235), y@240, s@235), I@234));
+    @premise init(*I@234, *s@235);
+    @premise know(*y@240);
+    @premise know(*s@235);
+    @premise know(*I@234);
+    @conclusion accept(I@234, s@235);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@236], ServerRes(), tuple3(resC(y@237, s@238), regZK(resC(y@237, s@238), y@237, s@238), I@239));
+    @premise init(*I@239, *s@238);
+    @premise know(*y@237);
+    @premise know(*s@238);
+    @premise know(*I@239);
+    @conclusion accept(I@239, s@238);
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@203], ServerCht(), tuple3(chtC(y@200, I@201, ba(), s@202), chtZK(chtC(y@200, I@201, ba(), s@202), sysA(y@205, I@201, ba(), s@206, [e@204], r()), [e@204], y@205, I@201, ba(), y@200, s@202), s@206));
+    @premise new(*[e@204], ServerRes(), tuple3(resC(y@205, s@206), regZK(resC(y@205, s@206), y@205, s@206), I@201));
+    @premise know(*chtC(y@200, I@201, ba(), s@202));
+    @premise know(*ba());
+    @premise know(*[e@204]);
+    @premise init(*I@201, *s@206);
+    @premise init(*I@201, *s@202);
+    @premise know(*y@205);
+    @premise know(*I@201);
+    @premise know(*y@200);
+    @premise know(*s@202);
+    @premise know(*s@206);
+    @conclusion know(*sysA(y@200, I@201, ba(), s@202, [e@203], r()));
+};
+Rule added at 2.
+
+Compose by at 2 : 
+@rule{
+    @premise know(*y@44);
+    @premise know(*I@45);
+    @premise know(*oB@46);
+    @premise know(*s@47);
+    @conclusion know(*chtC(y@44, I@45, oB@46, s@47));
+};
+Rule in cache: 5
+Rule staged: 32
+Rule before check and clean: 
+@rule{
+    @premise know(*y@241);
+    @premise know(*I@242);
+    @premise know(*ba());
+    @premise know(*s@243);
+    @premise new(*[e@244], ServerCht(), tuple3(chtC(y@241, I@242, ba(), s@243), chtZK(chtC(y@241, I@242, ba(), s@243), sysA(y@245, I@242, ba(), s@246, [e@247], r()), [e@247], y@245, I@242, ba(), y@241, s@243), s@246));
+    @premise new(*[e@247], ServerRes(), tuple3(resC(y@245, s@246), regZK(resC(y@245, s@246), y@245, s@246), I@242));
+    @premise know(*ba());
+    @premise know(*[e@247]);
+    @premise init(*I@242, *s@246);
+    @premise init(*I@242, *s@243);
+    @premise know(*y@245);
+    @premise know(*I@242);
+    @premise know(*y@241);
+    @premise know(*s@243);
+    @premise know(*s@246);
+    @conclusion know(*sysA(y@241, I@242, ba(), s@243, [e@244], r()));
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@244], ServerCht(), tuple3(chtC(y@241, I@242, ba(), s@243), chtZK(chtC(y@241, I@242, ba(), s@243), sysA(y@245, I@242, ba(), s@246, [e@247], r()), [e@247], y@245, I@242, ba(), y@241, s@243), s@246));
+    @premise new(*[e@247], ServerRes(), tuple3(resC(y@245, s@246), regZK(resC(y@245, s@246), y@245, s@246), I@242));
+    @premise know(*ba());
+    @premise know(*[e@247]);
+    @premise init(*I@242, *s@243);
+    @premise init(*I@242, *s@246);
+    @premise know(*y@241);
+    @premise know(*s@243);
+    @premise know(*I@242);
+    @premise know(*y@245);
+    @premise know(*s@246);
+    @conclusion know(*sysA(y@241, I@242, ba(), s@243, [e@244], r()));
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@207], ServerCht(), tuple3(chtC(y@212, I@211, ba(), s@213), chtZK(chtC(y@212, I@211, ba(), s@213), sysA(y@209, I@211, ba(), s@210, [e@208], r()), [e@208], y@209, I@211, ba(), y@212, s@213), s@210));
+    @premise new(*[e@208], ServerRes(), tuple3(resC(y@209, s@210), regZK(resC(y@209, s@210), y@209, s@210), I@211));
+    @premise know(*chtC(y@212, I@211, ba(), s@213));
+    @premise know(*ba());
+    @premise know(*[e@208]);
+    @premise init(*I@211, *s@210);
+    @premise init(*I@211, *s@213);
+    @premise know(*y@209);
+    @premise know(*I@211);
+    @premise know(*y@212);
+    @premise know(*s@213);
+    @premise know(*s@210);
+    @conclusion know(*[e@207]);
+};
+Rule added at 2.
+
+Compose by at 2 : 
+@rule{
+    @premise know(*y@44);
+    @premise know(*I@45);
+    @premise know(*oB@46);
+    @premise know(*s@47);
+    @conclusion know(*chtC(y@44, I@45, oB@46, s@47));
+};
+Rule in cache: 5
+Rule staged: 33
+Rule before check and clean: 
+@rule{
+    @premise know(*y@249);
+    @premise know(*I@250);
+    @premise know(*ba());
+    @premise know(*s@251);
+    @premise new(*[e@248], ServerCht(), tuple3(chtC(y@249, I@250, ba(), s@251), chtZK(chtC(y@249, I@250, ba(), s@251), sysA(y@252, I@250, ba(), s@253, [e@254], r()), [e@254], y@252, I@250, ba(), y@249, s@251), s@253));
+    @premise new(*[e@254], ServerRes(), tuple3(resC(y@252, s@253), regZK(resC(y@252, s@253), y@252, s@253), I@250));
+    @premise know(*ba());
+    @premise know(*[e@254]);
+    @premise init(*I@250, *s@253);
+    @premise init(*I@250, *s@251);
+    @premise know(*y@252);
+    @premise know(*I@250);
+    @premise know(*y@249);
+    @premise know(*s@251);
+    @premise know(*s@253);
+    @conclusion know(*[e@248]);
+};
+Rule cached at priority 0: 
+@rule{
+    @premise new(*[e@248], ServerCht(), tuple3(chtC(y@249, I@250, ba(), s@251), chtZK(chtC(y@249, I@250, ba(), s@251), sysA(y@252, I@250, ba(), s@253, [e@254], r()), [e@254], y@252, I@250, ba(), y@249, s@251), s@253));
+    @premise new(*[e@254], ServerRes(), tuple3(resC(y@252, s@253), regZK(resC(y@252, s@253), y@252, s@253), I@250));
+    @premise know(*ba());
+    @premise know(*[e@254]);
+    @premise init(*I@250, *s@251);
+    @premise init(*I@250, *s@253);
+    @premise know(*y@249);
+    @premise know(*s@251);
+    @premise know(*I@250);
+    @premise know(*y@252);
+    @premise know(*s@253);
+    @conclusion know(*[e@248]);
+};
+
+Stage rule: 
+@rule{
+    @premise new(*[e@218], ServerCht(), tuple3(chtC(y@214, I@215, oB@216, s@217), chtZK(chtC(y@214, I@215, oB@216, s@217), sysA(y@219, I@215, oB@216, s@220, e@221, r()), e@221, y@219, I@215, oB@216, y@214, s@217), s@220));
+    @premise know(*r());
+    @premise init(*I@215, *s@217);
+    @premise know(*s@217);
+    @premise know(*oB@216);
+    @premise know(*y@214);
+    @premise know(*I@215);
+    @premise know(*e@221);
+    @premise know(*y@219);
+    @premise know(*s@220);
+    @conclusion know(*sysA(y@214, I@215, oB@216, s@217, [e@218], r()));
+};
+Rule deleted: 
+@rule{
+    @premise new(*[e@180], ServerCht(), tuple3(chtC(y@176, I@177, D@178, s@179), chtZK(chtC(y@176, I@177, D@178, s@179), sysA(y@181, I@177, D@178, s@182, e@183, r()), e@183, y@181, I@177, D@178, y@176, s@179), s@182));
+    @premise know(*chtC(y@176, I@177, D@178, s@179));
+    @premise know(*r());
+    @premise init(*I@177, *s@179);
+    @premise know(*e@183);
+    @premise know(*y@181);
+    @premise know(*s@182);
+    @premise know(*D@178);
+    @premise know(*I@177);
+    @premise know(*y@176);
+    @premise know(*s@179);
+    @conclusion know(*sysA(y@176, I@177, D@178, s@179, [e@180], r()));
+};
+Rule added at 1.
+
+Stage rule: 
+@rule{
+    @premise new(*[e@222], ServerCht(), tuple3(chtC(y@223, I@224, oB@225, s@226), chtZK(chtC(y@223, I@224, oB@225, s@226), sysA(y@227, I@224, oB@225, s@228, e@229, r()), e@229, y@227, I@224, oB@225, y@223, s@226), s@228));
+    @premise know(*r());
+    @premise init(*I@224, *s@226);
+    @premise know(*s@226);
+    @premise know(*oB@225);
+    @premise know(*y@223);
+    @premise know(*I@224);
+    @premise know(*e@229);
+    @premise know(*y@227);
+    @premise know(*s@228);
+    @conclusion know(*[e@222]);
+};
+Rule deleted: 
+@rule{
+    @premise new(*[e@184], ServerCht(), tuple3(chtC(y@190, I@186, D@187, s@191), chtZK(chtC(y@190, I@186, D@187, s@191), sysA(y@185, I@186, D@187, s@188, e@189, r()), e@189, y@185, I@186, D@187, y@190, s@191), s@188));
+    @premise know(*chtC(y@190, I@186, D@187, s@191));
+    @premise know(*r());
+    @premise init(*I@186, *s@191);
+    @premise know(*e@189);
+    @premise know(*y@185);
+    @premise know(*s@188);
+    @premise know(*D@187);
+    @premise know(*I@186);
+    @premise know(*y@190);
+    @premise know(*s@191);
+    @conclusion know(*[e@184]);
+};
+Rule added at 1.
+
+Stage rule: 
+@rule{
+    @premise new(*[e@233], ServerRes(), tuple3(resC(y@230, s@232), regZK(resC(y@230, s@232), y@230, s@232), I@231));
+    @premise know(*r());
+    @premise know(*[e@233]);
+    @premise init(*I@231, *s@232);
+    @premise know(*y@230);
+    @premise know(*s@232);
+    @premise know(*I@231);
+    @conclusion know(*syse(sysall(y@230, I@231, ba(), s@232)));
+};
+Rule added at 1.
+
+Stage rule: 
+@rule{
+    @premise new(*[e@236], ServerRes(), tuple3(resC(y@237, s@238), regZK(resC(y@237, s@238), y@237, s@238), I@239));
+    @premise init(*I@239, *s@238);
+    @premise know(*y@237);
+    @premise know(*s@238);
+    @premise know(*I@239);
+    @conclusion accept(I@239, s@238);
+};
+Rule deleted: 
+@rule{
+    @premise new(*[e@198], ServerRes(), tuple3(resC(y@199, s@197), regZK(resC(y@199, s@197), y@199, s@197), I@196));
+    @premise know(*[e@198]);
+    @premise init(*I@196, *s@197);
+    @premise know(*y@199);
+    @premise know(*s@197);
+    @premise know(*I@196);
+    @conclusion accept(I@196, s@197);
+};
+Rule added.
+
+Check rule against queries: 
+@rule{
+    @premise new(*[e@236], ServerRes(), tuple3(resC(y@237, s@238), regZK(resC(y@237, s@238), y@237, s@238), I@239));
+    @premise init(*I@239, *s@238);
+    @premise know(*y@237);
+    @premise know(*s@238);
+    @premise know(*I@239);
+    @conclusion accept(I@239, s@238);
+};
+Before checking:
+0. Requested parameter relation:
+[@universe]
+
+After checking:
+0. Requested parameter relation:
+[@universe]
+
+
+Stage rule: 
+@rule{
+    @premise new(*[e@244], ServerCht(), tuple3(chtC(y@241, I@242, ba(), s@243), chtZK(chtC(y@241, I@242, ba(), s@243), sysA(y@245, I@242, ba(), s@246, [e@247], r()), [e@247], y@245, I@242, ba(), y@241, s@243), s@246));
+    @premise new(*[e@247], ServerRes(), tuple3(resC(y@245, s@246), regZK(resC(y@245, s@246), y@245, s@246), I@242));
+    @premise know(*ba());
+    @premise know(*[e@247]);
+    @premise init(*I@242, *s@243);
+    @premise init(*I@242, *s@246);
+    @premise know(*y@241);
+    @premise know(*s@243);
+    @premise know(*I@242);
+    @premise know(*y@245);
+    @premise know(*s@246);
+    @conclusion know(*sysA(y@241, I@242, ba(), s@243, [e@244], r()));
+};
+Rule deleted: 
+@rule{
+    @premise new(*[e@203], ServerCht(), tuple3(chtC(y@200, I@201, ba(), s@202), chtZK(chtC(y@200, I@201, ba(), s@202), sysA(y@205, I@201, ba(), s@206, [e@204], r()), [e@204], y@205, I@201, ba(), y@200, s@202), s@206));
+    @premise new(*[e@204], ServerRes(), tuple3(resC(y@205, s@206), regZK(resC(y@205, s@206), y@205, s@206), I@201));
+    @premise know(*chtC(y@200, I@201, ba(), s@202));
+    @premise know(*ba());
+    @premise know(*[e@204]);
+    @premise init(*I@201, *s@206);
+    @premise init(*I@201, *s@202);
+    @premise know(*y@205);
+    @premise know(*I@201);
+    @premise know(*y@200);
+    @premise know(*s@202);
+    @premise know(*s@206);
+    @conclusion know(*sysA(y@200, I@201, ba(), s@202, [e@203], r()));
+};
+Rule added at 2.
+
+Stage rule: 
+@rule{
+    @premise new(*[e@248], ServerCht(), tuple3(chtC(y@249, I@250, ba(), s@251), chtZK(chtC(y@249, I@250, ba(), s@251), sysA(y@252, I@250, ba(), s@253, [e@254], r()), [e@254], y@252, I@250, ba(), y@249, s@251), s@253));
+    @premise new(*[e@254], ServerRes(), tuple3(resC(y@252, s@253), regZK(resC(y@252, s@253), y@252, s@253), I@250));
+    @premise know(*ba());
+    @premise know(*[e@254]);
+    @premise init(*I@250, *s@251);
+    @premise init(*I@250, *s@253);
+    @premise know(*y@249);
+    @premise know(*s@251);
+    @premise know(*I@250);
+    @premise know(*y@252);
+    @premise know(*s@253);
+    @conclusion know(*[e@248]);
+};
+Rule deleted: 
+@rule{
+    @premise new(*[e@207], ServerCht(), tuple3(chtC(y@212, I@211, ba(), s@213), chtZK(chtC(y@212, I@211, ba(), s@213), sysA(y@209, I@211, ba(), s@210, [e@208], r()), [e@208], y@209, I@211, ba(), y@212, s@213), s@210));
+    @premise new(*[e@208], ServerRes(), tuple3(resC(y@209, s@210), regZK(resC(y@209, s@210), y@209, s@210), I@211));
+    @premise know(*chtC(y@212, I@211, ba(), s@213));
+    @premise know(*ba());
+    @premise know(*[e@208]);
+    @premise init(*I@211, *s@210);
+    @premise init(*I@211, *s@213);
+    @premise know(*y@209);
+    @premise know(*I@211);
+    @premise know(*y@212);
+    @premise know(*s@213);
+    @premise know(*s@210);
+    @conclusion know(*[e@207]);
+};
+Rule added at 2.
+
+Details:
+General Rules: 
+Rule No. [0.0]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*y@8);
+    @premise know(*I@9);
+    @premise know(*D@10);
+    @premise know(*s@11);
+    @conclusion know(*sysall(y@8, I@9, D@10, s@11));
+};
+
+Rule No. [0.1]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*r@13);
+    @conclusion know(*sysgr(r@13));
+};
+
+Rule No. [0.2]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*r@15);
+    @premise know(*e@16);
+    @conclusion know(*sysger(e@16, r@15));
+};
+
+Rule No. [0.3]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*sysgr(r@17));
+    @premise know(*e@18);
+    @conclusion know(*sysger(e@18, r@17));
+};
+
+Rule No. [0.4]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*y@20);
+    @premise know(*I@21);
+    @premise know(*D@22);
+    @premise know(*s@23);
+    @premise know(*e@24);
+    @premise know(*r@25);
+    @conclusion know(*sysA(y@20, I@21, D@22, s@23, e@24, r@25));
+};
+
+Rule No. [0.5]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*sysa@27);
+    @conclusion know(*syse(sysa@27));
+};
+
+Rule No. [0.6]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*sysA(y@28, I@29, D@30, s@31, e@32, r@33));
+    @premise know(*sysger(e@32, r@33));
+    @conclusion know(*syse(sysall(y@28, I@29, D@30, s@31)));
+};
+
+Rule No. [0.7]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*y@35);
+    @premise know(*s@36);
+    @conclusion know(*resC(y@35, s@36));
+};
+
+Rule No. [0.8]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*resC(y@37, s@38));
+    @premise know(*I@39);
+    @premise know(*D@40);
+    @premise know(*e@41);
+    @premise know(*r@42);
+    @conclusion know(*sysA(y@37, I@39, D@40, s@38, e@41, r@42));
+};
+
+Rule No. [0.9]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*y@44);
+    @premise know(*I@45);
+    @premise know(*oB@46);
+    @premise know(*s@47);
+    @conclusion know(*chtC(y@44, I@45, oB@46, s@47));
+};
+
+Rule No. [0.10]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*chtC(y@48, I@49, B@50, s@51));
+    @premise know(*e@52);
+    @premise know(*r@53);
+    @conclusion know(*sysA(y@48, I@49, B@50, s@51, e@52, r@53));
+};
+
+Rule No. [0.11]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*c@55);
+    @premise know(*y@56);
+    @premise know(*s@57);
+    @conclusion know(*regZK(c@55, y@56, s@57));
+};
+
+Rule No. [0.12]
+Valid Rule
+Intial Rule
+Not Selectable : 
+@rule{
+    @premise know(*c@59);
+    @premise know(*oA@60);
+    @premise know(*oe@61);
+    @premise know(*oy@62);
+    @premise know(*I@63);
+    @premise know(*oB@64);
+    @premise know(*y@65);
+    @premise know(*s@66);
+    @conclusion know(*chtZK(c@59, oA@60, oe@61, oy@62, I@63, oB@64, y@65, s@66));
+};
+
+Rule No. [0.13]
+Valid Rule
+Intial Rule
+Selectable at 1:
+@rule{
+    @premise new(*[e@84], ServerRes(), tuple3(resC(y@81, s@82), regZK(resC(y@81, s@82), y@81, s@82), I@83));
+    @premise know(*regZK(resC(y@81, s@82), y@81, s@82));
+    @premise know(*resC(y@81, s@82));
+    @premise init(*I@83, *s@82);
+    @premise know(*I@83);
+    @conclusion know(*sysA(y@81, I@83, ba(), s@82, [e@84], r()));
+};
+
+Rule No. [0.14]
+Valid Rule
+Intial Rule
+Selectable at 1:
+@rule{
+    @premise new(*[e@88], ServerRes(), tuple3(resC(y@85, s@86), regZK(resC(y@85, s@86), y@85, s@86), I@87));
+    @premise know(*regZK(resC(y@85, s@86), y@85, s@86));
+    @premise know(*resC(y@85, s@86));
+    @premise init(*I@87, *s@86);
+    @premise know(*I@87);
+    @conclusion know(*[e@88]);
+};
+
+Rule No. [0.15]
+Valid Rule
+Intial Rule
+Selectable at 1:
+@rule{
+    @premise new(*[e@97], ServerCht(), tuple3(chtC(y@90, I@91, oB@92, s@93), chtZK(chtC(y@90, I@91, oB@92, s@93), sysA(oy@94, I@91, oB@92, os@95, oe@96, r()), oe@96, oy@94, I@91, oB@92, y@90, s@93), os@95));
+    @premise know(*chtZK(chtC(y@90, I@91, oB@92, s@93), sysA(oy@94, I@91, oB@92, os@95, oe@96, r()), oe@96, oy@94, I@91, oB@92, y@90, s@93));
+    @premise know(*chtC(y@90, I@91, oB@92, s@93));
+    @premise init(*I@91, *s@93);
+    @premise know(*os@95);
+    @conclusion know(*sysA(y@90, I@91, oB@92, s@93, [e@97], r()));
+};
+
+Rule No. [0.16]
+Valid Rule
+Intial Rule
+Selectable at 1:
+@rule{
+    @premise new(*[e@105], ServerCht(), tuple3(chtC(y@98, I@99, oB@100, s@101), chtZK(chtC(y@98, I@99, oB@100, s@101), sysA(oy@102, I@99, oB@100, os@103, oe@104, r()), oe@104, oy@102, I@99, oB@100, y@98, s@101), os@103));
+    @premise know(*chtZK(chtC(y@98, I@99, oB@100, s@101), sysA(oy@102, I@99, oB@100, os@103, oe@104, r()), oe@104, oy@102, I@99, oB@100, y@98, s@101));
+    @premise know(*chtC(y@98, I@99, oB@100, s@101));
+    @premise init(*I@99, *s@101);
+    @premise know(*os@103);
+    @conclusion know(*[e@105]);
+};
+
+Rule No. [0.17]
+Valid Rule
+Intial Rule
+Selectable at 0:
+@rule{
+    @premise know(*sysA(y@106, I@107, B@108, s@109, e@110, r()));
+    @premise know(*e@110);
+    @conclusion accept(I@107, s@109);
+};
+
+Rule No. [0.18]
+Replaced by Rule [0.24]
+Composed by Rule [0.4] and [0.6]
+Selectable at 0:
+@rule{
+    @premise know(*sysger(e@119, r@120));
+    @premise know(*I@116);
+    @premise know(*D@117);
+    @premise know(*y@115);
+    @premise know(*e@119);
+    @premise know(*r@120);
+    @premise know(*s@118);
+    @conclusion know(*syse(sysall(y@115, I@116, D@117, s@118)));
+};
+
+Rule No. [0.19]
+Replaced by Rule [0.25]
+Composed by Rule [0.11] and [0.13]
+Selectable at 1:
+@rule{
+    @premise new(*[e@136], ServerRes(), tuple3(resC(y@133, s@135), regZK(resC(y@133, s@135), y@133, s@135), I@134));
+    @premise know(*resC(y@133, s@135));
+    @premise init(*I@134, *s@135);
+    @premise know(*y@133);
+    @premise know(*s@135);
+    @premise know(*I@134);
+    @conclusion know(*sysA(y@133, I@134, ba(), s@135, [e@136], r()));
+};
+
+Rule No. [0.20]
+Replaced by Rule [0.26]
+Composed by Rule [0.11] and [0.14]
+Selectable at 1:
+@rule{
+    @premise new(*[e@137], ServerRes(), tuple3(resC(y@138, s@139), regZK(resC(y@138, s@139), y@138, s@139), I@140));
+    @premise know(*resC(y@138, s@139));
+    @premise init(*I@140, *s@139);
+    @premise know(*y@138);
+    @premise know(*s@139);
+    @premise know(*I@140);
+    @conclusion know(*[e@137]);
+};
+
+Rule No. [0.21]
+Valid Rule
+Composed by Rule [0.12] and [0.15]
+Selectable at 1:
+@rule{
+    @premise new(*[e@145], ServerCht(), tuple3(chtC(y@141, I@142, oB@143, s@144), chtZK(chtC(y@141, I@142, oB@143, s@144), sysA(oy@146, I@142, oB@143, os@147, oe@148, r()), oe@148, oy@146, I@142, oB@143, y@141, s@144), os@147));
+    @premise know(*sysA(oy@146, I@142, oB@143, os@147, oe@148, r()));
+    @premise know(*chtC(y@141, I@142, oB@143, s@144));
+    @premise init(*I@142, *s@144);
+    @premise know(*I@142);
+    @premise know(*oB@143);
+    @premise know(*y@141);
+    @premise know(*s@144);
+    @premise know(*oy@146);
+    @premise know(*oe@148);
+    @premise know(*os@147);
+    @conclusion know(*sysA(y@141, I@142, oB@143, s@144, [e@145], r()));
+};
+
+Rule No. [0.22]
+Valid Rule
+Composed by Rule [0.12] and [0.16]
+Selectable at 1:
+@rule{
+    @premise new(*[e@149], ServerCht(), tuple3(chtC(y@150, I@151, oB@152, s@153), chtZK(chtC(y@150, I@151, oB@152, s@153), sysA(oy@154, I@151, oB@152, os@155, oe@156, r()), oe@156, oy@154, I@151, oB@152, y@150, s@153), os@155));
+    @premise know(*sysA(oy@154, I@151, oB@152, os@155, oe@156, r()));
+    @premise know(*chtC(y@150, I@151, oB@152, s@153));
+    @premise init(*I@151, *s@153);
+    @premise know(*I@151);
+    @premise know(*oB@152);
+    @premise know(*y@150);
+    @premise know(*s@153);
+    @premise know(*oy@154);
+    @premise know(*oe@156);
+    @premise know(*os@155);
+    @conclusion know(*[e@149]);
+};
+
+Rule No. [0.23]
+Valid Rule
+Composed by Rule [0.4] and [0.17]
+Selectable at 2:
+@rule{
+    @premise know(*I@157);
+    @premise know(*s@158);
+    @premise know(*r());
+    @conclusion accept(I@157, s@158);
+};
+
+Rule No. [0.24]
+Valid Rule
+Composed by Rule [0.2] and [0.18]
+Not Selectable : 
+@rule{
+    @premise know(*I@163);
+    @premise know(*D@164);
+    @premise know(*y@162);
+    @premise know(*s@165);
+    @conclusion know(*syse(sysall(y@162, I@163, D@164, s@165)));
+};
+
+Rule No. [0.25]
+Valid Rule
+Composed by Rule [0.7] and [0.19]
+Not Selectable : 
+@rule{
+    @premise new(*[e@171], ServerRes(), tuple3(resC(y@168, s@170), regZK(resC(y@168, s@170), y@168, s@170), I@169));
+    @premise init(*I@169, *s@170);
+    @premise know(*y@168);
+    @premise know(*s@170);
+    @premise know(*I@169);
+    @conclusion know(*sysA(y@168, I@169, ba(), s@170, [e@171], r()));
+};
+
+Rule No. [0.26]
+Valid Rule
+Composed by Rule [0.7] and [0.20]
+Not Selectable : 
+@rule{
+    @premise new(*[e@172], ServerRes(), tuple3(resC(y@173, s@174), regZK(resC(y@173, s@174), y@173, s@174), I@175));
+    @premise init(*I@175, *s@174);
+    @premise know(*y@173);
+    @premise know(*s@174);
+    @premise know(*I@175);
+    @conclusion know(*[e@172]);
+};
+
+Rule No. [0.27]
+Replaced by Rule [0.33]
+Composed by Rule [0.4] and [0.21]
+Selectable at 1:
+@rule{
+    @premise new(*[e@180], ServerCht(), tuple3(chtC(y@176, I@177, D@178, s@179), chtZK(chtC(y@176, I@177, D@178, s@179), sysA(y@181, I@177, D@178, s@182, e@183, r()), e@183, y@181, I@177, D@178, y@176, s@179), s@182));
+    @premise know(*chtC(y@176, I@177, D@178, s@179));
+    @premise know(*r());
+    @premise init(*I@177, *s@179);
+    @premise know(*e@183);
+    @premise know(*y@181);
+    @premise know(*s@182);
+    @premise know(*D@178);
+    @premise know(*I@177);
+    @premise know(*y@176);
+    @premise know(*s@179);
+    @conclusion know(*sysA(y@176, I@177, D@178, s@179, [e@180], r()));
+};
+
+Rule No. [0.28]
+Replaced by Rule [0.34]
+Composed by Rule [0.4] and [0.22]
+Selectable at 1:
+@rule{
+    @premise new(*[e@184], ServerCht(), tuple3(chtC(y@190, I@186, D@187, s@191), chtZK(chtC(y@190, I@186, D@187, s@191), sysA(y@185, I@186, D@187, s@188, e@189, r()), e@189, y@185, I@186, D@187, y@190, s@191), s@188));
+    @premise know(*chtC(y@190, I@186, D@187, s@191));
+    @premise know(*r());
+    @premise init(*I@186, *s@191);
+    @premise know(*e@189);
+    @premise know(*y@185);
+    @premise know(*s@188);
+    @premise know(*D@187);
+    @premise know(*I@186);
+    @premise know(*y@190);
+    @premise know(*s@191);
+    @conclusion know(*[e@184]);
+};
+
+Rule No. [0.29]
+Valid Rule
+Composed by Rule [0.25] and [0.6]
+Selectable at 1:
+@rule{
+    @premise new(*[e@195], ServerRes(), tuple3(resC(y@192, s@194), regZK(resC(y@192, s@194), y@192, s@194), I@193));
+    @premise know(*sysger([e@195], r()));
+    @premise init(*I@193, *s@194);
+    @premise know(*y@192);
+    @premise know(*s@194);
+    @premise know(*I@193);
+    @conclusion know(*syse(sysall(y@192, I@193, ba(), s@194)));
+};
+
+Rule No. [0.30]
+Replaced by Rule [0.36]
+Composed by Rule [0.25] and [0.17]
+Selectable at 1:
+@rule{
+    @premise new(*[e@198], ServerRes(), tuple3(resC(y@199, s@197), regZK(resC(y@199, s@197), y@199, s@197), I@196));
+    @premise know(*[e@198]);
+    @premise init(*I@196, *s@197);
+    @premise know(*y@199);
+    @premise know(*s@197);
+    @premise know(*I@196);
+    @conclusion accept(I@196, s@197);
+};
+
+Rule No. [0.31]
+Replaced by Rule [0.37]
+Composed by Rule [0.25] and [0.21]
+Selectable at 2:
+@rule{
+    @premise new(*[e@203], ServerCht(), tuple3(chtC(y@200, I@201, ba(), s@202), chtZK(chtC(y@200, I@201, ba(), s@202), sysA(y@205, I@201, ba(), s@206, [e@204], r()), [e@204], y@205, I@201, ba(), y@200, s@202), s@206));
+    @premise new(*[e@204], ServerRes(), tuple3(resC(y@205, s@206), regZK(resC(y@205, s@206), y@205, s@206), I@201));
+    @premise know(*chtC(y@200, I@201, ba(), s@202));
+    @premise know(*ba());
+    @premise know(*[e@204]);
+    @premise init(*I@201, *s@206);
+    @premise init(*I@201, *s@202);
+    @premise know(*y@205);
+    @premise know(*I@201);
+    @premise know(*y@200);
+    @premise know(*s@202);
+    @premise know(*s@206);
+    @conclusion know(*sysA(y@200, I@201, ba(), s@202, [e@203], r()));
+};
+
+Rule No. [0.32]
+Replaced by Rule [0.38]
+Composed by Rule [0.25] and [0.22]
+Selectable at 2:
+@rule{
+    @premise new(*[e@207], ServerCht(), tuple3(chtC(y@212, I@211, ba(), s@213), chtZK(chtC(y@212, I@211, ba(), s@213), sysA(y@209, I@211, ba(), s@210, [e@208], r()), [e@208], y@209, I@211, ba(), y@212, s@213), s@210));
+    @premise new(*[e@208], ServerRes(), tuple3(resC(y@209, s@210), regZK(resC(y@209, s@210), y@209, s@210), I@211));
+    @premise know(*chtC(y@212, I@211, ba(), s@213));
+    @premise know(*ba());
+    @premise know(*[e@208]);
+    @premise init(*I@211, *s@210);
+    @premise init(*I@211, *s@213);
+    @premise know(*y@209);
+    @premise know(*I@211);
+    @premise know(*y@212);
+    @premise know(*s@213);
+    @premise know(*s@210);
+    @conclusion know(*[e@207]);
+};
+
+Rule No. [0.33]
+Valid Rule
+Composed by Rule [0.9] and [0.27]
+Selectable at 1:
+@rule{
+    @premise new(*[e@218], ServerCht(), tuple3(chtC(y@214, I@215, oB@216, s@217), chtZK(chtC(y@214, I@215, oB@216, s@217), sysA(y@219, I@215, oB@216, s@220, e@221, r()), e@221, y@219, I@215, oB@216, y@214, s@217), s@220));
+    @premise know(*r());
+    @premise init(*I@215, *s@217);
+    @premise know(*s@217);
+    @premise know(*oB@216);
+    @premise know(*y@214);
+    @premise know(*I@215);
+    @premise know(*e@221);
+    @premise know(*y@219);
+    @premise know(*s@220);
+    @conclusion know(*sysA(y@214, I@215, oB@216, s@217, [e@218], r()));
+};
+
+Rule No. [0.34]
+Valid Rule
+Composed by Rule [0.9] and [0.28]
+Selectable at 1:
+@rule{
+    @premise new(*[e@222], ServerCht(), tuple3(chtC(y@223, I@224, oB@225, s@226), chtZK(chtC(y@223, I@224, oB@225, s@226), sysA(y@227, I@224, oB@225, s@228, e@229, r()), e@229, y@227, I@224, oB@225, y@223, s@226), s@228));
+    @premise know(*r());
+    @premise init(*I@224, *s@226);
+    @premise know(*s@226);
+    @premise know(*oB@225);
+    @premise know(*y@223);
+    @premise know(*I@224);
+    @premise know(*e@229);
+    @premise know(*y@227);
+    @premise know(*s@228);
+    @conclusion know(*[e@222]);
+};
+
+Rule No. [0.35]
+Valid Rule
+Composed by Rule [0.2] and [0.29]
+Selectable at 1:
+@rule{
+    @premise new(*[e@233], ServerRes(), tuple3(resC(y@230, s@232), regZK(resC(y@230, s@232), y@230, s@232), I@231));
+    @premise know(*r());
+    @premise know(*[e@233]);
+    @premise init(*I@231, *s@232);
+    @premise know(*y@230);
+    @premise know(*s@232);
+    @premise know(*I@231);
+    @conclusion know(*syse(sysall(y@230, I@231, ba(), s@232)));
+};
+
+Rule No. [0.37]
+Valid Rule
+Composed by Rule [0.9] and [0.31]
+Selectable at 2:
+@rule{
+    @premise new(*[e@244], ServerCht(), tuple3(chtC(y@241, I@242, ba(), s@243), chtZK(chtC(y@241, I@242, ba(), s@243), sysA(y@245, I@242, ba(), s@246, [e@247], r()), [e@247], y@245, I@242, ba(), y@241, s@243), s@246));
+    @premise new(*[e@247], ServerRes(), tuple3(resC(y@245, s@246), regZK(resC(y@245, s@246), y@245, s@246), I@242));
+    @premise know(*ba());
+    @premise know(*[e@247]);
+    @premise init(*I@242, *s@243);
+    @premise init(*I@242, *s@246);
+    @premise know(*y@241);
+    @premise know(*s@243);
+    @premise know(*I@242);
+    @premise know(*y@245);
+    @premise know(*s@246);
+    @conclusion know(*sysA(y@241, I@242, ba(), s@243, [e@244], r()));
+};
+
+Rule No. [0.38]
+Valid Rule
+Composed by Rule [0.9] and [0.32]
+Selectable at 2:
+@rule{
+    @premise new(*[e@248], ServerCht(), tuple3(chtC(y@249, I@250, ba(), s@251), chtZK(chtC(y@249, I@250, ba(), s@251), sysA(y@252, I@250, ba(), s@253, [e@254], r()), [e@254], y@252, I@250, ba(), y@249, s@251), s@253));
+    @premise new(*[e@254], ServerRes(), tuple3(resC(y@252, s@253), regZK(resC(y@252, s@253), y@252, s@253), I@250));
+    @premise know(*ba());
+    @premise know(*[e@254]);
+    @premise init(*I@250, *s@251);
+    @premise init(*I@250, *s@253);
+    @premise know(*y@249);
+    @premise know(*s@251);
+    @premise know(*I@250);
+    @premise know(*y@252);
+    @premise know(*s@253);
+    @conclusion know(*[e@248]);
+};
+
+
+Final Rules: 
+Rule No. [0.36]
+Valid Rule
+Composed by Rule [0.26] and [0.30]
+@rule{
+    @premise new(*[e@236], ServerRes(), tuple3(resC(y@237, s@238), regZK(resC(y@237, s@238), y@237, s@238), I@239));
+    @premise init(*I@239, *s@238);
+    @premise know(*y@237);
+    @premise know(*s@238);
+    @premise know(*I@239);
+    @conclusion accept(I@239, s@238);
+};
+with parameter relation:
+[@universe]
+
+
+0. Requested parameter relation:
+[@universe]
+
+
+Overall generated rule count : 43
+Basis size : 39
+Verification time: 26
+
+Proved as secure.
+

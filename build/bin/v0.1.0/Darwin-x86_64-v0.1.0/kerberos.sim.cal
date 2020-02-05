@@ -1,0 +1,128 @@
+@function (@variable mess) hash(mess);
+@function (@variable skey) pk(skey);
+@function (@variable mess, @variable skey) sign(mess, skey);
+@function (@variable mess, @variable skey) check(sign(mess, skey), pk(skey)) -> mess;
+@function (@variable mess, @variable skey) get(sign(mess, skey)) -> mess;
+@function (@variable mess, @variable pkey) aenc(mess, pkey);
+@function (@variable mess, @variable skey) adec(aenc(mess, pk(skey)), skey) -> mess;
+@function (@variable mess, @variable skey) senc(mess, skey);
+@function (@variable mess, @variable skey) sdec(senc(mess, skey), skey) -> mess;
+@private @function (@variable u) sk(u);
+@function (@variable u) ck(u);
+
+@string AS;
+@string TGS;
+@string AP;
+
+@join InitGen;
+@join InitAuth;
+@join Phase1;
+@join Phase2;
+@join Phase3;
+@join PhaseRenew;
+@accept Accept;
+
+@parameter l;
+@parameter r;
+@constraint l <= r;
+@constraint 0 < l;
+
+@process Phase1() {
+    @receive (@variable C, @variable S);
+    @receive (@timestamp tq, @timestamp rq);
+    @receive @variable n;
+    @new @timestamp cp;
+    @new @nonce kP;
+    @if (cp <= tq) @then
+    @if (tq <= rq) @then
+    @if (tq - cp <= l) @then
+    @if (rq - cp <= r) @then 
+    @engage InitGen(kP, C, S)@cp;
+    @engage InitAuth(kP, C, S)@cp;
+    @send (C, (S, senc((kP, C, (tq, rq)), sk(S))), senc((kP, n, (tq, rq)), ck(C)));
+}
+
+@process Phase2() {
+    @receive @variable S;
+    @receive (==TGS, @variable m1);
+    @let (@variable kS, @variable C, @variable ts) = sdec(m1, sk(TGS)) @then
+    @let (@timestamp ep, @timestamp rp) = ts @then
+    @receive @variable m2;
+    @let (==C) = sdec(m2, kS) @then
+    @receive (@timestamp tq, @timestamp rq);
+    @receive @variable n;
+    @new @timestamp cp;
+    @new @nonce kP;
+    @if (cp <= ep) @then
+    @if (tq <= ep) @then
+    @if (cp <= tq) @then
+    @if (tq <= rq) @then
+    @if (tq - cp <= l) @then
+    @if (rq - cp <= r) @then 
+    @engage InitGen(kP, C, S)@cp;
+    @engage Phase2(kP, kS)@cp;
+    @engage Accept(kS, C, TGS)@cp;
+    @send (C, (S, senc((kP, C, (tq, rq)), sk(S))), senc((kP, n, (tq, rq), S), kS));
+}
+
+@process PhaseRenew() {
+    @receive @variable S;
+    @receive (==TGS, @variable m1);
+    @let (@variable kS, @variable C, @variable ts) = sdec(m1, sk(TGS)) @then
+    @let (@timestamp ep, @timestamp rp) = ts @then
+    @receive @variable m2;
+    @let (==C) = sdec(m2, kS) @then
+    @receive @timestamp tq;
+    @receive @variable n;
+    @new @timestamp cp;
+    @new @nonce kP;
+    @if (cp <= ep) @then
+    @if (tq <= rp) @then
+    @if (cp <= tq) @then
+    @if (tq - cp <= l) @then
+    @engage InitGen(kP, C, S)@cp;
+    @engage PhaseRenew(kP, kS)@cp;
+    @send (C, (S, senc((kP, C, (tq, rp)), sk(S))), senc((kP, n, (tq, rp), S), kS));
+    @engage Accept(kS, C, TGS)@cp;
+}
+
+@process Phase3() {
+    @receive (==AP, @variable m1);
+    @let (@variable kS, @variable C, @variable ts) = sdec(m1, sk(AP)) @then
+    @let (@timestamp ep, @timestamp rp) = ts @then
+    @receive @variable m2;
+    @let (==C) = sdec(m2, kS) @then
+    @new @timestamp cp;
+    @if (cp <= ep) @then
+    @engage Accept(kS, C, AP)@cp;
+}
+
+@process Pp() {
+    @send AS;
+    @send TGS;
+    @send AP;
+}
+
+@system {
+    @parallel { 
+        !{ @invoke Phase1(); } | 
+        !{ @invoke Phase2(); } | 
+        !{ @invoke Phase3(); } | 
+        !{ @invoke PhaseRenew(); } | 
+        !{ @invoke Pp(); } 
+    }
+}
+
+@correspondence (@variable kS, @variable kP, @variable C, @variable S1, @variable S2, @timestamp t1, @timestamp t2) {
+    @enforced;
+    @event InitAuth(kS, C, S1)@t1;
+    @event Accept(kP, C, S2)@t2;
+    @constraint t2 - t1 <= r;
+}
+
+@correspondence (@variable kS, @variable C, @variable S, @timestamp t1, @timestamp t2) {
+    @enforced;
+    @event InitGen(kS, C, S)@t1;
+    @event Accept(kS, C, S)@t2;
+    @constraint t2 - t1 <= l;
+}

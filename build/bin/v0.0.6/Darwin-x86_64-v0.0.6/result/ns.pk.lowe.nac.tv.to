@@ -1,0 +1,282 @@
+Not Approximated. 
+
+Query satisfied.
+
+Service size : 57
+Verification time: 11
+
+Details:
+General services : 
+Select : NA	
+tknow<sk@0, #t1@1> -> tknow<pk(sk@0), #t@4>
+1:	[<=:0]	[<=:0]	
+4:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<m@5, #t1@6>, tknow<sk@7, #t2@8> -> tknow<sign(m@5, sk@7), #t@10>
+6:	[<=:0]	[<=:0]	[ <:Max]	
+10:	[ <:Max]	[<=:0]	[ <:Max]	
+8:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : 0
+tknow<sign(m@11, sk@12), #t1@13> -> tknow<m@11, #t@14>
+13:	[<=:0]	[<=:0]	
+14:	[ <:Max]	[<=:0]	
+
+Select : 1
+tknow<m@15, #t1@16>, tknow<pk(sk@17), #t2@18> -> tknow<aenc(m@15, pk(sk@17)), #t@20>
+16:	[<=:0]	[<=:0]	[ <:Max]	
+20:	[ <:Max]	[<=:0]	[ <:Max]	
+18:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : NA	
+tknow<x@26, #t1@27>, tknow<y@28, #t2@29> -> tknow<tuple2(x@26, y@28), #t@31>
+27:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+31:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+29:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	
+32:	[ <:Max]	[<=:0]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple2(x@33, y@34), #t1@35> -> tknow<x@33, #t@36>
+35:	[<=:0]	[<=:0]	
+36:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple2(x@37, y@38), #t1@39> -> tknow<y@38, #t@40>
+39:	[<=:0]	[<=:0]	
+40:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<x@41, #t1@42>, tknow<y@43, #t2@44>, tknow<z@45, #t3@46> -> tknow<tuple3(x@41, y@43, z@45), #t@48>
+42:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+48:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+44:	[ <:Max]	[<=:0]	[<=:0]	[ <:Max]	
+46:	[ <:Max]	[<=:0]	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple3(x@49, y@50, z@51), #t1@52> -> tknow<x@49, #t@53>
+52:	[<=:0]	[<=:0]	
+53:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple3(x@54, y@55, z@56), #t1@57> -> tknow<y@55, #t@58>
+57:	[<=:0]	[<=:0]	
+58:	[ <:Max]	[<=:0]	
+
+Select : 0
+tknow<tuple3(x@59, y@60, z@61), #t1@62> -> tknow<z@61, #t@63>
+62:	[<=:0]	[<=:0]	
+63:	[ <:Max]	[<=:0]	
+
+Select : NA	
+initA<skA[], skR@65, *[Na@66]> -> tknow<[Na@66], #t@68>
+
+Select : NA	
+ -> tknow<pk(skA[]), #t@69>
+
+Select : NA	
+ -> tknow<pk(skB[]), #t@71>
+
+Select : NA	
+initA<skA[], skR@72, *[Na@73]> -> tknow<aenc(tuple2([Na@73], pk(skA[])), pk(skR@72)), #t@74>
+
+Select : 1
+initB<skI@75, skB[], *[Nb@76]>, tknow<aenc(tuple2(Na@78, pk(skI@75)), pk(skB[])), #t1@79> -> tknow<aenc(tuple3(Na@78, [Nb@76], pk(skB[])), pk(skI@75)), #t@80>
+
+Select : 2
+initA<skA[], skR@81, *[Na@82]>, init<skA[], skR@81>, tknow<aenc(tuple3([Na@82], Nb@84, pk(skR@81)), pk(skA[])), #t1@85> -> tknow<aenc(Nb@84, pk(skR@81)), #t@86>
+
+Select : 1
+initB<skA[], skB[], *[Nb@87]>, tknow<aenc([Nb@87], pk(skB[])), #t1@88> -> accept<skA[], skB[]>
+
+Select : NA	
+tknow<sk@98, #t1@100>, tknow<m@97, #t1@101> -> tknow<aenc(m@97, pk(sk@98)), #t@99>
+101:	[<=:0]	[<=:0]	[ <:Max]	
+99:	[ <:Max]	[<=:0]	[ <:Max]	
+100:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : NA	
+tknow<m@133, #t1@135> -> tknow<aenc(m@133, pk(skA[])), #t@134>
+135:	[<=:0]	[<=:0]	
+134:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<m@136, #t1@138> -> tknow<aenc(m@136, pk(skB[])), #t@137>
+138:	[<=:0]	[<=:0]	
+137:	[ <:Max]	[<=:0]	
+
+Select : 1
+tknow<sk@21, #t1@22>, tknow<aenc(m@23, pk(sk@21)), #t2@24> -> tknow<m@23, #t@25>
+22:	[<=:0]	[<=:0]	[ <:Max]	
+25:	[ <:Max]	[<=:0]	[ <:Max]	
+24:	[ <:Max]	[<=:0]	[<=:0]	
+
+Select : NA	
+initA<skA[], skB[], *[Na@139]>, initB<skA[], skB[], *[Nb@140]> -> tknow<aenc(tuple3([Na@139], [Nb@140], pk(skB[])), pk(skA[])), #t@141>
+
+Select : 0
+tknow<tuple3([Na@160], Nb@157, pk(skR@158)), #t1@161>, init<skA[], skR@158>, initA<skA[], skR@158, *[Na@160]> -> tknow<aenc(Nb@157, pk(skR@158)), #t@159>
+161:	[<=:0]	
+
+Select : 0
+tknow<tuple2(Na@162, pk(skI@164)), #t1@166>, initB<skI@164, skB[], *[Nb@163]> -> tknow<aenc(tuple3(Na@162, [Nb@163], pk(skB[])), pk(skI@164)), #t@165>
+166:	[<=:0]	
+
+Select : 0
+tknow<[Nb@167], #t1@168>, initB<skA[], skB[], *[Nb@167]> -> accept<skA[], skB[]>
+168:	[<=:0]	
+
+Select : NA	
+tknow<skR@171, #t1@172>, initA<skA[], skR@171, *[Na@169]> -> tknow<tuple2([Na@169], pk(skA[])), #t@170>
+172:	[<=:0]	[<=:0]	
+170:	[ <:Max]	[<=:0]	
+
+Select : NA	
+init<skA[], skB[]>, initB<skA[], skB[], *[Nb@190]>, initA<skA[], skB[], *[Na@192]> -> tknow<aenc([Nb@190], pk(skB[])), #t@191>
+
+Select : 1
+tknow<x@204, #t1@208>, tknow<pk(skI@206), #t2@209>, initB<skI@206, skB[], *[Nb@205]> -> tknow<aenc(tuple3(x@204, [Nb@205], pk(skB[])), pk(skI@206)), #t@207>
+209:	[<=:0]	[ <:Max]	
+208:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<skR@223, #t1@224>, initA<skA[], skR@223, *[Na@220]>, initB<skA[], skB[], *[Nb@221]> -> tknow<aenc(tuple3([Na@220], [Nb@221], pk(skB[])), pk(skA[])), #t@222>
+224:	[<=:0]	
+
+Select : 1
+tknow<y@240, #t2@243>, tknow<pk(skR@241), #t3@244>, init<skA[], skR@241>, initA<skA[], skR@241, *[Na@245]> -> tknow<aenc(y@240, pk(skR@241)), #t@242>
+244:	[<=:0]	[ <:Max]	
+243:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<sk@248, #t1@250>, tknow<x@246, #t1@251>, initB<sk@248, skB[], *[Nb@247]> -> tknow<aenc(tuple3(x@246, [Nb@247], pk(skB[])), pk(sk@248)), #t@249>
+250:	[<=:0]	[ <:Max]	
+251:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<x@252, #t1@255>, initB<skA[], skB[], *[Nb@253]> -> tknow<aenc(tuple3(x@252, [Nb@253], pk(skB[])), pk(skA[])), #t@254>
+255:	[<=:0]	
+
+Select : NA	
+tknow<x@256, #t1@259>, initB<skB[], skB[], *[Nb@257]> -> tknow<aenc(tuple3(x@256, [Nb@257], pk(skB[])), pk(skB[])), #t@258>
+259:	[<=:0]	
+
+Select : NA	
+tknow<sk@276, #t1@278>, tknow<y@275, #t2@279>, init<skA[], sk@276>, initA<skA[], sk@276, *[Na@280]> -> tknow<aenc(y@275, pk(sk@276)), #t@277>
+278:	[<=:0]	[ <:Max]	
+279:	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<y@281, #t2@283>, init<skA[], skA[]>, initA<skA[], skA[], *[Na@284]> -> tknow<aenc(y@281, pk(skA[])), #t@282>
+283:	[<=:0]	
+
+Select : NA	
+tknow<y@285, #t2@287>, init<skA[], skB[]>, initA<skA[], skB[], *[Na@288]> -> tknow<aenc(y@285, pk(skB[])), #t@286>
+287:	[<=:0]	
+
+Select : NA	
+tknow<sk@297, #t1@298>, tknow<x@294, #t1@299>, initB<sk@297, skB[], *[Nb@295]> -> tknow<tuple3(x@294, [Nb@295], pk(skB[])), #t@296>
+300:	[<=:0]	[<=:0]	[ <:Max]	[ <:Max]	
+296:	[ <:Max]	[<=:0]	[ <:Max]	[ <:Max]	
+299:	[ <:Max]	[ <:Max]	[<=:0]	[ <:Max]	
+298:	[ <:Max]	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<sk@373, #t1@374>, tknow<x@375, #t1@376>, initB<sk@373, skB[], *[Nb@371]> -> tknow<[Nb@371], #t@372>
+376:	[<=:0]	[ <:Max]	[ <:Max]	
+372:	[ <:Max]	[<=:0]	[ <:Max]	
+374:	[ <:Max]	[ <:Max]	[<=:0]	
+
+Select : NA	
+tknow<sk@406, #t1@407>, init<skA[], skB[]>, initB<sk@406, skB[], *[Nb@404]>, initA<skA[], skB[], *[Na@408]> -> tknow<aenc([Nb@404], pk(skB[])), #t@405>
+407:	[<=:0]	
+
+
+Non-unifiable services : 
+Reserve as input on 0 is not unifiable. 
+tknow<skA[], #t1@151>, tknow<tuple3([Na@152], Nb@148, pk(skR@149)), #t1@153>, init<skA[], skR@149>, initA<skA[], skR@149, *[Na@152]> -> tknow<aenc(Nb@148, pk(skR@149)), #t@150>
+153:	[<=:0]	[ <:Max]	
+151:	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skA[], #t1@196>, initA<skA[], skB[], *[Na@193]>, initB<skA[], skB[], *[Nb@194]> -> tknow<tuple3([Na@193], [Nb@194], pk(skB[])), #t@195>
+196:	[<=:0]	[<=:0]	
+195:	[ <:Max]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<skR@272, #t1@273>, tknow<skA[], #t1@274>, initA<skA[], skR@272, *[Na@269]>, initB<skA[], skB[], *[Nb@270]> -> tknow<tuple3([Na@269], [Nb@270], pk(skB[])), #t@271>
+274:	[<=:0]	[<=:0]	[ <:Max]	
+271:	[ <:Max]	[<=:0]	[ <:Max]	
+273:	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skA[], #t1@291>, tknow<[Na@292], #t1@293>, init<skA[], skB[]>, initB<skA[], skB[], *[Nb@289]>, initA<skA[], skB[], *[Na@292]> -> tknow<aenc([Nb@289], pk(skB[])), #t@290>
+291:	[<=:0]	[ <:Max]	
+293:	[ <:Max]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<x@305, #t1@308>, tknow<skA[], #t1@309>, initB<skA[], skB[], *[Nb@306]> -> tknow<tuple3(x@305, [Nb@306], pk(skB[])), #t@307>
+309:	[<=:0]	[<=:0]	[ <:Max]	
+307:	[ <:Max]	[<=:0]	[ <:Max]	
+308:	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skA[], #t1@325>, tknow<tuple3([Na@326], Nb@322, pk(skR@323)), #t2@327>, init<skA[], skA[]>, init<skA[], skR@323>, initA<skA[], skA[], *[Na@328]>, initA<skA[], skR@323, *[Na@326]> -> tknow<aenc(Nb@322, pk(skR@323)), #t@324>
+325:	[<=:0]	[ <:Max]	
+327:	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skA[], #t1@394>, tknow<x@395, #t1@396>, initB<skA[], skB[], *[Nb@397]> -> accept<skA[], skB[]>
+396:	[<=:0]	[ <:Max]	
+394:	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skA[], #t1@422>, init<skA[], skB[]>, initB<skA[], skB[], *[Nb@423]>, initA<skA[], skB[], *[Na@424]> -> accept<skA[], skB[]>
+422:	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@146>, tknow<tuple2(Na@142, pk(skI@144)), #t1@147>, initB<skI@144, skB[], *[Nb@143]> -> tknow<aenc(tuple3(Na@142, [Nb@143], pk(skB[])), pk(skI@144)), #t@145>
+147:	[<=:0]	[ <:Max]	
+146:	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@154>, tknow<[Nb@155], #t1@156>, initB<skA[], skB[], *[Nb@155]> -> accept<skA[], skB[]>
+156:	[<=:0]	[ <:Max]	
+154:	[ <:Max]	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+init<skA[], skB[]>, tknow<skB[], #t1@232>, initB<skA[], skB[], *[Nb@229]>, initA<skA[], skB[], *[Na@231]> -> tknow<[Nb@229], #t@230>
+232:	[<=:0]	[<=:0]	
+230:	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@267>, init<skA[], skB[]>, initB<skA[], skB[], *[Nb@265]>, initA<skA[], skB[], *[Na@268]> -> tknow<aenc([Nb@265], pk(skB[])), #t@266>
+267:	[<=:0]	
+
+Reserve as input on 1 is not unifiable. 
+tknow<x@310, #t1@313>, tknow<skB[], #t1@314>, initB<skB[], skB[], *[Nb@311]> -> tknow<tuple3(x@310, [Nb@311], pk(skB[])), #t@312>
+314:	[<=:0]	[<=:0]	[ <:Max]	
+312:	[ <:Max]	[<=:0]	[ <:Max]	
+313:	[ <:Max]	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@319>, tknow<tuple2(Na@315, pk(skI@317)), #t2@320>, init<skA[], skB[]>, initA<skA[], skB[], *[Na@321]>, initB<skI@317, skB[], *[Nb@316]> -> tknow<aenc(tuple3(Na@315, [Nb@316], pk(skB[])), pk(skI@317)), #t@318>
+319:	[<=:0]	[ <:Max]	
+320:	[ <:Max]	[<=:0]	
+
+Reserve as input on 0 is not unifiable. 
+tknow<skB[], #t1@329>, tknow<[Nb@330], #t2@331>, init<skA[], skB[]>, initA<skA[], skB[], *[Na@332]>, initB<skA[], skB[], *[Nb@330]> -> accept<skA[], skB[]>
+329:	[<=:0]	[ <:Max]	
+331:	[ <:Max]	[<=:0]	
+
+Reserve as input on 2 is not unifiable. 
+tknow<sk@427, #t1@428>, init<skA[], skB[]>, tknow<skB[], #t1@430>, initB<sk@427, skB[], *[Nb@425]>, initA<skA[], skB[], *[Na@429]> -> tknow<[Nb@425], #t@426>
+430:	[<=:0]	[<=:0]	[ <:Max]	
+426:	[ <:Max]	[<=:0]	[ <:Max]	
+428:	[ <:Max]	[ <:Max]	[<=:0]	
+
+
+Final services : 
+init<skA[], skB[]>, initB<skA[], skB[], *[Nb@227]>, initA<skA[], skB[], *[Na@228]> -> accept<skA[], skB[]>
+
+

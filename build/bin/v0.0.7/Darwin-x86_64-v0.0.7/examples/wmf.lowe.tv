@@ -1,0 +1,42 @@
+@decl @event initA(-, -, *, -) @group e;
+@decl @event initB(-, -, -, *, -) @group e;
+@decl @event accept(-, -, -, -) @group e;
+@decl @event k(*, -) @group k;
+
+@decl @func senc/2;
+@decl @func senc1/2;
+@decl @func tuple3/3;
+@decl @func key/1;
+
+@nosel initA;
+@nosel initB;
+@nosel accept;
+
+@provide k(mx, #t);
+@provide k(#c, #t);
+@provide k(#t, #t);
+
+@rule k(m, #t1), k(k, #t2) -> k(senc(m, k), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(k, #t1), k(senc(m, k), #t2) -> k(m, #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(m, #t1), k(k, #t2) -> k(senc1(m, k), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(k, #t1), k(senc1(m, k), #t2) -> k(m, #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+
+@rule k(x, #t1), k(y, #t2), k(z, #t3) -> k(tuple3(x, y, z), #t) : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0;
+@rule k(tuple3(x, y, z), #t1) -> k(x, #t) : #t1 - #t <= 0;
+@rule k(tuple3(x, y, z), #t1) -> k(y, #t) : #t1 - #t <= 0;
+@rule k(tuple3(x, y, z), #t1) -> k(z, #t) : #t1 - #t <= 0;
+
+@rule k(senc(tuple3(#tI, R, k), key(I)), #t1), k(R, #t2) -> k(senc(tuple3(#tS, I, k), key(R)), #tS)
+: #tS - #tI <= 2, #tS - #tI >= 0, #t1 - #tS <= 0, #t2 - #tS <= 0;
+
+@rule k(A[], #t);
+@rule k(B[], #t);
+
+@rule initA(A[], R, [k], #tA) -> k(senc(tuple3(#tA, R, [k]), key(A[])), #tA);
+@rule initB(I, B[], k, [Nb], #tB), k(senc(tuple3(#tS, I, k), key(B[])), #t) -> k(senc([Nb], k), #tB)
+    : #tB - #tS <= 2, #t - #tB <= 0;
+@rule initA(A[], R, [k], #tA), k(senc(Nb, [k]), #t1) -> k(senc1(Nb, [k]), #t)
+    : #t - #t1 >= 0, #t - #tA >= 0, #t - #tA <= 4;
+@rule initB(I, B[], k, [Nb], #tB), k(senc1([Nb], k), #t1) -> accept(I, B[], k, #t) : #t - #tB <=2;
+
+@query accept(I, R, k, #tB) <- initA(I, R, k, #tA) : #tB - #tA <= 6;

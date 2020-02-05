@@ -1,0 +1,30 @@
+! <sk, #t1> -> <pk(sk), #t> : #t1 - #t <= 0;
+! <m, #t1>, <sk, #t2> -> <sign(m, sk), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <sign(m, sk), #t1> -> <m, #t> : #t1 - #t <= 0;
+! <m, #t1>, <pk(sk), #t2> -> <aenc(m, pk(sk)), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <sk, #t1>, <aenc(m, pk(sk)), #t2> -> <m, #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+
+! <x, #t1>, <y, #t2> -> <tuple2(x, y), #t> : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0;
+! <tuple2(x, y), #t1> -> <x, #t> : #t1 - #t <= 0;
+! <tuple2(x, y), #t1> -> <y, #t> : #t1 - #t <= 0;
+
+! <x, #t1>, <y, #t2>, <z, #t3> -> <tuple3(x, y, z), #t> : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0;
+! <tuple3(x, y, z), #t1> -> <x, #t> : #t1 - #t <= 0;
+! <tuple3(x, y, z), #t1> -> <y, #t> : #t1 - #t <= 0;
+! <tuple3(x, y, z), #t1> -> <z, #t> : #t1 - #t <= 0;
+
+! initA(skA[], skR, [Na]) -> <[Na], #t>;
+
+! <pk(skA[]), #t>;
+! <pk(skB[]), #t>;
+
+! initA(skA[], skR, [Na]) -> <aenc(tuple2([Na], pk(skA[])), pk(skR)), #t>;
+! initB(skI, skB[], [Nb]), <aenc(tuple2(Na, pk(skI)), pk(skB[])), #t1>
+    -> <aenc(tuple3(Na, [Nb], pk(skB[])), pk(skI)), #t>;
+! initA(skA[], skR, [Na]), init(skA[], skR), <aenc(tuple3([Na], Nb, pk(skR)), pk(skA[])), #t1> 
+    -> <aenc(Nb, pk(skR)), #t>;
+! initB(skA[], skB[], [Nb]), <aenc([Nb], pk(skB[])), #t1> -> accept(skA[], skB[]);
+
+? accept(skI, skR) <- init(skI, skR);
+
+

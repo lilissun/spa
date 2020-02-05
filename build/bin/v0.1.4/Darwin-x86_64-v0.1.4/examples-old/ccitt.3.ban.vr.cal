@@ -1,0 +1,63 @@
+@function (@variable skey) pk(skey);
+@function (@variable mess, @variable skey) sign(mess, skey);
+@function (@variable mess, @variable skey) check(sign(mess, skey), pk(skey)) -> mess;
+@function (@variable mess, @variable skey) get(sign(mess, skey)) -> mess;
+@function (@variable mess, @variable pkey) aenc(mess, pkey);
+@function (@variable mess, @variable skey) adec(aenc(mess, pk(skey)), skey) -> mess;
+@private @function (@variable skfrom, @variable pkto) X(skfrom, pkto);
+@private @function (@variable skfrom, @variable pkto) Y(skfrom, pkto);
+
+@string SKA;
+@string SKB;
+
+@join alice;
+@accept bob;
+
+@clock ca @maxdrift pa;
+@process Pa(@variable skA) {
+    @receive @variable pkR;
+    @new @nonce na;
+    @send (pk(skA), sign((na, pkR, X(skA, pkR), aenc(Y(skA, pkR), pkR)), skA));
+    @receive (==pkR, @variable m);
+    @let (@variable nb, ==pk(skA), ==na, @variable xb, @variable EYB) = check(m, pkR) @then
+    @let @variable yb = adec(EYB, skA) @then
+    @read @timestamp ta @from ca;
+    @engage alice(pk(skA), pkR, na, nb)@ta;
+    @send sign((pkR, nb), skA);
+}
+
+@clock cb @maxdrift pb;
+@process Pb(@variable skB) {
+    @receive (@variable pkI, @variable m);
+    @let (@variable na, ==pk(skB), @variable xa, @variable EYA) = check(m, pkI) @then
+    @let @variable ya = adec(EYA, skB) @then
+    @new @nonce nb;
+    @send sign((nb, pkI, na, X(skB, pkI), aenc(Y(skB, pkI), pkI)), skB);
+    @receive @variable m1;
+    @if (check(m1, pkI) == (pk(skB), nb)) @then 
+    @if (pkI == pk(SKA)) @then
+    @read @timestamp tb @from cb;
+    @engage bob(pkI, pk(skB), na, nb)@tb;
+}
+
+@process Pp(@variable pkB, @variable pkA) {
+    @send pkA;
+    @send pkB;
+}
+
+@system {
+    @secrecy Y(SKA, pk(SKB));
+    @secrecy Y(SKB, pk(SKA));
+    @parallel { 
+        !{ @invoke Pa(SKA); } | 
+        !{ @invoke Pb(SKB); } | 
+        !{ @invoke Pp(pk(SKA), pk(SKB)); } 
+    }
+}
+
+@correspondence (@variable pkI, @variable pkR, @variable na, @variable nb, @timestamp ta, @timestamp tb) {
+    @enforced;
+    @event alice(pkI, pkR, na, nb)@ta;
+    @event bob(pkI, pkR, na, nb)@tb;
+    @constraint ta <= tb;
+}

@@ -1,0 +1,123 @@
+@declare @event initFar(*, -);
+@provide @event initFar @removable @false;
+@declare @event initNear(*, -);
+@provide @event initNear @removable @false;
+@declare @event accept(-, -);
+@provide @event accept @removable @false;
+
+@declare @event far(*, -);
+@provide @event far(mx, #t) @removable @true;
+@provide @event far(#c, #t) @removable @true;
+@provide @event far(#t, #t) @removable @true;
+
+@declare @event near(*, -);
+@declare @event normalSend(*, -);
+@declare @event ultraRecv(*, -);
+@declare @event ultraNearSend(*, -);
+@declare @event ultraFarSend(*, -);
+
+@declare @function sign/2;
+@declare @function pk/1;
+
+@declare @parameter $s;
+@declare @parameter $l;
+
+///////////// near node /////////////
+// normal channel
+@rule {
+    @premise near(m, #t1);
+    @conclusion normalSend(m, #t);
+    @constraint #t1 - #t <= 0;
+};
+@rule {
+    @premise normalSend(m, #t1);
+    @conclusion near(m, #t);
+    @constraint #t1 - #t <= 0;
+};
+// ultrasound channel
+@rule {
+    @premise near(m, #t1);
+    @conclusion ultraNearSend(m, #t);
+    @constraint #t1 - #t <= 0;
+};
+@rule {
+    @premise ultraNearSend(m, #ta);
+    @conclusion ultraRecv(m, #tb);
+    @constraint #tb - #ta >= $s;
+};
+
+///////////// far node /////////////
+@rule {
+    @premise far(sk, #t1);
+    @conclusion far(pk(sk), #t);
+    @constraint #t1 - #t <= 0;
+};
+@rule {
+    @premise far(m, #t1);
+    @premise far(sk, #t2);
+    @conclusion far(sign(m, sk), #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+@rule {
+    @premise far(sign(m, sk), #t1);
+    @conclusion far(m, #t);
+    @constraint #t1 - #t <= 0;
+};
+// normal channel
+@rule {
+    @premise far(m, #t1);
+    @conclusion normalSend(m, #t);
+    @constraint #t1 - #t <= 0;
+};
+@rule {
+    @premise normalSend(m, #t1);
+    @conclusion far(m, #t);
+    @constraint #t1 - #t <= 0;
+};
+// ultrasound channel
+@rule {
+    @premise far(m, #t1);
+    @conclusion ultraFarSend(m, #t);
+    @constraint #t1 - #t <= 0;
+};
+@rule {
+    @premise ultraFarSend(m, #ta);
+    @conclusion ultraRecv(m, #tb);
+    @constraint #tb - #ta >=  $l;
+};
+
+@declare @string skB[];
+@rule { @conclusion near(skB[], #t); };
+@rule { @conclusion far(skB[], #t); };
+
+@rule {
+    @premise initFar([na], #ta);
+    @conclusion far([na], #t);
+    @constraint #ta - #t <= 0;
+};
+@rule {
+    @premise initNear([na], #ta);
+    @conclusion near([na], #t);
+    @constraint #ta - #t <= 0;
+};
+@rule {
+    @premise initFar([na], #ta);
+    @premise ultraRecv(sign([na], skB[]), #tb);
+    @conclusion accept([na], #tb);
+    @constraint #tb - #ta <= 2 * $s;
+    @constraint $l <= 3 * $s;
+};
+
+@rule {
+    @premise initNear([na], #ta);
+    @premise ultraRecv(sign([na], skB[]), #tb);
+    @conclusion accept([na], #tb);
+    @constraint #tb - #ta <= 2 * $s;
+    @constraint $l <= 3 * $s;
+};
+
+@authentication {
+    @conclusion accept(na, #tb);
+    @premise initNear(na, #ta);
+};

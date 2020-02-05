@@ -1,0 +1,461 @@
+@set @index 208;
+
+@declare @event new(1, 2);
+@provide @event new @removable @false;
+
+@declare @event unique(2, 3);
+@provide @event unique @removable @false;
+
+@declare @event accept(1, 3);
+@provide @event accept @removable @false;
+
+@declare @event init(1, 3);
+@provide @event init @removable @false;
+
+@declare @event open(1, 1);
+@provide @event open @removable @false;
+
+@declare @event know(1, 2);
+@provide @event know( m, #t) @removable @true;
+@provide @event know(#c, #t) @removable @true;
+@provide @event know(#t, #t) @removable @true;
+
+@declare @event leak(1, 1);
+@provide @event leak @removable @false;
+
+@rule {
+    @premise know(x0, #t0);
+    @constraint #t0 - #t <= 0;
+    @conclusion know((x0), #t);
+};
+
+@rule {
+    @premise know((x0), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t0 - #t >= 0;
+};
+
+@rule {
+    @premise know(x0, #t0);
+    @constraint #t0 - #t <= 0;
+    @premise know(x1, #t1);
+    @constraint #t1 - #t <= 0;
+    @conclusion know((x0, x1), #t);
+};
+
+@rule {
+    @premise know((x0, x1), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t0 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know(x0, #t0);
+    @constraint #t0 - #t <= 0;
+    @premise know(x1, #t1);
+    @constraint #t1 - #t <= 0;
+    @premise know(x2, #t2);
+    @constraint #t2 - #t <= 0;
+    @conclusion know((x0, x1, x2), #t);
+};
+
+@rule {
+    @premise know((x0, x1, x2), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t0 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2), #t);
+    @conclusion know(x2, #t2);
+    @constraint #t2 - #t >= 0;
+};
+
+@rule {
+    @premise know(x0, #t0);
+    @constraint #t0 - #t <= 0;
+    @premise know(x1, #t1);
+    @constraint #t1 - #t <= 0;
+    @premise know(x2, #t2);
+    @constraint #t2 - #t <= 0;
+    @premise know(x3, #t3);
+    @constraint #t3 - #t <= 0;
+    @conclusion know((x0, x1, x2, x3), #t);
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t0 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3), #t);
+    @conclusion know(x2, #t2);
+    @constraint #t2 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3), #t);
+    @conclusion know(x3, #t3);
+    @constraint #t3 - #t >= 0;
+};
+
+@rule {
+    @premise know(x0, #t0);
+    @constraint #t0 - #t <= 0;
+    @premise know(x1, #t1);
+    @constraint #t1 - #t <= 0;
+    @premise know(x2, #t2);
+    @constraint #t2 - #t <= 0;
+    @premise know(x3, #t3);
+    @constraint #t3 - #t <= 0;
+    @premise know(x4, #t4);
+    @constraint #t4 - #t <= 0;
+    @premise know(x5, #t5);
+    @constraint #t5 - #t <= 0;
+    @conclusion know((x0, x1, x2, x3, x4, x5), #t);
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t0 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x2, #t2);
+    @constraint #t2 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x3, #t3);
+    @constraint #t3 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x4, #t4);
+    @constraint #t4 - #t >= 0;
+};
+
+@rule {
+    @premise know((x0, x1, x2, x3, x4, x5), #t);
+    @conclusion know(x5, #t5);
+    @constraint #t5 - #t >= 0;
+};
+
+@set @barrier;
+
+@declare @string l0[];
+@declare @string l1[];
+@declare @string l2[];
+@declare @string l3[];
+@declare @string l4[];
+@declare @string l5[];
+@declare @string l6[];
+@declare @string l7[];
+@declare @string l8[];
+@declare @string l9[];
+@declare @string l10[];
+@declare @string l11[];
+@declare @string l12[];
+@declare @string l13[];
+@declare @string l14[];
+@declare @string l15[];
+
+@declare @string true[];
+@declare @string SKA[];
+@declare @string SKB[];
+
+@declare @parameter $pn;
+@set @constraint $pn > 0;
+
+@declare @function aenc/2;
+@declare @function pk/1;
+@declare @function sign/2;
+
+@rule {
+    @premise know((aenc(mess@195, pk(skey@196)), skey@196), #t);
+    @conclusion know(mess@195, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((mess@197, pkey@198), #t);
+    @conclusion know(aenc(mess@197, pkey@198), #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((sign(mess@199, skey@200), pk(skey@200)), #t);
+    @conclusion know(true[], #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((sign(mess@203, skey@204)), #t);
+    @conclusion know(mess@203, #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((skey@206), #t);
+    @conclusion know(pk(skey@206), #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule {
+    @premise know((mess@207, skey@208), #t);
+    @conclusion know(sign(mess@207, skey@208), #t1);
+    @constraint #t1 - #t >= 0;
+};
+
+@rule{
+    @guard pkey@121 != pk(SKB[]);
+    @premise know(#t@122, #t@122);
+    @premise know(pkey@121, #t@123);
+    @premise new([na@124], l1[]);
+    @premise unique([na@124], l2[], (#t@122, pkey@121, [na@124]));
+    @premise open([na@124]);
+    @premise unique([na@124], l3[], (#t@122, pkey@121, [na@124]));
+    @conclusion know(aenc(([na@124], pk(SKA[])), pkey@121), #t@125);
+    @constraint -$pn - #t@122 + #t@125 >= 0;
+    @constraint -#t@4 + #t@122 >= 0;
+    @constraint #t@122 - #t@123 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @guard pkey@126 != pk(SKB[]);
+    @premise know(#t@127, #t@127);
+    @premise know(pkey@126, #t@128);
+    @premise new([na@129], l1[]);
+    @premise unique([na@129], l2[], (#t@127, pkey@126, [na@129]));
+    @premise open([na@129]);
+    @premise unique([na@129], l3[], (#t@127, pkey@126, [na@129]));
+    @premise know(#t@130, #t@130);
+    @premise know(aenc(([na@129], mess@131, pkey@126), pk(SKA[])), #t@132);
+    @premise know(#ta@133, #ta@133);
+    @premise init([na@129], (pk(SKA[]), pkey@126, [na@129], mess@131), #ta@133);
+    @premise unique([na@129], l4[], (#t@127, pkey@126, [na@129], #t@130, aenc(([na@129], mess@131, pkey@126), pk(SKA[])), #ta@133));
+    @conclusion know(aenc(mess@131, pkey@126), #t@134);
+    @constraint -$pn - #t@127 + #t@26 >= 0;
+    @constraint -$pn - #ta@133 + #t@134 >= 0;
+    @constraint -#t@4 + #t@127 >= 0;
+    @constraint -#t@127 + #t@130 >= 0;
+    @constraint -#t@130 + #ta@133 >= 0;
+    @constraint #t@130 - #t@132 >= 0;
+    @constraint #t@127 - #t@128 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(#t@135, #t@135);
+    @premise know(pk(SKB[]), #t@136);
+    @premise new([na@137], l1[]);
+    @premise unique([na@137], l2[], (#t@135, pk(SKB[]), [na@137]));
+    @premise unique([na@137], l5[], (#t@135, pk(SKB[]), [na@137]));
+    @conclusion know(aenc(([na@137], pk(SKA[])), pk(SKB[])), #t@138);
+    @constraint -$pn - #t@135 + #t@138 >= 0;
+    @constraint -#t@4 + #t@135 >= 0;
+    @constraint #t@135 - #t@136 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(#t@139, #t@139);
+    @premise know(pk(SKB[]), #t@140);
+    @premise new([na@141], l1[]);
+    @premise unique([na@141], l2[], (#t@139, pk(SKB[]), [na@141]));
+    @premise unique([na@141], l5[], (#t@139, pk(SKB[]), [na@141]));
+    @premise know(#t@142, #t@142);
+    @premise know(m@143, #t@144);
+    @premise open([na@141]);
+    @premise unique([na@141], l6[], (#t@139, pk(SKB[]), [na@141], #t@142, m@143));
+    @conclusion know([na@141], #t@145);
+    @constraint -$pn - #t@139 + #t@45 >= 0;
+    @constraint -$pn - #t@142 + #t@145 >= 0;
+    @constraint -#t@4 + #t@139 >= 0;
+    @constraint -#t@139 + #t@142 >= 0;
+    @constraint #t@142 - #t@144 >= 0;
+    @constraint #t@139 - #t@140 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(#t@146, #t@146);
+    @premise know(pk(SKB[]), #t@147);
+    @premise new([na@148], l1[]);
+    @premise unique([na@148], l2[], (#t@146, pk(SKB[]), [na@148]));
+    @premise unique([na@148], l5[], (#t@146, pk(SKB[]), [na@148]));
+    @premise know(#t@149, #t@149);
+    @premise know(aenc(([na@148], mess@150, pk(SKB[])), pk(SKA[])), #t@151);
+    @premise open([na@148]);
+    @premise unique([na@148], l6[], (#t@146, pk(SKB[]), [na@148], #t@149, aenc(([na@148], mess@150, pk(SKB[])), pk(SKA[]))));
+    @premise know(#ta@152, #ta@152);
+    @premise init([na@148], (pk(SKA[]), pk(SKB[]), [na@148], mess@150), #ta@152);
+    @premise unique([na@148], l7[], (#t@146, pk(SKB[]), [na@148], #t@149, aenc(([na@148], mess@150, pk(SKB[])), pk(SKA[])), #ta@152));
+    @conclusion know(aenc(mess@150, pk(SKB[])), #t@153);
+    @constraint -$pn - #t@146 + #t@45 >= 0;
+    @constraint -$pn - #t@149 + #t@50 >= 0;
+    @constraint -$pn - #ta@152 + #t@153 >= 0;
+    @constraint -#t@4 + #t@146 >= 0;
+    @constraint -#t@146 + #t@149 >= 0;
+    @constraint -#t@149 + #ta@152 >= 0;
+    @constraint #t@149 - #t@151 >= 0;
+    @constraint #t@146 - #t@147 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(#t@154, #t@154);
+    @premise know(pkR@155, #t@156);
+    @premise new([na@157], l1[]);
+    @premise unique([na@157], l2[], (#t@154, pkR@155, [na@157]));
+    @premise know(#t@158, #t@158);
+    @premise know([na@157], #t@159);
+    @conclusion leak([na@157]);
+    @constraint -#t@4 + #t@154 >= 0;
+    @constraint -#t@154 + #t@158 >= 0;
+    @constraint #t@158 - #t@159 >= 0;
+    @constraint #t@154 - #t@156 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @guard pkey@160 != pk(SKA[]);
+    @premise know(#t@161, #t@161);
+    @premise know(aenc((na@162, pkey@160), pk(SKB[])), #t@163);
+    @premise new([nb@164], l8[]);
+    @premise unique([nb@164], l9[], (#t@161, aenc((na@162, pkey@160), pk(SKB[])), [nb@164]));
+    @premise open([nb@164]);
+    @premise unique([nb@164], l10[], (#t@161, aenc((na@162, pkey@160), pk(SKB[])), [nb@164]));
+    @conclusion know(aenc((na@162, [nb@164], pk(SKB[])), pkey@160), #t@165);
+    @constraint -$pn - #t@161 + #t@165 >= 0;
+    @constraint -#t@4 + #t@161 >= 0;
+    @constraint #t@161 - #t@163 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(#t@166, #t@166);
+    @premise know(aenc((na@167, pk(SKA[])), pk(SKB[])), #t@168);
+    @premise new([nb@169], l8[]);
+    @premise unique([nb@169], l9[], (#t@166, aenc((na@167, pk(SKA[])), pk(SKB[])), [nb@169]));
+    @premise unique([nb@169], l11[], (#t@166, aenc((na@167, pk(SKA[])), pk(SKB[])), [nb@169]));
+    @conclusion know(aenc((na@167, [nb@169], pk(SKB[])), pk(SKA[])), #t@170);
+    @constraint -$pn - #t@166 + #t@170 >= 0;
+    @constraint -#t@4 + #t@166 >= 0;
+    @constraint #t@166 - #t@168 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(#t@171, #t@171);
+    @premise know(aenc((na@172, pk(SKA[])), pk(SKB[])), #t@173);
+    @premise new([nb@174], l8[]);
+    @premise unique([nb@174], l9[], (#t@171, aenc((na@172, pk(SKA[])), pk(SKB[])), [nb@174]));
+    @premise unique([nb@174], l11[], (#t@171, aenc((na@172, pk(SKA[])), pk(SKB[])), [nb@174]));
+    @premise know(#t@175, #t@175);
+    @premise know(m1@176, #t@177);
+    @premise open([nb@174]);
+    @premise unique([nb@174], l12[], (#t@171, aenc((na@172, pk(SKA[])), pk(SKB[])), [nb@174], #t@175, m1@176));
+    @conclusion know([nb@174], #t@178);
+    @constraint -$pn - #t@171 + #t@91 >= 0;
+    @constraint -$pn - #t@175 + #t@178 >= 0;
+    @constraint -#t@4 + #t@171 >= 0;
+    @constraint -#t@171 + #t@175 >= 0;
+    @constraint #t@175 - #t@177 >= 0;
+    @constraint #t@171 - #t@173 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(#t@179, #t@179);
+    @premise know(aenc((na@180, pk(SKA[])), pk(SKB[])), #t@181);
+    @premise new([nb@182], l8[]);
+    @premise unique([nb@182], l9[], (#t@179, aenc((na@180, pk(SKA[])), pk(SKB[])), [nb@182]));
+    @premise unique([nb@182], l11[], (#t@179, aenc((na@180, pk(SKA[])), pk(SKB[])), [nb@182]));
+    @premise know(#t@183, #t@183);
+    @premise know(aenc([nb@182], pk(SKB[])), #t@184);
+    @premise open([nb@182]);
+    @premise unique([nb@182], l12[], (#t@179, aenc((na@180, pk(SKA[])), pk(SKB[])), [nb@182], #t@183, aenc([nb@182], pk(SKB[]))));
+    @premise know(#tb@185, #tb@185);
+    @premise unique([nb@182], l13[], (#t@179, aenc((na@180, pk(SKA[])), pk(SKB[])), [nb@182], #t@183, aenc([nb@182], pk(SKB[])), #tb@185));
+    @conclusion accept([nb@182], (pk(SKA[]), pk(SKB[]), na@180, [nb@182]), #tb@185);
+    @constraint -$pn - #t@179 + #t@91 >= 0;
+    @constraint -$pn - #t@183 + #t@96 >= 0;
+    @constraint -#t@4 + #t@179 >= 0;
+    @constraint -#t@179 + #t@183 >= 0;
+    @constraint -#t@183 + #tb@185 >= 0;
+    @constraint #t@183 - #t@184 >= 0;
+    @constraint #t@179 - #t@181 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @premise know(#t@186, #t@186);
+    @premise know(aenc((na@187, pkI@188), pk(SKB[])), #t@189);
+    @premise new([nb@190], l8[]);
+    @premise unique([nb@190], l9[], (#t@186, aenc((na@187, pkI@188), pk(SKB[])), [nb@190]));
+    @premise know(#t@191, #t@191);
+    @premise know([nb@190], #t@192);
+    @conclusion leak([nb@190]);
+    @constraint -#t@4 + #t@186 >= 0;
+    @constraint -#t@186 + #t@191 >= 0;
+    @constraint #t@191 - #t@192 >= 0;
+    @constraint #t@186 - #t@189 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @conclusion know(pk(SKB[]), #t@193);
+    @constraint -$pn - #t@4 + #t@193 >= 0;
+    @constraint $pn > 0;
+};
+
+@rule{
+    @conclusion know(pk(SKA[]), #t@194);
+    @constraint -$pn - #t@4 + #t@194 >= 0;
+    @constraint -$pn - #t@4 + #t@110 >= 0;
+    @constraint $pn > 0;
+};
+
+@correspondence{
+    @enforced;
+    @injective init([n@119], (pkA@113, pkB@114, na@115, nb@116), #ta@117);
+    @conclusion accept([n@120], (pkA@113, pkB@114, na@115, nb@116), #tb@118);
+    @constraint -#ta@117 + #tb@118 >= 0;
+};
+
+@correspondence {
+    @conclusion leak(x);
+    @premise open(x);
+};

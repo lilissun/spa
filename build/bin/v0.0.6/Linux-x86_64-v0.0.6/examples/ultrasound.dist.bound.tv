@@ -1,0 +1,31 @@
+///////////// near node /////////////
+! <near(sk), #t1> -> <near(pk(sk)), #t> : #t1 - #t <= 0;
+! <near(m), #t1>, <near(sk), #t2> -> <near(sign(m, sk)), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <near(sign(m, sk)), #t1> -> <near(m), #t> : #t1 - #t <= 0;
+// normal channel
+! <near(m), #t1> -> <normalSend(m), #t> : #t1 - #t <= 0;
+! <normalSend(m), #t1> -> <near(m), #t> : #t1 - #t <= 0;
+// ultrasound channel
+! <near(m), #t1> -> <ultraNearSend(m), #t> : #t1 - #t <= 0;
+! <ultraNearSend(m), #ta> -> <ultraRecv(m), #tb>: #ta - #tb >= 1;
+
+///////////// far node /////////////
+! <far(sk), #t1> -> <far(pk(sk)), #t> : #t1 - #t <= 0;
+! <far(m), #t1>, <far(sk), #t2> -> <far(sign(m, sk)), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <far(sign(m, sk)), #t1> -> <far(m), #t> : #t1 - #t <= 0;
+// normal channel
+! <far(m), #t1> -> <normalSend(m), #t> : #t1 - #t <= 0;
+! <normalSend(m), #t1> -> <far(m), #t> : #t1 - #t <= 0;
+// ultrasound channel 
+! <far(m), #t1> -> <ultraFarSend(m), #t> : #t1 - #t <= 0;
+! <ultraFarSend(m), #ta> -> <ultraRecv(m), #tb>: #ta - #tb >= 10;
+
+! <near(skB[]), #t>;
+! <far(skB[]), #t>;
+
+! initFar([na], #ta) -> <far([na]), #t>;
+! initNear([na], #ta) -> <near([na]), #t>;
+! initFar([na], #ta), <ultraRecv(sign([na], skB[])), #tb> -> accept([na], #tb) : #tb - #ta <= 2;
+! initNear([na], #ta), <ultraRecv(sign([na], skB[])), #tb> -> accept([na], #tb) : #tb - #ta <= 2;
+
+? accept(na, #tb) <- initNear(na, #ta);

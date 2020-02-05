@@ -1,0 +1,83 @@
+// This is the Skeme - Internet Key Exchange Protocol - without PFS. 
+// It uses nonce rather than Diffie-Hellman exchange to establish the keys. 
+
+@ceiling 1;
+
+@decl @event initAk(-, *, -) @group p;
+@decl @event initAn(-, *, -) @group p;
+@decl @event initBk(-, *, -, -, -) @group p;
+@decl @event initBn(-, *, -, -, -) @group p;
+@decl @event init(*, *, *) @group p;
+@decl @event accept(-, -, -) @group c;
+@decl @event k(*, -) @group k;
+
+@decl @func tuple2/2;
+@decl @func tuple4/4;
+@decl @func h/2;
+@decl @func senc/2;
+@decl @func pk/1;
+@decl @func aenc/2;
+@decl @func sign/2;
+
+@nosel initAk;
+@nosel initAn;
+@nosel initBk;
+@nosel initBn;
+@nosel init;
+@nosel accept;
+
+@provide k(mx, #t);
+@provide k(#c, #t);
+@provide k(#t, #t);
+
+@rule k(sk, #t1) -> k(pk(sk), #t) : #t1 - #t <= 0;
+
+@rule k(m, #t1), k(sk, #t2) -> k(sign(m, sk), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(sign(m, sk), #t1) -> k(m, #t) : #t1 - #t <= 0;
+
+@rule k(m, #t1), k(pk(sk), #t2) -> k(aenc(m, pk(sk)), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(sk, #t1), k(aenc(m, pk(sk)), #t2) -> k(m, #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+
+@rule k(m1, #t1), k(m2, #t2) -> k(h(m1, m2), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+
+@rule k(m, #t1), k(k, #t2) -> k(senc(m, k), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(k, #t1), k(senc(m, k), #t2) -> k(m, #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+
+@rule k(x, #t1), k(y, #t2) -> k(tuple2(x, y), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(tuple2(x, y), #t1) -> k(x, #t) : #t1 - #t <= 0;
+@rule k(tuple2(x, y), #t1) -> k(y, #t) : #t1 - #t <= 0;
+
+@rule k(x, #t1), k(y, #t2), k(z, #t3), k(k, #t4) -> k(tuple4(x, y, z, k), #t) 
+: #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0, #t4 - #t <= 0;
+@rule k(tuple4(x, y, z, k), #t1) -> k(x, #t) : #t1 - #t <= 0;
+@rule k(tuple4(x, y, z, k), #t1) -> k(y, #t) : #t1 - #t <= 0;
+@rule k(tuple4(x, y, z, k), #t1) -> k(z, #t) : #t1 - #t <= 0;
+@rule k(tuple4(x, y, z, k), #t1) -> k(k, #t) : #t1 - #t <= 0;
+
+// A -> B : aenc(tuple2(pk(skA[]), [Ka]), pk(skB[])), k([Na], #t)
+@rule initAk(pkR, [Ka], [Na]), initAn(pkR, [Na], [Ka]) -> k(aenc(tuple2(pk(skA[]), [Ka]), pkR), #t);
+@rule initAn(pkR, [Na], [Ka]), initAk(pkR, [Ka], [Na]) -> k([Na], #t);
+
+// B -> A : aenc([Kb], pk(skA[])), [Nb], senc(tuple4([Na], [Nb], pk(skB[]), pkI), h([Ka], [Kb]))
+@rule initBk(pkI, [Kb], [Nb], Ki, Ni), initBn(pkI, [Nb], [Ka], Ki, Ni)
+    , k(aenc(tuple2(pkI, Ki), pk(skB[])), #t1), k(Ni, #t2)
+    -> k(aenc([Kb], pkI), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule initBk(pkI, [Kb], [Nb], Ki, Ni), initBn(pkI, [Nb], [Ka], Ki, Ni)
+    , k(aenc(tuple2(pkI, Ki), pk(skB[])), #t1), k(Ni, #t2)
+    -> k([Nb], #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule initBk(pkI, [Kb], [Nb], Ki, Ni), initBn(pkI, [Nb], [Ka], Ki, Ni)
+    , k(aenc(tuple2(pkI, Ki), pk(skB[])), #t1), k(Ni, #t2)
+    -> k(senc(tuple4(Ni, [Nb], pk(skB[]), pkI), h(Ki, [Kb])), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+
+// A inits -> B : senc(tuple4([Nb], [Na], pk(skA[]), pk(skB[])), h([Ka], [Kb]))
+@rule init(pk(skA[]), pkR, senc(senc(tuple4(Nr, [Na], pk(skA[]), pkR), h([Ka], Kr)), h([Ka], Kr)))
+    , initAk(pkR, [Ka], [Na]), initAn(pkR, [Na], [Ka])
+    , k(aenc(Kr, pk(skA[])), #t1), k(Nr, #t2), k(senc(tuple4([Na], Nr, pkR, pk(skA[])), h([Ka], Kr)), #t3)
+    -> k(senc(tuple4(Nr, [Na], pk(skA[]), pkR), h([Ka], Kr)), #t) : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0;
+
+// B accepts
+@rule initBk(pkI, [Kb], [Nb], Ki, Ni), initBn(pkI, [Nb], [Ka], Ki, Ni)
+    , k(senc(tuple4([Nb], Ni, pk(skA[]), pk(skB[])), h(Kr, [Kb])), #t1)
+    -> accept(pk(skA[]), pk(skB[]), senc(senc(tuple4([Nb], Ni, pk(skA[]), pk(skB[])), h(Ki, [Kb])), h(Ki, [Kb])));
+
+@query accept(pkI, pkR, sk) <- init(pkI, pkR, sk); 

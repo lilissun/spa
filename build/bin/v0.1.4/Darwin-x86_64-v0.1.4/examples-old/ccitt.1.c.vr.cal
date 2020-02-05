@@ -1,0 +1,60 @@
+@function (@variable skey) pk(skey);
+@function (@variable mess) h(mess);
+@function (@variable mess, @variable skey) sign(mess, skey);
+@function (@variable mess, @variable skey) check(sign(mess, skey), pk(skey)) -> mess;
+@function (@variable mess, @variable skey) get(sign(mess, skey)) -> mess;
+@function (@variable mess, @variable pkey) aenc(mess, pkey);
+@function (@variable mess, @variable skey) adec(aenc(mess, pk(skey)), skey) -> mess;
+@function (@variable skfrom, @variable pkto) X(skfrom, pkto);
+@function (@variable skfrom, @variable pkto) Y(skfrom, pkto);
+
+@string SKA;
+@string SKB;
+
+@join alice;
+@accept bob;
+
+@clock ca @maxdrift pa;
+@process Pa(@variable skA) {
+    @receive @variable pkR;
+    @new @nonce na;
+    @read @timestamp ta @from ca;
+    @engage alice(pk(skA), pkR, ta, na)@ta;
+    @let @variable xa = X(skA, pkR) @then
+    @let @variable ya = Y(skA, pkR) @then
+    @send (pk(skA), sign((ta, na, pkR, xa, aenc((ya, sign(h(ya), skA)), pkR)), skA));
+}
+
+@clock cb @maxdrift pb;
+@process Pb(@variable skB) {
+    @receive (@variable pkI, @variable m);
+    @let (@timestamp ta, @variable na, == pk(skB), @variable xa, @variable EYA) = check(m, pkI) @then
+    @let (@variable ya, @variable SYA) = adec(EYA, skB) @then
+    @let @variable HYA = check(SYA, pkI) @then
+    @if (HYA == h(ya)) @then
+    @if (xa == X(SKA, pk(skB))) @then
+    @if (ya == Y(SKA, pk(skB))) @then
+    @read @timestamp tb @from cb;
+    @engage bob(pkI, pk(skB), ta, na)@tb;
+}
+
+@process Pp(@variable pkB, @variable pkA) {
+    @send pkA;
+    @send pkB;
+}
+
+@system {
+    @secrecy Y(SKA, pk(SKB));
+    @parallel { 
+        !{ @invoke Pa(SKA); } | 
+        !{ @invoke Pb(SKB); } | 
+        !{ @invoke Pp(pk(SKA), pk(SKB)); } 
+    }
+}
+
+@correspondence (@variable pkA, @variable pkB, @variable na, @timestamp ta, @timestamp tap, @timestamp tbp) {
+    @enforced;
+    @event alice(pkA, pkB, ta, na)@tap;
+    @event bob(pkA, pkB, ta, na)@tbp;
+    @constraint tap <= tbp;
+}

@@ -1,0 +1,167 @@
+@declare @event new(*, -, -);
+@provide @event new @removable @false;
+
+@declare @event init(*, *);
+@provide @event init @removable @false;
+
+@declare @event accept(-, -);
+@provide @event accept @removable @false;
+
+@declare @event unique(*, *, -);
+@provide @event unique @removable @false;
+
+@declare @event know(*);
+@provide @event know(v) @removable @true;
+
+@declare @function sysall/4;
+@rule {
+    @premise know(y);
+    @premise know(I);
+    @premise know(D);
+    @premise know(s);
+    @conclusion know(sysall(y, I, D, s));
+};
+
+@declare @function sysgr/1;
+@rule {
+    @premise know(r);
+    @conclusion know(sysgr(r));
+};
+
+@declare @function sysger/2;
+@rule {
+    @premise know(r);
+    @premise know(e);
+    @conclusion know(sysger(e, r));
+};
+@rule {
+    @premise know(sysgr(r));
+    @premise know(e);
+    @conclusion know(sysger(e, r));
+};
+
+@declare @function sysA/6;
+@rule {
+    @premise know(y);
+    @premise know(I);
+    @premise know(D);
+    @premise know(s);
+    @premise know(e);
+    @premise know(r);
+    @conclusion know(sysA(y, I, D, s, e, r));
+};
+
+@declare @function syse/1;
+@rule {
+    @premise know(sysa);
+    @conclusion know(syse(sysa));
+};
+@rule {
+    @premise know(sysA(y, I, D, s, e, r));
+    @premise know(sysger(e, r));
+    @conclusion know(syse(sysall(y, I, D, s)));
+};
+
+
+@declare @function resC/2;
+@rule {
+    @premise know(y);
+    @premise know(s);
+    @conclusion know(resC(y, s));
+};
+@rule {
+    @premise know(resC(y, s));
+    @premise know(I);
+    @premise know(D);
+    @premise know(e);
+    @premise know(r);
+    @conclusion know(sysA(y, I, D, s, e, r));
+};
+
+@declare @function chtC/4;
+@rule {
+    @premise know(y);
+    @premise know(I);
+    @premise know(oB);
+    @premise know(s);
+    @conclusion know(chtC(y, I, oB, s));
+};
+@rule {
+    @premise know(chtC(y, I, B, s));
+    @premise know(e);
+    @premise know(r);
+    @conclusion know(sysA(y, I, B, s, e, r));
+};
+
+// zero knowledge
+@declare @function regZK/3;
+@rule {
+    @premise know(c);
+    @premise know(y);
+    @premise know(s);
+    @conclusion know(regZK(c, y, s));
+};
+
+@declare @function chtZK/8;
+@rule {
+    @premise know(c);
+    @premise know(oA);
+    @premise know(oe);
+    @premise know(oy);
+    @premise know(I);
+    @premise know(oB);
+    @premise know(y);
+    @premise know(s);
+    @conclusion know(chtZK(c, oA, oe, oy, I, oB, y, s));
+};
+
+@declare @function stmZK/8;
+@rule {
+    @premise know(c);
+    @premise know(I);
+    @premise know(oB);
+    @premise know(oA);
+    @premise know(oe);
+    @premise know(oy);
+    @premise know(y);
+    @premise know(s);
+    @conclusion know(chtZK(c, I, oB, oA, oe, oy, y, s));
+};
+
+@declare @function tuple2/2;
+@declare @function tuple3/3;
+
+@declare @string r[];
+@declare @string ba[];
+@declare @string ServerRes[];
+@rule {
+    @premise know(resC(y, s));
+    @premise know(regZK(resC(y, s), y, s));
+    @premise know(I);
+    @premise new([e], ServerRes[], tuple3(resC(y, s), regZK(resC(y, s), y, s), I));
+    @premise init(I, s);
+    @conclusion know(sysA(y, I, ba[], s, [e], r[]));
+    @conclusion know([e]);
+};
+
+@declare @string ServerCht[];
+@rule {
+    @premise know(chtC(y, I, oB, s));
+    @premise know(chtZK(chtC(y, I, oB, s), sysA(oy, I, oB, os, oe, r[]), oe, oy, I, oB, y, s));
+    @premise know(os);
+    @premise new([e], ServerCht[], tuple3(chtC(y, I, oB, s), chtZK(chtC(y, I, oB, s), sysA(oy, I, oB, os, oe, r[]), oe, oy, I, oB, y, s), os));
+    @premise init(I, s);
+    @conclusion know(sysA(y, I, oB, s, [e], r[]));
+    @conclusion know([e]);
+};
+
+@rule {
+    @premise know(sysA(y, I, B, s, e, r[]));
+    @premise know(e);
+    @conclusion accept(I, s);
+};
+
+@authentication {
+    @conclusion accept(I, s);
+    @premise init(I, s);
+}; 

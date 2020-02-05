@@ -1,0 +1,49 @@
+// This is the Skeme - Internet Key Exchange Protocol - without PFS. 
+// It uses nonce rather than Diffie-Hellman exchange to establish the keys. 
+% 1
+
+! <sk, #t1> -> <pk(sk), #t> : #t1 - #t <= 0;
+
+! <m, #t1>, <sk, #t2> -> <sign(m, sk), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <sign(m, sk), #t1> -> <m, #t> : #t1 - #t <= 0;
+
+! <m, #t1>, <pk(sk), #t2> -> <aenc(m, pk(sk)), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <sk, #t1>, <aenc(m, pk(sk)), #t2> -> <m, #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+
+! <m1, #t1>, <m2, #t2> -> <h(m1, m2), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+
+! <m, #t1>, <k, #t2> -> <senc(m, k), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! <k, #t1>, <senc(m, k), #t2> -> <m, #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+
+! <x, #t1>, <y, #t2> -> <tuple2(x, y), #t> : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0;
+! <tuple2(x, y), #t1> -> <x, #t> : #t1 - #t <= 0;
+! <tuple2(x, y), #t1> -> <y, #t> : #t1 - #t <= 0;
+
+! <x, #t1>, <y, #t2>, <z, #t3>, <k, #t4> -> <tuple4(x, y, z, k), #t> 
+: #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0, #t4 - #t <= 0;
+! <tuple4(x, y, z, k), #t1> -> <x, #t> : #t1 - #t <= 0;
+! <tuple4(x, y, z, k), #t1> -> <y, #t> : #t1 - #t <= 0;
+! <tuple4(x, y, z, k), #t1> -> <z, #t> : #t1 - #t <= 0;
+! <tuple4(x, y, z, k), #t1> -> <k, #t> : #t1 - #t <= 0;
+
+! initA(pkR, [Ka], [Na]) -> <aenc(tuple2(pk(skA[]), [Ka]), pkR), #t>; 
+! initA(pkR, [Ka], [Na]) -> <[Na], #t>; 
+
+! initB(pkI, [Kb], [Nb], Ki, Ni), <aenc(tuple2(pkI, Ki), pk(skB[])), #t1>, <Ni, #t2> 
+    -> <aenc([Kb], pkI), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! initB(pkI, [Kb], [Nb], Ki, Ni), <aenc(tuple2(pkI, Ki), pk(skB[])), #t1>, <Ni, #t2> 
+    -> <[Nb], #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+! initB(pkI, [Kb], [Nb], Ki, Ni), <aenc(tuple2(pkI, Ki), pk(skB[])), #t1>, <Ni, #t2> 
+    -> <senc(tuple4(Ni, [Nb], pk(skB[]), pkI), h(Ki, [Kb])), #t> : #t1 - #t <= 0, #t2 - #t <= 0;
+
+! init(pk(skA[]), pkR, senc(senc(tuple4(Nr, [Na], pk(skA[]), pkR), h([Ka], Kr)), h([Ka], Kr)))
+    , initA(pkR, [Ka], [Na]), <aenc(Kr, pk(skA[])), #t1>, <Nr, #t2>, <senc(tuple4([Na], Nr, pkR, pk(skA[])), h([Ka], Kr)), #t3>
+    -> <senc(tuple4(Nr, [Na], pk(skA[]), pkR), h([Ka], Kr)), #t> : #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0;
+
+! initB(pk(skA[]), [Kb], [Nb], Ki, Ni), <senc(tuple4([Nb], Ni, pk(skA[]), pk(skB[])), h(Kr, [Kb])), #t1>
+    -> accept(pk(skA[]), pk(skB[]), senc(senc(tuple4([Nb], Ni, pk(skA[]), pk(skB[])), h(Ki, [Kb])), h(Ki, [Kb])));
+
+? accept(pkI, pkR, sk) <- init(pkI, pkR, sk); 
+
+
+

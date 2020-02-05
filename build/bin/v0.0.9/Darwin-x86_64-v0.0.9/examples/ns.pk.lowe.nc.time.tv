@@ -1,0 +1,206 @@
+@declare @event initA(*, *, *, *);
+@provide @event initA @removable @false;
+
+@declare @event initB(*, *, *, *);
+@provide @event initB @removable @false;
+
+@declare @event init(*, *, *);
+@provide @event init @removable @false;
+
+@declare @event accept(*, *, *);
+@provide @event accept @removable @false;
+
+@declare @event new(*, -, -);
+@provide @event new @removable @false;
+
+@declare @event attack();
+@provide @event attack @removable @false;
+
+@declare @event know(*, -);
+@provide @event know(mx, #t) @removable @true;
+@provide @event know(#c, #t) @removable @true;
+@provide @event know(#t, #t) @removable @true;
+
+@declare @function tuple2/2;
+@rule {
+    @premise know(x0, #t0);
+    @premise know(x1, #t1);
+    @conclusion know(tuple2(x0, x1), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+};
+@rule {
+    @premise know(tuple2(x0, x1), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t - #t0 <= 0;
+};
+@rule {
+    @premise know(tuple2(x0, x1), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t - #t1 <= 0;
+};
+
+@declare @function tuple3/3;
+@rule {
+    @premise know(x0, #t0);
+    @premise know(x1, #t1);
+    @premise know(x2, #t2);
+    @conclusion know(tuple3(x0, x1, x2), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+@rule {
+    @premise know(tuple3(x0, x1, x2), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t - #t0 <= 0;
+};
+@rule {
+    @premise know(tuple3(x0, x1, x2), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t - #t1 <= 0;
+};
+@rule {
+    @premise know(tuple3(x0, x1, x2), #t);
+    @conclusion know(x2, #t2);
+    @constraint #t - #t2 <= 0;
+};
+
+@declare @function tuple4/4;
+@rule {
+    @premise know(x0, #t0);
+    @premise know(x1, #t1);
+    @premise know(x2, #t2);
+    @premise know(x3, #t3);
+    @conclusion know(tuple4(x0, x1, x2, x3), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+    @constraint #t3 - #t <= 0;
+};
+@rule {
+    @premise know(tuple4(x0, x1, x2, x3), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t - #t0 <= 0;
+};
+@rule {
+    @premise know(tuple4(x0, x1, x2, x3), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t - #t1 <= 0;
+};
+@rule {
+    @premise know(tuple4(x0, x1, x2, x3), #t);
+    @conclusion know(x2, #t2);
+    @constraint #t - #t2 <= 0;
+};
+@rule {
+    @premise know(tuple4(x0, x1, x2, x3), #t);
+    @conclusion know(x3, #t3);
+    @constraint #t - #t3 <= 0;
+};
+
+@set @priority_barrier;
+
+@declare @function pk/1;
+@rule {
+    @premise know(sk, #t1);
+    @conclusion know(pk(sk), #t);
+    @constraint #t1 - #t <= 0;
+};
+
+@declare @function sign/2;
+@rule {
+    @premise know(m, #t1);
+    @premise know(sk, #t2);
+    @conclusion know(sign(m, sk), #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+@rule {
+    @premise know(sign(m, sk), #t1);
+    @conclusion know(m, #t);
+    @constraint #t1 - #t <= 0;
+};
+
+@declare @function aenc/2;
+@rule {
+    @premise know(m, #t1);
+    @premise know(pk(sk), #t2);
+    @conclusion know(aenc(m, pk(sk)), #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+@rule {
+    @premise know(sk, #t1);
+    @premise know(aenc(m, pk(sk)), #t2);
+    @conclusion know(m, #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+
+@declare @string skA[];
+@declare @string skB[];
+@rule { @conclusion know(pk(skA[]), #t); };
+@rule { @conclusion know(pk(skB[]), #t); };
+
+@declare @parameter $lad;
+@declare @parameter $lbd;
+@declare @parameter $tad;
+@declare @parameter $tbd;
+
+@declare @string aliceNa[];
+@rule {
+    @premise initA(skA[], skR, [Na], #ta);
+    @premise new([Na], aliceNa[], tuple3(skA[], skR, #ta));
+    @conclusion know([Na], #t);
+    @constraint #t - #ta >= $lad;
+};
+@rule {
+    @premise initA(skA[], skR, [Na], #ta);
+    @premise new([Na], aliceNa[], tuple3(skA[], skR, #ta));
+    @conclusion know(aenc(tuple2([Na], pk(skA[])), pk(skR)), #t);
+    @constraint #t - #ta >= 0;
+};
+
+@declare @string bobNb[];
+@rule {
+    @premise initB(skI, skB[], [Nb], #tb);
+    @premise new([Nb], bobNb[], tuple4(skI, skB[], Na, #tb));
+    @conclusion know([Nb], #t);
+    @constraint #t - #tb >= $lbd;
+};
+@rule {
+    @premise initB(skI, skB[], [Nb], #tb);
+    @premise new([Nb], bobNb[], tuple4(skI, skB[], Na, #tb));
+    @premise know(aenc(tuple2(Na, pk(skI)), pk(skB[])), #t1);
+    @conclusion know(aenc(tuple3(Na, [Nb], pk(skB[])), pk(skI)), #t);
+    @constraint #tb - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #tb - #t1 >= 0;
+};
+
+@rule {
+    @premise initA(skA[], skR, [Na], #ta);
+    @premise init(skA[], skR, #ta);
+    @premise new([Na], aliceNa[], tuple3(skA[], skR, #ta));
+    @premise know(aenc(tuple3([Na], Nb, pk(skR)), pk(skA[])), #t1);
+    @conclusion know(aenc(Nb, pk(skR)), #t);
+    @constraint #t - #ta <= $tad;
+    @constraint #ta - #t <= 0;
+    @constraint #t1 - #t <= 0;
+};
+
+@rule {
+    @premise initB(skA[], skB[], [Nb], #tb);
+    @premise new([Nb], bobNb[], tuple4(skA[], skB[], Na, #tb));
+    @premise know(aenc([Nb], pk(skB[])), #t1);
+    @conclusion accept(skA[], skB[], #t);
+    @constraint #t - #tb <= $tbd;
+    @constraint #t1 - #t <= 0;
+    @constraint #tb - #t <= 0;
+};
+
+@authentication {
+    @conclusion accept(I, R, #t);
+    @premise init(I, R, #ta);
+};

@@ -1,0 +1,214 @@
+// This is the Skeme - Internet Key Exchange Protocol - without PFS. 
+// It uses nonce rather than Diffie-Hellman exchange to establish the keys. 
+
+@declare @event new(*, -, -);
+@provide @event init @removable @false;
+
+@declare @event init(*, *, *);
+@provide @event new @removable @false;
+
+@declare @event accept(-, -, -);
+@provide @event accept @removable @false;
+
+@declare @event know(*, -);
+@provide @event know(mx, #t) @removable @true;
+@provide @event know(#c, #t) @removable @true;
+@provide @event know(#t, #t) @removable @true;
+
+@declare @function tuple2/2;
+@rule {
+    @premise know(x0, #t0);
+    @premise know(x1, #t1);
+    @conclusion know(tuple2(x0, x1), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+};
+@rule {
+    @premise know(tuple2(x0, x1), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t - #t0 <= 0;
+};
+@rule {
+    @premise know(tuple2(x0, x1), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t - #t1 <= 0;
+};
+
+@declare @function tuple3/3;
+@rule {
+    @premise know(x0, #t0);
+    @premise know(x1, #t1);
+    @premise know(x2, #t2);
+    @conclusion know(tuple3(x0, x1, x2), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+@rule {
+    @premise know(tuple3(x0, x1, x2), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t - #t0 <= 0;
+};
+@rule {
+    @premise know(tuple3(x0, x1, x2), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t - #t1 <= 0;
+};
+@rule {
+    @premise know(tuple3(x0, x1, x2), #t);
+    @conclusion know(x2, #t2);
+    @constraint #t - #t2 <= 0;
+};
+
+@declare @function tuple4/4;
+@rule {
+    @premise know(x0, #t0);
+    @premise know(x1, #t1);
+    @premise know(x2, #t2);
+    @premise know(x3, #t3);
+    @conclusion know(tuple4(x0, x1, x2, x3), #t);
+    @constraint #t0 - #t <= 0;
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+    @constraint #t3 - #t <= 0;
+};
+@rule {
+    @premise know(tuple4(x0, x1, x2, x3), #t);
+    @conclusion know(x0, #t0);
+    @constraint #t - #t0 <= 0;
+};
+@rule {
+    @premise know(tuple4(x0, x1, x2, x3), #t);
+    @conclusion know(x1, #t1);
+    @constraint #t - #t1 <= 0;
+};
+@rule {
+    @premise know(tuple4(x0, x1, x2, x3), #t);
+    @conclusion know(x2, #t2);
+    @constraint #t - #t2 <= 0;
+};
+@rule {
+    @premise know(tuple4(x0, x1, x2, x3), #t);
+    @conclusion know(x3, #t3);
+    @constraint #t - #t3 <= 0;
+};
+
+@set @priority_barrier;
+
+@declare @function hash/2;
+@rule {
+    @premise know(m1, #t1);
+    @premise know(m2, #t2);
+    @conclusion know(hash(m1, m2), #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+
+@declare @function pk/1;
+@rule {
+    @premise know(sk, #t1);
+    @conclusion know(pk(sk), #t);
+    @constraint #t1 - #t <= 0;
+};
+
+@declare @function sign/2;
+@rule {
+    @premise know(m, #t1);
+    @premise know(sk, #t2);
+    @conclusion know(sign(m, sk), #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+@rule {
+    @premise know(sign(m, sk), #t1);
+    @conclusion know(m, #t);
+    @constraint #t1 - #t <= 0;
+};
+
+@declare @function aenc/2;
+@rule {
+    @premise know(m, #t1);
+    @premise know(pk(sk), #t2);
+    @conclusion know(aenc(m, pk(sk)), #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+@rule {
+    @premise know(sk, #t1);
+    @premise know(aenc(m, pk(sk)), #t2);
+    @conclusion know(m, #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+
+@declare @function senc/2;
+@rule {
+    @premise know(m, #t1);
+    @premise know(k, #t2);
+    @conclusion know(senc(m, k), #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+@rule {
+    @premise know(k, #t1);
+    @premise know(senc(m, k), #t2);
+    @conclusion know(m, #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+
+@declare @string skA[];
+@declare @string skB[];
+@rule { @conclusion know(pk(skA[]), #t); };
+@rule { @conclusion know(pk(skB[]), #t); };
+
+// A -> B : aenc(tuple2(pk(skA[]), [Ka]), pk(skB[])), k([Na], #t)
+@declare @string Ak[];
+@declare @string An[];
+@rule {
+    @premise new([Ka], Ak[], tuple2(pkR, [Na]));
+    @premise new([Na], An[], tuple2(pkR, [Ka]));
+    @conclusion know(tuple2(aenc(tuple2(pk(skA[]), [Ka]), pkR), [Na]), #t);
+};
+
+// B -> A : aenc([Kb], pk(skA[])), [Nb], senc(tuple4([Na], [Nb], pk(skB[]), pkI), hash([Ka], [Kb]))
+@declare @string Bk[];
+@declare @string Bn[];
+@rule {
+    @premise new([Kb], Bk[], tuple4(pkI, [Nb], Ki, Ni));
+    @premise new([Nb], Bn[], tuple4(pkI, [Ka], Ki, Ni));
+    @premise know(aenc(tuple2(pkI, Ki), pk(skB[])), #t1);
+    @premise know(Ni, #t2);
+    @conclusion know(aenc([Kb], pkI), #t);
+    @conclusion know([Nb], #t);
+    @conclusion know(senc(tuple4(Ni, [Nb], pk(skB[]), pkI), hash(Ki, [Kb])), #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+};
+
+// A inits -> B : senc(tuple4([Nb], [Na], pk(skA[]), pk(skB[])), hash([Ka], [Kb]))
+@rule {
+    @premise init(pk(skA[]), pkR, senc(senc(tuple4(Nr, [Na], pk(skA[]), pkR), hash([Ka], Kr)), hash([Ka], Kr)));
+    @premise new([Ka], Ak[], tuple2(pkR, [Na]));
+    @premise new([Na], An[], tuple2(pkR, [Ka]));
+    @premise know(aenc(Kr, pk(skA[])), #t1);
+    @premise know(Nr, #t2);
+    @premise know(senc(tuple4([Na], Nr, pkR, pk(skA[])), hash([Ka], Kr)), #t3);
+    @conclusion know(senc(tuple4(Nr, [Na], pk(skA[]), pkR), hash([Ka], Kr)), #t);
+    @constraint #t1 - #t <= 0;
+    @constraint #t2 - #t <= 0;
+    @constraint #t3 - #t <= 0;
+};
+
+// B accepts
+@rule {
+    @premise new([Kb], Bk[], tuple4(pk(skA[]), [Nb], Ki, Ni));
+    @premise new([Nb], Bn[], tuple4(pk(skA[]), [Ka], Ki, Ni));
+    @premise know(senc(tuple4([Nb], Ni, pk(skA[]), pk(skB[])), hash(Kr, [Kb])), #t1);
+    @conclusion accept(pk(skA[]), pk(skB[]), senc(senc(tuple4([Nb], Ni, pk(skA[]), pk(skB[])), hash(Ki, [Kb])), hash(Ki, [Kb])));
+};
+
+@authentication {
+    @conclusion accept(pkI, pkR, sk);
+    @premise init(pkI, pkR, sk);
+}; 

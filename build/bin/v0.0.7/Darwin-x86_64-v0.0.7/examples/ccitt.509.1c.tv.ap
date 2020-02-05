@@ -1,0 +1,59 @@
+@ceiling 1;
+
+@decl @event init(-, -, -, *) @group p;
+@decl @event accept(-, -, -, -) @group c;
+@decl @event k(*, -) @group k;
+
+@decl @func tuple5/5;
+@decl @func tuple2/2;
+@decl @func pk/1;
+@decl @func aenc/2;
+@decl @func sign/2;
+@decl @func hash/1;
+@decl @func X/1;
+@decl @func Y/1;
+
+@nosel init;
+@nosel accept;
+
+@provide k(mx, #t);
+@provide k(#c, #t);
+@provide k(#t, #t);
+
+@rule k(sk, #t1) -> k(pk(sk), #t) : #t1 - #t <= 0;
+@rule k(m, #t1) -> k(hash(m), #t) : #t1 - #t <= 0;
+
+@rule k(m, #t1), k(sk, #t2) -> k(sign(m, sk), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(sign(m, sk), #t1) -> k(m, #t) : #t1 - #t <= 0;
+
+@rule k(m, #t1), k(pk(sk), #t2) -> k(aenc(m, pk(sk)), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(sk, #t1), k(aenc(m, pk(sk)), #t2) -> k(m, #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+
+@rule k(x, #t1), k(y, #t2) -> k(tuple2(x, y), #t) : #t1 - #t <= 0, #t2 - #t <= 0;
+@rule k(tuple2(x, y), #t1) -> k(x, #t) : #t1 - #t <= 0;
+@rule k(tuple2(x, y), #t1) -> k(y, #t) : #t1 - #t <= 0;
+
+@rule k(x, #t1), k(y, #t2), k(z, #t3), k(k, #t4), k(l, #t5) -> k(tuple5(x, y, z, k, l), #t) 
+: #t1 - #t <= 0, #t2 - #t <= 0, #t3 - #t <= 0, #t4 - #t <= 0, #t5 - #t <= 0;
+@rule k(tuple5(x, y, z, k, l), #t1) -> k(x, #t) : #t1 - #t <= 0;
+@rule k(tuple5(x, y, z, k, l), #t1) -> k(y, #t) : #t1 - #t <= 0;
+@rule k(tuple5(x, y, z, k, l), #t1) -> k(z, #t) : #t1 - #t <= 0;
+@rule k(tuple5(x, y, z, k, l), #t1) -> k(k, #t) : #t1 - #t <= 0;
+@rule k(tuple5(x, y, z, k, l), #t1) -> k(l, #t) : #t1 - #t <= 0;
+
+@rule k(A[], #t);
+@rule k(B[], #t);
+@rule k(I[], #t);
+
+@rule k(pk(skA[]), #t);
+@rule k(pk(skB[]), #t);
+
+
+@rule init(skA[], skR, #ta, [Na]) -> 
+    k(sign(tuple5(#ta, [Na], pk(skR), X(pk(skR)), aenc(tuple2(Y(pk(skR)), sign(hash(Y(pk(skR))), skA[])), pk(skR))), skA[]), #ta);
+
+@rule k(sign(tuple5(#ta, Na, pk(skB[]), X(pk(skB[])), aenc(tuple2(Y(pk(skB[])), sign(hash(Y(pk(skB[]))), skI)), pk(skB[]))), skI), #t1) 
+    -> accept(skI, skB[], #t, Na);
+
+@query accept(skI, skR, #t, Na) <- init(skI, skR, #ta, Na);
+
